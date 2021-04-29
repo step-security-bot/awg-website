@@ -1,0 +1,23 @@
+<div id="page">
+    <div class="content">
+
+        <div class="left">
+            <awg-sub-menu *ngIf="selectedMenu"
+                [selectedMenu]="selectedMenu">
+            </awg-sub-menu>
+        </div>
+
+        <div class="center">
+            <awg-menu *ngIf="menuArray && selectedMenu"
+                [menuArray]="menuArray">
+            </awg-menu>
+            <awg-main-text></awg-main-text>
+        </div>
+
+        <div class="right">
+            <awg-search></awg-search>
+            <awg-right-text *ngIf="rightTextPortal" [rightTextPortal]="rightTextPortal"></awg-right-text>
+        </div>
+
+    </div>
+</div>

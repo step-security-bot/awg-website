@@ -1,0 +1,91 @@
+{
+    "name": "ng2-awg",
+    "version": "0.0.0",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "ng": "ng",
+        "--dev--": "",
+        "start": "ng serve",
+        "--build--": "",
+        "build": "ng build --prod",
+        "--test--": "",
+        "test": "ng test",
+        "test:cov": "ng test --code-coverage true",
+        "serve:test:cov": "npx http-server -c-1 -o -p 9875 ./coverage",
+        "e2e": "ng e2e",
+        "--lint--": "",
+        "lint": "ng lint ng2-awg",
+        "tslint-check": "tslint-config-prettier-check ./tslint.json",
+        "format:check": "prettier --check \"src/**/*.ts\"",
+        "format:fix": "pretty-quick --staged",
+        "lint-staged": "lint-staged",
+        "prepare": "husky install"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "run-s -l format:fix lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.ts": [
+            "ng-lint-staged lint --fix --"
+        ]
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": true,
+        "arrowParens": "avoid"
+    },
+    "dependencies": {
+        "@angular/animations": "^10.1.4",
+        "@angular/cdk": "^10.2.4",
+        "@angular/common": "~10.1.4",
+        "@angular/compiler": "~10.1.4",
+        "@angular/core": "~10.1.4",
+        "@angular/forms": "~10.1.4",
+        "@angular/material": "^10.2.4",
+        "@angular/platform-browser": "~10.1.4",
+        "@angular/platform-browser-dynamic": "~10.1.4",
+        "@angular/router": "~10.1.4",
+        "rxjs": "~6.5.5",
+        "tslib": "^2.0.0",
+        "zone.js": "~0.10.3"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~0.1001.4",
+        "@angular/cli": "~10.1.4",
+        "@angular/compiler-cli": "~10.1.4",
+        "@angular/language-service": "~10.1.4",
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-angular": "^11.0.0",
+        "@types/jasmine": "~3.5.0",
+        "@types/jasminewd2": "~2.0.3",
+        "@types/node": "^14.6.1",
+        "codelyzer": "^6.0.1",
+        "husky": "^6.0.0",
+        "jasmine-core": "~3.5.0",
+        "jasmine-spec-reporter": "~5.0.0",
+        "karma": "~5.0.0",
+        "karma-chrome-launcher": "~3.1.0",
+        "karma-coverage-istanbul-reporter": "~3.0.2",
+        "karma-jasmine": "~4.0.0",
+        "karma-jasmine-html-reporter": "^1.5.0",
+        "lint-staged": "^10.5.4",
+        "ng-lint-staged": "^0.1.6",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.2.1",
+        "pretty-quick": "^3.1.0",
+        "protractor": "~7.0.0",
+        "ts-node": "~8.3.0",
+        "tslint": "~6.1.0",
+        "typescript": "~4.0.3"
+    }
+}
