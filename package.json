@@ -4,6 +4,7 @@
     "license": "MIT",
     "private": true,
     "scripts": {
+        "postinstall": "husky install",
         "ng": "ng",
         "--dev--": "",
         "start": "ng serve",
@@ -21,12 +22,6 @@
         "format:fix": "pretty-quick --staged",
         "lint-staged": "lint-staged",
         "prepare": "husky install"
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "pre-commit": "run-s -l format:fix lint-staged"
-        }
     },
     "lint-staged": {
         "src/**/*.ts": [
