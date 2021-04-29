@@ -14,13 +14,13 @@ export class PageComponent implements AfterViewInit {
     @Input()
     selectedMenu: Menu;
 
-    rightTextPortal: TemplateRef<unknown>;
+    rightPanelPortal: TemplateRef<unknown>;
 
-    constructor(private portalService: PortalService, private cdRef: ChangeDetectorRef) {}
+    constructor(private _portalService: PortalService, private cdRef: ChangeDetectorRef) {}
 
     ngAfterViewInit() {
-        this.portalService.getRightTextPortalData().subscribe((ref: TemplateRef<unknown>) => {
-            this.rightTextPortal = ref;
+        this._portalService.getRightPanelPortalData().subscribe((ref: TemplateRef<unknown>) => {
+            this.rightPanelPortal = ref;
 
             this.cdRef.detectChanges();
         });

@@ -1,12 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from '@angular/core';
+
+import { PortalService } from '@awg-core/page/page-services/portal.service';
 
 @Component({
     selector: 'awg-project-news-archive',
     templateUrl: './project-news-archive.component.html',
     styleUrls: ['./project-news-archive.component.css']
 })
-export class ProjectNewsArchiveComponent implements OnInit {
-    constructor() {}
+export class ProjectNewsArchiveComponent implements AfterViewInit, OnDestroy {
+    @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
 
-    ngOnInit(): void {}
+    constructor(private _portalService: PortalService) {}
+
+    ngAfterViewInit() {
+        this._portalService.updateRightPanelPortalData(this.rightPanelPortal);
+    }
+
+    ngOnDestroy() {
+        this._portalService.clearRightPanelPortalData();
+    }
 }

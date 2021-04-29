@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from '@angular/core';
+
+import { PortalService } from '@awg-core/page/page-services/portal.service';
 
 @Component({
     selector: 'awg-works-opus',
     templateUrl: './works-opus.component.html',
     styleUrls: ['./works-opus.component.css']
 })
-export class WorksOpusComponent {
+export class WorksOpusComponent implements AfterViewInit, OnDestroy {
     info = 'works-opus works!';
 
-    constructor() {}
+    @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+
+    constructor(private _portalService: PortalService) {}
+
+    ngAfterViewInit() {
+        this._portalService.updateRightPanelPortalData(this.rightPanelPortal);
+    }
+
+    ngOnDestroy() {
+        this._portalService.clearRightPanelPortalData();
+    }
 }
