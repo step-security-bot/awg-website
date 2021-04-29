@@ -4,13 +4,14 @@ import { SharedModule } from '../shared/shared.module';
 
 import { PageModule } from './page/page.module';
 
+import { CornerRibbonComponent } from './corner-ribbon';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
     imports: [SharedModule, PageModule],
-    declarations: [FooterComponent, HeaderComponent],
-    exports: [FooterComponent, HeaderComponent, PageModule]
+    declarations: [CornerRibbonComponent, FooterComponent, HeaderComponent],
+    exports: [CornerRibbonComponent, FooterComponent, HeaderComponent, PageModule]
 })
 export class CoreModule {
     constructor(
