@@ -1,3 +1,24 @@
-<p>{{ info }}</p>
+<p>
+    Anton Weberns Œuvre beinhaltet neben einigen orchestralen Werken hauptsächlich Lieder und Kammermusik in
+    verschiedenster Besetzung. Während die mit einer Opuszahl versehenen Werke (op. 1–31) größtenteils noch zu Lebzeiten
+    bei der UE in Wien im Druck erschienen sind, ist ein beträchtlicher Teil des kompositorischen Nachlasses – darunter
+    zahlreiche Kompositionen aus seiner Jugend und Studienzeit, teils auch aus dem zwischen 1904 und 1908
+    stattgefundenen Unterricht bei Schönberg stammend – erst nach seinem Tod entdeckt und der Öffentlichkeit zugänglich
+    gemacht worden.
+</p>
 
-<ng-template #rightPanelPortal></ng-template>
+<p>
+    Für Recherchezwecke sind im Folgenden nach den Kategorien <a [routerLink]="['/works', 'opus']">Opuszahl</a> und
+    <a [routerLink]="['/works', 'moldenhauer']">Moldenhauer-Nummer</a> geordnete Werklisten aufrufbar, um einen
+    Überblick über Weberns Schaffen zu ermöglichen. Zu jedem Eintrag einer Liste bietet die Plattform KNORA/SALSAH kurze
+    Informationen zu Entstehung, gegebenenfalls Uraufführung und/oder Drucklegung eines Stücks sowie eine
+    Quellenübersicht. Verweise auf einen größeren Kontext innerhalb von Werkzusammenhängen, Fassungen oder Ähnlichem
+    werden durch Verknüpfungen angezeigt.
+</p>
+
+<ng-template #rightPanelPortal>
+    <img src="assets/images/Werkverzeichnis_UE1936.jpg" alt="" width="400" height="625" />
+    <br />
+    Verlagszanzeige der Werke Weberns auf der Umschlagseite des Erstdrucks der
+    <em>Drei Gesänge aus „Viae Inviae“ von Hildegard Jone</em> op. 23 (Wien: Universal Edition, 1936).
+</ng-template>
