@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de-DE" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="04f423109bf7897f8b2014fb766915a6d6126995" datatype="html">
+        <source> Die Plattform SALSAH bietet unter der Rubrik <x id="START_LINK" ctype="x-a" equiv-text="&lt;a
+        href=&quot;http://www.salsah.org/webern/search.php?restype=musical_piece&quot;
+        target=&quot;_blank&quot;
+    &gt;"/>Moldenhauer-Nummer<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+    &gt;"/> eine Liste mit Weberns sämtlichen Werken geordnet nach ihrer Moldenhauer-Nummer. Moldenhauer erstellte ein chronologisches Werkverzeichnis und ordnete (mit einigen Ausnahmen) jedem ihm bekannten Einzelstück, gleich ob Bestandteil eines mehrsätzigen Werkes oder separat für sich stehend, eine Nummer zu. Die AWG hat trotz vereinzelter Zweifel an der chronologischen Richtigkeit diese Nummerierung als Basis bei der Strukturierung von Weberns kompositorischem Œuvre übernommen, erweitert oder modifiziert sie jedoch bei Bedarf. Von Moldenhauer nicht erfassten Stücken ordnet die AWG ungeachtet der Chronologie eine neue Nummer zu. Diese neu vergebenen Nummern beginnen zur klaren Abgrenzung von den ursprünglichen 347 Moldenhauer-Nummern ab der Nummer 400.
+</source>
+<target>In the section entitled <x id="START_LINK" ctype="x-a" equiv-text="&lt;a
+        href=&quot;http://www.salsah.org/webern/search.php?restype=musical_piece&quot;
+        target=&quot;_blank&quot;
+    &gt;"/>Moldenhauer-No.<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+    &gt;"/> (Moldenhauer numbers) the Knora/SALSAH platform provides a list of Webern’s complete works arranged according to their Moldenhauer numbers. Hans Moldenhauer made a chronological index of works and, with a few exceptions, attributed a number to each work known to him, regardless of whether it was part of a larger work or a piece in its own right. Despite harbouring occasional doubts as to its chronological accuracy, the AWG has taken over this numbering system which serves as a basis for the structuring of Webern’s oeuvre, but has however taken the liberty of extending or modifying it as required. The AWG has attributed a new number to pieces not included by Moldenhauer, irrespective of their chronology. These new numbers begin at 400, so as to clearly differentiate them from the original Moldenhauer numbering system, which runs to 347.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-moldenhauer/works-moldenhauer.component.html</context>
+          <context context-type="linenumber">2,15</context>
+        </context-group>
+        <note priority="1" from="description">A paragraph about Moldenhauer numbers</note>
+        <note priority="1" from="meaning">First paragraph Moldenhauer</note>
+      </trans-unit>
+      <trans-unit id="bbca4fc3fca3760d169ed77ad04183d14e507734" datatype="html">
+        <source> Zu jeder Nummer findet sich ein Eintrag mit kurzen Informationen zu Entstehung, gegebenenfalls Uraufführung und/oder Drucklegung eines Stücks sowie eine Quellenübersicht. Verweise auf einen größeren Kontext innerhalb von Werkzusammenhängen, Fassungen oder Ähnlichem werden durch Verknüpfungen angezeigt (dieser Bereich befindet sich im Aufbau und wird laufend erweitert und ergänzt).</source>
+<target>For each number there is an entry with brief information about the origins of the work and, where appropriate, its first performance and/or publication, as well as an outline of its various sources. References to a broader scheme within the context of the composer’s other works and the differing versions of a given work etc., are indicated via links (this area is still being developed and is regularly extended and supplemented).</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-moldenhauer/works-moldenhauer.component.html</context>
+          <context context-type="linenumber">20,24</context>
+        </context-group>
+        <note priority="1" from="description">A paragraph about Moldenhauer numbers</note>
+        <note priority="1" from="meaning">Second paragraph Moldenhauer</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
