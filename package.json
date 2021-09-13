@@ -30,29 +30,31 @@
     "bugs": "",
     "private": true,
     "scripts": {
-        "postinstall": "husky install",
+        "husky:prepare": "husky install",
         "ng": "ng",
-        "-- DEV --": "",
         "start": "ng serve",
         "-- TEST --": "",
         "test": "ng test",
         "test:cov": "ng test --code-coverage true",
-        "serve:test:cov": "npx http-server -c-1 -o -p 9875 ./coverage",
-        "e2e": "ng e2e",
+        "test:cov:serve": "yarn test:cov --watch false && npx http-server -c-1 -o -p 9875 ./coverage",
         "-- LINT --": "",
         "lint": "ng lint awg-website",
-        "tslint-check": "tslint-config-prettier-check ./tslint.json",
-        "format:check": "prettier --check \"src/**/*.ts\"",
-        "format:fix": "pretty-quick --staged",
+        "lint:fix": "yarn lint --fix",
+        "lint-files": "eslint --color -c .eslintrc.json --ext .ts,.html",
+        "lint-files:fix": "yarn lint-files --fix",
         "lint-staged": "lint-staged",
+        "tslint-check": "tslint-config-prettier-check ./tslint.json",
+        "format:check": "prettier --check \"src/**/*.{ts,js,css,html}\"",
+        "format:write": "prettier --write \"src/**/*.{ts,js,css,html}\"",
+        "format:fix-staged": "pretty-quick --staged",
         "-- DOCS --": "",
         "doc": "yarn compodoc --tsconfig tsconfig.doc.json --theme Readthedocs --output dist/awg-website/compodoc --disableRoutesGraph",
-        "serve:doc": "yarn doc --serve --watch",
-        "build:doc": "yarn doc",
+        "doc:build": "yarn doc",
+        "doc:serve": "yarn doc --serve --watch",
         "-- BUILD --": "",
-        "build": "ng build",
-        "build:prod": "yarn build --prod",
-        "build:gh": "yarn build:prod --base-href $npm_package_homepage && yarn gzip:dist && yarn build:doc",
+        "build:prod": "ng build",
+        "build:watch": "ng build --watch --configuration development",
+        "build:gh": "yarn build:prod --base-href $npm_package_homepage && yarn gzip:dist && yarn doc:build",
         "gzip:dist": "gzipper compress ./dist/awg-website/",
         "-- DEPLOY --": "",
         "pre-release": "standard-version -a",
@@ -120,8 +122,8 @@
         }
     },
     "lint-staged": {
-        "src/**/*.ts": [
-            "ng-lint-staged lint --fix --"
+        "src/**/*.{ts,html}": [
+            "yarn lint-files:fix"
         ]
     },
     "prettier": {
@@ -147,8 +149,8 @@
         "@angular/platform-browser": "~12.2.5",
         "@angular/platform-browser-dynamic": "~12.2.5",
         "@angular/router": "~12.2.5",
-        "rxjs": "~6.6.0",
-        "tslib": "^2.0.0",
+        "rxjs": "~6.6.7",
+        "tslib": "^2.3.1",
         "zone.js": "~0.11.4"
     },
     "devDependencies": {
