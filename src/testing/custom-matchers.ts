@@ -1,4 +1,4 @@
-/* tslint:disable:no-redundant-jsdoc */
+/* Tslint:disable:no-redundant-jsdoc */
 
 import MatchersUtil = jasmine.MatchersUtil;
 import CustomMatcherFactories = jasmine.CustomMatcherFactories;

@@ -5,12 +5,12 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 @Component({
     selector: 'awg-works-opus',
     templateUrl: './works-opus.component.html',
-    styleUrls: ['./works-opus.component.css']
+    styleUrls: ['./works-opus.component.css'],
 })
 export class WorksOpusComponent implements AfterViewInit, OnDestroy {
-    info = 'works-opus works!';
-
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+
+    info = 'works-opus works!';
 
     constructor(private _portalService: PortalService) {}
 

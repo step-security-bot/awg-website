@@ -36,8 +36,8 @@ describe('PageComponent', () => {
                     MainTextStubComponent,
                     RightTextStubComponent,
                     SearchStubComponent,
-                    RouterLinkStubDirective
-                ]
+                    RouterLinkStubDirective,
+                ],
             }).compileComponents();
         })
     );
@@ -88,15 +88,15 @@ describe('PageComponent', () => {
 
     describe('AFTER initial data binding', () => {
         beforeEach(() => {
-            // mock the input values supplied by the parent component
+            // Mock the input values supplied by the parent component
             expectedMenuArray = MENUDATA;
             expectedMenu = MENUDATA[0];
 
-            // simulate the parent setting the input properties
+            // Simulate the parent setting the input properties
             component.menuArray = expectedMenuArray;
             component.selectedMenu = expectedMenu;
 
-            // trigger initial data binding
+            // Trigger initial data binding
             fixture.detectChanges();
         });
 

@@ -23,7 +23,7 @@ describe('SubMenuComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [SubMenuComponent, RouterLinkStubDirective]
+                declarations: [SubMenuComponent, RouterLinkStubDirective],
             }).compileComponents();
         })
     );
@@ -32,26 +32,26 @@ describe('SubMenuComponent', () => {
         fixture = TestBed.createComponent(SubMenuComponent);
         component = fixture.componentInstance;
 
-        // mock the menu array supplied by the parent component
+        // Mock the menu array supplied by the parent component
         expectedMenu = MENUDATA[0];
 
-        // simulate the parent setting the input property with that menu array
+        // Simulate the parent setting the input property with that menu array
         component.selectedMenu = expectedMenu;
 
-        // trigger initial data binding
+        // Trigger initial data binding
         fixture.detectChanges();
 
-        // find the DebugElement and element of the first & last menu
+        // Find the DebugElement and element of the first & last menu
         firstMenuDe = fixture.debugElement.query(By.css('.first'));
         firstMenuEl = firstMenuDe.nativeElement;
         lastMenuDe = fixture.debugElement.query(By.css('.last'));
         lastMenuEl = lastMenuDe.nativeElement;
 
-        // find DebugElements with an attached RouterLinkStubDirective
+        // Find DebugElements with an attached RouterLinkStubDirective
         linkDes = fixture.debugElement.queryAll(By.directive(RouterLinkStubDirective));
 
-        // get attached link directive instances
-        // using each DebugElement's injector
+        // Get attached link directive instances
+        // Using each DebugElement's injector
         routerLinks = linkDes.map(de => de.injector.get(RouterLinkStubDirective));
     });
 
@@ -67,7 +67,7 @@ describe('SubMenuComponent', () => {
         expect(routerLinks.length).toBe(5, 'should have 5 routerLinks');
         routerLinks.forEach(route => {
             expect(route.routerLink[0]).toBe('/project');
-        }); // every route has /project root
+        }); // Every route has /project root
         expect(routerLinks[0].routerLink[1]).toBe('overview');
         expect(routerLinks[1].routerLink[1]).toBe('team');
         expect(routerLinks[2].routerLink[1]).toBe('board');
@@ -76,8 +76,8 @@ describe('SubMenuComponent', () => {
     });
 
     it('can click edition link in template', () => {
-        const boardLinkDe = linkDes[2]; // board link DebugElement
-        const boardLink = routerLinks[2]; // board link directive
+        const boardLinkDe = linkDes[2]; // Board link DebugElement
+        const boardLink = routerLinks[2]; // Board link directive
 
         expect(boardLink.navigatedTo).toBeNull('should not have navigated yet');
 
@@ -105,8 +105,8 @@ describe('SubMenuComponent', () => {
     });
 
     it('should display menu label in uppercase', () => {
-        const expectedFirstUppercaseLabel = expectedMenu.subMenu[0].label.toUpperCase(); // label: OVERVIEW
-        const expectedLastUppercaseLabel = expectedMenu.subMenu[4].label.toUpperCase(); // label: NEWS-ARCHIV
+        const expectedFirstUppercaseLabel = expectedMenu.subMenu[0].label.toUpperCase(); // Label: OVERVIEW
+        const expectedLastUppercaseLabel = expectedMenu.subMenu[4].label.toUpperCase(); // Label: NEWS-ARCHIV
         expect(firstMenuEl.textContent).toContain(expectedFirstUppercaseLabel);
         expect(lastMenuEl.textContent).toContain(expectedLastUppercaseLabel);
     });

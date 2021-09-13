@@ -5,12 +5,12 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 @Component({
     selector: 'awg-edition-outline',
     templateUrl: './edition-outline.component.html',
-    styleUrls: ['./edition-outline.component.css']
+    styleUrls: ['./edition-outline.component.css'],
 })
 export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
-    info = 'edition-outline works!';
-
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+
+    info = 'edition-outline works!';
 
     constructor(private _portalService: PortalService) {}
 

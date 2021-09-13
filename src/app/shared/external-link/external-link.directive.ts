@@ -2,7 +2,7 @@ import { Directive, HostBinding, Inject, Input, OnChanges, PLATFORM_ID } from '@
 import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
-    selector: 'a[href]'
+    selector: 'a[href]',
 })
 export class ExternalLinkDirective implements OnChanges {
     @HostBinding('attr.href') hrefAttr = '';
@@ -15,13 +15,13 @@ export class ExternalLinkDirective implements OnChanges {
     ngOnChanges() {
         this.hrefAttr = this.href;
 
-        if (this.isExternalLink()) {
+        if (this._isExternalLink()) {
             this.targetAttr = '_blank';
             this.relAttr = 'noopener noreferrer';
         }
     }
 
-    private isExternalLink() {
+    private _isExternalLink() {
         return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname);
     }
 }

@@ -5,12 +5,12 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 @Component({
     selector: 'awg-research-archives',
     templateUrl: './research-archives.component.html',
-    styleUrls: ['./research-archives.component.css']
+    styleUrls: ['./research-archives.component.css'],
 })
 export class ResearchArchivesComponent implements AfterViewInit, OnDestroy {
-    info = 'research-archive works!';
-
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+
+    info = 'research-archive works!';
 
     constructor(private _portalService: PortalService) {}
 

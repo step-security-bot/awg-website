@@ -1,8 +1,7 @@
-/* tslint:disable:directive-selector component-selector */
 import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
-    selector: '[routerLink]'
+    selector: '[routerLink]',
 })
 export class RouterLinkStubDirective {
     @Input()

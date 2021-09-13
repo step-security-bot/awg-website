@@ -31,9 +31,9 @@ import { WorksModule } from './views/works/works.module';
         WebernModule,
         WorksModule,
 
-        AppRoutingModule // has to be last routed Module
+        AppRoutingModule, // Has to be last routed Module
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

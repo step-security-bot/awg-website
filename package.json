@@ -126,17 +126,6 @@
             "yarn lint-files:fix"
         ]
     },
-    "prettier": {
-        "printWidth": 120,
-        "tabWidth": 4,
-        "useTabs": false,
-        "semi": true,
-        "singleQuote": true,
-        "trailingComma": "none",
-        "bracketSpacing": true,
-        "jsxBracketSameLine": true,
-        "arrowParens": "avoid"
-    },
     "dependencies": {
         "@angular/animations": "^12.2.5",
         "@angular/cdk": "^12.2.5",

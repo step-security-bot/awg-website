@@ -5,12 +5,12 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 @Component({
     selector: 'awg-research-webern-studies',
     templateUrl: './research-webern-studies.component.html',
-    styleUrls: ['./research-webern-studies.component.css']
+    styleUrls: ['./research-webern-studies.component.css'],
 })
 export class ResearchWebernStudiesComponent implements AfterViewInit, OnDestroy {
-    info = 'research-webern-studies works!';
-
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+
+    info = 'research-webern-studies works!';
 
     constructor(private _portalService: PortalService) {}
 

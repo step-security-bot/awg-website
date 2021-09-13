@@ -13,7 +13,7 @@ describe('HeaderComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [HeaderComponent, RouterLinkStubDirective]
+                declarations: [HeaderComponent, RouterLinkStubDirective],
             }).compileComponents();
         })
     );
@@ -22,14 +22,14 @@ describe('HeaderComponent', () => {
         fixture = TestBed.createComponent(HeaderComponent);
         component = fixture.componentInstance;
 
-        // trigger initial data binding
+        // Trigger initial data binding
         fixture.detectChanges();
 
-        // find DebugElements with an attached RouterLinkStubDirective
+        // Find DebugElements with an attached RouterLinkStubDirective
         linkDes = fixture.debugElement.queryAll(By.directive(RouterLinkStubDirective));
 
-        // get attached link directive instances
-        // using each DebugElement's injector
+        // Get attached link directive instances
+        // Using each DebugElement's injector
         routerLinks = linkDes.map(de => de.injector.get(RouterLinkStubDirective));
     });
 
@@ -43,8 +43,8 @@ describe('HeaderComponent', () => {
     });
 
     it('can click contact link in template', () => {
-        const contactLinkDe = linkDes[0]; // contact link DebugElement
-        const contactLink = routerLinks[0]; // contact link directive
+        const contactLinkDe = linkDes[0]; // Contact link DebugElement
+        const contactLink = routerLinks[0]; // Contact link directive
 
         expect(contactLink.navigatedTo).toBeNull('should not have navigated yet');
 

@@ -5,12 +5,12 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 @Component({
     selector: 'awg-webern-correspondence',
     templateUrl: './webern-correspondence.component.html',
-    styleUrls: ['./webern-correspondence.component.css']
+    styleUrls: ['./webern-correspondence.component.css'],
 })
 export class WebernCorrespondenceComponent implements AfterViewInit, OnDestroy {
-    info = 'webern-correspondence works!';
-
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+
+    info = 'webern-correspondence works!';
 
     constructor(private _portalService: PortalService) {}
 
