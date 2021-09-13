@@ -247,6 +247,9 @@ hr {
     color: #00a4a7;
 }
 
+.para {
+    margin-bottom: 1em;
+}
 .personbox {
     overflow: hidden;
     width: 100%;
