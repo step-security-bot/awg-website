@@ -10,8 +10,6 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 export class WorksOverviewComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
 
-    info = 'works-overview works!';
-
     constructor(private _portalService: PortalService) {}
 
     ngAfterViewInit() {

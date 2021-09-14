@@ -1,4 +1,4 @@
-<p class="para" i18n="First paragraph Moldenhauer|A paragraph about Moldenhauer numbers">
+<p class="para" i18n>
     Die Plattform SALSAH bietet unter der Rubrik
     <a href="http://www.salsah.org/webern/search.php?restype=musical_piece" target="_blank">Moldenhauer-Nummer</a> eine
     Liste mit Weberns sämtlichen Werken geordnet nach ihrer Moldenhauer-Nummer. Moldenhauer erstellte ein
@@ -10,7 +10,7 @@
     klaren Abgrenzung von den ursprünglichen 347 Moldenhauer-Nummern ab der Nummer 400.
 </p>
 
-<p class="para" i18n="Second paragraph Moldenhauer|A paragraph about Moldenhauer numbers">
+<p class="para" i18n>
     Zu jeder Nummer findet sich ein Eintrag mit kurzen Informationen zu Entstehung, gegebenenfalls Uraufführung und/oder
     Drucklegung eines Stücks sowie eine Quellenübersicht. Verweise auf einen größeren Kontext innerhalb von
     Werkzusammenhängen, Fassungen oder Ähnlichem werden durch Verknüpfungen angezeigt (dieser Bereich befindet sich im
@@ -18,11 +18,22 @@
 </p>
 
 <ng-template #rightPanelPortal>
-    <img src="assets/images/Moldenhauer_Montblanc.jpg" alt="" width="400" height="573" />
-    <br />
-    Hans Moldenhauer und Fred Gaiser, Montblanc 1932 (Library of Congress, Washington DC).
-    <br /><br />
-    <strong>Hans Moldenhauer</strong> (1906–1987) verfasste eine umfangreiche Biographie über Webern (<em
-        >Anton von Webern. A Chronicle of His Life and Work</em
-    >, New York: Knopf, 1979 / <em>Anton von Webern. Chronik seines Lebens und Werkes</em>, Zürich: Atlantis, 1980).
+    <p>
+        <img
+            src="assets/images/Moldenhauer_Montblanc.jpg"
+            i18n-alt
+            alt="Moldenhauer und Gaiser, Montblanc 1932"
+            width="400"
+            height="573" />
+        <br />
+        <span i18n>Hans Moldenhauer und Fred Gaiser, Montblanc 1932 (Library of Congress, Washington DC).</span>
+        <br />
+        <br />
+        <span i18n>
+            <strong>Hans Moldenhauer</strong> (1906–1987) verfasste eine umfangreiche Biographie über Webern (<em
+                >Anton von Webern. A Chronicle of His Life and Work</em
+            >, New York: Knopf, 1979 / <em>Anton von Webern. Chronik seines Lebens und Werkes</em>, Zürich: Atlantis,
+            1980).
+        </span>
+    </p>
 </ng-template>

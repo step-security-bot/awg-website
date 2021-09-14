@@ -1,4 +1,4 @@
-<p>
+<p class="para" i18n>
     Die Plattform SALSAH bietet unter der Rubrik
     <a href="http://www.salsah.org/webern/search.php?restype=opus" target="_blank">Opuszahl</a> eine Liste mit Weberns
     Werken geordnet nach ihrer Opuszahl. Anton Webern hat allerdings nur einen Teil seiner Kompositionen mit einer
@@ -9,8 +9,17 @@
 </p>
 
 <ng-template #rightPanelPortal>
-    <img src="assets/images/Werkverzeichnis_UE1936.jpg" alt="" width="400" height="625" />
-    <br />
-    Verlagszanzeige der Werke Weberns auf der Umschlagseite des Erstdrucks der
-    <em>Drei Gesänge aus „Viae Inviae“ von Hildegard Jone</em> op. 23 (Wien: Universal Edition, 1936).
+    <p>
+        <img
+            src="assets/images/Werkverzeichnis_UE1936.jpg"
+            i18n-alt
+            alt="Verlagszanzeige der Werke Weberns, 1936"
+            width="400"
+            height="625" />
+        <br />
+        <span i18n
+            >Verlagszanzeige der Werke Weberns auf der Umschlagseite des Erstdrucks der
+            <em>Drei Gesänge aus „Viae Inviae“ von Hildegard Jone</em> op. 23 (Wien: Universal Edition, 1936).</span
+        >
+    </p>
 </ng-template>

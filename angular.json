@@ -12,7 +12,7 @@
             "i18n": {
                 "sourceLocale": "de-DE",
                 "locales": {
-                    "en": "src/assets/i18n/messages.en.xlf"
+                    "en": "src/i18n/messages.en.xlf"
                 }
             },
             "architect": {
@@ -24,7 +24,7 @@
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.app.json",
-                        "localize": ["en"],
+                        "localize": true,
                         "aot": true,
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": ["src/styles.css"],
@@ -78,6 +78,12 @@
                                     "maximumError": "10kb"
                                 }
                             ]
+                        },
+                        "en": {
+                            "localize": ["en"]
+                        },
+                        "de-DE": {
+                            "localize": ["de-DE"]
                         }
                     },
                     "defaultConfiguration": "production"
@@ -91,6 +97,12 @@
                         },
                         "development": {
                             "browserTarget": "awg-website:build:development"
+                        },
+                        "en": {
+                            "browserTarget": "awg-website:build:en"
+                        },
+                        "de-DE": {
+                            "browserTarget": "awg-website:build:de-DE"
                         }
                     },
                     "defaultConfiguration": "development"

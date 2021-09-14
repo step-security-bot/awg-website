@@ -3,11 +3,11 @@ import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from '@an
 import { PortalService } from '@awg-core/page/page-services/portal.service';
 
 @Component({
-    selector: 'awg-works-opus',
-    templateUrl: './works-opus.component.html',
-    styleUrls: ['./works-opus.component.css'],
+    selector: 'awg-webern-correspondence',
+    templateUrl: './webern-letters.component.html',
+    styleUrls: ['./webern-letters.component.css'],
 })
-export class WorksOpusComponent implements AfterViewInit, OnDestroy {
+export class WebernLettersComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
 
     constructor(private _portalService: PortalService) {}

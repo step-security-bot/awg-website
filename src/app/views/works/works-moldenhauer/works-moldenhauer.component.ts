@@ -10,8 +10,6 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 export class WorksMoldenhauerComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
 
-    info = 'works-moldenhauer works!';
-
     constructor(private _portalService: PortalService) {}
 
     ngAfterViewInit() {

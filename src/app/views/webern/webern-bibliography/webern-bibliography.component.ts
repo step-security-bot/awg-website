@@ -3,14 +3,12 @@ import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from '@an
 import { PortalService } from '@awg-core/page/page-services/portal.service';
 
 @Component({
-    selector: 'awg-webern-correspondence',
-    templateUrl: './webern-correspondence.component.html',
-    styleUrls: ['./webern-correspondence.component.css'],
+    selector: 'awg-webern-bibliography',
+    templateUrl: './webern-bibliography.component.html',
+    styleUrls: ['./webern-bibliography.component.css'],
 })
-export class WebernCorrespondenceComponent implements AfterViewInit, OnDestroy {
+export class WebernBibliographyComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
-
-    info = 'webern-correspondence works!';
 
     constructor(private _portalService: PortalService) {}
 

@@ -6,6 +6,7 @@ import { ResearchActivitiesComponent } from './research-activities/research-acti
 import { ResearchArchivesComponent } from './research-archives/research-archives.component';
 import { ResearchConferencesComponent } from './research-conferences/research-conferences.component';
 import { ResearchOverviewComponent } from './research-overview/research-overview.component';
+import { ResearchPublicationsComponent } from './research-publications/research-publications.component';
 import { ResearchWebernLecturesComponent } from './research-webern-lectures/research-webern-lectures.component';
 import { ResearchWebernStudiesComponent } from './research-webern-studies/research-webern-studies.component';
 
@@ -21,18 +22,19 @@ const researchRoutes: Routes = [
                     { path: 'studies', component: ResearchWebernStudiesComponent },
                     { path: 'lectures', component: ResearchWebernLecturesComponent },
                     { path: 'conferences', component: ResearchConferencesComponent },
-                    { path: 'archives', component: ResearchArchivesComponent },
+                    { path: 'publications', component: ResearchPublicationsComponent },
                     { path: 'activities', component: ResearchActivitiesComponent },
-                    { path: '', redirectTo: 'overview', pathMatch: 'full' }
-                ]
-            }
-        ]
-    }
+                    { path: 'archives', component: ResearchArchivesComponent },
+                    { path: '', redirectTo: 'overview', pathMatch: 'full' },
+                ],
+            },
+        ],
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(researchRoutes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class ResearchRoutingModule {}
 
@@ -43,5 +45,5 @@ export const routedResearchComponents = [
     ResearchConferencesComponent,
     ResearchOverviewComponent,
     ResearchWebernLecturesComponent,
-    ResearchWebernStudiesComponent
+    ResearchWebernStudiesComponent,
 ];
