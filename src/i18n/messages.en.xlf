@@ -213,21 +213,20 @@
       <trans-unit id="55792841345736423" datatype="html">
         <source> Die Anton Webern Gesamtausgabe lässt sich von einem mit renommierten Musikwissenschaftlern und Webern-Forschern zusammengesetzten Editorial Board beraten:
 </source>
-        <target> The Anton Webern Gesamtausgabe is advised by an Editorial Board whose members are renowned musicologists and Webern scholars:
+        <target state="needs-adaptation"> The Anton Webern Gesamtausgabe is advised by an Editorial Board whose members are renowned musicologists and Webern scholars:
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-board/project-board.component.html</context>
           <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1893230594595958890" datatype="html">
-        <source> Die wichtigsten Kooperationspartner der Anton Webern Gesamtausgabe:
-</source>
-        <target> The Anton Webern Gesamtausgabe’s most important cooperation partners:
-</target>
+      <trans-unit id="1145691638501613344" datatype="html">
+        <source>Die wichtigsten Kooperationspartner der Anton Webern Gesamtausgabe:</source>
+        <target>The Anton Webern Gesamtausgabe’s most important cooperation partners:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-cooperations/project-cooperations.component.html</context>
-          <context context-type="linenumber">2,3</context>
+          <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5276109039371303005" datatype="html">
@@ -235,14 +234,279 @@
         <target> In addition, there are numerous contacts and substantive exchange with related edition projects (<x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.absw.at/aktuell&quot;&gt;"/>Alban Berg<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.schoenberg-gesamtausgabe.de/informationen.html&quot;&gt;"/>Arnold Schönberg<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://simpk.de/wiener_schule_301.html&quot;&gt;"/>Briefwechsel der Wiener Schule<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>), numerous archives, as well as with the international Webern research community. In the area of Digital Humanities, there are also contacts to important communities such as <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://dig-hum.de/&quot;&gt;"/>DHd<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> or <x id="START_LINK_4" equiv-text="&lt;a href=&quot;https://www.dhoxss.net/&quot;&gt;"/>DHOxSS<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, to the Music Encoding Community (<x id="START_LINK_5" equiv-text="&lt;a href=&quot;https://music-encoding.org/&quot;&gt;"/>MEI<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_6" equiv-text="&lt;a href=&quot;https://www.edirom.de/&quot;&gt;"/>ViFE/Edirom<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>) as well as to music-related Semantic Web projects (<x id="START_LINK_7" equiv-text="&lt;a href=&quot;https://www.doremus.org/&quot;&gt;"/>DOREMUS<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_8" equiv-text="&lt;a href=&quot;https://github.com/oerc-music/meld&quot;&gt;"/>MELD<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_9" equiv-text="&lt;a href=&quot;https://trompamusic.eu/&quot;&gt;"/>TROMPA<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>).<x id="START_LINK_10" equiv-text="&lt;a href=&quot;http://www.universaledition.com/&quot;&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_LINK_10" equiv-text="&lt;a href=&quot;http://www.universaledition.com/&quot;&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-cooperations/project-cooperations.component.html</context>
-          <context context-type="linenumber">28,39</context>
+          <context context-type="linenumber">26,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1369534082236186534" datatype="html">
+        <source>Für weitere Links insbesondere zu Archiven siehe auch <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/research', 'archives']&quot;&gt;"/>Forschung/Archive<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <target state="needs-adaptation">Also see <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/research', 'archives']&quot;&gt;"/>Research/Archives<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> for further links related in particular to the archives.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-cooperations/project-cooperations.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3022543557445694316" datatype="html">
+        <source>Dezember</source>
+        <target>December</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5275149212937742107" datatype="html">
+        <source>Neuer Beitrag erschienen: Thomas Ahrend, Michael Matter: "Webern, Anton" (u. a. mit Werkverzeichnis und Bibliographie), in: KDG - Komponisten der Gegenwart, 2018. Online unter <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.munzinger.de/document/17000000630&quot;&gt;"/>Munzinger Online<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <target>New article published: Thomas Ahrend, Michael Matter: "Webern, Anton" (including work catalogue and bibliography), in: KDG - Komponisten der Gegenwart, 2018. Online available at <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.munzinger.de/document/17000000630&quot;&gt;"/>Munzinger Online<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6035640637616570853" datatype="html">
+        <source>Happy Birthday, Webern! Heute <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/resources/4852&quot; target=&quot;_blank&quot;&gt;"/>vor 135 Jahren<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, ebenfalls ein Montag, wird Anton Webern in Wien, III. Bezirk, Löwengasse 53a, „durch eine Hebamme entbunden“.</source>
+        <target>Happy Birthday, Webern! On this day <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/resources/4852&quot; target=&quot;_blank&quot;&gt;"/>135 years ago<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, also a Monday, Anton Webern is "delivered by a midwife" in Vienna, III. district, Löwengasse 53a.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1109977718843277527" datatype="html">
+        <source>November</source>
+        <target>November</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5833739792919411257" datatype="html">
+        <source>Simone Hohmaier wird am 27. November 2018 den nächsten Anton Webern Vortrag zum Thema "Die Korrespondenz zwischen Anton Webern und Alban Berg – Dokument einer wundersamen Freundschaft" halten (18.15 Uhr, Vortragssaal des Musikwissenschaftlichen Seminars, Basel).</source>
+        <target>On November 27th, 2018, Simone Hohmaier will give the next Anton Webern lecture on the topic "The correspondence between Anton Webern and Alban Berg - document of a wondrous friendship" (6.15 p.m., lecture hall of the Musikwissenschaftliches Seminar, Basel).</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="352572573579396133" datatype="html">
+        <source>Flyer Anton Webern Vortrag 2018</source>
+        <target>Flyer Anton Webern Lecture 2018</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5725864740490533353" datatype="html">
+        <source>Weitere Informationen <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://musikwissenschaft.philhist.unibas.ch/de/veranstaltungen/details/news/mws-vortrag-1/&quot;&gt;"/>hier<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/>.</source>
+        <target>Further information <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://musikwissenschaft.philhist.unibas.ch/de/veranstaltungen/details/news/mws-vortrag-1/&quot;&gt;"/>here<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1280165460303116228" datatype="html">
+        <source>Oktober</source>
+        <target>October</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5169386229060539470" datatype="html">
+        <source>Gefunden! Programmzettel von Weberns erstem Konzert als „Vereinschormeister“ des Mödlinger Männer-Gesang-Vereins am 25. November 1921:</source>
+        <target>Newly found! Program sheet of Webern's first concert as “Vereinschormeister” of the Mödlinger Männer-Gesang-Verein on November 25, 1921:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5041653054074764315" datatype="html">
+        <source>Programmzettel Mödlinger Männer-Gesang-Verein 1921</source>
+        <target>Program sheet Mödlinger Männer-Gesang-Verein 1921</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3467775797814862273" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/resources/2574844&quot; target=&quot;_blank&quot;&gt;"/>Die Quelle<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> wurde im Archiv des Männer-Gesang-Vereins (heute: Chor Kontroverse) entdeckt, von seinem aktuellen Leiter Andreas Brüger.</source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/resources/2574844&quot; target=&quot;_blank&quot;&gt;"/>The source<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> was discovered in the archive of the Männer-Gesang-Verein (today: Chor Kontroverse) by its current director Andreas Brüger.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6007938108488521736" datatype="html">
+        <source>März</source>
+        <target>March</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8790369684700739788" datatype="html">
+        <source>Neuer Online-Beitrag erschienen:</source>
+        <target>New Online-article published:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5872622085239011307" datatype="html">
+        <source>September</source>
+        <target>September</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5541756007654365152" datatype="html">
+        <source>Mit über 2000 Einträgen hat die Anton Webern Gesamtausgabe die weltweit größte <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=bibliography&quot; target=&quot;_blank&quot;&gt;"/>Webern-Bibliographie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> zusammengestellt. Sie bietet damit einen umfassenden Überblick über die internationale wissenschaftliche Beschäftigung mit Anton Webern von 1907 bis 2017.</source>
+        <target>The Anton Webern Gesamtausgabe has assembled the worldwide largest bibliography on Webern with more than 2000 entries available <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=bibliography&quot; target=&quot;_blank&quot;&gt;"/>online<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. It provides a comprehensive overview of the international scholarly engagement with Anton Webern from 1907 to 2017.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">78,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3861688459413357367" datatype="html">
+        <source>Eine Auswahl von Webern-Büchern</source>
+        <target>A sample of Webern-related books</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-bibliography/webern-bibliography.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4843131531072359201" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/resources/2173581&quot; target=&quot;_blank&quot;&#xA;            &gt;"/>Konzertprogramm vom 8. Februar 1910<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/> in den Karl Weigl Papers der Yale University gefunden:</source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/resources/2173581&quot; target=&quot;_blank&quot;&#xA;            &gt;"/>Program of February, 8 1910<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/> found in The Karl Weigl Papers at Yale University:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">95,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8504017634289892546" datatype="html">
+        <source>Konzertprogramm vom 8. Februar 1910</source>
+        <target>Concert program for February 8, 1910</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2219446267498213550" datatype="html">
+        <source>Mai</source>
+        <target>May</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6984604668440578862" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=34&quot;&gt;"/>Webern-Studien<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 3 erschienen:</source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=34&quot;&gt;"/>Webern-Studien<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 3 published:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3405361534562359915" datatype="html">
+        <source>hg. von</source>
+        <target>ed.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6036093409057430163" datatype="html">
+        <source>und</source>
+        <target>and</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6282476115324363716" datatype="html">
+        <source>Wien</source>
+        <target>Vienna</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8044499984033738120" datatype="html">
+        <source>Januar</source>
+        <target>January</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4376970150755250849" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.laaber-verlag.wslv.de/popup.php?ID_Buch=837&amp;lang=&quot; target=&quot;_blank&quot;&gt;"/>Musiktheorie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/>-Heft zu Webern und Segantini:</source>
+        <target>Issue of <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.laaber-verlag.wslv.de/popup.php?ID_Buch=837&amp;lang=&quot; target=&quot;_blank&quot;&gt;"/>Musiktheorie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/> on Webern and Segantini:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">124,125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2391813105993233672" datatype="html">
         <source> Die Anton Webern Gesamtausgabe (AWG) ist eine historisch-kritische Edition, die das gesamte kompositorische Schaffen Anton Weberns der Öffentlichkeit in wissenschaftlich angemessener und der musikalischen Praxis dienender Form zugänglich machen will. Die Edition beinhaltet nicht nur die von Webern selbst zum Druck beförderten Werke, sondern auch deren unpublizierte Fassungen, zu Lebzeiten unveröffentlichte Kompositionen, Jugend- und Studienkompositionen sowie Fragmente, Skizzen und Bearbeitungen.
 </source>
-        <target> The Anton Webern Gesamtausgabe (AWG) is a critical-historical edition which aims to make Webern’s entire oeuvre accessible to musical scholarship and practice in a scholarly form. The edition includes not only all the works Webern himself had forwarded to be printed but also their unpublished variants. It also includes compositions that were never made public in his lifetime, works from his youth and student years, as well as fragments, sketches, arrangements and revisions of his and other scores.
+        <target state="needs-adaptation"> The Anton Webern Gesamtausgabe (AWG) is a critical-historical edition which aims to make Webern’s entire oeuvre accessible to musical scholarship and practice in a scholarly form. The edition includes not only all the works Webern himself had forwarded to be printed but also their unpublished variants. It also includes compositions that were never made public in his lifetime, works from his youth and student years, as well as fragments, sketches, arrangements and revisions of his and other scores.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
           <context context-type="linenumber">2,7</context>
@@ -251,8 +515,9 @@
       <trans-unit id="7600611932591139740" datatype="html">
         <source> Die AWG entsteht am <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://mws.unibas.ch/&quot; target=&quot;_blank&quot;&gt;"/>Musikwissenschaftlichen Seminar der Universität Basel<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> in enger inhaltlicher Zusammenarbeit mit der <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.paul-sacher-stiftung.ch/de/home.html&quot; target=&quot;_blank&quot;&gt;"/>Paul Sacher Stiftung, Basel<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>, wo der größte Teil der überlieferten Webern-Quellen aufbewahrt wird. Seit Oktober 2006 wird die Gesamtausgabe vom <x id="START_LINK_2" equiv-text="&lt;a href=&quot;http://p3.snf.ch/project-143565&quot; target=&quot;_blank&quot;&gt;"/>Schweizerischen Nationalfonds<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> und seit 2019 von der <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://sagw.ch/sagw/&quot; target=&quot;_blank&quot;&gt;"/>Schweizerischen Akademie der Geistes- und Sozialwissenschaften<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> gefördert. Außerdem wurde in einer Kooperation mit der <x id="START_LINK_4" equiv-text="&lt;a href=&quot;https://www.oeaw.ac.at/&quot; target=&quot;_blank&quot;&gt;"/>Österreichischen Akademie der Wissenschaften<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> ab 2008 eine <x id="START_LINK_5" equiv-text="&lt;a&#xA;        href=&quot;https://www.oeaw.ac.at/acdh/musikwissenschaft/forschung/musikedition-und-quellendokumentation/anton-webern/&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>Wiener Arbeitsstelle<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> eingerichtet, die Dokumente zur Werkgeschichte, Rezeption und zum historischen Kontext recherchiert. Diese Zusammenarbeit wurde durch Fördermittel der <x id="START_LINK_6" equiv-text="&lt;a&#xA;        href=&quot;http://www.evs-musikstiftung.ch/de/preise/preise/foerderprojekte/symposienpublikationen/anton-webern-briefwechsel-mit-der-universal-0&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>Ernst von Siemens Musikstiftung<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>ausgebaut.
 </source>
-        <target> The AWG is based at the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://mws.unibas.ch/&quot; target=&quot;_blank&quot;&gt;"/>Musicology Seminar of the University of Basel<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> and works in close collaboration with the <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.paul-sacher-stiftung.ch/de/home.html&quot; target=&quot;_blank&quot;&gt;"/>Paul Sacher Stiftung (Basel)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>, which holds most of Webern's existing source material. Since October 2006 the <x id="START_LINK_2" equiv-text="&lt;a href=&quot;http://p3.snf.ch/project-143565&quot; target=&quot;_blank&quot;&gt;"/>Swiss National Scientific Foundation<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> and since 2019 the <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://sagw.ch/sagw/&quot; target=&quot;_blank&quot;&gt;"/>Swiss Academy of Humanities and Social Sciences<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> has supported its activities. Furthermore, since 2008 an <x id="START_LINK_5" equiv-text="&lt;a&#xA;        href=&quot;https://www.oeaw.ac.at/acdh/musikwissenschaft/forschung/musikedition-und-quellendokumentation/anton-webern/&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>office has been set up in Vienna<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> in cooperation with the <x id="START_LINK_4" equiv-text="&lt;a href=&quot;https://www.oeaw.ac.at/&quot; target=&quot;_blank&quot;&gt;"/>Österreichische Akademie der Wissenschaften<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>. Its aim is to find new information and undisclosed documents concerning the history, the reception, and the historical context of Webern’s oeuvre. This collaboration has been extended thanks to a grant from the <x id="START_LINK_6" equiv-text="&lt;a&#xA;        href=&quot;http://www.evs-musikstiftung.ch/de/preise/preise/foerderprojekte/symposienpublikationen/anton-webern-briefwechsel-mit-der-universal-0&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>Ernst von Siemens Musikstiftung<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>.
+        <target state="needs-adaptation"> The AWG is based at the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://mws.unibas.ch/&quot; target=&quot;_blank&quot;&gt;"/>Musicology Seminar of the University of Basel<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> and works in close collaboration with the <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.paul-sacher-stiftung.ch/de/home.html&quot; target=&quot;_blank&quot;&gt;"/>Paul Sacher Stiftung (Basel)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>, which holds most of Webern's existing source material. Since October 2006 the <x id="START_LINK_2" equiv-text="&lt;a href=&quot;http://p3.snf.ch/project-143565&quot; target=&quot;_blank&quot;&gt;"/>Swiss National Scientific Foundation<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> and since 2019 the <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://sagw.ch/sagw/&quot; target=&quot;_blank&quot;&gt;"/>Swiss Academy of Humanities and Social Sciences<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> has supported its activities. Furthermore, since 2008 an <x id="START_LINK_5" equiv-text="&lt;a&#xA;        href=&quot;https://www.oeaw.ac.at/acdh/musikwissenschaft/forschung/musikedition-und-quellendokumentation/anton-webern/&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>office has been set up in Vienna<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/> in cooperation with the <x id="START_LINK_4" equiv-text="&lt;a href=&quot;https://www.oeaw.ac.at/&quot; target=&quot;_blank&quot;&gt;"/>Österreichische Akademie der Wissenschaften<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>. Its aim is to find new information and undisclosed documents concerning the history, the reception, and the historical context of Webern’s oeuvre. This collaboration has been extended thanks to a grant from the <x id="START_LINK_6" equiv-text="&lt;a&#xA;        href=&quot;http://www.evs-musikstiftung.ch/de/preise/preise/foerderprojekte/symposienpublikationen/anton-webern-briefwechsel-mit-der-universal-0&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>Ernst von Siemens Musikstiftung<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
           <context context-type="linenumber">10,31</context>
@@ -261,8 +526,9 @@
       <trans-unit id="2846772538422013422" datatype="html">
         <source> Erscheinen wird die AWG in einer Print-/Online-Hybrid-<x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=30&quot; target=&quot;_blank&quot;&gt;"/>Edition<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, deren gedruckte Bände bei der <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.universaledition.com/&quot; target=&quot;_blank&quot;&gt;"/>Universal Edition, Wien,<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> publiziert und deren online zugängliche Bestandteile und Datenbestände als Open Data über eine eigene Webapplikation (<x id="START_LINK_2" equiv-text="&lt;a&#xA;        href=&quot;https://edition.anton-webern.ch&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>https://edition.anton-webern.ch<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>) präsentiert und über das Software-Framework <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://www.knora.org/&quot; target=&quot;_blank&quot;&gt;"/>Knora<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>/<x id="START_LINK_4" equiv-text="&lt;a&#xA;        href=&quot;https://www.salsah.org/&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>SALSAH<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> des <x id="START_LINK_5" equiv-text="&lt;a href=&quot;http://www.dhlab.unibas.ch/&quot; target=&quot;_blank&quot;&gt;"/>Digital Humanities Lab<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> der Universität Basel aufbereitet werden. Zudem werden die Datenbestände durch das <x id="START_LINK_6" equiv-text="&lt;a href=&quot;https://dasch.swiss/&quot; target=&quot;_blank&quot;&gt;"/>Data and Service Center for Humanities (DaSCH)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> zugänglich gehalten und langfristig aufbewahrt.
 </source>
-        <target> The AWG will be released in a Hybrid Print-Online <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=30&quot; target=&quot;_blank&quot;&gt;"/>Edition<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, the printed volumes being published by <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.universaledition.com/&quot; target=&quot;_blank&quot;&gt;"/>Universal Edition (Vienna)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, the online accessible components and datasets being presented as Open Data via a separate Web application (<x id="START_LINK_2" equiv-text="&lt;a&#xA;        href=&quot;https://edition.anton-webern.ch&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>https://edition.anton-webern.ch<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>) and processed via the software framework <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://www.knora.org/&quot; target=&quot;_blank&quot;&gt;"/>Knora<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>/<x id="START_LINK_4" equiv-text="&lt;a&#xA;        href=&quot;https://www.salsah.org/&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>SALSAH<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> of the <x id="START_LINK_5" equiv-text="&lt;a href=&quot;http://www.dhlab.unibas.ch/&quot; target=&quot;_blank&quot;&gt;"/>Digital Humanities Lab<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> at the University of Basel. In addition, the <x id="START_LINK_6" equiv-text="&lt;a href=&quot;https://dasch.swiss/&quot; target=&quot;_blank&quot;&gt;"/>Data and Service Center for Humanities (DaSCH)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> will make the data accessible and store it for the long term.
+        <target state="needs-adaptation"> The AWG will be released in a Hybrid Print-Online <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=30&quot; target=&quot;_blank&quot;&gt;"/>Edition<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, the printed volumes being published by <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.universaledition.com/&quot; target=&quot;_blank&quot;&gt;"/>Universal Edition (Vienna)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, the online accessible components and datasets being presented as Open Data via a separate Web application (<x id="START_LINK_2" equiv-text="&lt;a&#xA;        href=&quot;https://edition.anton-webern.ch&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>https://edition.anton-webern.ch<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>) and processed via the software framework <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://www.knora.org/&quot; target=&quot;_blank&quot;&gt;"/>Knora<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>/<x id="START_LINK_4" equiv-text="&lt;a&#xA;        href=&quot;https://www.salsah.org/&quot;&#xA;        target=&quot;_blank&quot;&#xA;        &gt;"/>SALSAH<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> of the <x id="START_LINK_5" equiv-text="&lt;a href=&quot;http://www.dhlab.unibas.ch/&quot; target=&quot;_blank&quot;&gt;"/>Digital Humanities Lab<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> at the University of Basel. In addition, the <x id="START_LINK_6" equiv-text="&lt;a href=&quot;https://dasch.swiss/&quot; target=&quot;_blank&quot;&gt;"/>Data and Service Center for Humanities (DaSCH)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> will make the data accessible and store it for the long term.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
           <context context-type="linenumber">34,50</context>
@@ -271,19 +537,12 @@
       <trans-unit id="8378120845685718382" datatype="html">
         <source> Die AWG versteht sich als Kompetenzzentrum, in dem neben den editorischen auch archivarische, dokumentarische, analytisch-forschende, kommunizierende, dienstleistende und organisatorische Aktivitäten vernetzt werden.
 </source>
-        <target> The AWG understands itself as a centre of competence comprising, beside its editorial work, a network of archival, documentary, analytical, communication, service-providing, and organizational activities
+        <target state="needs-adaptation"> The AWG understands itself as a centre of competence comprising, beside its editorial work, a network of archival, documentary, analytical, communication, service-providing, and organizational activities
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
           <context context-type="linenumber">53,55</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5872622085239011307" datatype="html">
-        <source>September</source>
-        <target>September</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1750641140844133054" datatype="html">
@@ -294,60 +553,28 @@
           <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3405361534562359915" datatype="html">
-        <source>hg. von</source>
-        <target>ed.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">100</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6282476115324363716" datatype="html">
-        <source>Wien</source>
-        <target>Vienna</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">101</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="1809521303476565743" datatype="html">
         <source>April</source>
         <target>April</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5051461053214864415" datatype="html">
-        <source>Update des AWG-Editions-Prototyps mit dynamischer <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://edition.anton-webern.ch/edition/composition/op25/graph(side:editionInfo)&quot; target=&quot;_blank&quot;&#xA;            &gt;"/>Graph-Visualisierung der Skizzen zu op. 25/I<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/>.</source>
-        <target>Update of the AWG edition prototype with dynamic <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://edition.anton-webern.ch/edition/composition/op25/graph(side:editionInfo)&quot; target=&quot;_blank&quot;&#xA;            &gt;"/>graph visualization of the sketches to Op. 25/I<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/>.</target>
+        <source>Update des AWG-Editions-Prototyps mit dynamischer <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://edition.anton-webern.ch/edition/composition/op25/graph(side:editionInfo)&quot; target=&quot;_blank&quot;&#xA;                &gt;"/>Graph-Visualisierung der Skizzen zu op. 25/I<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;            &gt;"/>.</source>
+        <target state="needs-adaptation">Update of the AWG edition prototype with dynamic <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://edition.anton-webern.ch/edition/composition/op25/graph(side:editionInfo)&quot; target=&quot;_blank&quot;&#xA;            &gt;"/>graph visualization of the sketches to Op. 25/I<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;        &gt;"/>.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">73,76</context>
+          <context context-type="linenumber">75,78</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6007938108488521736" datatype="html">
-        <source>März</source>
-        <target>March</target>
+      <trans-unit id="136246523859127769" datatype="html">
+        <source>Graph-Visualisierung</source>
+        <target>graph visualisation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">82</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="334452957108284931" datatype="html">
@@ -355,7 +582,7 @@
         <target>Newly published:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4983303062705323867" datatype="html">
@@ -363,7 +590,7 @@
         <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/research', 'studies']&quot;&gt;"/>Webern-Studien<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 4 published:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">96</context>
+          <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2689667414710841997" datatype="html">
@@ -371,15 +598,15 @@
         <target>Research Associate</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">55</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1227443877310595843" datatype="html">
@@ -387,15 +614,15 @@
         <target>Member of the editorial management</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">97</context>
+          <context context-type="linenumber">101</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7492519553920316891" datatype="html">
@@ -403,7 +630,7 @@
         <target> Born 1967 in Berlin. He studied Musicology, Philosophy and Literary Studies in Frankfurt a. M. and Berlin. He received his MA 1996, and his PhD 2005 at Technische Universität Berlin with a dissertation on the instrumental music of Hanns Eisler. 1997–2010 member of the editorial staff of the Hanns Eisler Gesamtausgabe in Berlin. Since September 2010 member of the editorial staff of the Anton Webern Gesamtausgabe at Musikwissenschaftliches Seminar at University of Basel. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">7,12</context>
+          <context context-type="linenumber">9,14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4189621005525646772" datatype="html">
@@ -411,31 +638,31 @@
         <target>[More]</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">48</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">94</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">119</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">135</context>
+          <context context-type="linenumber">139</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1433365361756474209" datatype="html">
@@ -443,11 +670,11 @@
         <target>Research Associate</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">122</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="583238220330038839" datatype="html">
@@ -455,11 +682,11 @@
         <target>Vienna office</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">166</context>
+          <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5014416614704464465" datatype="html">
@@ -467,7 +694,7 @@
         <target> Born in 1974 in Cologne. Studied musicology, German philology and phonetics at the University of Cologne. Received her MA in 2002, with a thesis on Händel's image during the National Socialist era. Research assistant for the Complete Critical Edition of the Writings of Arnold Schönberg from March 2003 to December 2014. Received her Doctorate degree in 2014 at the University of Music and Performing Arts, Vienna, with a disseration on  <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>The Library of Arnold Schönberg<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. Freelance lecturer and editor of scientific publications. Research assistant at the Alban Berg Complete Edition from 2015 to 2017. Since January 2015 research associate at the Department of Musicology at the Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) of the Austrian Academy of Sciences (Vienna branch of the Anton Webern Complete Edition). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">28,37</context>
+          <context context-type="linenumber">32,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="39488386440533206" datatype="html">
@@ -475,7 +702,7 @@
         <target> Born in Bern in 1981. He studied musicology, history and history of art at the universities of Bern and Rome (La Sapienza). He graduated in 2007 and in 2012 he received his PhD from Zurich university with a dissertation on Niels Gade and the ‚nordic tone‘ (<x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Niels W. Gade und der ‚nordische Ton‘. Ein musikgeschichtlicher Präzedenzfall<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>). In addition he worked as a music critic and did internships as an editor (Tübingen), as dramaturge (Biel) and as cultural manager (Freiburg in Breisgau). From 2013 to 2015 he was a research associate at RISM Switzerland. Since March 2013 he has been a research associate of the Anton Webern Gesamtausgabe and since 2015 co-editor of the "Editionen der Schweizerischen Musikforschenden Gesellschaft". </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">53,60</context>
+          <context context-type="linenumber">57,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4083402606837134721" datatype="html">
@@ -483,7 +710,7 @@
         <target> Born 1982. Studied musicology and communication science at the Technische Universität Berlin, MA 2011 with a thesis on cantional setting in Heinrich Schütz's <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Becker-Psalter<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. 2012 research assistant, 2013–2015 research associate of the <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Felix Mendelssohn Bartholdy. Sämtliche Briefe<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> edition at University of Leipzig (co-editor of vols. 9 &amp; 12). Since October 2015 research associate of the Anton Webern Gesamtausgabe, Basel; received his Doctorate degree in 2020 at the department of musicology at the University of Basel with a dissertation about music notation and its codes (<x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Musikalische Schrift und ihre Codes<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">76,83</context>
+          <context context-type="linenumber">80,87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6182066291521705057" datatype="html">
@@ -491,7 +718,7 @@
         <target> Simon Obert is a scholarly staff member of the Paul Sacher Foundation in Basel. His main research interests are the Second Viennese School, music history and aesthetics of the 19th to 21st century, musical analysis and philology, and popular music. He studied Musicology, Art History, Linguistics and Media Studies at the Universities in Heidelberg, Zurich, Konstanz and Freiburg, where he received his MA in 1999. After working as a music journalist and editor, he was 2002–13 assistant at the Musicological Institute at the University of Basel. There he took his PhD in 2006 with a dissertation on musical brevity in the 20th century (<x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Musikalische Kürze zu Beginn des 20. Jahrhunderts<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>). Grants and stipends took him to Harvard University (2003–04), Humboldt University Berlin (2010) and University of Southampton (2011). 2011–12 he was visiting professor for popular music at the University of Vienna, 2013–14 full professor for musicology at the University of Music and Performing Arts Vienna. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">99,108</context>
+          <context context-type="linenumber">103,112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2668525783834212226" datatype="html">
@@ -499,7 +726,7 @@
         <target> Barbara Schingnitz was born in Germany. She read musicology, literature and media studies at Universität Basel, graduating in 2008, and also trained as a classical singer at the Basel Musikhochschule, where she graduated with a Master’s degree in 2010. She has been an associate of the Anton Webern Gesamtausgabe in Basel since 2006. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">124,128</context>
+          <context context-type="linenumber">128,132</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6740481241247005324" datatype="html">
@@ -507,7 +734,7 @@
         <target>Project Manager</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4380558525151774618" datatype="html">
@@ -515,7 +742,7 @@
         <target> Born in Cologne. Studied musicology, German philology, art history and philosophy at the Universities in Bonn, Berlin and Vienna; obtained his MA and his PhD from the Freie Universität Berlin. Research associate of the Arnold Schoenberg Research Center at the Institut für Musikalische Stilforschung of the University of Music and Performing Arts, Vienna. Habilitation from the University of Salzburg. Stipends of the DAAD, the Fritz Thyssen Foundation and the Austrian Research Association took him to Austria, Italy and several times to the USA. Long-standing experience as a lecturer, deputy professor and visiting professor at various universities in Austria, Switzerland, Germany and the Netherlands. In addition to his academic work, he is also active as a music journalist, curator of exhibitions and concert dramaturg. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">144,150</context>
+          <context context-type="linenumber">150,156</context>
         </context-group>
       </trans-unit>
       <trans-unit id="342742957521530086" datatype="html">
@@ -523,7 +750,7 @@
         <target>Former staff members:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">164</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5600623002459425155" datatype="html">
@@ -531,47 +758,51 @@
         <target>Internship:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">171</context>
+          <context context-type="linenumber">177</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3026208196674309481" datatype="html">
         <source> Auf der wissenschaftlichen Forschungsplattform SALSAH verzeichnet die Anton Webern Gesamtausgabe unter der Rubrik <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.salsah.org/webern/search.php?restype=bibliography&quot; target=&quot;_blank&quot;&gt;"/>Bibliografie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> originale Schriften des Komponisten sowie Forschungsliteratur im Zusammenhang mit Anton Webern. Erfasst werden Aufsätze in Zeitschriften und Sammelbänden, Monographien, Hochschulschriften und Lexikoneinträge. Diese bibliografische Datenbank bietet damit einen umfassenden Überblick über die internationale wissenschaftliche Beschäftigung mit Anton Webern seit 1907 bis heute und wird laufend ergänzt.
 </source>
-        <target> On the Knora/SALSAH research platform the Anton Webern Complete Edition is compiling a <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.salsah.org/webern/search.php?restype=bibliography&quot; target=&quot;_blank&quot;&gt;"/>bibliography<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> with original writings of the composer as well as research literature related to Anton Webern. It includes articles in journals and anthologies, monographs, university theses and encyclopaedia entries. This bibliographical database thus offers a comprehensive overview of the international scholarly work on Anton Webern from 1907 to the present day and is constantly being expanded.
+        <target state="needs-adaptation"> On the Knora/SALSAH research platform the Anton Webern Complete Edition is compiling a <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.salsah.org/webern/search.php?restype=bibliography&quot; target=&quot;_blank&quot;&gt;"/>bibliography<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> with original writings of the composer as well as research literature related to Anton Webern. It includes articles in journals and anthologies, monographs, university theses and encyclopaedia entries. This bibliographical database thus offers a comprehensive overview of the international scholarly work on Anton Webern from 1907 to the present day and is constantly being expanded.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-bibliography/webern-bibliography.component.html</context>
           <context context-type="linenumber">2,8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5423415026568401801" datatype="html">
-        <source> Auf der wissenschaftlichen Forschungsplattform SALSAH erstellt die Anton Webern Gesamtausgabe eine <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&#xA;        href=&quot;http://www.salsah.org/webern/search.php?restype=chronology&quot;&#xA;        target=&quot;_blank&quot;&gt;"/>Chronologie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, in der Ereignisse im Leben des Komponisten wie auch die Stationen im Kompositionsprozeß eines Werks, von der Anfertigung erster Skizzen über etwaige Fassungen bis hin zu Reinschrift und je nachdem Drucklegung, festgehalten werden. Die Chronologie befindet sich im Aufbau und wird laufend erweitert.
+        <source> Auf der wissenschaftlichen Forschungsplattform SALSAH erstellt die Anton Webern Gesamtausgabe eine <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=chronology&quot; target=&quot;_blank&quot;&gt;"/>Chronologie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, in der Ereignisse im Leben des Komponisten wie auch die Stationen im Kompositionsprozeß eines Werks, von der Anfertigung erster Skizzen über etwaige Fassungen bis hin zu Reinschrift und je nachdem Drucklegung, festgehalten werden. Die Chronologie befindet sich im Aufbau und wird laufend erweitert.
 </source>
-        <target> On the Knora/SALSAH research platform the Anton Webern Gesamtausgabe is compiling a <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&#xA;        href=&quot;http://www.salsah.org/webern/search.php?restype=chronology&quot;&#xA;        target=&quot;_blank&quot;&gt;"/>chronology<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>. This chronology aims to record the main events in the composer’s life as well as the various stages in a work’s compositional process. These stages range from the completion of initial drafts, followed by eventual variants, to the fair copy and, as the case might be, to the printed score. This chronology is under construction and is constantly being expanded.
+        <target state="needs-adaptation"> On the Knora/SALSAH research platform the Anton Webern Gesamtausgabe is compiling a <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&#xA;        href=&quot;http://www.salsah.org/webern/search.php?restype=chronology&quot;&#xA;        target=&quot;_blank&quot;&gt;"/>chronology<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&#xA;    &gt;"/>. This chronology aims to record the main events in the composer’s life as well as the various stages in a work’s compositional process. These stages range from the completion of initial drafts, followed by eventual variants, to the fair copy and, as the case might be, to the printed score. This chronology is under construction and is constantly being expanded.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">2,5</context>
+          <context context-type="linenumber">2,7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7905576211288803039" datatype="html">
         <source> Verknüpfungen mit Objekten aus dem Bereich <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=19&quot;&gt;"/>Briefe<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, in denen auf Entstehung oder Publikation von Werken, auf Uraufführungen und Konzerte, aber auch biographische Aspekte wie Reisen, Krankheiten, Dirigier- oder Unterrichtstätigkeiten eingegangen wird, oder auch mit anderen Zusatzmaterialien, wie z. B. Herstellungskarten der Universal Edition, dienen als Nachweise der Ereignisse. Externe Links, etwa zu digitalisierten Ausgaben der damaligen Tagespresse, ordnen sie innerhalb des Zeitgeschehens ein und liefern zusätzliche Informationen. Auf diese Weise entsteht ein detaillierter Zeitstrahl, mit dessen Hilfe sich einzelne Stränge unterschiedlichster Thematik verfolgen lassen: Je nach Interesse können größere Lebens- oder Schaffensperioden überblickt oder aber sogar verschiedene Ereignisse innerhalb eines einzelnen Tages nachvollzogen werden.
 </source>
-        <target> Evidence for these events can be accessed through hyperlinks to objects in <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=19&quot;&gt;"/>Letters<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>dealing with the genesis or publication of works, world premieres and concerts, biographical aspects including travel, diseases, activities as a conductor or as a teacher, as well as with other additionally related objects, e.g. production cards of Universal Edition. External links, such as digitalized issues of newspapers of the period, are aligned with current events and supply additional information. This contributes to a detailed time line which facilitates the observation of single threads within the diversity of the subject matter: allowing for overviews of longer periods of his life or career, as well as, depending on interest, the comprehension of different events within a single day.
+        <target state="needs-adaptation"> Evidence for these events can be accessed through hyperlinks to objects in <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=19&quot;&gt;"/>Letters<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>dealing with the genesis or publication of works, world premieres and concerts, biographical aspects including travel, diseases, activities as a conductor or as a teacher, as well as with other additionally related objects, e.g. production cards of Universal Edition. External links, such as digitalized issues of newspapers of the period, are aligned with current events and supply additional information. This contributes to a detailed time line which facilitates the observation of single threads within the diversity of the subject matter: allowing for overviews of longer periods of his life or career, as well as, depending on interest, the comprehension of different events within a single day.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">8,17</context>
+          <context context-type="linenumber">10,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7661923054382696669" datatype="html">
         <source> Auf SALSAH wird jedes Ereignis einzeln katalogisiert. Die Suche lässt sich nach verschiedenen Parametern eingrenzen (z. B. nach bestimmten Zeitperioden, Orten, Personen, Werken oder weiteren Schlagwörtern zur Volltextsuche).
 </source>
-        <target> SALSAH catalogues each event independently. Search results can therefore be narrowed down according to various parameters (e.g. specific time periods, places, people, works, or other keywords using the full-text search).
+        <target state="needs-adaptation"> SALSAH catalogues each event independently. Search results can therefore be narrowed down according to various parameters (e.g. specific time periods, places, people, works, or other keywords using the full-text search).
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">20,22</context>
+          <context context-type="linenumber">22,24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2293790145688911855" datatype="html">
@@ -579,15 +810,11 @@
         <target>Wienbibliothek im Rathaus, Vienna</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">30</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
@@ -595,19 +822,23 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">79</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">85</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">113</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8086620605652368094" datatype="html">
@@ -615,14 +846,19 @@
         <target>Anton Webern with his son Peter and daughter Christine on Mount Schneealpe (Styria), summer 1928</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7271289436423039521" datatype="html">
         <source> Auf der wissenschaftlichen Forschungsplattform SALSAH archiviert die Anton Webern Gesamtausgabe unter der Rubrik <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=correspondence&quot; target=&quot;_blank&quot;&gt;"/>Briefe<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> Korrespondenzen Weberns, die zur Einordnung und Verifizierung biographischer Ereignisse und zur Dokumentation der Entstehungsgeschichte seiner Werke beitragen. Diese Briefdatenbank befindet sich im Aufbau und wird laufend ergänzt.
 </source>
-        <target> On the Knora/SALSAH research platform the Anton Webern Gesamtausgabe is archiving Webern’s correspondence under the heading <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=correspondence&quot; target=&quot;_blank&quot;&gt;"/>Letters<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. This correspondence contains relevant information for the classification and verification of biographical events and documents the genesis of his works. This database is under construction and is constantly being expanded.
+        <target state="needs-adaptation"> On the Knora/SALSAH research platform the Anton Webern Gesamtausgabe is archiving Webern’s correspondence under the heading <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=correspondence&quot; target=&quot;_blank&quot;&gt;"/>Letters<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. This correspondence contains relevant information for the classification and verification of biographical events and documents the genesis of his works. This database is under construction and is constantly being expanded.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-letters/webern-letters.component.html</context>
           <context context-type="linenumber">2,6</context>
@@ -631,8 +867,9 @@
       <trans-unit id="8030915917375250162" datatype="html">
         <source> Neben Weberns ‚großen‘ Briefwechseln – z. B. mit Arnold Schönberg, Alban Berg, seiner Librettistin der späteren Jahre Hildegard Jone, mit Heinrich Jalowetz oder mit der Universal Edition - wird auch sein Schriftverkehr mit zahlreichen weiteren Personen so umfänglich wie möglich erfasst.
 </source>
-        <target> Besides the more substantial exchange of letters – for example with Arnold Schoenberg, Alban Berg, Hildegard Jone (his librettist in the later years), Heinrich Jalowetz, or Universal Edition – his correspondence with numerous other people is also being gathered as extensively as possible.
+        <target state="needs-adaptation"> Besides the more substantial exchange of letters – for example with Arnold Schoenberg, Alban Berg, Hildegard Jone (his librettist in the later years), Heinrich Jalowetz, or Universal Edition – his correspondence with numerous other people is also being gathered as extensively as possible.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-letters/webern-letters.component.html</context>
           <context context-type="linenumber">9,12</context>
@@ -641,8 +878,9 @@
       <trans-unit id="7300864522831724688" datatype="html">
         <source> Auf SALSAH wird jedes Dokument einzeln katalogisiert. Zu jedem solchen Objekt sind für den Nutzer Kurzinformationen (Adressat, Absender, Datum, Ort, Incipit, Kurzinhalt) abrufbar. Die Suche ist nach verschiedenen Parametern eingrenzbar (z. B. Korrespondenzpartnern, Datum).
 </source>
-        <target> SALSAH catalogues each document individually. Users can retrieve information (addressee, sender, date, place, incipit, brief description and summary) for each of these objects. Searching can be filtered by various parameters (e.g. correspondence partners, date).
+        <target state="needs-adaptation"> SALSAH catalogues each document individually. Users can retrieve information (addressee, sender, date, place, incipit, brief description and summary) for each of these objects. Searching can be filtered by various parameters (e.g. correspondence partners, date).
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-letters/webern-letters.component.html</context>
           <context context-type="linenumber">15,18</context>
@@ -653,14 +891,19 @@
         <target>Anton Webern, letter to Arnold Schönberg, Christmas 1908</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-letters/webern-letters.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-letters/webern-letters.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="419148864508886384" datatype="html">
         <source> Die Anton Webern Gesamtausgabe erarbeitet im Zuge der Edition sämtlicher Kompositionen Anton Weberns eine möglichst lückenlose Dokumentation einerseits der Biographie des Komponisten, andererseits der Entstehungs-, Publikations- und Aufführungsgeschichte seiner Werke. Zu diesem Zweck werden auf der vom Digital Humanities Lab (DHLab) der philosophisch-historischen Fakultät der Universität Basel entwickelten Forschungsplattform KNORA (Platform for <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Kn<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>owledge <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>O<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>rganization, <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>R<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>epresentation and <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>A<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>nnotation; Zugang: SALSAH) Informationen unterschiedlicher Art – sowohl materielle Objekte als auch immaterielle Ereignisse – archiviert und verknüpft: Eine <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=6&quot;&gt;"/>Chronologie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, die Weberns Leben privat wie auch beruflich als Ganzes wie auch im Detail beschreibt und die Entwicklung seiner Werke dokumentiert, wird durch Verweise auf materielle Zeugnisse (z. B. Korrespondenzen, wie sie in der Rubrik <x id="START_LINK_1" equiv-text="&lt;a href=&quot;index.php?id=19&quot;&gt;"/>Briefe<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> archiviert und kategorisiert werden) verifiziert. Schlagworthafte Kurzinformationen zu relevanten <x id="START_LINK_2" equiv-text="&lt;a href=&quot;index.php?id=20&quot;&gt;"/>Personen<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> dienen der besseren Übersicht über Kontakte und das soziale Umfeld des Komponisten.
 </source>
-        <target> As a part of the complete edition of Anton Webern’s compositions the Anton Webern Gesamtausgabe is compiling a full documentation of the composer’s biography, as well as of the genesis, publication and performance history of his works. To this end all types of data, including both tangible objects and intangible events, are archived and interrelated using the research platform Knora (Platform for <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Kn<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>owledge <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>O<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>rganization, <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>R<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>epresentation and <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>A<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>nnotation; access: SALSAH) developed by Digital Humanities Lab (DHLab) of the Faculty of Humanities of Basel University. A <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=6&quot;&gt;"/>chronology<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, which gives both a general and a detailed description of Webern’s private as well as professional life and which also documents the development of his works, is substantiated by references to material evidence (e.g. correspondence, as archived and categorized under the heading <x id="START_LINK_1" equiv-text="&lt;a href=&quot;index.php?id=19&quot;&gt;"/>Letters<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>). Keyword-like short information on relevant <x id="START_LINK_2" equiv-text="&lt;a href=&quot;index.php?id=20&quot;&gt;"/>persons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> ensures a better overview of contacts and of the composer's social environment.
+        <target state="needs-adaptation"> As a part of the complete edition of Anton Webern’s compositions the Anton Webern Gesamtausgabe is compiling a full documentation of the composer’s biography, as well as of the genesis, publication and performance history of his works. To this end all types of data, including both tangible objects and intangible events, are archived and interrelated using the research platform Knora (Platform for <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Kn<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>owledge <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>O<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>rganization, <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>R<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>epresentation and <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>A<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>nnotation; access: SALSAH) developed by Digital Humanities Lab (DHLab) of the Faculty of Humanities of Basel University. A <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=6&quot;&gt;"/>chronology<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, which gives both a general and a detailed description of Webern’s private as well as professional life and which also documents the development of his works, is substantiated by references to material evidence (e.g. correspondence, as archived and categorized under the heading <x id="START_LINK_1" equiv-text="&lt;a href=&quot;index.php?id=19&quot;&gt;"/>Letters<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>). Keyword-like short information on relevant <x id="START_LINK_2" equiv-text="&lt;a href=&quot;index.php?id=20&quot;&gt;"/>persons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> ensures a better overview of contacts and of the composer's social environment.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">2,14</context>
@@ -677,8 +920,9 @@
       <trans-unit id="8369069201983008574" datatype="html">
         <source> Am 3. Dezember 1883 in Wien geboren, wuchs Anton Webern in Wien, Graz und Klagenfurt sowie auf dem väterlichen Gut Preglhof in Kärnten auf. In Klagenfurt, wo er auch das humanistische Gymnasium besuchte, erhielt er seine erste musikalische und musiktheoretische Ausbildung und sammelte praktische Erfahrung als Cellist im örtlichen Konzertvereinsorchester. Ab dem Herbstsemester 1902 studierte Webern Musikwissenschaft im von Guido Adler geleiteten musikwissenschaftlichen Institut in Wien, wo er 1906 mit einer Dissertation zu Heinrich Isaacs <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Choralis Constantinus<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> abschloss. 1904–1908 war er Kompositionsschüler Arnold Schönbergs, dem er zeitlebens eng verbunden blieb. Versuche einer Karriere als fest engagierter Dirigent an diversen Musiktheatern (Teplitz, Bad Ischl, Danzig, Stettin, Prag) scheiterten.
 </source>
-        <target> Born December 3, 1883 in Vienna, Anton Webern grew up in Vienna, Graz, and Klagenfurt as well as at Preglhof, the family estate in Carinthia. He received his initial education in music performance and theory in Klagenfurt where he also attended the <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Humanistische Gymnasium<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> (classical grammar school) and gained practical experience as a cellist with the orchestra of the local Concert Society. In the autumn of 1902 Webern began to study musicology at the Musicological Institute in Vienna under Guido Adler. He graduated in 1906 with a dissertation on Heinrich Isaac’s <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Choralis Constantinus<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. From 1904 to 1908 he studied composition with Arnold Schoenberg with whom he remained in close contact throughout his life. Efforts to obtain a position as a permanent conductor in various music theatres (Teplitz, Bad Ischl, Danzig, Stettin, Prague) ended in failure.
+        <target state="needs-adaptation"> Born December 3, 1883 in Vienna, Anton Webern grew up in Vienna, Graz, and Klagenfurt as well as at Preglhof, the family estate in Carinthia. He received his initial education in music performance and theory in Klagenfurt where he also attended the <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Humanistische Gymnasium<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> (classical grammar school) and gained practical experience as a cellist with the orchestra of the local Concert Society. In the autumn of 1902 Webern began to study musicology at the Musicological Institute in Vienna under Guido Adler. He graduated in 1906 with a dissertation on Heinrich Isaac’s <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Choralis Constantinus<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. From 1904 to 1908 he studied composition with Arnold Schoenberg with whom he remained in close contact throughout his life. Efforts to obtain a position as a permanent conductor in various music theatres (Teplitz, Bad Ischl, Danzig, Stettin, Prague) ended in failure.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">21,29</context>
@@ -687,8 +931,9 @@
       <trans-unit id="1897255032702585127" datatype="html">
         <source> Nach dem Ersten Weltkrieg unterrichtete Webern Privatschüler in Musiktheorie und Komposition und arbeitete u. a. als Vortragsmeister beim Verein für musikalische Privataufführungen (1918–1922), als Klavierlehrer und Chorleiter am Israelitischen Blindeninstitut in Wien (1925–1931) oder übernahm (in seinen letzten Lebensjahren) auch Aufgaben als Arrangeur fremder Werke für die Universal Edition.
 </source>
-        <target> After World War I, Webern taught music theory and composition to private students. He also worked as a <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Vortragsmeister<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> (rehearsal coach) for the Society for Private Musical Performances (1918–1922), as a piano teacher and choirmaster at the Jewish Institute for the Blind in Vienna (1925–1931) and, towards the end of his life, he accepted to arrange works by other composers for Universal Edition.
+        <target state="needs-adaptation"> After World War I, Webern taught music theory and composition to private students. He also worked as a "Vortragsmeister" (rehearsal coach) for the Society for Private Musical Performances (1918–1922), as a piano teacher and choirmaster at the Jewish Institute for the Blind in Vienna (1925–1931) and, towards the end of his life, he accepted to arrange works by other composers for Universal Edition.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">32,36</context>
@@ -697,8 +942,9 @@
       <trans-unit id="5941840387880682932" datatype="html">
         <source> Als Dirigent verschiedenster Chöre und Orchester (z. B. des Wiener Schubertbundes, des Mödlinger Männergesangvereins, der Arbeiter-Symphoniekonzerte der Sozialdemokratischen Kunststelle in Wien) wurde er in den Zwanziger- und Dreissigerjahren einem breiteren Publikum bekannt. Ab 1927 dirigierte er im Wiener Rundfunk, wo er zwischen 1930 und 1939 noch als Lektor und Zensor arbeitete. Seine Tätigkeit als Dirigent im Inland endete allerdings 1934 nach dem Dollfuß-Putsch. Wenige Auslandsengagements führten ihn ab 1929 mehrfach nach London sowie nach Deutschland.
 </source>
-        <target> As a conductor of various choirs and orchestras (e.g. the Wiener Schubertbund, the Mödlinger Männergesangverein, the Arbeiter-Symphoniekonzerte der Sozialdemokratischen Kunststelle in Vienna), he became known to a wider public in the twenties and thirties. From 1927 onwards, he worked as a conductor at the Viennese Radio where he was also employed as editor and censor (1930–1939). On the national level, his activities as a conductor ceased after the Dollfuß putsch in 1934. From 1929 onwards, a few international engagements took him several times to London and Germany.
+        <target state="needs-adaptation"> As a conductor of various choirs and orchestras (e.g. the Wiener Schubertbund, the Mödlinger Männergesangverein, the Arbeiter-Symphoniekonzerte der Sozialdemokratischen Kunststelle in Vienna), he became known to a wider public in the twenties and thirties. From 1927 onwards, he worked as a conductor at the Viennese Radio where he was also employed as editor and censor (1930–1939). On the national level, his activities as a conductor ceased after the Dollfuß putsch in 1934. From 1929 onwards, a few international engagements took him several times to London and Germany.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">39,45</context>
@@ -707,8 +953,9 @@
       <trans-unit id="6503759721694116730" datatype="html">
         <source> Weberns erste kompositorische Zeugnisse sind ab ca. 1900 überliefert. Vor dem Ersten Weltkrieg beschäftigte er sich zunächst mit frei-‚atonalen‘ Kompositionen, in den 1920er Jahren entwickelte er dann eine spezifische, radikal konzentrierte Form der Zwölftontechnik. Sein Œuvre umfasst von ihm selbst so benannte 31 Opuswerke aus den Jahren 1908–1944 (vorwiegend bei der Universal Edition veröffentlicht, ab op. 29: posthum publiziert), darüber hinaus Bearbeitungen eigener und fremder Werke sowie weitere Kompositionen (teils posthum publiziert) und Skizzen.
 </source>
-        <target> The earliest documented examples of Webern’s compositional activity date from around 1900. Before World War I, he first occupied himself with free, atonal compositions, then, in the 1920s he developed a specific, radically concentrated form of twelve-tone technique. His oeuvre comprises 31 ‚Opuswerke‘, opus works, composed between 1908–1944 (mainly published by Universal Edition, from op. 29 posthumously). It also includes arrangements of his own and other composer’s works, as well as further compositions (partly published posthumously), and drafts.
+        <target state="needs-adaptation"> The earliest documented examples of Webern’s compositional activity date from around 1900. Before World War I, he first occupied himself with free, atonal compositions, then, in the 1920s he developed a specific, radically concentrated form of twelve-tone technique. His oeuvre comprises 31 ‚Opuswerke‘, opus works, composed between 1908–1944 (mainly published by Universal Edition, from op. 29 posthumously). It also includes arrangements of his own and other composer’s works, as well as further compositions (partly published posthumously), and drafts.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">48,53</context>
@@ -717,8 +964,9 @@
       <trans-unit id="5817673600606021993" datatype="html">
         <source> Mit seiner Frau Wilhelmine (Minna), geb. Mörtl, die er im Februar 1911 geheiratet hatte, und den vier Kindern Amalie, Maria, Peter und Christine lebte Webern vorwiegend in der Umgebung Wiens, zunächst in Mödling, später in Maria Enzersdorf. Dort verbrachte das Ehepaar Webern auch die Jahre des Zweiten Weltkriegs. Anfang April 1945 flüchteten sie nach Mittersill im Oberpinzgau, wo Anton Webern am 15. September von einem amerikanischen Besatzungssoldaten erschossen wurde.
 </source>
-        <target> Webern, his wife Wilhelmine (Minna), born Mörtl, who he married in February 1911, and their four children Amalie, Maria, Peter and Christine lived mostly near Vienna, first in Mödling and then later in Maria Enzersdorf where the Webern couple remained throughout the Second World War. At the beginning of April 1945 they fled to Mittersill in Oberpinzgau, where, on September 15, Anton Webern was shot dead by a soldier of the American occupation forces.
+        <target state="needs-adaptation"> Webern, his wife Wilhelmine (Minna), born Mörtl, who he married in February 1911, and their four children Amalie, Maria, Peter and Christine lived mostly near Vienna, first in Mödling and then later in Maria Enzersdorf where the Webern couple remained throughout the Second World War. At the beginning of April 1945 they fled to Mittersill in Oberpinzgau, where, on September 15, Anton Webern was shot dead by a soldier of the American occupation forces.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">56,61</context>
@@ -729,7 +977,11 @@
         <target>Anton Webern with his wife Minna and daughter Mali, 1912</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7941821556229055658" datatype="html">
@@ -737,7 +989,11 @@
         <target>Webern serving in the army, with daughter Mali, 1915</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2254265657068057443" datatype="html">
@@ -745,7 +1001,11 @@
         <target>Webern on a choir trip, ca. 1925</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8032091363137465950" datatype="html">
@@ -753,14 +1013,19 @@
         <target>Webern conducting, 1933</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4948186215495826060" datatype="html">
         <source> Auf der wissenschaftlichen Forschungsplattform SALSAH sammelt die Anton Webern Gesamtausgabe unter der Rubrik <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=person&quot; target=&quot;_blank&quot;&gt;"/>Personen<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> Informationen zum Umfeld Anton Weberns. Berücksichtigt werden sowohl sein Familien-, Freundes- oder Kollegenkreis, wie er sich aus biographischen Angaben, eigenen Aussagen in Briefen, Tagebüchern, Notizen oder mittels Erinnerungen aus zweiter Hand rekonstruieren lässt, als auch Personen, die im weiteren Sinne mit dem Komponisten in Verbindung standen, oder mit denen er sich, sei es direkt oder indirekt, in irgendeiner Form auseinandersetzte, wie etwa diverse Persönlichkeiten aus Theater- und Musikbetrieb. Die Personendatenbank befindet sich im Aufbau und wird laufend erweitert.
 </source>
-        <target> On the Knora/SALSAH research platform the Anton Webern Gesamtausgabe is collecting information relating to Anton Webern’s circle under the heading <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=person&quot; target=&quot;_blank&quot;&gt;"/>Persons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. This section concerns his family circle as well as his friends and colleagues, as far as can be gathered from biographical information, his own statements in letters, diaries, notes, or memories from others. Also included are people who, in a broader sense, were in contact with the composer, or who he was in touch with, directly or indirectly, such as various personalities from the theatre and music industry. This person-database is under construction and is constantly extended.
+        <target state="needs-adaptation"> On the Knora/SALSAH research platform the Anton Webern Gesamtausgabe is collecting information relating to Anton Webern’s circle under the heading <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=person&quot; target=&quot;_blank&quot;&gt;"/>Persons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. This section concerns his family circle as well as his friends and colleagues, as far as can be gathered from biographical information, his own statements in letters, diaries, notes, or memories from others. Also included are people who, in a broader sense, were in contact with the composer, or who he was in touch with, directly or indirectly, such as various personalities from the theatre and music industry. This person-database is under construction and is constantly extended.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
           <context context-type="linenumber">2,9</context>
@@ -769,8 +1034,9 @@
       <trans-unit id="2125061917693378001" datatype="html">
         <source> Für jede Person ist ein eigenes Objekt mit Stichworten angelegt, die kurz über biographische Eckdaten sowie über den jeweiligen Bezug zu Anton Webern informieren.
 </source>
-        <target> Each person is classified as a separate object, with keyword information about important biographical facts as well as about their connection to Anton Webern.
+        <target state="needs-adaptation"> Each person is classified as a separate object, with keyword information about important biographical facts as well as about their connection to Anton Webern.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
           <context context-type="linenumber">12,14</context>
@@ -781,14 +1047,19 @@
         <target>Anton Webern with Hildegard Jone and Josef Humplik, ca. 1928</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6467457701440667380" datatype="html">
         <source> Die Plattform SALSAH bietet unter der Rubrik <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=musical_piece&quot; target=&quot;_blank&quot;&gt;"/>Moldenhauer-Nummer<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> eine Liste mit Weberns sämtlichen Werken geordnet nach ihrer Moldenhauer-Nummer. Moldenhauer erstellte ein chronologisches Werkverzeichnis und ordnete (mit einigen Ausnahmen) jedem ihm bekannten Einzelstück, gleich ob Bestandteil eines mehrsätzigen Werkes oder separat für sich stehend, eine Nummer zu. Die AWG hat trotz vereinzelter Zweifel an der chronologischen Richtigkeit diese Nummerierung als Basis bei der Strukturierung von Weberns kompositorischem Œuvre übernommen, erweitert oder modifiziert sie jedoch bei Bedarf. Von Moldenhauer nicht erfassten Stücken ordnet die AWG ungeachtet der Chronologie eine neue Nummer zu. Diese neu vergebenen Nummern beginnen zur klaren Abgrenzung von den ursprünglichen 347 Moldenhauer-Nummern ab der Nummer 400.
 </source>
-        <target> In the section entitled <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=musical_piece&quot; target=&quot;_blank&quot;&gt;"/>Moldenhauer No.<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> (Moldenhauer numbers), the Knora/SALSAH platform provides a list of Webern’s complete works arranged according to their Moldenhauer numbers. Hans Moldenhauer made a chronological index of works and, with a few exceptions, attributed a number to each work known to him, regardless of whether it was part of a larger work or a piece in its own right. Despite harbouring occasional doubts as to its chronological accuracy, the AWG has taken over this numbering system which serves as a basis for the structuring of Webern’s oeuvre, but has however taken the liberty of extending or modifying it as required. The AWG has attributed a new number to pieces not included by Moldenhauer, irrespective of their chronology. These new numbers begin at 400, so as to clearly differentiate them from the original Moldenhauer numbering system, which runs to 347.
+        <target state="needs-adaptation"> In the section entitled <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=musical_piece&quot; target=&quot;_blank&quot;&gt;"/>Moldenhauer No.<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> (Moldenhauer numbers), the Knora/SALSAH platform provides a list of Webern’s complete works arranged according to their Moldenhauer numbers. Hans Moldenhauer made a chronological index of works and, with a few exceptions, attributed a number to each work known to him, regardless of whether it was part of a larger work or a piece in its own right. Despite harbouring occasional doubts as to its chronological accuracy, the AWG has taken over this numbering system which serves as a basis for the structuring of Webern’s oeuvre, but has however taken the liberty of extending or modifying it as required. The AWG has attributed a new number to pieces not included by Moldenhauer, irrespective of their chronology. These new numbers begin at 400, so as to clearly differentiate them from the original Moldenhauer numbering system, which runs to 347.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-moldenhauer/works-moldenhauer.component.html</context>
           <context context-type="linenumber">2,11</context>
@@ -797,8 +1068,9 @@
       <trans-unit id="1350066534615141300" datatype="html">
         <source> Zu jeder Nummer findet sich ein Eintrag mit kurzen Informationen zu Entstehung, gegebenenfalls Uraufführung und/oder Drucklegung eines Stücks sowie eine Quellenübersicht. Verweise auf einen größeren Kontext innerhalb von Werkzusammenhängen, Fassungen oder Ähnlichem werden durch Verknüpfungen angezeigt (dieser Bereich befindet sich im Aufbau und wird laufend erweitert und ergänzt).
 </source>
-        <target> For each number there is an entry with brief information about the origins of the work and, where appropriate, its first performance and/or publication, as well as an outline of its various sources. References to a broader scheme within the context of the composer’s other works and the differing versions of a given work etc., are indicated via links (this area is still being developed and is regularly extended and supplemented).
+        <target state="needs-adaptation"> For each number there is an entry with brief information about the origins of the work and, where appropriate, its first performance and/or publication, as well as an outline of its various sources. References to a broader scheme within the context of the composer’s other works and the differing versions of a given work etc., are indicated via links (this area is still being developed and is regularly extended and supplemented).
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-moldenhauer/works-moldenhauer.component.html</context>
           <context context-type="linenumber">14,18</context>
@@ -831,8 +1103,9 @@
       <trans-unit id="9108824038722461886" datatype="html">
         <source> Die Plattform SALSAH bietet unter der Rubrik <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=opus&quot; target=&quot;_blank&quot;&gt;"/>Opuszahl<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> eine Liste mit Weberns Werken geordnet nach ihrer Opuszahl. Anton Webern hat allerdings nur einen Teil seiner Kompositionen mit einer Opuszahl versehen. Zu jeder Opuszahl findet sich ein Eintrag mit kurzen Informationen zu Entstehung, gegebenenfalls Uraufführung und/oder Drucklegung eines Stücks sowie eine Quellenübersicht. Verweise auf einen größeren Kontext innerhalb von Werkzusammenhängen, Fassungen oder Ähnlichem werden durch Verknüpfungen angezeigt (dieser Bereich befindet sich im Aufbau und wird laufend erweitert und ergänzt).
 </source>
-        <target> In the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=opus&quot; target=&quot;_blank&quot;&gt;"/>opus numbers<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> section, the Knora/SALSAH research platform provides a list of Webern's complete works arranged according to their opus number. Anton Webern himself only allocated opus numbers to certain of his compositions. For each opus number there is an entry with brief information about the origins of the work, its first performance and/or publication, as well as an outline of its various sources. References to a broader scheme within the context of the composer's other works and the differing versions of a given work etc., are indicated via links (this area is still being developed and is regularly extended and supplemented).
+        <target state="needs-adaptation"> In the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=opus&quot; target=&quot;_blank&quot;&gt;"/>opus numbers<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> section, the Knora/SALSAH research platform provides a list of Webern's complete works arranged according to their opus number. Anton Webern himself only allocated opus numbers to certain of his compositions. For each opus number there is an entry with brief information about the origins of the work, its first performance and/or publication, as well as an outline of its various sources. References to a broader scheme within the context of the composer's other works and the differing versions of a given work etc., are indicated via links (this area is still being developed and is regularly extended and supplemented).
     </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-opus/works-opus.component.html</context>
           <context context-type="linenumber">2,9</context>
@@ -865,8 +1138,9 @@
       <trans-unit id="3183614456317213746" datatype="html">
         <source> Anton Weberns Œuvre beinhaltet neben einigen orchestralen Werken hauptsächlich Lieder und Kammermusik in verschiedenster Besetzung. Während die mit einer Opuszahl versehenen Werke (op. 1–31) größtenteils noch zu Lebzeiten bei der UE in Wien im Druck erschienen sind, ist ein beträchtlicher Teil des kompositorischen Nachlasses – darunter zahlreiche Kompositionen aus seiner Jugend und Studienzeit, teils auch aus dem zwischen 1904 und 1908 stattgefundenen Unterricht bei Schönberg stammend – erst nach seinem Tod entdeckt und der Öffentlichkeit zugänglich gemacht worden.
 </source>
-        <target> Anton Webern’s oeuvre mainly consists of numerous <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Lieder<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> and chamber music compositions for a variety of instrumental combinations as well as a few orchestral works. While most of the compositions with opus numbers (op. 1–31) were printed during his lifetime by UE in Vienna, a substantial number of other works were only discovered and made public after his death. These include numerous compositions from his youth and student years, some of them written while studying with Schoenberg 1904–1908.
+        <target state="needs-adaptation"> Anton Webern’s oeuvre mainly consists of numerous "Lieder" and chamber music compositions for a variety of instrumental combinations as well as a few orchestral works. While most of the compositions with opus numbers (op. 1–31) were printed during his lifetime by UE in Vienna, a substantial number of other works were only discovered and made public after his death. These include numerous compositions from his youth and student years, some of them written while studying with Schoenberg 1904–1908.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
           <context context-type="linenumber">2,8</context>
@@ -875,8 +1149,9 @@
       <trans-unit id="4058712050406131209" datatype="html">
         <source> Für Recherchezwecke sind im Folgenden nach den Kategorien <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/works', 'opus']&quot;&gt;"/>Opuszahl<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> und <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/works', 'moldenhauer']&quot;&gt;"/>Moldenhauer-Nummer<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> geordnete Werklisten aufrufbar, um einen Überblick über Weberns Schaffen zu ermöglichen. Zu jedem Eintrag einer Liste bietet die Plattform KNORA/SALSAH kurze Informationen zu Entstehung, gegebenenfalls Uraufführung und/oder Drucklegung eines Stücks sowie eine Quellenübersicht. Verweise auf einen größeren Kontext innerhalb von Werkzusammenhängen, Fassungen oder Ähnlichem werden durch Verknüpfungen angezeigt.
 </source>
-        <target> For research purposes, the Knora/SALSAH platform can either generate a list of <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/works', 'opus']&quot;&gt;"/>works with opus number<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> or create a list of all the <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/works', 'moldenhauer']&quot;&gt;"/>Moldenhauer numbers<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. For each list entry, the Knora/SALSAH platform gives a brief overview of the work’s genesis, its first performance (when applicable), and/or the history of its publication as well as an overview of its sources. References within a wider context to other works, variants, etc. are indicated via hyperlinks.
+        <target state="needs-adaptation"> For research purposes, the Knora/SALSAH platform can either generate a list of <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/works', 'opus']&quot;&gt;"/>works with opus number<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> or create a list of all the <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/works', 'moldenhauer']&quot;&gt;"/>Moldenhauer numbers<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. For each list entry, the Knora/SALSAH platform gives a brief overview of the work’s genesis, its first performance (when applicable), and/or the history of its publication as well as an overview of its sources. References within a wider context to other works, variants, etc. are indicated via hyperlinks.
 </target>
+        <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
           <context context-type="linenumber">11,17</context>

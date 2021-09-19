@@ -194,19 +194,260 @@
           <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1893230594595958890" datatype="html">
-        <source> Die wichtigsten Kooperationspartner der Anton Webern Gesamtausgabe:
-</source>
+      <trans-unit id="1145691638501613344" datatype="html">
+        <source>Die wichtigsten Kooperationspartner der Anton Webern Gesamtausgabe:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-cooperations/project-cooperations.component.html</context>
-          <context context-type="linenumber">2,3</context>
+          <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5276109039371303005" datatype="html">
         <source> Darüber hinaus bestehen zahlreiche mit inhaltlichem Austausch verbundene Kontakte zu benachbarten Editionsprojekten (<x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.absw.at/aktuell&quot;&gt;"/>Alban Berg<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_1" equiv-text="&lt;a href=&quot;http://www.schoenberg-gesamtausgabe.de/informationen.html&quot;&gt;"/>Arnold Schönberg<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://simpk.de/wiener_schule_301.html&quot;&gt;"/>Briefwechsel der Wiener Schule<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>), zahlreichen Archiven sowie zur internationalen Webern-Forschung. Im Bereich der Digital Humanities bestehen ebenfalls Kontakte zu wichtigen Communities wie <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://dig-hum.de/&quot;&gt;"/>DHd<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> oder <x id="START_LINK_4" equiv-text="&lt;a href=&quot;https://www.dhoxss.net/&quot;&gt;"/>DHOxSS<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, zur Music Encoding Community (<x id="START_LINK_5" equiv-text="&lt;a href=&quot;https://music-encoding.org/&quot;&gt;"/>MEI<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_6" equiv-text="&lt;a href=&quot;https://www.edirom.de/&quot;&gt;"/>ViFE/Edirom<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>) sowie zu musikbezogenen Semantic Web-Projekten (<x id="START_LINK_7" equiv-text="&lt;a href=&quot;https://www.doremus.org/&quot;&gt;"/>DOREMUS<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_8" equiv-text="&lt;a href=&quot;https://github.com/oerc-music/meld&quot;&gt;"/>MELD<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_9" equiv-text="&lt;a href=&quot;https://trompamusic.eu/&quot;&gt;"/>TROMPA<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>).<x id="START_LINK_10" equiv-text="&lt;a href=&quot;http://www.universaledition.com/&quot;&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_LINK_10" equiv-text="&lt;a href=&quot;http://www.universaledition.com/&quot;&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-cooperations/project-cooperations.component.html</context>
-          <context context-type="linenumber">28,39</context>
+          <context context-type="linenumber">26,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1369534082236186534" datatype="html">
+        <source>Für weitere Links insbesondere zu Archiven siehe auch <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;[&apos;/research&apos;, &apos;archives&apos;]&quot;&gt;"/>Forschung/Archive<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-cooperations/project-cooperations.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3022543557445694316" datatype="html">
+        <source>Dezember</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5275149212937742107" datatype="html">
+        <source>Neuer Beitrag erschienen: Thomas Ahrend, Michael Matter: &quot;Webern, Anton&quot; (u. a. mit Werkverzeichnis und Bibliographie), in: KDG - Komponisten der Gegenwart, 2018. Online unter <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.munzinger.de/document/17000000630&quot;&gt;"/>Munzinger Online<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6035640637616570853" datatype="html">
+        <source>Happy Birthday, Webern! Heute <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/resources/4852&quot; target=&quot;_blank&quot;&gt;"/>vor 135 Jahren<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, ebenfalls ein Montag, wird Anton Webern in Wien, III. Bezirk, Löwengasse 53a, „durch eine Hebamme entbunden“.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1109977718843277527" datatype="html">
+        <source>November</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5833739792919411257" datatype="html">
+        <source>Simone Hohmaier wird am 27. November 2018 den nächsten Anton Webern Vortrag zum Thema &quot;Die Korrespondenz zwischen Anton Webern und Alban Berg – Dokument einer wundersamen Freundschaft&quot; halten (18.15 Uhr, Vortragssaal des Musikwissenschaftlichen Seminars, Basel).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="352572573579396133" datatype="html">
+        <source>Flyer Anton Webern Vortrag 2018</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5725864740490533353" datatype="html">
+        <source>Weitere Informationen <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://musikwissenschaft.philhist.unibas.ch/de/veranstaltungen/details/news/mws-vortrag-1/&quot;&gt;"/>hier<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+        &gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1280165460303116228" datatype="html">
+        <source>Oktober</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5169386229060539470" datatype="html">
+        <source>Gefunden! Programmzettel von Weberns erstem Konzert als „Vereinschormeister“ des Mödlinger Männer-Gesang-Vereins am 25. November 1921:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5041653054074764315" datatype="html">
+        <source>Programmzettel Mödlinger Männer-Gesang-Verein 1921</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3467775797814862273" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/resources/2574844&quot; target=&quot;_blank&quot;&gt;"/>Die Quelle<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> wurde im Archiv des Männer-Gesang-Vereins (heute: Chor Kontroverse) entdeckt, von seinem aktuellen Leiter Andreas Brüger.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6007938108488521736" datatype="html">
+        <source>März</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8790369684700739788" datatype="html">
+        <source>Neuer Online-Beitrag erschienen:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5872622085239011307" datatype="html">
+        <source>September</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5541756007654365152" datatype="html">
+        <source>Mit über 2000 Einträgen hat die Anton Webern Gesamtausgabe die weltweit größte <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=bibliography&quot; target=&quot;_blank&quot;&gt;"/>Webern-Bibliographie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> zusammengestellt. Sie bietet damit einen umfassenden Überblick über die internationale wissenschaftliche Beschäftigung mit Anton Webern von 1907 bis 2017.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">78,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3861688459413357367" datatype="html">
+        <source>Eine Auswahl von Webern-Büchern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-bibliography/webern-bibliography.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4843131531072359201" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/resources/2173581&quot; target=&quot;_blank&quot;
+            &gt;"/>Konzertprogramm vom 8. Februar 1910<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+        &gt;"/> in den Karl Weigl Papers der Yale University gefunden:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">95,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8504017634289892546" datatype="html">
+        <source>Konzertprogramm vom 8. Februar 1910</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2219446267498213550" datatype="html">
+        <source>Mai</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6984604668440578862" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;index.php?id=34&quot;&gt;"/>Webern-Studien<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 3 erschienen:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3405361534562359915" datatype="html">
+        <source>hg. von</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6036093409057430163" datatype="html">
+        <source>und</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6282476115324363716" datatype="html">
+        <source>Wien</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8044499984033738120" datatype="html">
+        <source>Januar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4376970150755250849" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.laaber-verlag.wslv.de/popup.php?ID_Buch=837&amp;amp;lang=&quot; target=&quot;_blank&quot;&gt;"/>Musiktheorie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+        &gt;"/>-Heft zu Webern und Segantini:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/project/project-news-archive/project-news-archive.component.html</context>
+          <context context-type="linenumber">124,125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2391813105993233672" datatype="html">
@@ -260,13 +501,6 @@
           <context context-type="linenumber">53,55</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5872622085239011307" datatype="html">
-        <source>September</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">61</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="1750641140844133054" datatype="html">
         <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;[&apos;/research&apos;, &apos;studies&apos;]&quot;&gt;"/>Webern-Studien<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 5 erschienen:</source>
         <context-group purpose="location">
@@ -274,224 +508,194 @@
           <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3405361534562359915" datatype="html">
-        <source>hg. von</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">100</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6282476115324363716" datatype="html">
-        <source>Wien</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">101</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="1809521303476565743" datatype="html">
         <source>April</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5051461053214864415" datatype="html">
         <source>Update des AWG-Editions-Prototyps mit dynamischer <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://edition.anton-webern.ch/edition/composition/op25/graph(side:editionInfo)&quot; target=&quot;_blank&quot;
-            &gt;"/>Graph-Visualisierung der Skizzen zu op. 25/I<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
-        &gt;"/>.</source>
+                &gt;"/>Graph-Visualisierung der Skizzen zu op. 25/I<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+            &gt;"/>.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">73,76</context>
+          <context context-type="linenumber">75,78</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6007938108488521736" datatype="html">
-        <source>März</source>
+      <trans-unit id="136246523859127769" datatype="html">
+        <source>Graph-Visualisierung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">82</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="334452957108284931" datatype="html">
         <source>Neu erschienen:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4983303062705323867" datatype="html">
         <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;[&apos;/research&apos;, &apos;studies&apos;]&quot;&gt;"/>Webern-Studien<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 4 erschienen:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-overview/project-overview.component.html</context>
-          <context context-type="linenumber">96</context>
+          <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2689667414710841997" datatype="html">
         <source>Wissenschaftlicher Mitarbeiter</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">55</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1227443877310595843" datatype="html">
         <source>Mitglied der Editionsleitung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">97</context>
+          <context context-type="linenumber">101</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7492519553920316891" datatype="html">
         <source> Geboren 1967 in Berlin. Studium der Musikwissenschaft, Philosophie und Literaturwissenschaft in Frankfurt a. M. und Berlin. Magister Artium 1996 und Promotion 2005 an der Technischen Universität Berlin mit einer Arbeit zur Instrumentalmusik Hanns Eislers. Von 1997 bis 2010 Mitarbeiter der Hanns Eisler Gesamtausgabe in Berlin. Seit September 2010 Mitarbeiter der Anton Webern Gesamtausgabe am Musikwissenschaftlichen Seminar der Universität Basel. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">7,12</context>
+          <context context-type="linenumber">9,14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4189621005525646772" datatype="html">
         <source>[Mehr]</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">48</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">94</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">119</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">135</context>
+          <context context-type="linenumber">139</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1433365361756474209" datatype="html">
         <source>Wissenschaftliche Mitarbeiterin</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">122</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="583238220330038839" datatype="html">
         <source>Wiener Arbeitsstelle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">166</context>
+          <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5014416614704464465" datatype="html">
         <source> Geboren 1974 in Köln. Studium der Musikwissenschaft, Germanistik und Phonetik an der Universität zu Köln. Magister Artium 2002 mit einer Arbeit über das Händel-Bild im NS-Staat. Von März 2003 bis Dezember 2014 wissenschaftliche Mitarbeiterin bei der Kritischen Gesamtausgabe der Schriften Arnold Schönbergs. Promotion 2014 an der Universität für Musik und darstellende Kunst mit einer Arbeit über <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Die Bibliothek Arnold Schönbergs<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. Freiberufliche Tätigkeit als Lektorin und Redakteurin von wissenschaftlichen Publikationen. 2015 bis 2017 wissenschaftliche Mitarbeiterin bei der Alban Berg Gesamtausgabe. Seit Januar 2015 Mitarbeiterin in der Abteilung Musikwissenschaft des Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) der Österreichischen Akademie der Wissenschaften (Wiener Arbeitsstelle der Anton Webern Gesamtausgabe). </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">28,37</context>
+          <context context-type="linenumber">32,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="39488386440533206" datatype="html">
         <source> Geboren 1981 in Bern. Studium der Musikwissenschaft, Geschichte und Kunstgeschichte in Bern und Rom (La Sapienza). Nach dem Lizentiat 2007 folgte 2008–2012 die Promotion an der Universität Zürich mit einer Arbeit über <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Niels W. Gade und der ‚nordische Ton‘. Ein musikgeschichtlicher Präzedenzfall<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. Von 2006–2013 ausserdem Tätigkeit als Musikkritiker sowie Praktika in den Bereichen Edition (Tübingen), Opern-Dramaturgie (Biel) und Kulturmanagement (Freiburg i. Br.). Von 2013–2015 wissenschaftlicher Mitarbeiter bei RISM Schweiz. Seit März 2013 wissenschaftlicher Mitarbeiter bei der Anton Webern Gesamtausgabe. Daneben tätig als Konzertdramaturg sowie als Mitherausgeber der &quot;Editionen der Schweizerischen Musikforschenden Gesellschaft&quot;. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">53,60</context>
+          <context context-type="linenumber">57,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4083402606837134721" datatype="html">
         <source> Geboren 1982. Studium der Musikwissenschaft und Kommunikationswissenschaft an der Technischen Universität Berlin, Magister Artium 2011 mit einer Arbeit zum Kantionalsatz in Heinrich Schütz&apos;s <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Becker-Psalter<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. 2012 wissenschaftliche Hilfskraft, 2013–2015 wissenschaftlicher Mitarbeiter am Editionsprojekt <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Felix Mendelssohn Bartholdy. Sämtliche Briefe<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> an der Universität Leipzig (Mitherausgeber der Bände 9 &amp; 12). Seit Oktober 2015 wissenschaftlicher Mitarbeiter der Anton Webern Gesamtausgabe, Basel; Promotion 2020 am musikwissenschaftlichen Seminar der Universität Basel mit einer Arbeit über <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Musikalische Schrift und ihre Codes<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">76,83</context>
+          <context context-type="linenumber">80,87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6182066291521705057" datatype="html">
         <source> Studium der Musikwissenschaft, Kunstgeschichte, Germanistischen Sprachwissenschaft und Medienwissenschaft in Heidelberg, Zürich, Konstanz und Freiburg im Br. 1999 Magister Artium. Arbeit als Musikjournalist und Redaktor. 2002–13 Assistent am Musikwissenschaftlichen Institut der Universität Basel. 2003–04 Forschungsaufenthalt in den USA mit einem Stipendium der Harvard University. 2006 Promotion mit der Arbeit <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Musikalische Kürze zu Beginn des 20. Jahrhunderts<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/>. 2010–11 Stipendiat des Schweizerischen Nationalfonds am Forschungszentrum Populäre Musik der Humboldt-Universität und an der University of Southampton. 2011–12 Gastprofessor für populäre Musik am Musikwissenschaftlichen Institut der Universität Wien. 2013–14 Professor für Musikwissenschaft an der Universität für Musik und darstellende Kunst Wien. Seit 2014 wissenschaftlicher Mitarbeiter der Paul Sacher Stiftung, Basel. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">99,108</context>
+          <context context-type="linenumber">103,112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2668525783834212226" datatype="html">
         <source> Studium der Musikwissenschaft, Neuen deutschen Literatur und Medienwissenschaft an der Universität Basel, Abschluss 2008 mit dem Lizentiatsexamen. Sologesangsstudium an der Hochschule für Musik in Basel (BA-Diplom 2008, MA-Diplom 2010). 2006–2009 Hilfsassistentin, seit 2009 wissenschaftliche Mitarbeiterin der Anton Webern Gesamtausgabe. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">124,128</context>
+          <context context-type="linenumber">128,132</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6740481241247005324" datatype="html">
         <source>Projektleitung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4380558525151774618" datatype="html">
         <source> Geboren in Köln. Studium der Musikwissenschaft, Germanistik, Kunstgeschichte und Philosophie in Bonn, Berlin und Wien; M. A. und Dr. phil. an der FU Berlin. Wissenschaftlicher Mitarbeiter des Arnold Schönberg-Instituts der Universität für Musik und darstellende Kunst Wien. Habilitation Universität Salzburg. DAAD-, Thyssen- und ÖFG-Stipendiat in Österreich, Italien und mehrfach in den USA. Langjährige Lehrtätigkeit (als Dozent, Vertretungs- und Gastprofessor) an Hochschulen in Österreich, der Schweiz, Deutschland und den Niederlanden. Neben den akademischen Aufgaben als Musikjournalist, Ausstellungskurator und Konzertdramaturg tätig. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">144,150</context>
+          <context context-type="linenumber">150,156</context>
         </context-group>
       </trans-unit>
       <trans-unit id="342742957521530086" datatype="html">
         <source>Ehemalige Mitarbeitende:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">164</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5600623002459425155" datatype="html">
         <source>Praktikantinnen &amp; Praktikanten:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/project/project-team/project-team.component.html</context>
-          <context context-type="linenumber">171</context>
+          <context context-type="linenumber">177</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3026208196674309481" datatype="html">
@@ -503,13 +707,11 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5423415026568401801" datatype="html">
-        <source> Auf der wissenschaftlichen Forschungsplattform SALSAH erstellt die Anton Webern Gesamtausgabe eine <x id="START_LINK" ctype="x-a" equiv-text="&lt;a
-        href=&quot;http://www.salsah.org/webern/search.php?restype=chronology&quot;
-        target=&quot;_blank&quot;&gt;"/>Chronologie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, in der Ereignisse im Leben des Komponisten wie auch die Stationen im Kompositionsprozeß eines Werks, von der Anfertigung erster Skizzen über etwaige Fassungen bis hin zu Reinschrift und je nachdem Drucklegung, festgehalten werden. Die Chronologie befindet sich im Aufbau und wird laufend erweitert.
+        <source> Auf der wissenschaftlichen Forschungsplattform SALSAH erstellt die Anton Webern Gesamtausgabe eine <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.salsah.org/webern/search.php?restype=chronology&quot; target=&quot;_blank&quot;&gt;"/>Chronologie<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, in der Ereignisse im Leben des Komponisten wie auch die Stationen im Kompositionsprozeß eines Werks, von der Anfertigung erster Skizzen über etwaige Fassungen bis hin zu Reinschrift und je nachdem Drucklegung, festgehalten werden. Die Chronologie befindet sich im Aufbau und wird laufend erweitert.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">2,5</context>
+          <context context-type="linenumber">2,7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7905576211288803039" datatype="html">
@@ -517,7 +719,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">8,17</context>
+          <context context-type="linenumber">10,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7661923054382696669" datatype="html">
@@ -525,22 +727,18 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">20,22</context>
+          <context context-type="linenumber">22,24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2293790145688911855" datatype="html">
         <source>Wienbibliothek im Rathaus</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">30</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
@@ -548,26 +746,34 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">79</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
           <context context-type="linenumber">85</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">113</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8086620605652368094" datatype="html">
         <source>Anton Webern mit Sohn Peter und Tochter Christine auf der Schneealpe, Sommer 1928</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-chronology/webern-chronology.component.html</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7271289436423039521" datatype="html">
@@ -598,7 +804,11 @@
         <source>Brief Anton Weberns an Arnold Schönberg, Weihnachten 1908</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-letters/webern-letters.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-letters/webern-letters.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="419148864508886384" datatype="html">
@@ -660,28 +870,44 @@
         <source>Anton Webern mit seiner Frau Minna und Tochter Mali, 1912</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7941821556229055658" datatype="html">
         <source>Webern als Soldat mit Tochter Mali, 1915</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2254265657068057443" datatype="html">
         <source>Webern bei einem Chorausflug, um 1925</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8032091363137465950" datatype="html">
         <source>Webern als Dirigent, 1933</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-overview/webern-overview.component.html</context>
+          <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4948186215495826060" datatype="html">
@@ -704,7 +930,11 @@
         <source>Anton Webern mit Hildegard Jone und Josef Humplik, ca. 1928</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/webern/webern-persons/webern-persons.component.html</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6467457701440667380" datatype="html">

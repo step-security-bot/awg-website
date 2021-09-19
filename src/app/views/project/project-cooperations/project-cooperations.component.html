@@ -37,4 +37,11 @@
     <a href="http://www.universaledition.com/"></a>
 </p>
 
-<ng-template #rightPanelPortal></ng-template>
+<ng-template #rightPanelPortal>
+    <p>
+        <span i18n
+            >Für weitere Links insbesondere zu Archiven siehe auch
+            <a [routerLink]="['/research', 'archives']">Forschung/Archive</a>.</span
+        >
+    </p>
+</ng-template>
