@@ -5,7 +5,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 @Component({
     selector: 'awg-project-news-archive',
     templateUrl: './project-news-archive.component.html',
-    styleUrls: ['./project-news-archive.component.css']
+    styleUrls: ['./project-news-archive.component.css'],
 })
 export class ProjectNewsArchiveComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

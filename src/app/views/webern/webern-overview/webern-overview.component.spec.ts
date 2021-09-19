@@ -10,7 +10,7 @@ describe('WebernOverviewComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [WebernOverviewComponent]
+                declarations: [WebernOverviewComponent],
             }).compileComponents();
         })
     );

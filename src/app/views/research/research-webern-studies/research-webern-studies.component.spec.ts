@@ -10,7 +10,7 @@ describe('ResearchWebernStudiesComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [ResearchWebernStudiesComponent]
+                declarations: [ResearchWebernStudiesComponent],
             }).compileComponents();
         })
     );

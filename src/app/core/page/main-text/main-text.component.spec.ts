@@ -11,7 +11,7 @@ describe('MainTextComponent', () => {
         waitForAsync(() => {
             TestBed.configureTestingModule({
                 imports: [RouterTestingModule],
-                declarations: [MainTextComponent]
+                declarations: [MainTextComponent],
             }).compileComponents();
         })
     );

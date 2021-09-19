@@ -10,7 +10,7 @@ describe('EditionOnlineComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [EditionOnlineComponent]
+                declarations: [EditionOnlineComponent],
             }).compileComponents();
         })
     );

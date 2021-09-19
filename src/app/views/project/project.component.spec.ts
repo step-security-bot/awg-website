@@ -11,7 +11,7 @@ describe('ProjectComponent', () => {
         waitForAsync(() => {
             TestBed.configureTestingModule({
                 imports: [RouterTestingModule],
-                declarations: [ProjectComponent]
+                declarations: [ProjectComponent],
             }).compileComponents();
         })
     );

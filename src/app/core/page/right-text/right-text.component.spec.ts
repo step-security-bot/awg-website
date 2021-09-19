@@ -9,7 +9,7 @@ describe('RightTextComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [RightTextComponent]
+                declarations: [RightTextComponent],
             }).compileComponents();
         })
     );

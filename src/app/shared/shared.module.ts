@@ -9,6 +9,6 @@ import { ExternalLinkDirective } from './external-link/external-link.directive';
 @NgModule({
     imports: [AppMaterialModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
     declarations: [ExternalLinkDirective],
-    exports: [AppMaterialModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule, ExternalLinkDirective]
+    exports: [AppMaterialModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule, ExternalLinkDirective],
 })
 export class SharedModule {}

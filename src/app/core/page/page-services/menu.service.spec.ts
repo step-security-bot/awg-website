@@ -10,7 +10,7 @@ describe('MenuService', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [MenuService]
+            providers: [MenuService],
         });
         menuService = TestBed.inject(MenuService);
         expectedMenuArray = MENUDATA;

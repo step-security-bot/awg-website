@@ -12,7 +12,7 @@ describe('WorksComponent', () => {
         waitForAsync(() => {
             TestBed.configureTestingModule({
                 imports: [RouterTestingModule],
-                declarations: [WorksComponent]
+                declarations: [WorksComponent],
             }).compileComponents();
         })
     );

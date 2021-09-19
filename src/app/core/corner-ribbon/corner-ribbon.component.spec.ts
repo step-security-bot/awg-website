@@ -9,7 +9,7 @@ describe('CornerRibbonComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [CornerRibbonComponent]
+                declarations: [CornerRibbonComponent],
             }).compileComponents();
         })
     );

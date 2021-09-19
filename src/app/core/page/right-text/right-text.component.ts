@@ -7,7 +7,7 @@ import {
     OnChanges,
     OnInit,
     TemplateRef,
-    ViewContainerRef
+    ViewContainerRef,
 } from '@angular/core';
 import { TemplatePortal } from '@angular/cdk/portal';
 
@@ -15,7 +15,7 @@ import { TemplatePortal } from '@angular/cdk/portal';
     selector: 'awg-right-text',
     templateUrl: './right-text.component.html',
     styleUrls: ['./right-text.component.css'],
-    changeDetection: ChangeDetectionStrategy.Default
+    changeDetection: ChangeDetectionStrategy.Default,
 })
 export class RightTextComponent implements AfterViewInit {
     @Input() rightPanelPortal: TemplateRef<unknown>;

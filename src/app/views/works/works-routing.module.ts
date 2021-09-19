@@ -17,16 +17,16 @@ const worksRoutes: Routes = [
                     { path: 'overview', component: WorksOverviewComponent },
                     { path: 'opus', component: WorksOpusComponent },
                     { path: 'moldenhauer', component: WorksMoldenhauerComponent },
-                    { path: '', redirectTo: 'overview', pathMatch: 'full' }
-                ]
-            }
-        ]
-    }
+                    { path: '', redirectTo: 'overview', pathMatch: 'full' },
+                ],
+            },
+        ],
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(worksRoutes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class WorksRoutingModule {}
 
@@ -34,5 +34,5 @@ export const routedWorksComponents = [
     WorksComponent,
     WorksOverviewComponent,
     WorksOpusComponent,
-    WorksMoldenhauerComponent
+    WorksMoldenhauerComponent,
 ];

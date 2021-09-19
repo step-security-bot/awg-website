@@ -5,6 +5,6 @@ import { EditionRoutingModule, routedEditionComponents } from './edition-routing
 
 @NgModule({
     imports: [CommonModule, EditionRoutingModule],
-    declarations: [routedEditionComponents]
+    declarations: [routedEditionComponents],
 })
 export class EditionModule {}

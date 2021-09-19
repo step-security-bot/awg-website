@@ -10,7 +10,7 @@ describe('ResearchOverviewComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [ResearchOverviewComponent]
+                declarations: [ResearchOverviewComponent],
             }).compileComponents();
         })
     );

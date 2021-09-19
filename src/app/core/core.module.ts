@@ -11,7 +11,7 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
     imports: [SharedModule, PageModule],
     declarations: [CornerRibbonComponent, FooterComponent, HeaderComponent],
-    exports: [CornerRibbonComponent, FooterComponent, HeaderComponent, PageModule]
+    exports: [CornerRibbonComponent, FooterComponent, HeaderComponent, PageModule],
 })
 export class CoreModule {
     constructor(

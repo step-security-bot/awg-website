@@ -10,7 +10,7 @@ describe('WebernPersonsComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [WebernPersonsComponent]
+                declarations: [WebernPersonsComponent],
             }).compileComponents();
         })
     );

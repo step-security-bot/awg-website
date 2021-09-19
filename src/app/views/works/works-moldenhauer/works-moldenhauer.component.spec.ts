@@ -10,7 +10,7 @@ describe('WorksMoldenhauerComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [WorksMoldenhauerComponent]
+                declarations: [WorksMoldenhauerComponent],
             }).compileComponents();
         })
     );

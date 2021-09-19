@@ -2,15 +2,14 @@ import { Injectable, TemplateRef } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
 export class PortalService {
     /**
      * Private subject to handle right text portal data.
      */
-    private _rightPanelPortalDataSubject: Subject<
-        TemplateRef<unknown>
-    > = new BehaviorSubject<TemplateRef<unknown> | null>(null);
+    private _rightPanelPortalDataSubject: Subject<TemplateRef<unknown>> =
+        new BehaviorSubject<TemplateRef<unknown> | null>(null);
 
     /**
      * Readonly right text portal data stream as observable (`Subject`).

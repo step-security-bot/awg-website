@@ -10,7 +10,7 @@ describe('WorksOpusComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [WorksOpusComponent]
+                declarations: [WorksOpusComponent],
             }).compileComponents();
         })
     );

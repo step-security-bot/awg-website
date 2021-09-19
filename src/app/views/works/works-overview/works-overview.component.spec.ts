@@ -10,7 +10,7 @@ describe('WorksOverviewComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [WorksOverviewComponent]
+                declarations: [WorksOverviewComponent],
             }).compileComponents();
         })
     );

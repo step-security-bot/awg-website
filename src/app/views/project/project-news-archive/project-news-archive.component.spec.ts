@@ -8,7 +8,7 @@ describe('ProjectNewsArchiveComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ProjectNewsArchiveComponent]
+            declarations: [ProjectNewsArchiveComponent],
         }).compileComponents();
     });
 

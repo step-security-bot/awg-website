@@ -5,6 +5,6 @@ import { WorksRoutingModule, routedWorksComponents } from './works-routing.modul
 
 @NgModule({
     imports: [CommonModule, WorksRoutingModule],
-    declarations: [routedWorksComponents]
+    declarations: [routedWorksComponents],
 })
 export class WorksModule {}

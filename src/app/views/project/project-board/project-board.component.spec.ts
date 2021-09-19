@@ -9,7 +9,7 @@ describe('ProjectBoardComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [ProjectBoardComponent]
+                declarations: [ProjectBoardComponent],
             }).compileComponents();
         })
     );

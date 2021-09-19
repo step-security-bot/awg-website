@@ -4,7 +4,7 @@ import { Menu } from '@awg-core/page/page-models/menu.model';
 import { MENUDATA } from '@awg-core/page//page-data/menu-data';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
 export class MenuService {
     constructor() {}

@@ -10,7 +10,7 @@ describe('EditionOutlineComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [EditionOutlineComponent]
+                declarations: [EditionOutlineComponent],
             }).compileComponents();
         })
     );

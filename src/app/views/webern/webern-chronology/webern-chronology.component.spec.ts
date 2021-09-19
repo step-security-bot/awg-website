@@ -10,7 +10,7 @@ describe('WebernChronologyComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [WebernChronologyComponent]
+                declarations: [WebernChronologyComponent],
             }).compileComponents();
         })
     );

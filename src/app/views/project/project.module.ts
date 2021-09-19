@@ -6,6 +6,6 @@ import { ProjectRoutingModule, routedProjectComponents } from './project-routing
 
 @NgModule({
     imports: [SharedModule, ProjectRoutingModule],
-    declarations: [routedProjectComponents]
+    declarations: [routedProjectComponents],
 })
 export class ProjectModule {}

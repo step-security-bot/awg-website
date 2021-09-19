@@ -9,7 +9,7 @@ describe('ProjectCooperationsComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [ProjectCooperationsComponent]
+                declarations: [ProjectCooperationsComponent],
             }).compileComponents();
         })
     );

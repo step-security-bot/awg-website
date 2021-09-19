@@ -12,7 +12,7 @@ describe('ResearchComponent', () => {
         waitForAsync(() => {
             TestBed.configureTestingModule({
                 imports: [RouterTestingModule],
-                declarations: [ResearchComponent]
+                declarations: [ResearchComponent],
             }).compileComponents();
         })
     );

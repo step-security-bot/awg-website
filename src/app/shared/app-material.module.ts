@@ -59,7 +59,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         MatSortModule,
         MatTabsModule,
         MatToolbarModule,
-        MatTooltipModule
+        MatTooltipModule,
     ],
 
     exports: [
@@ -91,7 +91,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         MatSortModule,
         MatTabsModule,
         MatToolbarModule,
-        MatTooltipModule
-    ]
+        MatTooltipModule,
+    ],
 })
 export class AppMaterialModule {}

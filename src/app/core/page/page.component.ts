@@ -6,7 +6,7 @@ import { PortalService } from './page-services/portal.service';
 @Component({
     selector: 'awg-page',
     templateUrl: './page.component.html',
-    styleUrls: ['./page.component.css']
+    styleUrls: ['./page.component.css'],
 })
 export class PageComponent implements AfterViewInit {
     @Input()
