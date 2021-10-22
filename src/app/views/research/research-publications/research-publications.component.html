@@ -1,1 +1,20 @@
-<p>research-publications works!</p>
+<iframe id="awg-bibbase-embed-map" width="100%" height="800" [src]="bibBaseUrl"> </iframe>
+
+<ng-template #rightPanelPortal>
+    <p class="para" i18n>
+        Die nebenstehende Publikationsliste enthält die durch die AWG und ihre Mitarbeiter erarbeiteten Publikationen.
+    </p>
+
+    <p class="para" i18n>
+        Die Liste wird dynamisch via <a href="https://bibbase.org/" target="_blank">BibBase.org</a> erstellt und
+        eingebunden.
+    </p>
+
+    <p class="para" i18n>
+        Sie lässt sich nach Jahr, Autor, Publikationstyp und weiteren Optionen sortieren ("Group by").
+    </p>
+
+    <p class="para" i18n>Die zugrunde liegende .bib-Datei lässt sich unter "Download BibTex" herunterladen ("☰").</p>
+
+    <p i18n>Falls sich Links nicht öffnen lassen, überprüfen Sie bitte die Tracking-Optionen Ihres Browsers.</p>
+</ng-template>

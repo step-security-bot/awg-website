@@ -10,8 +10,6 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 export class ResearchArchivesComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
 
-    info = 'research-archive works!';
-
     constructor(private _portalService: PortalService) {}
 
     ngAfterViewInit() {

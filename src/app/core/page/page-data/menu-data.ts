@@ -48,11 +48,11 @@ export const MENUDATA: Menu[] = [
         subMenu: [
             { label: $localize`Übersicht`, linkTo: 'overview' },
             { label: $localize`Webern-Studien`, linkTo: 'studies' },
-            { label: $localize`Webern Vorträge`, linkTo: 'lectures' },
+            { label: $localize`Anton Webern Vorträge`, linkTo: 'lectures' },
             { label: $localize`Tagungen`, linkTo: 'conferences' },
             { label: $localize`Publikationen`, linkTo: 'publications' },
-            { label: $localize`Archive`, linkTo: 'archives' },
             { label: $localize`Weitere Aktivitäten`, linkTo: 'activities' },
+            { label: $localize`Archive`, linkTo: 'archives' },
         ],
     },
 ];

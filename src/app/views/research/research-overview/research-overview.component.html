@@ -1,3 +1,29 @@
-<p>{{ info }}</p>
+<p class="para" i18n>
+    Die Anton Webern Gesamtausgabe ist aktiv im aktuellen wissenschaftlichen Diskurs zu Anton Webern vernetzt – sei es
+    in Form von <a [routerLink]="['/research', 'conferences']">Tagungen</a> und Workshops, der Schriftenreihe
+    <a [routerLink]="['/research', 'studies']">Webern-Studien</a> oder der in unregelmäßigen Abständen stattfindenden
+    <a [routerLink]="['/research', 'lectures']">Anton Webern Vorträge</a>. Die
+    <a [routerLink]="['/project', 'team']">Mitarbeitenden</a> der AWG sind zudem mit
+    <a [routerLink]="['/research', 'activities']">Referaten</a> und
+    <a [routerLink]="['/research', 'publications']">Publikationsbeiträgen</a> in der Forschung präsent. Darüber hinaus
+    sucht die AWG auch immer wieder die Kooperation mit Interpreten.
+</p>
 
-<ng-template #rightPanelPortal></ng-template>
+<ng-template #rightPanelPortal>
+    <p>
+        <span i18n>
+            <a href="http://www.laaber-verlag.wslv.de/popup.php?ID_Buch=837&amp;lang=" target="_blank">Musiktheorie</a
+            >-Heft zu Webern und Segantini:
+        </span>
+        <br />
+        <img
+            src="assets/images/Musiktheorie_4_15_Titel_klein.jpg"
+            i18n-alt
+            alt="Musiktheorie-Heft zu Webern und Segantini"
+            width="400"
+            height="568" />
+        <br />
+        <em>Anton Webern und Giovanni Segantini</em>, <span i18n>hg. von</span> Thomas Ahrend
+        <span i18n>und</span> Matthias Schmidt, Laaber: Laaber, 2015 (Musiktheorie 30/4).
+    </p>
+</ng-template>
