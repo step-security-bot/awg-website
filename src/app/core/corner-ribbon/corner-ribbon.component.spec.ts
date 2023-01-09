@@ -6,13 +6,11 @@ describe('CornerRibbonComponent', () => {
     let component: CornerRibbonComponent;
     let fixture: ComponentFixture<CornerRibbonComponent>;
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [CornerRibbonComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [CornerRibbonComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(CornerRibbonComponent);

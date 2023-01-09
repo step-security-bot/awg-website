@@ -7,13 +7,11 @@ describe('EditionOverviewComponent', () => {
     let fixture: ComponentFixture<EditionOverviewComponent>;
     const info = 'edition-overview works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [EditionOverviewComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [EditionOverviewComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(EditionOverviewComponent);

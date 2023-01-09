@@ -55,28 +55,26 @@ describe('PageComponent', () => {
 
     let mockTemplate: TemplateRef<unknown>;
 
-    beforeEach(
-        waitForAsync(() => {
-            // Stub service for test purposes
-            mockPortalService = {
-                getRightPanelPortalData: (): Observable<TemplateRef<unknown>> => observableOf(),
-            };
+    beforeEach(waitForAsync(() => {
+        // Stub service for test purposes
+        mockPortalService = {
+            getRightPanelPortalData: (): Observable<TemplateRef<unknown>> => observableOf(),
+        };
 
-            TestBed.configureTestingModule({
-                declarations: [
-                    PageComponent,
-                    MainTextStubComponent,
-                    MenuStubComponent,
-                    MockTemplateComponent,
-                    RightTextStubComponent,
-                    SearchStubComponent,
-                    SubMenuStubComponent,
-                    RouterLinkStubDirective,
-                ],
-                providers: [{ provide: PortalService, useValue: mockPortalService }],
-            }).compileComponents();
-        })
-    );
+        TestBed.configureTestingModule({
+            declarations: [
+                PageComponent,
+                MainTextStubComponent,
+                MenuStubComponent,
+                MockTemplateComponent,
+                RightTextStubComponent,
+                SearchStubComponent,
+                SubMenuStubComponent,
+                RouterLinkStubDirective,
+            ],
+            providers: [{ provide: PortalService, useValue: mockPortalService }],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(PageComponent);

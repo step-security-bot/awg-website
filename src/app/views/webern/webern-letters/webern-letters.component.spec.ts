@@ -7,13 +7,11 @@ describe('WebernCorrespondenceComponent', () => {
     let fixture: ComponentFixture<WebernLettersComponent>;
     const info = 'webern-correspondence works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [WebernLettersComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [WebernLettersComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(WebernLettersComponent);

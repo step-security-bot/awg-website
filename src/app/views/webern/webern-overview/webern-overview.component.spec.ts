@@ -7,13 +7,11 @@ describe('WebernOverviewComponent', () => {
     let fixture: ComponentFixture<WebernOverviewComponent>;
     const info = 'webern-overview works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [WebernOverviewComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [WebernOverviewComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(WebernOverviewComponent);

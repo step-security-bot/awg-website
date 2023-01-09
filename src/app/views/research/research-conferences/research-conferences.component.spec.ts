@@ -7,13 +7,11 @@ describe('ResearchConferencesComponent', () => {
     let fixture: ComponentFixture<ResearchConferencesComponent>;
     const info = 'research-conferences works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [ResearchConferencesComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [ResearchConferencesComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ResearchConferencesComponent);

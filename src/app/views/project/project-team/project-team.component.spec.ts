@@ -7,13 +7,11 @@ describe('ProjectTeamComponent', () => {
     let fixture: ComponentFixture<ProjectTeamComponent>;
     const info = 'project-team works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [ProjectTeamComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [ProjectTeamComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ProjectTeamComponent);

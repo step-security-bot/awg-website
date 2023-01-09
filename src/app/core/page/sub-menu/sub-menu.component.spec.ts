@@ -20,13 +20,11 @@ describe('SubMenuComponent', () => {
     let routerLinks: RouterLinkStubDirective[];
     let expectedMenu: Menu;
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [SubMenuComponent, RouterLinkStubDirective],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [SubMenuComponent, RouterLinkStubDirective],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(SubMenuComponent);

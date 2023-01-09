@@ -7,13 +7,11 @@ describe('WebernPersonsComponent', () => {
     let fixture: ComponentFixture<WebernPersonsComponent>;
     const info = 'webern-persons works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [WebernPersonsComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [WebernPersonsComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(WebernPersonsComponent);

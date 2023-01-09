@@ -7,13 +7,11 @@ describe('EditionOutlineComponent', () => {
     let fixture: ComponentFixture<EditionOutlineComponent>;
     const info = 'edition-outline works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [EditionOutlineComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [EditionOutlineComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(EditionOutlineComponent);

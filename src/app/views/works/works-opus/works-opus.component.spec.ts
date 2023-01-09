@@ -7,13 +7,11 @@ describe('WorksOpusComponent', () => {
     let fixture: ComponentFixture<WorksOpusComponent>;
     const info = 'works-opus works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [WorksOpusComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [WorksOpusComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(WorksOpusComponent);

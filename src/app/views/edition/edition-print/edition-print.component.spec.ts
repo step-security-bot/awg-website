@@ -7,13 +7,11 @@ describe('EditionPrintComponent', () => {
     let fixture: ComponentFixture<EditionPrintComponent>;
     const info = 'edition-print works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [EditionPrintComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [EditionPrintComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(EditionPrintComponent);

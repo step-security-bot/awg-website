@@ -7,13 +7,11 @@ describe('ProjectCooperationsComponent', () => {
     let component: ProjectCooperationsComponent;
     let fixture: ComponentFixture<ProjectCooperationsComponent>;
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [ProjectCooperationsComponent, RouterLinkStubDirective],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [ProjectCooperationsComponent, RouterLinkStubDirective],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ProjectCooperationsComponent);

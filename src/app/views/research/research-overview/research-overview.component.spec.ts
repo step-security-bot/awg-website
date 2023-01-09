@@ -8,13 +8,11 @@ describe('ResearchOverviewComponent', () => {
     let fixture: ComponentFixture<ResearchOverviewComponent>;
     const info = 'research-overview works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [ResearchOverviewComponent, RouterLinkStubDirective],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [ResearchOverviewComponent, RouterLinkStubDirective],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ResearchOverviewComponent);

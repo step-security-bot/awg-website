@@ -7,13 +7,11 @@ describe('WorksMoldenhauerComponent', () => {
     let fixture: ComponentFixture<WorksMoldenhauerComponent>;
     const info = 'works-moldenhauer works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [WorksMoldenhauerComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [WorksMoldenhauerComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(WorksMoldenhauerComponent);

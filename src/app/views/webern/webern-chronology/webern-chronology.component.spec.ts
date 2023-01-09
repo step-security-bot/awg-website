@@ -7,13 +7,11 @@ describe('WebernChronologyComponent', () => {
     let fixture: ComponentFixture<WebernChronologyComponent>;
     const info = 'webern-chronology works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [WebernChronologyComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [WebernChronologyComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(WebernChronologyComponent);

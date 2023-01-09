@@ -7,13 +7,11 @@ describe('EditionOnlineComponent', () => {
     let fixture: ComponentFixture<EditionOnlineComponent>;
     const info = 'edition-online works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [EditionOnlineComponent],
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [EditionOnlineComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(EditionOnlineComponent);
