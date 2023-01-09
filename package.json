@@ -46,87 +46,24 @@
         "lint-files:fix": "yarn lint-files --fix",
         "lint-staged": "lint-staged",
         "tslint-check": "tslint-config-prettier-check ./tslint.json",
-        "format:check": "prettier --check \"src/**/*.{ts,js,css,html}\"",
-        "format:write": "prettier --write \"src/**/*.{ts,js,css,html}\"",
-        "format:fix-staged": "pretty-quick --staged",
+        "format-files:check": "prettier --check \"src/**/*.{ts,js,html,css,scss}\"",
+        "format-files:fix": "prettier --write \"src/**/*.{ts,js,html,css,scss}\"",
         "-- DOCS --": "",
-        "doc": "yarn compodoc --tsconfig tsconfig.doc.json --theme Readthedocs --output dist/awg-website/compodoc --disableRoutesGraph",
+        "doc": "yarn compodoc --tsconfig tsconfig.doc.json --theme Readthedocs --output dist/awg-website/compodoc",
         "doc:build": "yarn doc",
         "doc:serve": "yarn doc --serve --watch",
         "-- BUILD --": "",
         "build:prod": "ng build",
         "build:watch": "ng build --watch --configuration development",
-        "build:gh": "yarn build:prod --base-href $npm_package_homepage && yarn gzip:dist && yarn doc:build",
-        "gzip:dist": "gzipper compress ./dist/awg-website/",
+        "build:gh": "yarn build:prod --base-href $npm_package_homepage && yarn compress:dist && yarn doc:build",
+        "compress:dist": "gzipper compress ./dist/awg-website/ --gzip --brotli",
         "-- DEPLOY --": "",
         "pre-release": "standard-version -a",
         "-- ANALYZE --": "",
-        "pre_wpanalyzer": "yarn build:prod --statsJson",
+        "pre_wpanalyzer": "yarn build:prod --stats-json",
         "wpanalyzer": "yarn pre_wpanalyzer && webpack-bundle-analyzer dist/awg-website/stats.json",
         "pre_sourcemap": "yarn build:prod --sourceMap",
         "sourcemap": "yarn pre_sourcemap && source-map-explorer dist/awg-website/*.js"
-    },
-    "standard-version": {
-        "scripts": {
-            "postbump": "yarn update-appversion"
-        },
-        "types": [
-            {
-                "type": "feat",
-                "section": "Features"
-            },
-            {
-                "type": "fix",
-                "section": "Bug Fixes"
-            },
-            {
-                "type": "perf",
-                "section": "Performance Improvements"
-            },
-            {
-                "type": "revert",
-                "section": "Reverts"
-            },
-            {
-                "type": "test",
-                "section": "Tests"
-            },
-            {
-                "type": "docs",
-                "section": "Documentation"
-            },
-            {
-                "type": "build",
-                "section": "Build System"
-            },
-            {
-                "type": "ci",
-                "section": "Continuous Integration"
-            },
-            {
-                "type": "style",
-                "section": "Styles",
-                "hidden": true
-            },
-            {
-                "type": "chore",
-                "section": "Miscellaneous Chores",
-                "hidden": true
-            },
-            {
-                "type": "refactor",
-                "section": "Code Refactoring",
-                "hidden": true
-            }
-        ],
-        "skip": {
-            "tag": true
-        }
-    },
-    "lint-staged": {
-        "src/**/*.{ts,html}": [
-            "yarn lint-files:fix"
-        ]
     },
     "dependencies": {
         "@angular/animations": "^12.2.5",

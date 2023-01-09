@@ -36,6 +36,8 @@ speed-measure-plugin*.json
 .history/*
 
 # misc
+/.angular/cache
+/.cache/
 /.sass-cache
 /connect.lock
 /coverage
@@ -57,4 +59,3 @@ yarn-error.log*
 # System Files
 .DS_Store
 Thumbs.db
-
