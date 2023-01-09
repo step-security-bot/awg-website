@@ -79,11 +79,11 @@
                                 }
                             ]
                         },
-                        "en": {
-                            "localize": ["en"]
-                        },
                         "de-DE": {
                             "localize": ["de-DE"]
+                        },
+                        "en": {
+                            "localize": ["en"]
                         }
                     },
                     "defaultConfiguration": "production"
@@ -98,11 +98,11 @@
                         "development": {
                             "browserTarget": "awg-website:build:development"
                         },
-                        "en": {
-                            "browserTarget": "awg-website:build:en"
-                        },
                         "de-DE": {
                             "browserTarget": "awg-website:build:de-DE"
+                        },
+                        "en": {
+                            "browserTarget": "awg-website:build:en"
                         }
                     },
                     "defaultConfiguration": "development"

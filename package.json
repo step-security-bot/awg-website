@@ -32,7 +32,7 @@
     "scripts": {
         "husky:prepare": "husky install",
         "ng": "ng",
-        "serve": "ng serve",
+        "serve": "yarn serve:de",
         "serve:de": "ng serve --configuration=de-DE",
         "serve:en": "ng serve --configuration=en",
         "-- TEST --": "",
