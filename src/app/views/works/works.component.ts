@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./works.component.css'],
 })
 export class WorksComponent {
-    info = 'works works!';
-
     constructor() {}
 }

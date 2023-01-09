@@ -1,9 +1,9 @@
-import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
-import { Component, DebugElement, Input, NgZone } from '@angular/core';
 import { Location } from '@angular/common';
+import { Component, DebugElement, Input, NgZone } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { Router, Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { By } from '@angular/platform-browser';
 
 import Spy = jasmine.Spy;
 
@@ -17,6 +17,9 @@ import { MenuService } from '@awg-core/page/page-services/menu.service';
 import { AppComponent } from './app.component';
 
 // Mock components
+@Component({ selector: 'awg-corner-ribbon', template: '' })
+class CornerRibbonStubComponent {}
+
 @Component({ selector: 'awg-footer', template: '' })
 class FooterStubComponent {}
 
@@ -74,6 +77,7 @@ describe('AppComponent', () => {
                 imports: [RouterTestingModule.withRoutes(mockRoutes)],
                 declarations: [
                     AppComponent,
+                    CornerRibbonStubComponent,
                     HeaderStubComponent,
                     FooterStubComponent,
                     PageStubComponent,
@@ -175,21 +179,22 @@ describe('AppComponent', () => {
 
     describe('BEFORE onInit', () => {
         it('should not have menu array', () => {
-            expect(component.menuArray).toBeUndefined('should be undefined');
+            expect(component.menuArray).toBeUndefined();
         });
 
         it('should not have selected menu', () => {
-            expect(component.selectedMenu).toBeUndefined('should be undefined');
+            expect(component.selectedMenu).toBeUndefined();
         });
 
-        it(
-            'should contain header component (stubbed)',
-            waitForAsync(() => {
-                const headerEl = fixture.debugElement.query(By.directive(HeaderStubComponent));
-                console.log('headerEL', headerEl);
-                expect(headerEl).toBeTruthy();
-            })
-        );
+        it('should contain header component (stubbed)', () => {
+            const headerEl = fixture.debugElement.query(By.directive(HeaderStubComponent));
+            expect(headerEl).toBeTruthy();
+        });
+
+        it('should contain corner ribbon component (stubbed)', () => {
+            const cornerRibbonEl = fixture.debugElement.query(By.directive(CornerRibbonStubComponent));
+            expect(cornerRibbonEl).toBeTruthy();
+        });
 
         it('should contain footer component (stubbed)', () => {
             const footerEl = fixture.debugElement.query(By.directive(FooterStubComponent));

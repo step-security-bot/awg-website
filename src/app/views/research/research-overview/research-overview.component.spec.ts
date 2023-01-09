@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
 
 import { ResearchOverviewComponent } from './research-overview.component';
 
@@ -10,7 +11,7 @@ describe('ResearchOverviewComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [ResearchOverviewComponent],
+                declarations: [ResearchOverviewComponent, RouterLinkStubDirective],
             }).compileComponents();
         })
     );
@@ -23,14 +24,5 @@ describe('ResearchOverviewComponent', () => {
 
     it('should create', () => {
         expect(component).toBeTruthy();
-    });
-
-    it(`should have as status info 'research-overview works!'`, () => {
-        expect(component.info).toEqual(info);
-    });
-
-    it('should render status info in a p-tag', () => {
-        const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('p').textContent).toContain(info);
     });
 });

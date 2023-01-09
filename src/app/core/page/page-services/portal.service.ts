@@ -35,7 +35,6 @@ export class PortalService {
      * @returns {void} Sets the next templateRef to the right text portal data stream.
      */
     updateRightPanelPortalData(templateRef: TemplateRef<unknown>): void {
-        console.log(templateRef);
         this._rightPanelPortalDataSubject.next(templateRef);
     }
 

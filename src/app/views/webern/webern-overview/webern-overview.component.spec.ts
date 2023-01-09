@@ -24,13 +24,4 @@ describe('WebernOverviewComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
-
-    it(`should have as status info 'webern-overview works!'`, () => {
-        expect(component.info).toEqual(info);
-    });
-
-    it('should render status info in a p-tag', () => {
-        const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('p').textContent).toContain(info);
-    });
 });

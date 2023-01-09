@@ -1,6 +1,6 @@
 import { Component, DebugElement } from '@angular/core';
-import { By } from '@angular/platform-browser';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { ExternalLinkDirective } from './external-link.directive';
 
@@ -58,8 +58,6 @@ describe('ExternalLinkDirective', () => {
         aDes = fixture.debugElement.queryAll(By.directive(ExternalLinkDirective));
 
         expect(aDes.length).toBe(4, 'should be 4');
-
-        console.log(aDes);
     });
 
     it('should have 1 anchor element without href attributes', () => {

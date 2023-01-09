@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
 
 import { ProjectOverviewComponent } from './project-overview.component';
 
@@ -9,7 +10,7 @@ describe('ProjectOverviewComponent', () => {
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [ProjectOverviewComponent],
+                declarations: [ProjectOverviewComponent, RouterLinkStubDirective],
             }).compileComponents();
         })
     );

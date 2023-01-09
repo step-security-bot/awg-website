@@ -1,15 +1,13 @@
+import { TemplatePortal } from '@angular/cdk/portal';
 import {
     AfterViewInit,
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
     Input,
-    OnChanges,
-    OnInit,
     TemplateRef,
     ViewContainerRef,
 } from '@angular/core';
-import { TemplatePortal } from '@angular/cdk/portal';
 
 @Component({
     selector: 'awg-right-text',
