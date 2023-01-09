@@ -8,7 +8,6 @@
             "@awg-app/*": ["app/*"],
             "@awg-core/*": ["app/core/*"],
             "@awg-shared/*": ["app/shared/*"],
-            "@awg-side-info/*": ["app/side-info/*"],
             "@awg-views/*": ["app/views/*"],
             "@testing/*": ["testing/*"]
         }

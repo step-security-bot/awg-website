@@ -131,10 +131,10 @@ describe('ExternalLinkDirective', () => {
     it('should not apply [href|target|rel] values to bare anchor', () => {
         bareADes = fixture.debugElement.queryAll(By.css('a:not([href])'));
 
-        expect(bareADes[0].properties.href).not.toBeTruthy('should be empty string');
-        expect(bareADes[0].properties.target).not.toBeTruthy('should be empty string');
-        expect(bareADes[0].properties.rel).not.toBeTruthy('should be empty string');
-        expect(bareADes[0].properties.innerText).toBe('Link without href', 'should be "Link without href"');
+        expect(bareADes[0].properties['href']).not.toBeTruthy('should be empty string');
+        expect(bareADes[0].properties['target']).not.toBeTruthy('should be empty string');
+        expect(bareADes[0].properties['rel']).not.toBeTruthy('should be empty string');
+        expect(bareADes[0].properties['innerText']).toBe('Link without href', 'should be "Link without href"');
     });
 
     it('should reflect input change for [href] values', () => {
