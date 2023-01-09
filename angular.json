@@ -49,12 +49,12 @@
                                 {
                                     "type": "initial",
                                     "maximumWarning": "2mb",
-                                    "maximumError": "5mb"
+                                    "maximumError": "3mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
                                 }
                             ]
                         },
@@ -70,12 +70,12 @@
                                 {
                                     "type": "initial",
                                     "maximumWarning": "2mb",
-                                    "maximumError": "5mb"
+                                    "maximumError": "3mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
                                 }
                             ]
                         },
@@ -123,6 +123,13 @@
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": ["src/styles.css"],
                         "scripts": []
+                    },
+                    "configurations": {
+                        "ci": {
+                            "watch": false,
+                            "progress": false,
+                            "browsers": "ChromeHeadlessCI"
+                        }
                     }
                 },
                 "lint": {
@@ -135,6 +142,12 @@
         }
     },
     "cli": {
-        "schematicCollections": ["@angular-eslint/schematics"]
+        "cache": {
+            "enabled": true,
+            "path": ".angular/cache",
+            "environment": "all"
+        },
+        "schematicCollections": ["@angular-eslint/schematics"],
+        "analytics": false
     }
 }
