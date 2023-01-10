@@ -6,7 +6,6 @@ import { WorksOverviewComponent } from './works-overview.component';
 describe('WorksOverviewComponent', () => {
     let component: WorksOverviewComponent;
     let fixture: ComponentFixture<WorksOverviewComponent>;
-    const info = 'works-overview works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

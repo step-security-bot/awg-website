@@ -6,7 +6,6 @@ import { ResearchComponent } from './research.component';
 describe('ResearchComponent', () => {
     let component: ResearchComponent;
     let fixture: ComponentFixture<ResearchComponent>;
-    const info = 'research works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

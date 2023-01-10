@@ -6,7 +6,6 @@ import { ResearchOverviewComponent } from './research-overview.component';
 describe('ResearchOverviewComponent', () => {
     let component: ResearchOverviewComponent;
     let fixture: ComponentFixture<ResearchOverviewComponent>;
-    const info = 'research-overview works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

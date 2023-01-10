@@ -5,7 +5,6 @@ import { WorksOpusComponent } from './works-opus.component';
 describe('WorksOpusComponent', () => {
     let component: WorksOpusComponent;
     let fixture: ComponentFixture<WorksOpusComponent>;
-    const info = 'works-opus works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

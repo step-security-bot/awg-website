@@ -6,7 +6,6 @@ import { WebernComponent } from './webern.component';
 describe('WebernComponent', () => {
     let component: WebernComponent;
     let fixture: ComponentFixture<WebernComponent>;
-    const info = 'webern works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

@@ -5,7 +5,6 @@ import { WebernLettersComponent } from './webern-letters.component';
 describe('WebernCorrespondenceComponent', () => {
     let component: WebernLettersComponent;
     let fixture: ComponentFixture<WebernLettersComponent>;
-    const info = 'webern-correspondence works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

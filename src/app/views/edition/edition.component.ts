@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./edition.component.css'],
 })
 export class EditionComponent {
-    info = 'edition works!';
-
     constructor() {}
 }

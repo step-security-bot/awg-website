@@ -5,7 +5,6 @@ import { WorksMoldenhauerComponent } from './works-moldenhauer.component';
 describe('WorksMoldenhauerComponent', () => {
     let component: WorksMoldenhauerComponent;
     let fixture: ComponentFixture<WorksMoldenhauerComponent>;
-    const info = 'works-moldenhauer works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

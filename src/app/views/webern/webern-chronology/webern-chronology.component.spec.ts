@@ -5,7 +5,6 @@ import { WebernChronologyComponent } from './webern-chronology.component';
 describe('WebernChronologyComponent', () => {
     let component: WebernChronologyComponent;
     let fixture: ComponentFixture<WebernChronologyComponent>;
-    const info = 'webern-chronology works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

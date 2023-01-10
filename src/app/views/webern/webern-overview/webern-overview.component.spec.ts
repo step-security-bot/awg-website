@@ -5,7 +5,6 @@ import { WebernOverviewComponent } from './webern-overview.component';
 describe('WebernOverviewComponent', () => {
     let component: WebernOverviewComponent;
     let fixture: ComponentFixture<WebernOverviewComponent>;
-    const info = 'webern-overview works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

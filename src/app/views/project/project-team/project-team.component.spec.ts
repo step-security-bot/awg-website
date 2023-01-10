@@ -5,7 +5,6 @@ import { ProjectTeamComponent } from './project-team.component';
 describe('ProjectTeamComponent', () => {
     let component: ProjectTeamComponent;
     let fixture: ComponentFixture<ProjectTeamComponent>;
-    const info = 'project-team works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

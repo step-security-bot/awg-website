@@ -5,7 +5,6 @@ import { ResearchWebernStudiesComponent } from './research-webern-studies.compon
 describe('ResearchWebernStudiesComponent', () => {
     let component: ResearchWebernStudiesComponent;
     let fixture: ComponentFixture<ResearchWebernStudiesComponent>;
-    const info = 'research-webern-studies works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({

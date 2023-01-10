@@ -5,7 +5,6 @@ import { ResearchConferencesComponent } from './research-conferences.component';
 describe('ResearchConferencesComponent', () => {
     let component: ResearchConferencesComponent;
     let fixture: ComponentFixture<ResearchConferencesComponent>;
-    const info = 'research-conferences works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
