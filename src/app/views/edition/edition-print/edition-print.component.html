@@ -1,3 +1,33 @@
-<p>{{ info }}</p>
+<p class="para" i18n>
+    Innerhalb folgender <a [routerLink]="['/edition', 'outline']">Gliederung</a>seinheiten der Anton Webern
+    Gesamtausgabe sind Print-Editionen geplant:
+</p>
 
-<ng-template #rightPanelPortal></ng-template>
+<p class="para" i18n>Serie I Werke mit Opuszahl</p>
+<ul class="awg-edition-print">
+    <li>AWG I/1 Orchestermusik</li>
+    <li>AWG I/2 Kammer- und Klaviermusik</li>
+    <li>AWG I/3 Chormusik</li>
+    <li>AWG I/4 Vokalmusik mit Ensemblebegleitung</li>
+    <li>AWG I/5 Klavierlieder</li>
+</ul>
+
+<p class="para" i18n>Serie II Nachgelassene Kompositionen und Fragmente</p>
+<ul class="awg-edition-print">
+    <li>AWG II/1 Orchestermusik</li>
+    <li>AWG II/2 Kammer- und Klaviermusik</li>
+    <li>AWG II/5 Klavierlieder</li>
+</ul>
+
+<p class="para" i18n>Serie III Bearbeitungen von Werken anderer Komponisten</p>
+<ul class="awg-edition-print">
+    <li>AWG III/1–2 Orchestermusik / Kammer- und Klaviermusik</li>
+    <li>AWG III/3–5 Chormusik / Vokalmusik mit Ensemblebegleitung / Klavierauszüge</li>
+</ul>
+
+<ng-template #rightPanelPortal>
+    <p class="para" i18n>
+        Die Print-Edition der AWG wird bei der
+        <a href="http://www.universaledition.com/">Universal Edition, Wien</a> erscheinen.
+    </p>
+</ng-template>
