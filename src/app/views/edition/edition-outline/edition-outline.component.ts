@@ -10,6 +10,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
  */
 interface EditionComplexNode {
     name: string;
+    link?: string;
     children?: EditionComplexNode[];
 }
 
@@ -31,9 +32,116 @@ const TREE_DATA: EditionComplexNode[] = [
                 name: 'Abteilung 5 (Klavierlieder)',
                 children: [
                     { name: 'Einleitung' },
-                    { name: 'George-Lieder (op. 3 und 4)' },
-                    { name: 'Vier Lieder op. 12' },
-                    { name: 'Drei Gesänge aus Viae Inviae von Hildegard Jone op. 23' },
+                    {
+                        name: 'George-Lieder (op. 3 und 4)',
+                        children: [
+                            { name: 'Einleitung' },
+                            {
+                                name: 'Fünf Lieder aus Der siebente Ring von Stefan George op. 3',
+                                children: [
+                                    { name: 'I [„Dies ist ein Lied“ M 133: Textfassung 4]' },
+                                    { name: 'II [„Im Windesweben“ M 134: Textfassung 3]' },
+                                    { name: 'III [„An Bachesranft“ M 135: Textfassung 3]' },
+                                    { name: 'IV [„Im Morgentaun“ M 136: Textfassung 3]' },
+                                    { name: 'V [„Kahl reckt der Baum“ M 137: Textfassung 5]' },
+                                ],
+                            },
+                            {
+                                name: 'Fünf Lieder nach Gedichten von Stefan George op. 4',
+                                children: [
+                                    { name: 'I [Eingang („Welt der Gestalten“) M 138: Textfassung 3]' },
+                                    { name: 'II [„Noch zwingt mich Treue“ M 139: Textfassung 3]' },
+                                    { name: 'III [„Ja Heil und Dank dir“ M 140: Textfassung 2]' },
+                                    { name: 'IV [„So ich traurig bin“ M 141: Textfassung 2]' },
+                                    { name: 'V [„Ihr tratet zu dem Herde“ M 142: Textfassung 3]' },
+                                ],
+                            },
+                            {
+                                name: 'Texteditionen',
+                                children: [
+                                    { name: '[„An Bachesranft“ M 135: Textfassung 1]' },
+                                    { name: '[„An Bachesranft“ M 135: Textfassung 2]' },
+                                    { name: '[„Das lockere Saatgefilde“ M 146: einzige Textfassung]' },
+                                    { name: '[„Dies ist ein Lied“ M 133: Textfassung 1]' },
+                                    { name: '[„Dies ist ein Lied“ M 133: Textfassung 2]' },
+                                    { name: '[„Dies ist ein Lied“ M 133: Textfassung 3]' },
+                                    { name: '[Eingang („Welt der Gestalten“) M 138: Textfassung 1]' },
+                                    { name: '[Eingang („Welt der Gestalten“) M 138: Textfassung 2]' },
+                                    { name: '[„Erwachen aus dem tiefsten Traumesschoße“ M 143: einzige Textfassung]' },
+                                    { name: '[„Ihr tratet zu dem Herde“ M 142: Textfassung 1]' },
+                                    { name: '[„Ihr tratet zu dem Herde“ M 142: Textfassung 2]' },
+                                    { name: '[„Im Morgentaun“ M 136: Textfassung 1]' },
+                                    { name: '[„Im Morgentaun“ M 136: Textfassung 2]' },
+                                    { name: '[„Im Windesweben“ M 134: Textfassung 1]' },
+                                    { name: '[„Im Windesweben“ M 134: Textfassung 2]' },
+                                    { name: '[„Ja Heil und Dank dir“ M 140: Textfassung 1]' },
+                                    { name: '[„Kahl reckt der Baum“ M 137: Textfassung 1]' },
+                                    { name: '[„Kahl reckt der Baum“ M 137: Textfassung 2]' },
+                                    { name: '[„Kahl reckt der Baum“ M 137: Textfassung 3]' },
+                                    { name: '[„Kahl reckt der Baum“ M 137: Textfassung 4]' },
+                                    { name: '[Kunfttag I („Dem bist du Kind“) M 144: einzige Textfassung]' },
+                                    { name: '[„Noch zwingt mich Treue“ M 139: Textfassung 1]' },
+                                    { name: '[„Noch zwingt mich Treue“ M 139: Textfassung 2]' },
+                                    { name: '[„So ich traurig bin“ M 141: Textfassung 1]' },
+                                    {
+                                        name: '[Trauer I („So wart bis ich dies dir noch künde“) M 145: einzige Textfassung] ',
+                                    },
+                                ],
+                            },
+                            { name: 'Skizzen' },
+                        ],
+                    },
+                    {
+                        name: 'Vier Lieder op. 12',
+                        children: [
+                            { name: 'Einleitung' },
+                            {
+                                name: 'Vier Lieder op. 12',
+                                children: [
+                                    { name: 'I [„Der Tag ist vergangen“ M 212: Textfassung 3]' },
+                                    {
+                                        name: 'II [Die geheimnisvolle Flöte („An einem Abend“) M 217: einzige Textfassung] ',
+                                    },
+                                    { name: 'III [„Schien mir’s, als ich sah die Sonne“ M 213: einzige Textfassung]' },
+                                    { name: 'IV [Gleich und Gleich („Ein Blumenglöckchen“) M 216: Textfassung 2]' },
+                                ],
+                            },
+                            {
+                                name: 'Texteditionen',
+                                children: [
+                                    { name: '[„Der Tag ist vergangen“ M 212: Textfassung 1]' },
+                                    { name: '[„Der Tag ist vergangen“ M 212: Textfassung 2]' },
+                                    { name: '[Gleich und Gleich („Ein Blumenglöckchen“) M 216: Textfassung 1]' },
+                                ],
+                            },
+                            {
+                                name: 'Skizzen',
+                                children: [
+                                    {
+                                        name: 'Beispieledition ausgewählter Skizzen zu op. 12',
+                                        link: 'https://edition.anton-webern.ch/edition/complex/op12/',
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Drei Gesänge aus Viae Inviae von Hildegard Jone op. 23',
+                        children: [
+                            { name: 'Einleitung' },
+                            {
+                                name: 'Drei Gesänge aus Viae Inviae von Hildegard Jone op. 23',
+                                children: [
+                                    { name: 'I [„Das dunkle Herz“ M 314: einzige Textfassung]' },
+                                    { name: 'II [„Es stürzt aus Höhen Frische“ M 313: einzige Textfassung]' },
+                                    { name: 'III [„Herr Jesus mein“ M 312: einzige Textfassung]' },
+                                ],
+                            },
+                            {
+                                name: 'Skizzen',
+                            },
+                        ],
+                    },
                     {
                         name: 'Drei Lieder nach Gedichten von Hildegard Jone op. 25',
                         children: [
@@ -47,10 +155,18 @@ const TREE_DATA: EditionComplexNode[] = [
                                 ],
                             },
                             {
-                                name: 'Textfassungen und nachgelassene Lieder',
+                                name: 'Texteditionen',
                                 children: [{ name: '[„Wie bin ich froh!“ M 317: Textfassung 1]' }],
                             },
-                            { name: 'Skizzen', children: [{ name: 'Beispieledition ausgewählter Skizzen zu op. 25' }] },
+                            {
+                                name: 'Skizzen',
+                                children: [
+                                    {
+                                        name: 'Beispieledition ausgewählter Skizzen zu op. 25',
+                                        link: 'https://edition.anton-webern.ch/edition/complex/op25/',
+                                    },
+                                ],
+                            },
                         ],
                     },
                 ],
@@ -93,6 +209,7 @@ const TREE_DATA: EditionComplexNode[] = [
 export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
 
+    isAllCollapsed = true;
     treeControl = new NestedTreeControl<EditionComplexNode>(node => node.children);
     dataSource = new MatTreeNestedDataSource<EditionComplexNode>();
 
@@ -103,8 +220,33 @@ export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
 
     hasChild = (_: number, node: EditionComplexNode) => !!node.children && node.children.length > 0;
 
+    hasLink = (node: EditionComplexNode) => !!node.link && node.link.length > 0;
+
+    hasChildLinkRecursive = (node: EditionComplexNode) => {
+        if (node.children) {
+            for (const child of node.children) {
+                if (this.hasLink(child)) {
+                    return true;
+                } else if (child.children) {
+                    if (this.hasChildLinkRecursive(child)) {return true;}
+                }
+            }
+        }
+        return false;
+    };
+
     ngAfterViewInit() {
         this._portalService.updateRightPanelPortalData(this.rightPanelPortal);
+    }
+
+    collapseAll() {
+        this.treeControl.collapseAll();
+        this.isAllCollapsed = true;
+    }
+
+    expandAll() {
+        this.treeControl.expandAll();
+        this.isAllCollapsed = false;
     }
 
     ngOnDestroy() {

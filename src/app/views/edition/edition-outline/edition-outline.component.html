@@ -1,12 +1,22 @@
-<button (click)="editionComplexTree.treeControl.collapseAll()">collapse all</button>
-<button (click)="editionComplexTree.treeControl.expandAll()">expand all</button>
+<div style="text-align: right">
+    <button mat-raised-button (click)="isAllCollapsed ? expandAll() : collapseAll()">
+        {{ isAllCollapsed ? 'expand' : 'collapse' }} all
+    </button>
+</div>
 
 <mat-tree #editionComplexTree [dataSource]="dataSource" [treeControl]="treeControl" class="awg-edition-complex-tree">
     <!-- This is the tree node template for leaf nodes -->
     <!-- There is inline padding applied to this node using styles.
       This padding value depends on the mat-icon-button width. -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-        {{ node.name }}
+        <ng-container *ngIf="node.link; else noLink">
+            <a href="{{ node.link }}">
+                {{ node.name }}
+            </a>
+        </ng-container>
+        <ng-template #noLink>
+            {{ node.name }}
+        </ng-template>
     </mat-tree-node>
 
     <!-- This is the tree node template for expandable nodes -->
@@ -17,7 +27,7 @@
                     {{ treeControl.isExpanded(node) ? 'remove' : 'add' }}
                 </mat-icon>
             </button>
-            {{ node.name }}
+            <span [style.font-weight]="hasChildLinkRecursive(node) ? 'bold' : 'normal'">{{ node.name }}</span>
         </div>
         <!-- There is inline padding applied to this div using styles.
             This padding value depends on the mat-icon-button width.  -->
