@@ -5,7 +5,6 @@ import { ContactComponent } from './contact.component';
 describe('ContactComponent', () => {
     let component: ContactComponent;
     let fixture: ComponentFixture<ContactComponent>;
-    const info = 'contact works!';
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
@@ -21,14 +20,5 @@ describe('ContactComponent', () => {
 
     it('should create', () => {
         expect(component).toBeTruthy();
-    });
-
-    it(`should have as status info 'contact works!'`, () => {
-        expect(component.info).toEqual(info);
-    });
-
-    it('should render status info in a p-tag', () => {
-        const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('p').textContent).toContain(info);
     });
 });

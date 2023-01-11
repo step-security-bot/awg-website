@@ -55,4 +55,13 @@ export const MENUDATA: Menu[] = [
             { label: $localize`Archive`, linkTo: 'archives' },
         ],
     },
+    {
+        label: '',
+        linkTo: '/contact',
+        subMenu: [
+            { label: $localize`Kontakt`, linkTo: 'address' },
+            { label: $localize`Impressum`, linkTo: 'imprint' },
+            { label: $localize`Zitationshinweise`, linkTo: 'citation' },
+        ],
+    },
 ];

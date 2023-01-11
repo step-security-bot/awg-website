@@ -279,3 +279,16 @@ ol > li.low-alpha-parenthesis:before {
     position: absolute;
     left: -1.4em;
 }
+
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.highlighted {
+    background: orange;
+}
+.caps {
+    font-variant: small-caps;
+}
