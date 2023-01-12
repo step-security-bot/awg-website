@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { WorksRoutingModule, routedWorksComponents } from './works-routing.module';
+import { SharedModule } from '@awg-app/shared/shared.module';
+
+import { routedWorksComponents, WorksRoutingModule } from './works-routing.module';
 
 @NgModule({
-    imports: [CommonModule, WorksRoutingModule],
+    imports: [SharedModule, WorksRoutingModule],
     declarations: [routedWorksComponents],
 })
 export class WorksModule {}

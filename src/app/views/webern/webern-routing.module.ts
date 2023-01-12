@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { WebernComponent } from './webern.component';
 import { WebernBibliographyComponent } from './webern-bibliography/webern-bibliography.component';
 import { WebernChronologyComponent } from './webern-chronology/webern-chronology.component';
 import { WebernLettersComponent } from './webern-letters/webern-letters.component';
 import { WebernOverviewComponent } from './webern-overview/webern-overview.component';
 import { WebernPersonsComponent } from './webern-persons/webern-persons.component';
+import { WebernComponent } from './webern.component';
 
 const webernRoutes: Routes = [
     {
@@ -36,6 +36,7 @@ export class WebernRoutingModule {}
 
 export const routedWebernComponents = [
     WebernComponent,
+    WebernBibliographyComponent,
     WebernChronologyComponent,
     WebernLettersComponent,
     WebernOverviewComponent,
