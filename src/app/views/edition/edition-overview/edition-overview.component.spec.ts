@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
+
 import { EditionOverviewComponent } from './edition-overview.component';
 
 describe('EditionOverviewComponent', () => {
@@ -8,7 +10,7 @@ describe('EditionOverviewComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            declarations: [EditionOverviewComponent],
+            declarations: [EditionOverviewComponent, RouterLinkStubDirective],
         }).compileComponents();
     }));
 
