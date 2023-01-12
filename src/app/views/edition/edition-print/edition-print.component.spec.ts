@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
+
 import { EditionPrintComponent } from './edition-print.component';
 
 describe('EditionPrintComponent', () => {
@@ -8,7 +10,7 @@ describe('EditionPrintComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            declarations: [EditionPrintComponent],
+            declarations: [EditionPrintComponent, RouterLinkStubDirective],
         }).compileComponents();
     }));
 

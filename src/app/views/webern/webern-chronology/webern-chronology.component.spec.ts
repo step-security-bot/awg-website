@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
+
 import { WebernChronologyComponent } from './webern-chronology.component';
 
 describe('WebernChronologyComponent', () => {
@@ -8,7 +10,7 @@ describe('WebernChronologyComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            declarations: [WebernChronologyComponent],
+            declarations: [WebernChronologyComponent, RouterLinkStubDirective],
         }).compileComponents();
     }));
 

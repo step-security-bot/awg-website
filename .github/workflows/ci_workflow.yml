@@ -1,0 +1,66 @@
+name: CI Workflow
+
+on:
+    push:
+        # trigger on all branches except for dependabot-triggered push events
+        branches-ignore: [ dependabot/** ]
+        tags:
+            - 'v*'    # trigger on all tags
+        paths-ignore:
+            - '**.md' # ignore changes in markdown files
+    pull_request:
+        branches: [ develop ]
+        types: [ opened, synchronize, reopened ]
+
+# globals
+env:
+    # general settings
+    MAIN_REPO_OWNER:
+        musicEnfanthen # Main repo owner (default: webern-unibas-ch; should not be changed)
+
+jobs:
+    test:
+        name: Run tests (Node v${{ matrix.node-version }}, ${{ matrix.os }})
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+                node-version: [14.21, 16.18, 18.x]
+
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0  # Get all history and branches
+
+            - name: Set up node ${{ matrix.node-version}}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'yarn'
+
+            - name: yarn install dependencies
+              run: |
+                  yarn install
+
+            - name: Run CI tests with coverage
+              run: |
+                  yarn run test:ci
+
+            # - name: Upload code coverage
+            #  if: matrix.node-version == 16.18 # upload coverage report for current node version only
+            #  uses: codecov/codecov-action@v3.1.1
+            #  with:
+            #      flags: unittests
+            #      env_vars: ${{ matrix.os }}, ${{ matrix.node-version }}
+
+            #- name: Perform SonarCloud Analysis
+            #  if: matrix.node-version == 16.18 && github.event_name != 'pull_request' && github.repository_owner == env.MAIN_REPO_OWNER # perform SonarCloud analysis only for current node version and not with pull requests or forks(token issue)
+            #  uses: SonarSource/sonarcloud-github-action@v1.8
+            #  env:
+            #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+            #      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+            - name: Test build for GH Pages
+              run: |
+                  yarn run build:gh

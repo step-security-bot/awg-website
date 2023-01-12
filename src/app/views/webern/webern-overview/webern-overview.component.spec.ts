@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
+
 import { WebernOverviewComponent } from './webern-overview.component';
 
 describe('WebernOverviewComponent', () => {
@@ -8,7 +10,7 @@ describe('WebernOverviewComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            declarations: [WebernOverviewComponent],
+            declarations: [WebernOverviewComponent, RouterLinkStubDirective],
         }).compileComponents();
     }));
 

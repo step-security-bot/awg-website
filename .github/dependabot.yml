@@ -1,0 +1,20 @@
+version: 2
+updates:
+    # Maintain dependencies for GitHub Actions
+    - package-ecosystem: 'github-actions'
+      directory: '/'
+      schedule:
+          interval: 'daily'
+      target-branch: 'develop'
+      labels:
+          - 'gh actions dependencies'
+
+    # Maintain dependencies for yarn
+    - package-ecosystem: 'npm'
+      directory: '/'
+      schedule:
+          interval: 'daily'
+      target-branch: 'develop'
+      open-pull-requests-limit: 15
+      labels:
+          - 'npm dependencies'

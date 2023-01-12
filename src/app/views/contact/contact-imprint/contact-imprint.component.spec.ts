@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
+
 import { ContactImprintComponent } from './contact-imprint.component';
 
 describe('ContactImprintComponent', () => {
@@ -8,7 +10,7 @@ describe('ContactImprintComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ContactImprintComponent],
+            declarations: [ContactImprintComponent, RouterLinkStubDirective],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ContactImprintComponent);
