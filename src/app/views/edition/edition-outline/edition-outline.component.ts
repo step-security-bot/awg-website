@@ -18,16 +18,10 @@ const TREE_DATA: EditionComplexNode[] = [
     {
         name: 'Serie I (Werke mit Opuszahlen)',
         children: [
-            { name: 'Abteilung 1 (Orchestermusik)', children: [{ name: 'Konzert für Klavier und Orchester Nr. 1' }] },
-            {
-                name: 'Abteilung 2 (Kammer- und Klaviermusik)',
-                children: [{ name: 'Konzert für Klavier und Orchester Nr. 1' }],
-            },
-            { name: 'Abteilung 3 (Chormusik) ', children: [{ name: 'Konzert für Klavier und Orchester Nr. 1' }] },
-            {
-                name: 'Abteilung 4 (Vokalmusik mit Ensemblebegleitung)',
-                children: [{ name: 'Konzert für Klavier und Orchester Nr. 1' }],
-            },
+            { name: 'Abteilung 1 (Orchestermusik)' },
+            { name: 'Abteilung 2 (Kammer- und Klaviermusik)' },
+            { name: 'Abteilung 3 (Chormusik) ' },
+            { name: 'Abteilung 4 (Vokalmusik mit Ensemblebegleitung)' },
             {
                 name: 'Abteilung 5 (Klavierlieder)',
                 children: [
@@ -177,12 +171,22 @@ const TREE_DATA: EditionComplexNode[] = [
         name: 'Serie II (Nachgelassene Kompositionen und Fragmente)',
         children: [
             {
-                name: 'Green',
-                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+                name: 'Abteilung 1 (Orchestermusik)',
             },
             {
-                name: 'Orange',
-                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+                name: 'Abteilung 2a (Klaviermusik)',
+            },
+            {
+                name: 'Abteilung 2b (Kammermusik)',
+            },
+            {
+                name: 'Abteilung 3 (Chormusik)',
+            },
+            {
+                name: 'Abteilung 4 (Vokalmusik mit Ensemblebegleitung)',
+            },
+            {
+                name: 'Abteilung 5 (Klavierlieder)',
             },
         ],
     },
@@ -190,12 +194,19 @@ const TREE_DATA: EditionComplexNode[] = [
         name: 'Serie III (Bearbeitungen von Werken anderer Komponisten)',
         children: [
             {
-                name: 'Green',
-                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+                name: 'Abteilung 1 (Orchestermusik)',
             },
             {
-                name: 'Orange',
-                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+                name: 'Abteilung 2 (Kammer- und Klaviermusik)',
+            },
+            {
+                name: 'Abteilung 3 (Chormusik)',
+            },
+            {
+                name: 'Abteilung 4 (Vokalmusik mit Ensemblebegleitung)',
+            },
+            {
+                name: 'Abteilung 5 (Klavierauszüge)',
             },
         ],
     },
