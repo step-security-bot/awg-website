@@ -228,7 +228,9 @@ export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
                 if (this.hasLink(child)) {
                     return true;
                 } else if (child.children) {
-                    if (this.hasChildLinkRecursive(child)) {return true;}
+                    if (this.hasChildLinkRecursive(child)) {
+                        return true;
+                    }
                 }
             }
         }
