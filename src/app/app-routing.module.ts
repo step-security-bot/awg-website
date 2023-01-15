@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 
@@ -8,8 +8,13 @@ const appRoutes: Routes = [
     { path: '**', component: PageNotFoundComponent },
 ];
 
+const routerOptions: ExtraOptions = {
+    anchorScrolling: 'enabled',
+    scrollPositionRestoration: 'enabled',
+};
+
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes)],
+    imports: [RouterModule.forRoot(appRoutes, routerOptions)],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}
