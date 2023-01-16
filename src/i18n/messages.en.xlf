@@ -447,12 +447,28 @@
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7300380329026185283" datatype="html">
+        <source>Alles ausklappen</source>
+        <target>Expand all</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/edition/edition-outline/edition-outline.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5941615704122599354" datatype="html">
+        <source>Alles einklappen</source>
+        <target>Collapse all</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/edition/edition-outline/edition-outline.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="5287721202774718599" datatype="html">
         <source> Die nebenstehende, durch Anklicken der "+"-Zeichen ausfaltbare Gliederung der AWG ordnet sämtliche zu edierende Kompositionen Weberns nach besetzungsspezifischen und chronologischen Gesichtspunkten. Verschiedene Textfassungen oder im Entstehungsprozess einer bestimmten Komposition zuordenbare Fragmente werden zu Werkkomplexen unter einem Sammeltitel zusammengefasst. </source>
         <target> The hierarchical structure of each heading can be accessed by clicking on the "+" sign. All of Webern’s edited compositions have been sorted by the AWG according to their instrumentation as well as from a chronological perspective. Different versions or fragments related to a composition’s genesis are grouped together under a collective title. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/edition/edition-outline/edition-outline.component.html</context>
-          <context context-type="linenumber">41,46</context>
+          <context context-type="linenumber">42,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="547769716977151652" datatype="html">
@@ -460,7 +476,7 @@
         <target> Completed <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/edition', 'online']&quot;&gt;"/>online editions<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> will be directly accessible through this structure. A corresponding reference is displayed for available <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/edition', 'print']&quot;&gt;"/>print edition<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> publications. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/edition/edition-outline/edition-outline.component.html</context>
-          <context context-type="linenumber">48,52</context>
+          <context context-type="linenumber">49,53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7895688740866562463" datatype="html">

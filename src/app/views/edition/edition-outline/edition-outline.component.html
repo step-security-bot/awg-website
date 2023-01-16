@@ -1,6 +1,7 @@
 <div style="text-align: right">
     <button mat-raised-button (click)="isAllCollapsed ? expandAll() : collapseAll()">
-        Alles {{ isAllCollapsed ? 'aus' : 'ein' }}klappen
+        <ng-container *ngIf="isAllCollapsed" i18n>Alles ausklappen</ng-container>
+        <ng-container *ngIf="!isAllCollapsed" i18n>Alles einklappen</ng-container>
     </button>
 </div>
 
