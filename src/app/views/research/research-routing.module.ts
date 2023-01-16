@@ -19,8 +19,8 @@ const researchRoutes: Routes = [
                 path: '',
                 children: [
                     { path: 'overview', component: ResearchOverviewComponent },
-                    { path: 'studies', component: ResearchWebernStudiesComponent },
-                    { path: 'lectures', component: ResearchWebernLecturesComponent },
+                    { path: 'webern-studies', component: ResearchWebernStudiesComponent },
+                    { path: 'webern-lectures', component: ResearchWebernLecturesComponent },
                     { path: 'conferences', component: ResearchConferencesComponent },
                     { path: 'publications', component: ResearchPublicationsComponent },
                     { path: 'activities', component: ResearchActivitiesComponent },

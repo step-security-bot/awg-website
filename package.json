@@ -35,6 +35,7 @@
         "serve": "yarn serve:de",
         "serve:de": "ng serve --configuration=de-DE",
         "serve:en": "ng serve --configuration=en",
+        "localize": "ng extract-i18n --output-path src/i18n",
         "-- TEST --": "",
         "test": "ng test",
         "test:cov": "ng test --code-coverage true",
