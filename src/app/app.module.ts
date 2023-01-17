@@ -1,5 +1,7 @@
+import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import localeDeDE from '@angular/common/locales/de';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -15,6 +17,9 @@ import { ProjectModule } from './views/project/project.module';
 import { ResearchModule } from './views/research/research.module';
 import { WebernModule } from './views/webern/webern.module';
 import { WorksModule } from './views/works/works.module';
+
+/* Load and register the used locale file */
+registerLocaleData(localeDeDE);
 
 @NgModule({
     declarations: [AppComponent, routedComponents],
@@ -35,7 +40,7 @@ import { WorksModule } from './views/works/works.module';
 
         AppRoutingModule, // Has to be last routed Module
     ],
-    providers: [],
+    providers: [{ provide: LOCALE_ID, useValue: 'de-DE' }], // Change global LOCALE-ID
     bootstrap: [AppComponent],
 })
 export class AppModule {}

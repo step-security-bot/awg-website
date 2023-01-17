@@ -10,9 +10,11 @@
             "sourceRoot": "src",
             "prefix": "awg",
             "i18n": {
-                "sourceLocale": "de-DE",
+                "sourceLocale": "de",
                 "locales": {
-                    "en": "src/i18n/messages.en.xlf"
+                    "en": {
+                        "translation": "src/i18n/messages.en.xlf"
+                    }
                 }
             },
             "architect": {
@@ -77,12 +79,17 @@
                                     "maximumWarning": "2kb",
                                     "maximumError": "4kb"
                                 }
-                            ]
-                        },
-                        "de-DE": {
-                            "localize": ["de-DE"]
+                            ],
+                            "localize": ["de"]
                         },
                         "en": {
+                            "fileReplacements": [],
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true,
                             "localize": ["en"]
                         }
                     },
@@ -97,9 +104,6 @@
                         },
                         "development": {
                             "browserTarget": "awg-website:build:development"
-                        },
-                        "de-DE": {
-                            "browserTarget": "awg-website:build:de-DE"
                         },
                         "en": {
                             "browserTarget": "awg-website:build:en"

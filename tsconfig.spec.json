@@ -3,7 +3,11 @@
     "compilerOptions": {
         "baseUrl": "./src/",
         "outDir": "./out-tsc/spec",
-        "types": ["jasmine", "node"],
+        "types": [
+          "jasmine",
+          "node",
+          "@angular/localize"
+        ],
         "paths": {
             "@awg-app/*": ["app/*"],
             "@awg-core/*": ["app/core/*"],

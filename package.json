@@ -32,8 +32,7 @@
     "scripts": {
         "husky:prepare": "husky install",
         "ng": "ng",
-        "serve": "yarn serve:de",
-        "serve:de": "ng serve --configuration=de-DE",
+        "serve": "ng serve",
         "serve:en": "ng serve --configuration=en",
         "localize": "ng extract-i18n --output-path src/i18n",
         "-- TEST --": "",
@@ -56,6 +55,7 @@
         "doc:serve": "yarn doc --serve --watch",
         "-- BUILD --": "",
         "build:prod": "ng build",
+        "build:prod:serve": "yarn build:prod && http-server -c-1 -o -p 9875 ./dist/awg-website",
         "build:watch": "ng build --watch --configuration development",
         "build:gh": "yarn build:prod --base-href $npm_package_homepage && yarn compress:dist && yarn doc:build",
         "compress:dist": "gzipper compress ./dist/awg-website/ --gzip --brotli",
