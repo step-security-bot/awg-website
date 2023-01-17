@@ -22,6 +22,16 @@ export class ExternalLinkDirective implements OnChanges {
     }
 
     private _isExternalLink() {
-        return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname);
+        return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname) && !this._isLanguageCode();
+    }
+
+    private _isLanguageCode() {
+        const langCodes = ['de', 'en'];
+        const hrefSplit = this.href.split('/');
+
+        if (langCodes.includes(hrefSplit[1])) {
+            return true;
+        }
+        return false;
     }
 }

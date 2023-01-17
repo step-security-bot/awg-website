@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
 
@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
         this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
             const urlAfterRedirectsKey = 'urlAfterRedirects';
             const path = event[urlAfterRedirectsKey];
+
             this.provideActiveMenu(path);
         });
     }
