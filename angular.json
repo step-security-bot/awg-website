@@ -141,6 +141,14 @@
                     "options": {
                         "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
                     }
+                },
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy",
+                  "options": {
+                        "name": "github-actions",
+                        "email": "github-actions@users.noreply.github.com",
+                        "repo": "https://github.com/webern-unibas-ch/awg-website.git"
+                    }
                 }
             }
         }

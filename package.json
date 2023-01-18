@@ -59,13 +59,14 @@
         "build:watch": "ng build --watch --configuration development",
         "build:gh": "yarn build:prod --base-href $npm_package_homepage && yarn compress:dist && yarn doc:build",
         "compress:dist": "gzipper compress ./dist/awg-website/ --gzip --brotli",
-        "-- DEPLOY --": "",
-        "pre-release": "standard-version -a",
         "-- ANALYZE --": "",
         "pre_wpanalyzer": "yarn build:prod --stats-json",
         "wpanalyzer": "yarn pre_wpanalyzer && webpack-bundle-analyzer dist/awg-website/stats.json",
         "pre_sourcemap": "yarn build:prod --sourceMap",
-        "sourcemap": "yarn pre_sourcemap && source-map-explorer dist/awg-website/*.js"
+        "sourcemap": "yarn pre_sourcemap && source-map-explorer dist/awg-website/*.js",
+        "-- DEPLOY --": "",
+        "pre-release": "standard-version -a",
+        "deploy:ci": "ng deploy --no-build --message=\"Release $npm_package_name (v$npm_package_version) on gh-pages\""
     },
     "dependencies": {
         "@angular/animations": "^15.1.0",
@@ -100,6 +101,7 @@
         "@types/node": "^16.18.11",
         "@typescript-eslint/eslint-plugin": "^5.48.2",
         "@typescript-eslint/parser": "^5.48.2",
+        "angular-cli-ghpages": "1.0.5",
         "conventional-recommended-bump": "^6.1.0",
         "eslint": "^8.32.0",
         "eslint-config-prettier": "^8.6.0",

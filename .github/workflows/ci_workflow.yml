@@ -64,3 +64,39 @@ jobs:
             - name: Test build for GH Pages
               run: |
                   yarn run build:gh
+
+    deploy:
+        name: Deploy app from main (Node v${{ matrix.node-version }}, ${{ matrix.os }})
+        runs-on: ${{ matrix.os }}
+        needs: test
+        # run only on main
+        if: github.ref == 'refs/heads/main'
+
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+                node-version: [ 16.18 ]
+
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v3
+
+            - name: Set up node ${{ matrix.node-version}}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'yarn'
+
+            - name: yarn install dependencies
+              run: |
+                  yarn install
+
+            - name: Build app for GH Pages
+              run: |
+                  yarn run build:gh
+
+            - name: Deploy to GH Pages
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  yarn run deploy:ci
