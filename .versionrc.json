@@ -1,7 +1,4 @@
 {
-    "scripts": {
-        "postbump": "yarn update-appversion"
-    },
     "types": [
         {
             "type": "feat",
