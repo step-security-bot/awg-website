@@ -26,7 +26,7 @@
         "type": "git",
         "url": "git+https://github.com/musicEnfanthen/awg-website.git"
     },
-    "homepage": "https://www.anton-webern.ch",
+    "homepage": "https://webern-unibas-ch.github.io/awg-website",
     "bugs": "",
     "private": true,
     "scripts": {
