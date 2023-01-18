@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/musicEnfanthen/awg-website/compare/v0.0.2...v0.0.3) (2023-01-18)
+
+
+### Bug Fixes
+
+* **shared:** do not open locales links in new window ([1f57881](https://github.com/musicEnfanthen/awg-website/commit/1f57881c5945e2cae7e41ec6f0eb8d9daa2b7103))
+
 ### [0.0.2](https://github.com/musicEnfanthen/awg-website/compare/v0.0.1...v0.0.2) (2023-01-18)
 
 
