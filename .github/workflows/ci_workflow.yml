@@ -95,6 +95,10 @@ jobs:
               run: |
                   yarn run build:gh
 
+            - name: Create default index.html for locales
+              run: |
+                  cp locale-base.html dist/awg-website/index.html
+
             - name: Deploy to GH Pages
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
