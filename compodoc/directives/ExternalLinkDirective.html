@@ -631,9 +631,10 @@ export class ExternalLinkDirective implements OnChanges {
         const langCodes &#x3D; [&#x27;de&#x27;, &#x27;en&#x27;];
         const hrefSplit &#x3D; this.href.split(&#x27;/&#x27;);
 
-        if (langCodes.includes(hrefSplit[1])) {
+        if (hrefSplit[1] &#x3D;&#x3D;&#x3D; &#x27;awg-website&#x27; &amp;&amp; langCodes.includes(hrefSplit[2])) {
             return true;
         }
+
         return false;
     }
 }

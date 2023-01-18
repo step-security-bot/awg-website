@@ -24,115 +24,115 @@
 <title>cluster_ProjectModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-195 1413,-195 1413,-70 8,-70"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_ProjectModule_declarations</title>
-<polygon fill="none" stroke="black" points="300,-78 300,-130 1405,-130 1405,-78 300,-78"/>
-</g>
 <g id="clust9" class="cluster">
 <title>cluster_ProjectModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 292,-130 292,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="1129,-78 1129,-130 1405,-130 1405,-78 1129,-78"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ProjectModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 1121,-130 1121,-78 16,-78"/>
 </g>
 <!-- ProjectBoardComponent -->
 <g id="node1" class="node">
 <title>ProjectBoardComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1396.7,-122 1241.3,-122 1241.3,-86 1396.7,-86 1396.7,-122"/>
-<text text-anchor="middle" x="1319" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectBoardComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1112.7,-122 957.3,-122 957.3,-86 1112.7,-86 1112.7,-122"/>
+<text text-anchor="middle" x="1035" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectBoardComponent</text>
 </g>
 <!-- ProjectModule -->
 <g id="node7" class="node">
 <title>ProjectModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="718.7,-187 715.7,-191 694.7,-191 691.7,-187 619.3,-187 619.3,-151 718.7,-151 718.7,-187"/>
-<text text-anchor="middle" x="669" y="-164.8" font-family="Times,serif" font-size="14.00">ProjectModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="840.7,-187 837.7,-191 816.7,-191 813.7,-187 741.3,-187 741.3,-151 840.7,-151 840.7,-187"/>
+<text text-anchor="middle" x="791" y="-164.8" font-family="Times,serif" font-size="14.00">ProjectModule</text>
 </g>
 <!-- ProjectBoardComponent&#45;&gt;ProjectModule -->
 <g id="edge1" class="edge">
 <title>ProjectBoardComponent&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M1319,-122.29C1319,-144.21 1319,-178 1319,-178 1319,-178 728.66,-178 728.66,-178"/>
-<polygon fill="black" stroke="black" points="728.66,-174.5 718.66,-178 728.66,-181.5 728.66,-174.5"/>
+<path fill="none" stroke="black" d="M1035,-122.03C1035,-138.4 1035,-160 1035,-160 1035,-160 850.67,-160 850.67,-160"/>
+<polygon fill="black" stroke="black" points="850.67,-156.5 840.67,-160 850.67,-163.5 850.67,-156.5"/>
 </g>
 <!-- ProjectComponent -->
 <g id="node2" class="node">
 <title>ProjectComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1223.49,-122 1102.51,-122 1102.51,-86 1223.49,-86 1223.49,-122"/>
-<text text-anchor="middle" x="1163" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="939.49,-122 818.51,-122 818.51,-86 939.49,-86 939.49,-122"/>
+<text text-anchor="middle" x="879" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectComponent</text>
 </g>
 <!-- ProjectComponent&#45;&gt;ProjectModule -->
 <g id="edge2" class="edge">
 <title>ProjectComponent&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M1163,-122.11C1163,-141.34 1163,-169 1163,-169 1163,-169 728.63,-169 728.63,-169"/>
-<polygon fill="black" stroke="black" points="728.63,-165.5 718.63,-169 728.63,-172.5 728.63,-165.5"/>
+<path fill="none" stroke="black" d="M829.55,-122.11C829.55,-122.11 829.55,-140.99 829.55,-140.99"/>
+<polygon fill="black" stroke="black" points="826.05,-140.99 829.55,-150.99 833.05,-140.99 826.05,-140.99"/>
 </g>
 <!-- ProjectCooperationsComponent -->
 <g id="node3" class="node">
 <title>ProjectCooperationsComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1084.64,-122 889.36,-122 889.36,-86 1084.64,-86 1084.64,-122"/>
-<text text-anchor="middle" x="987" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectCooperationsComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="800.64,-122 605.36,-122 605.36,-86 800.64,-86 800.64,-122"/>
+<text text-anchor="middle" x="703" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectCooperationsComponent</text>
 </g>
 <!-- ProjectCooperationsComponent&#45;&gt;ProjectModule -->
 <g id="edge3" class="edge">
 <title>ProjectCooperationsComponent&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M987,-122.03C987,-138.4 987,-160 987,-160 987,-160 728.69,-160 728.69,-160"/>
-<polygon fill="black" stroke="black" points="728.69,-156.5 718.69,-160 728.69,-163.5 728.69,-156.5"/>
+<path fill="none" stroke="black" d="M771.11,-122.11C771.11,-122.11 771.11,-140.99 771.11,-140.99"/>
+<polygon fill="black" stroke="black" points="767.61,-140.99 771.11,-150.99 774.61,-140.99 767.61,-140.99"/>
 </g>
 <!-- ProjectNewsArchiveComponent -->
 <g id="node4" class="node">
 <title>ProjectNewsArchiveComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="870.95,-122 673.05,-122 673.05,-86 870.95,-86 870.95,-122"/>
-<text text-anchor="middle" x="772" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectNewsArchiveComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="586.95,-122 389.05,-122 389.05,-86 586.95,-86 586.95,-122"/>
+<text text-anchor="middle" x="488" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectNewsArchiveComponent</text>
 </g>
 <!-- ProjectNewsArchiveComponent&#45;&gt;ProjectModule -->
 <g id="edge4" class="edge">
 <title>ProjectNewsArchiveComponent&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M695.81,-122.11C695.81,-122.11 695.81,-140.99 695.81,-140.99"/>
-<polygon fill="black" stroke="black" points="692.31,-140.99 695.81,-150.99 699.31,-140.99 692.31,-140.99"/>
+<path fill="none" stroke="black" d="M488,-122.03C488,-138.4 488,-160 488,-160 488,-160 731.31,-160 731.31,-160"/>
+<polygon fill="black" stroke="black" points="731.31,-163.5 741.31,-160 731.3,-156.5 731.31,-163.5"/>
 </g>
 <!-- ProjectOverviewComponent -->
 <g id="node5" class="node">
 <title>ProjectOverviewComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="655.18,-122 478.82,-122 478.82,-86 655.18,-86 655.18,-122"/>
-<text text-anchor="middle" x="567" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectOverviewComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="371.18,-122 194.82,-122 194.82,-86 371.18,-86 371.18,-122"/>
+<text text-anchor="middle" x="283" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectOverviewComponent</text>
 </g>
 <!-- ProjectOverviewComponent&#45;&gt;ProjectModule -->
 <g id="edge5" class="edge">
 <title>ProjectOverviewComponent&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M637.24,-122.11C637.24,-122.11 637.24,-140.99 637.24,-140.99"/>
-<polygon fill="black" stroke="black" points="633.74,-140.99 637.24,-150.99 640.74,-140.99 633.74,-140.99"/>
+<path fill="none" stroke="black" d="M283,-122.11C283,-141.34 283,-169 283,-169 283,-169 731.37,-169 731.37,-169"/>
+<polygon fill="black" stroke="black" points="731.37,-172.5 741.37,-169 731.37,-165.5 731.37,-172.5"/>
 </g>
 <!-- ProjectTeamComponent -->
 <g id="node6" class="node">
 <title>ProjectTeamComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="460.36,-122 307.64,-122 307.64,-86 460.36,-86 460.36,-122"/>
-<text text-anchor="middle" x="384" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectTeamComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="176.36,-122 23.64,-122 23.64,-86 176.36,-86 176.36,-122"/>
+<text text-anchor="middle" x="100" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectTeamComponent</text>
 </g>
 <!-- ProjectTeamComponent&#45;&gt;ProjectModule -->
 <g id="edge6" class="edge">
 <title>ProjectTeamComponent&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M384,-122.03C384,-138.4 384,-160 384,-160 384,-160 609.36,-160 609.36,-160"/>
-<polygon fill="black" stroke="black" points="609.36,-163.5 619.36,-160 609.36,-156.5 609.36,-163.5"/>
+<path fill="none" stroke="black" d="M100,-122.29C100,-144.21 100,-178 100,-178 100,-178 731.3,-178 731.3,-178"/>
+<polygon fill="black" stroke="black" points="731.31,-181.5 741.3,-178 731.3,-174.5 731.31,-181.5"/>
 </g>
 <!-- ProjectRoutingModule -->
 <g id="node8" class="node">
 <title>ProjectRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="284.32,-122 281.32,-126 260.32,-126 257.32,-122 139.68,-122 139.68,-86 284.32,-86 284.32,-122"/>
-<text text-anchor="middle" x="212" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="1397.32,-122 1394.32,-126 1373.32,-126 1370.32,-122 1252.68,-122 1252.68,-86 1397.32,-86 1397.32,-122"/>
+<text text-anchor="middle" x="1325" y="-99.8" font-family="Times,serif" font-size="14.00">ProjectRoutingModule</text>
 </g>
 <!-- ProjectRoutingModule&#45;&gt;ProjectModule -->
 <g id="edge7" class="edge">
 <title>ProjectRoutingModule&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M212,-122.11C212,-141.34 212,-169 212,-169 212,-169 609.22,-169 609.22,-169"/>
-<polygon fill="black" stroke="black" points="609.22,-172.5 619.22,-169 609.22,-165.5 609.22,-172.5"/>
+<path fill="none" stroke="black" d="M1325,-122.29C1325,-144.21 1325,-178 1325,-178 1325,-178 850.76,-178 850.76,-178"/>
+<polygon fill="black" stroke="black" points="850.76,-174.5 840.76,-178 850.76,-181.5 850.76,-174.5"/>
 </g>
 <!-- SharedModule -->
 <g id="node9" class="node">
 <title>SharedModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="122.42,-122 119.42,-126 98.42,-126 95.42,-122 23.58,-122 23.58,-86 122.42,-86 122.42,-122"/>
-<text text-anchor="middle" x="73" y="-99.8" font-family="Times,serif" font-size="14.00">SharedModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="1235.42,-122 1232.42,-126 1211.42,-126 1208.42,-122 1136.58,-122 1136.58,-86 1235.42,-86 1235.42,-122"/>
+<text text-anchor="middle" x="1186" y="-99.8" font-family="Times,serif" font-size="14.00">SharedModule</text>
 </g>
 <!-- SharedModule&#45;&gt;ProjectModule -->
 <g id="edge8" class="edge">
 <title>SharedModule&#45;&gt;ProjectModule</title>
-<path fill="none" stroke="black" d="M73,-122.29C73,-144.21 73,-178 73,-178 73,-178 609.21,-178 609.21,-178"/>
-<polygon fill="black" stroke="black" points="609.21,-181.5 619.21,-178 609.21,-174.5 609.21,-181.5"/>
+<path fill="none" stroke="black" d="M1186,-122.11C1186,-141.34 1186,-169 1186,-169 1186,-169 850.63,-169 850.63,-169"/>
+<polygon fill="black" stroke="black" points="850.63,-165.5 840.63,-169 850.63,-172.5 850.63,-165.5"/>
 </g>
 </g>
 </svg>
