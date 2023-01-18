@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/musicEnfanthen/awg-website/compare/v0.0.1...v0.0.2) (2023-01-18)
+
+
+### Continuous Integration
+
+* **gh-actions:** add default index.html ([58eca70](https://github.com/musicEnfanthen/awg-website/commit/58eca70bc5f18ca9e02bbeebe66db2add6b15d6a))
+
 ### 0.0.1 (2023-01-18)
 
 
