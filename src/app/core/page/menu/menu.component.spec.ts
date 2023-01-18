@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
@@ -19,38 +19,36 @@ describe('MenuComponent', () => {
     let routerLinks: RouterLinkStubDirective[];
     let expectedMenuArray: Menu[];
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [MenuComponent, RouterLinkStubDirective]
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [MenuComponent, RouterLinkStubDirective],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(MenuComponent);
         component = fixture.componentInstance;
 
-        // mock the menu array supplied by the parent component
+        // Mock the menu array supplied by the parent component
         expectedMenuArray = MENUDATA;
 
-        // simulate the parent setting the input property with that menu array
+        // Simulate the parent setting the input property with that menu array
         component.menuArray = expectedMenuArray;
 
-        // trigger initial data binding
+        // Trigger initial data binding
         fixture.detectChanges();
 
-        // find the DebugElement and element of the first & last menu
+        // Find the DebugElement and element of the first & last menu
         firstMenuDe = fixture.debugElement.query(By.css('.first'));
         firstMenuEl = firstMenuDe.nativeElement;
         lastMenuDe = fixture.debugElement.query(By.css('.last'));
         lastMenuEl = lastMenuDe.nativeElement;
 
-        // find DebugElements with an attached RouterLinkStubDirective
+        // Find DebugElements with an attached RouterLinkStubDirective
         linkDes = fixture.debugElement.queryAll(By.directive(RouterLinkStubDirective));
 
-        // get attached link directive instances
-        // using each DebugElement's injector
+        // Get attached link directive instances
+        // Using each DebugElement's injector
         routerLinks = linkDes.map(de => de.injector.get(RouterLinkStubDirective));
     });
 
@@ -59,28 +57,31 @@ describe('MenuComponent', () => {
     });
 
     it('should get menu array input after data binding', () => {
+        expect(component.menuArray).toBeDefined();
         expect(component.menuArray).toBe(expectedMenuArray);
     });
 
     it('can get routerLinks from template', () => {
-        expect(routerLinks.length).toBe(5, 'should have 5 routerLinks');
+        expect(routerLinks.length).withContext('should have 6 routerLinks').toBe(6);
         expect(routerLinks[0].routerLink).toBe('/project');
         expect(routerLinks[1].routerLink).toBe('/webern');
         expect(routerLinks[2].routerLink).toBe('/works');
         expect(routerLinks[3].routerLink).toBe('/edition');
         expect(routerLinks[4].routerLink).toBe('/research');
+        expect(routerLinks[5].routerLink).toBe('/contact');
     });
 
     it('can click edition link in template', () => {
-        const editionLinkDe = linkDes[3]; // edition link DebugElement
-        const editionLink = routerLinks[3]; // edition link directive
+        const editionLinkDe = linkDes[3]; // Edition link DebugElement
+        const editionLink = routerLinks[3]; // Edition link directive
 
-        expect(editionLink.navigatedTo).toBeNull('should not have navigated yet');
+        expect(editionLink.navigatedTo).toBeNull();
 
         editionLinkDe.triggerEventHandler('click', null);
         fixture.detectChanges();
 
-        expect(editionLink.navigatedTo).toBe('/edition');
+        expect(editionLink.navigatedTo).toBeDefined();
+        expect(editionLink.navigatedTo).withContext(`should be '/edition'`).toBe('/edition');
     });
 
     it('should apply class .first only to first menu', () => {
@@ -89,6 +90,7 @@ describe('MenuComponent', () => {
         expect(linkDes[2].nativeElement.className).not.toContain('first');
         expect(linkDes[3].nativeElement.className).not.toContain('first');
         expect(linkDes[4].nativeElement.className).not.toContain('first');
+        expect(linkDes[5].nativeElement.className).not.toContain('first');
     });
 
     it('should apply class .last only to last menu', () => {
@@ -96,13 +98,22 @@ describe('MenuComponent', () => {
         expect(linkDes[1].nativeElement.className).not.toContain('last');
         expect(linkDes[2].nativeElement.className).not.toContain('last');
         expect(linkDes[3].nativeElement.className).not.toContain('last');
-        expect(linkDes[4].nativeElement.className).toContain('last');
+        expect(linkDes[4].nativeElement.className).not.toContain('last');
+        expect(linkDes[5].nativeElement.className).toContain('last');
     });
 
     it('should display menu label in uppercase', () => {
-        const expectedFirstUppercaseLabel = expectedMenuArray[0].label.toUpperCase(); // label: PROJEKT
-        const expectedLastUppercaseLabel = expectedMenuArray[4].label.toUpperCase(); // label: RESEARCH
-        expect(firstMenuEl.textContent).toContain(expectedFirstUppercaseLabel);
-        expect(lastMenuEl.textContent).toContain(expectedLastUppercaseLabel);
+        const expectedFirstUppercaseLabel = expectedMenuArray.at(0).label.toUpperCase(); // Label: PROJEKT
+        const expectedLastUppercaseLabel = expectedMenuArray.at(-1).label.toUpperCase(); // Label: ' ' (empty)
+
+        expect(firstMenuEl.textContent).toBeTruthy();
+        expect(firstMenuEl.textContent)
+            .withContext(`should contain ${expectedFirstUppercaseLabel}`)
+            .toContain(expectedFirstUppercaseLabel);
+
+        expect(lastMenuEl.textContent).toBeTruthy();
+        expect(lastMenuEl.textContent)
+            .withContext(`should contain ${expectedLastUppercaseLabel}`)
+            .toContain(expectedLastUppercaseLabel);
     });
 });

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { WebernComponent } from './webern.component';
+import { WebernBibliographyComponent } from './webern-bibliography/webern-bibliography.component';
 import { WebernChronologyComponent } from './webern-chronology/webern-chronology.component';
-import { WebernCorrespondenceComponent } from './webern-correspondence/webern-correspondence.component';
+import { WebernLettersComponent } from './webern-letters/webern-letters.component';
 import { WebernOverviewComponent } from './webern-overview/webern-overview.component';
 import { WebernPersonsComponent } from './webern-persons/webern-persons.component';
+import { WebernComponent } from './webern.component';
 
 const webernRoutes: Routes = [
     {
@@ -17,25 +18,27 @@ const webernRoutes: Routes = [
                 children: [
                     { path: 'overview', component: WebernOverviewComponent },
                     { path: 'chronology', component: WebernChronologyComponent },
-                    { path: 'correspondence', component: WebernCorrespondenceComponent },
+                    { path: 'letters', component: WebernLettersComponent },
                     { path: 'persons', component: WebernPersonsComponent },
-                    { path: '', redirectTo: 'overview', pathMatch: 'full' }
-                ]
-            }
-        ]
-    }
+                    { path: 'bibliography', component: WebernBibliographyComponent },
+                    { path: '', redirectTo: 'overview', pathMatch: 'full' },
+                ],
+            },
+        ],
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(webernRoutes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class WebernRoutingModule {}
 
 export const routedWebernComponents = [
     WebernComponent,
+    WebernBibliographyComponent,
     WebernChronologyComponent,
-    WebernCorrespondenceComponent,
+    WebernLettersComponent,
     WebernOverviewComponent,
-    WebernPersonsComponent
+    WebernPersonsComponent,
 ];

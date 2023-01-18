@@ -7,18 +7,21 @@ import { ReplaySubject } from 'rxjs';
  */
 export class ActivatedRouteStubComponent {
     // Use a ReplaySubject to share previous values with subscribers
-    // and pump new values into the `paramMap` observable
-    private subject = new ReplaySubject<ParamMap>();
+    // And pump new values into the `paramMap` observable
+    private _subject = new ReplaySubject<ParamMap>();
+
+    /**
+     * The mock paramMap observable
+     */
+    // eslint-disable-next-line @typescript-eslint/member-ordering, @typescript-eslint/naming-convention
+    readonly paramMap = this._subject.asObservable();
 
     constructor(initialParams?: Params) {
         this.setParamMap(initialParams);
     }
 
-    /** The mock paramMap observable */
-    readonly paramMap = this.subject.asObservable();
-
     /** Set the paramMap observables's next value */
     setParamMap(params?: Params) {
-        this.subject.next(convertToParamMap(params));
+        this._subject.next(convertToParamMap(params));
     }
 }

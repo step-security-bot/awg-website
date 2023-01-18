@@ -7,14 +7,12 @@ describe('MainTextComponent', () => {
     let component: MainTextComponent;
     let fixture: ComponentFixture<MainTextComponent>;
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                imports: [RouterTestingModule],
-                declarations: [MainTextComponent]
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            imports: [RouterTestingModule],
+            declarations: [MainTextComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(MainTextComponent);

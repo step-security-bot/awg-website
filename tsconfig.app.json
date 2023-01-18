@@ -3,7 +3,9 @@
     "compilerOptions": {
         "baseUrl": "./src/",
         "outDir": "./out-tsc/app",
-        "types": [],
+        "types": [
+          "@angular/localize"
+        ],
         "paths": {
             "@awg-app/*": ["app/*"],
             "@awg-core/*": ["app/core/*"],

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from '@awg-app/shared/shared.module';
 
 import { ResearchRoutingModule, routedResearchComponents } from './research-routing.module';
 
 @NgModule({
-    imports: [CommonModule, ResearchRoutingModule],
-    declarations: [routedResearchComponents]
+    imports: [SharedModule, ResearchRoutingModule],
+    declarations: [routedResearchComponents],
 })
 export class ResearchModule {}

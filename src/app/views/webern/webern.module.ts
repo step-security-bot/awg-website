@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { WebernRoutingModule, routedWebernComponents } from './webern-routing.module';
+import { SharedModule } from '@awg-app/shared/shared.module';
+
+import { routedWebernComponents, WebernRoutingModule } from './webern-routing.module';
 
 @NgModule({
-    imports: [CommonModule, WebernRoutingModule],
-    declarations: [routedWebernComponents]
+    imports: [SharedModule, WebernRoutingModule],
+    declarations: [routedWebernComponents],
 })
 export class WebernModule {}

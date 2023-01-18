@@ -247,6 +247,13 @@ hr {
     color: #00a4a7;
 }
 
+.para {
+    margin-bottom: 1.5em;
+}
+.presentation-year {
+    margin-bottom: 0;
+    margin-top: 3em;
+}
 .personbox {
     overflow: hidden;
     width: 100%;
@@ -254,4 +261,34 @@ hr {
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
     margin-bottom: 10px;
+}
+
+ol.awg-research-conferences {
+    counter-reset: list;
+    margin: 0;
+}
+
+ol > li.low-alpha-parenthesis {
+    list-style: none;
+    position: relative;
+}
+
+ol > li.low-alpha-parenthesis:before {
+    counter-increment: list;
+    content: counter(list, lower-alpha) ') ';
+    position: absolute;
+    left: -1.4em;
+}
+
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.highlighted {
+    background: orange;
+}
+.caps {
+    font-variant: small-caps;
 }

@@ -1,27 +1,17 @@
-# Ng2Awg
+![GitHub package.json version](https://img.shields.io/github/package-json/v/webern-unibas-ch/awg-website.svg)
+[![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/webern-unibas-ch/awg-website/@angular/core?color=red&label=angular&logo=angular)](https://github.com/angular/angular)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/webern-unibas-ch/awg-website)
+![CI Workflow](https://github.com/webern-unibas-ch/awg-website/actions/workflows/ci_workflow.yml/badge.svg)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+Website of the [Anton Webern Gesamtausgabe](https://www.anton-webern.ch), located at the Department of Musicology of the University of Basel. It is written in [Angular](https://angular.io/) and runs on [www.anton-webern.ch](https://www.anton-webern.ch).
 
-## Development server
+## Contributing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Please read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [CONTRIBUTING.md](CONTRIBUTING.md) to see how you may contribute to this project.
 
-## Code scaffolding
+## License
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The software code of this project is released under [MIT](https://opensource.org/licenses/MIT) license, see [LICENSE.md](https://github.com/webern-unibas-ch/awg-app/blob/main/LICENSE.md).
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The contents of the webpage are released under [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/), see [Disclaimer](https://www.anton-webern.ch/index.php?id=42).

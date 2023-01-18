@@ -3,21 +3,30 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "ng2-awg": {
+        "awg-website": {
             "projectType": "application",
             "schematics": {},
             "root": "",
             "sourceRoot": "src",
             "prefix": "awg",
+            "i18n": {
+                "sourceLocale": "de",
+                "locales": {
+                    "en": {
+                        "translation": "src/i18n/messages.en.xlf"
+                    }
+                }
+            },
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/ng2-awg",
+                        "outputPath": "dist/awg-website",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.app.json",
+                        "localize": true,
                         "aot": true,
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": ["src/styles.css"],
@@ -42,32 +51,70 @@
                                 {
                                     "type": "initial",
                                     "maximumWarning": "2mb",
-                                    "maximumError": "5mb"
+                                    "maximumError": "3mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
                                 }
                             ]
+                        },
+                        "development": {
+                            "fileReplacements": [],
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "3mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
+                                }
+                            ],
+                            "localize": ["de"]
+                        },
+                        "en": {
+                            "fileReplacements": [],
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true,
+                            "localize": ["en"]
                         }
-                    }
+                    },
+                    "defaultConfiguration": "production"
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
-                    "options": {
-                        "browserTarget": "ng2-awg:build"
-                    },
+                    "options": {},
                     "configurations": {
                         "production": {
-                            "browserTarget": "ng2-awg:build:production"
+                            "browserTarget": "awg-website:build:production"
+                        },
+                        "development": {
+                            "browserTarget": "awg-website:build:development"
+                        },
+                        "en": {
+                            "browserTarget": "awg-website:build:en"
                         }
-                    }
+                    },
+                    "defaultConfiguration": "development"
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "ng2-awg:build"
+                        "browserTarget": "awg-website:build"
                     }
                 },
                 "test": {
@@ -80,29 +127,39 @@
                         "assets": ["src/favicon.ico", "src/assets"],
                         "styles": ["src/styles.css"],
                         "scripts": []
+                    },
+                    "configurations": {
+                        "ci": {
+                            "watch": false,
+                            "progress": false,
+                            "browsers": "ChromeHeadlessCI"
+                        }
                     }
                 },
                 "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
+                    "builder": "@angular-eslint/builder:lint",
                     "options": {
-                        "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
-                        "exclude": ["**/node_modules/**"]
+                        "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
                     }
                 },
-                "e2e": {
-                    "builder": "@angular-devkit/build-angular:protractor",
-                    "options": {
-                        "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "ng2-awg:serve"
-                    },
-                    "configurations": {
-                        "production": {
-                            "devServerTarget": "ng2-awg:serve:production"
-                        }
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy",
+                  "options": {
+                        "name": "github-actions",
+                        "email": "github-actions@users.noreply.github.com",
+                        "repo": "https://github.com/webern-unibas-ch/awg-website.git"
                     }
                 }
             }
         }
     },
-    "defaultProject": "ng2-awg"
+    "cli": {
+        "cache": {
+            "enabled": true,
+            "path": ".angular/cache",
+            "environment": "all"
+        },
+        "schematicCollections": ["@angular-eslint/schematics"],
+        "analytics": false
+    }
 }

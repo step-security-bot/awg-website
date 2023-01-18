@@ -19,16 +19,16 @@ const editionRoutes: Routes = [
                     { path: 'outline', component: EditionOutlineComponent },
                     { path: 'print', component: EditionPrintComponent },
                     { path: 'online', component: EditionOnlineComponent },
-                    { path: '', redirectTo: 'overview', pathMatch: 'full' }
-                ]
-            }
-        ]
-    }
+                    { path: '', redirectTo: 'overview', pathMatch: 'full' },
+                ],
+            },
+        ],
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(editionRoutes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class EditionRoutingModule {}
 
@@ -37,5 +37,5 @@ export const routedEditionComponents = [
     EditionOnlineComponent,
     EditionOutlineComponent,
     EditionOverviewComponent,
-    EditionPrintComponent
+    EditionPrintComponent,
 ];

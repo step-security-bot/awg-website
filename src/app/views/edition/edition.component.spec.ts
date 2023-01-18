@@ -6,16 +6,13 @@ import { EditionComponent } from './edition.component';
 describe('EditionComponent', () => {
     let component: EditionComponent;
     let fixture: ComponentFixture<EditionComponent>;
-    const info = 'edition works!';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                imports: [RouterTestingModule],
-                declarations: [EditionComponent]
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            imports: [RouterTestingModule],
+            declarations: [EditionComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(EditionComponent);
@@ -25,14 +22,5 @@ describe('EditionComponent', () => {
 
     it('should create', () => {
         expect(component).toBeTruthy();
-    });
-
-    it(`should have as status info 'edition works!'`, () => {
-        expect(component.info).toEqual(info);
-    });
-
-    it('should render status info in a p-tag', () => {
-        const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('p').textContent).toContain(info);
     });
 });

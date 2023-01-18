@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { PortalModule } from '@angular/cdk/portal';
+import { NgModule } from '@angular/core';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -28,6 +28,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
     imports: [
@@ -59,7 +60,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         MatSortModule,
         MatTabsModule,
         MatToolbarModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatTreeModule,
     ],
 
     exports: [
@@ -91,7 +93,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         MatSortModule,
         MatTabsModule,
         MatToolbarModule,
-        MatTooltipModule
-    ]
+        MatTooltipModule,
+        MatTreeModule,
+    ],
 })
 export class AppMaterialModule {}

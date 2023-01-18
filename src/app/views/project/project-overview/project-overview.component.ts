@@ -5,20 +5,18 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
 @Component({
     selector: 'awg-project-overview',
     templateUrl: './project-overview.component.html',
-    styleUrls: ['./project-overview.component.css']
+    styleUrls: ['./project-overview.component.css'],
 })
 export class ProjectOverviewComponent implements AfterViewInit, OnDestroy {
-    @ViewChild('rightTextPortal') rightTextPortal: TemplateRef<unknown>;
+    @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
 
-    constructor(private portalService: PortalService) {}
+    constructor(private _portalService: PortalService) {}
 
-    ngAfterViewInit () {
-        this.portalService.updateRightTextPortalData(this.rightTextPortal);
+    ngAfterViewInit() {
+        this._portalService.updateRightPanelPortalData(this.rightPanelPortal);
     }
 
-    ngOnDestroy () {
-        this.portalService.clearRightTextPortalData();
+    ngOnDestroy() {
+        this._portalService.clearRightPanelPortalData();
     }
-
-
 }

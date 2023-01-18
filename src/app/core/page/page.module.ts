@@ -17,8 +17,8 @@ import { RightTextComponent } from './right-text/right-text.component';
         MenuComponent,
         RightTextComponent,
         SearchComponent,
-        SubMenuComponent
+        SubMenuComponent,
     ],
-    exports: [PageComponent, MainTextComponent, MenuComponent, RightTextComponent, SearchComponent, SubMenuComponent]
+    exports: [PageComponent, MainTextComponent, MenuComponent, RightTextComponent, SearchComponent, SubMenuComponent],
 })
 export class PageModule {}

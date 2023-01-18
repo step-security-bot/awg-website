@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
@@ -12,46 +12,46 @@ import { SubMenuComponent } from './sub-menu.component';
 describe('SubMenuComponent', () => {
     let component: SubMenuComponent;
     let fixture: ComponentFixture<SubMenuComponent>;
+
     let linkDes: DebugElement[];
-    let firstMenuDe: DebugElement;
-    let lastMenuDe: DebugElement;
-    let firstMenuEl;
-    let lastMenuEl;
+    let firstSubMenuDe: DebugElement;
+    let lastSubMenuDe: DebugElement;
+    let firstSubMenuEl;
+    let lastSubMenuEl;
+
     let routerLinks: RouterLinkStubDirective[];
     let expectedMenu: Menu;
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [SubMenuComponent, RouterLinkStubDirective]
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [SubMenuComponent, RouterLinkStubDirective],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(SubMenuComponent);
         component = fixture.componentInstance;
 
-        // mock the menu array supplied by the parent component
+        // Mock the menu array supplied by the parent component
         expectedMenu = MENUDATA[0];
 
-        // simulate the parent setting the input property with that menu array
+        // Simulate the parent setting the input property with that menu array
         component.selectedMenu = expectedMenu;
 
-        // trigger initial data binding
+        // Trigger initial data binding
         fixture.detectChanges();
 
-        // find the DebugElement and element of the first & last menu
-        firstMenuDe = fixture.debugElement.query(By.css('.first'));
-        firstMenuEl = firstMenuDe.nativeElement;
-        lastMenuDe = fixture.debugElement.query(By.css('.last'));
-        lastMenuEl = lastMenuDe.nativeElement;
+        // Find the DebugElement and element of the first & last sub menu
+        firstSubMenuDe = fixture.debugElement.query(By.css('.first'));
+        firstSubMenuEl = firstSubMenuDe.nativeElement;
+        lastSubMenuDe = fixture.debugElement.query(By.css('.last'));
+        lastSubMenuEl = lastSubMenuDe.nativeElement;
 
-        // find DebugElements with an attached RouterLinkStubDirective
+        // Find DebugElements with an attached RouterLinkStubDirective
         linkDes = fixture.debugElement.queryAll(By.directive(RouterLinkStubDirective));
 
-        // get attached link directive instances
-        // using each DebugElement's injector
+        // Get attached link directive instances
+        // Using each DebugElement's injector
         routerLinks = linkDes.map(de => de.injector.get(RouterLinkStubDirective));
     });
 
@@ -63,11 +63,11 @@ describe('SubMenuComponent', () => {
         expect(component.selectedMenu).toBe(expectedMenu);
     });
 
-    it('can get routerLinks from template', () => {
-        expect(routerLinks.length).toBe(5, 'should have 5 routerLinks');
+    it('can get project routerLinks from template', () => {
+        expect(routerLinks.length).withContext('should have 5 routerLinks').toBe(5);
         routerLinks.forEach(route => {
             expect(route.routerLink[0]).toBe('/project');
-        }); // every route has /project root
+        }); // Every route has /project root
         expect(routerLinks[0].routerLink[1]).toBe('overview');
         expect(routerLinks[1].routerLink[1]).toBe('team');
         expect(routerLinks[2].routerLink[1]).toBe('board');
@@ -75,11 +75,11 @@ describe('SubMenuComponent', () => {
         expect(routerLinks[4].routerLink[1]).toBe('news-archive');
     });
 
-    it('can click edition link in template', () => {
-        const boardLinkDe = linkDes[2]; // board link DebugElement
-        const boardLink = routerLinks[2]; // board link directive
+    it('can click board link in template', () => {
+        const boardLinkDe = linkDes[2]; // Board link DebugElement
+        const boardLink = routerLinks[2]; // Board link directive
 
-        expect(boardLink.navigatedTo).toBeNull('should not have navigated yet');
+        expect(boardLink.navigatedTo).toBeNull();
 
         boardLinkDe.triggerEventHandler('click', null);
         fixture.detectChanges();
@@ -88,7 +88,7 @@ describe('SubMenuComponent', () => {
         expect(boardLink.navigatedTo[1]).toBe('board');
     });
 
-    it('should apply class .first only to first menu', () => {
+    it('should apply class .first only to first sub menu', () => {
         expect(linkDes[0].nativeElement.className).toContain('first');
         expect(linkDes[1].nativeElement.className).not.toContain('first');
         expect(linkDes[2].nativeElement.className).not.toContain('first');
@@ -96,7 +96,7 @@ describe('SubMenuComponent', () => {
         expect(linkDes[4].nativeElement.className).not.toContain('first');
     });
 
-    it('should apply class .last only to last menu', () => {
+    it('should apply class .last only to last sub menu', () => {
         expect(linkDes[0].nativeElement.className).not.toContain('last');
         expect(linkDes[1].nativeElement.className).not.toContain('last');
         expect(linkDes[2].nativeElement.className).not.toContain('last');
@@ -104,10 +104,18 @@ describe('SubMenuComponent', () => {
         expect(linkDes[4].nativeElement.className).toContain('last');
     });
 
-    it('should display menu label in uppercase', () => {
-        const expectedFirstUppercaseLabel = expectedMenu.subMenu[0].label.toUpperCase(); // label: OVERVIEW
-        const expectedLastUppercaseLabel = expectedMenu.subMenu[4].label.toUpperCase(); // label: NEWS-ARCHIV
-        expect(firstMenuEl.textContent).toContain(expectedFirstUppercaseLabel);
-        expect(lastMenuEl.textContent).toContain(expectedLastUppercaseLabel);
+    it('should display sub menu label in uppercase', () => {
+        const expectedFirstUppercaseLabel = expectedMenu.subMenu[0].label.toUpperCase(); // Label: OVERVIEW
+        const expectedLastUppercaseLabel = expectedMenu.subMenu[4].label.toUpperCase(); // Label: NEWS-ARCHIV
+
+        expect(firstSubMenuEl.textContent).toBeTruthy();
+        expect(firstSubMenuEl.textContent)
+            .withContext(`should contain ${expectedFirstUppercaseLabel}`)
+            .toContain(expectedFirstUppercaseLabel);
+
+        expect(lastSubMenuEl.textContent).toBeTruthy();
+        expect(lastSubMenuEl.textContent)
+            .withContext(`should contain ${expectedLastUppercaseLabel}`)
+            .toContain(expectedLastUppercaseLabel);
     });
 });

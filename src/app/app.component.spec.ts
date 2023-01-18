@@ -1,9 +1,9 @@
-import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
-import { Component, DebugElement, Input, NgZone } from '@angular/core';
 import { Location } from '@angular/common';
+import { Component, DebugElement, Input, NgZone } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { Router, Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { By } from '@angular/platform-browser';
 
 import Spy = jasmine.Spy;
 
@@ -16,8 +16,10 @@ import { MenuService } from '@awg-core/page/page-services/menu.service';
 
 import { AppComponent } from './app.component';
 
-
 // Mock components
+@Component({ selector: 'awg-corner-ribbon', template: '' })
+class CornerRibbonStubComponent {}
+
 @Component({ selector: 'awg-footer', template: '' })
 class FooterStubComponent {}
 
@@ -63,32 +65,31 @@ describe('AppComponent', () => {
     let getMenuArraySpy: Spy;
     let getActiveMenuSpy: Spy;
 
-    beforeEach(
-        waitForAsync(() => {
-            // stub menuService for test purposes
-            mockMenuService = {
-                getMenuArray: () => MENUDATA,
-                getActiveMenu: () => MENUDATA[0]
-            };
+    beforeEach(waitForAsync(() => {
+        // Stub menuService for test purposes
+        mockMenuService = {
+            getMenuArray: () => MENUDATA,
+            getActiveMenu: () => MENUDATA[0],
+        };
 
-            TestBed.configureTestingModule({
-                imports: [RouterTestingModule.withRoutes(mockRoutes)],
-                declarations: [
-                    AppComponent,
-                    HeaderStubComponent,
-                    FooterStubComponent,
-                    PageStubComponent,
-                    RoutedTestMockComponent,
-                    RoutedTest2MockComponent
-                ],
-                providers: [{ provide: MenuService, useValue: mockMenuService }]
-            }).compileComponents();
+        TestBed.configureTestingModule({
+            imports: [RouterTestingModule.withRoutes(mockRoutes)],
+            declarations: [
+                AppComponent,
+                CornerRibbonStubComponent,
+                HeaderStubComponent,
+                FooterStubComponent,
+                PageStubComponent,
+                RoutedTestMockComponent,
+                RoutedTest2MockComponent,
+            ],
+            providers: [{ provide: MenuService, useValue: mockMenuService }],
+        }).compileComponents();
 
-            // Spies for service methods
-            getMenuArraySpy = spyOn(mockMenuService, 'getMenuArray').and.callThrough();
-            getActiveMenuSpy = spyOn(mockMenuService, 'getActiveMenu').and.callThrough();
-        })
-    );
+        // Spies for service methods
+        getMenuArraySpy = spyOn(mockMenuService, 'getMenuArray').and.callThrough();
+        getActiveMenuSpy = spyOn(mockMenuService, 'getActiveMenu').and.callThrough();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(AppComponent);
@@ -119,12 +120,9 @@ describe('AppComponent', () => {
         cleanStylesFromDOM();
     });
 
-    it(
-        'should create the app',
-        waitForAsync(() => {
-            expect(component).toBeTruthy();
-        })
-    );
+    it('should create the app', waitForAsync(() => {
+        expect(component).toBeTruthy();
+    }));
 
     it('injected menuService should use provided mockValue', () => {
         const menuService = TestBed.inject(MenuService);
@@ -132,65 +130,54 @@ describe('AppComponent', () => {
     });
 
     describe('router setup (self-test)', () => {
-        it(
-            '... initial navigation should have detected empty route \'\'',
-            waitForAsync(() => {
-                expect(location.path()).toBe('', 'should be \'\'');
-                expect(location.path()).toBe('', 'should be \'\'');
-            })
-        );
+        it("... initial navigation should have detected empty route ''", waitForAsync(() => {
+            expect(location.path()).toBe('', "should be ''");
+            expect(location.path()).toBe('', "should be ''");
+        }));
 
-        it(
-            '... should redirect to /test from \'\' redirect',
-            waitForAsync(() => {
-                fixture.ngZone.run(() => {
-                    router.navigate(['']).then(() => {
-                        expect(location.path()).toBe('/test', 'should be /test');
-                    });
+        it("... should redirect to /test from '' redirect", waitForAsync(() => {
+            fixture.ngZone.run(() => {
+                router.navigate(['']).then(() => {
+                    expect(location.path()).toBe('/test', 'should be /test');
                 });
-            })
-        );
+            });
+        }));
 
-        it(
-            '... should navigate to \'test\' from /test',
-            waitForAsync(() => {
-                fixture.ngZone.run(() => {
-                    router.navigate(['/test']).then(() => {
-                        expect(location.path()).toBe('/test', 'should be /test');
-                    });
+        it("... should navigate to 'test' from /test", waitForAsync(() => {
+            fixture.ngZone.run(() => {
+                router.navigate(['/test']).then(() => {
+                    expect(location.path()).toBe('/test', 'should be /test');
                 });
-            })
-        );
+            });
+        }));
 
-        it(
-            '... should navigate to \'test2\' from /test2',
-            waitForAsync(() => {
-                fixture.ngZone.run(() => {
-                    router.navigate(['/test2']).then(() => {
-                        expect(location.path()).toBe('/test2', 'should be /test2');
-                    });
+        it("... should navigate to 'test2' from /test2", waitForAsync(() => {
+            fixture.ngZone.run(() => {
+                router.navigate(['/test2']).then(() => {
+                    expect(location.path()).toBe('/test2', 'should be /test2');
                 });
-            })
-        );
+            });
+        }));
     });
 
     describe('BEFORE onInit', () => {
         it('should not have menu array', () => {
-            expect(component.menuArray).toBeUndefined('should be undefined');
+            expect(component.menuArray).toBeUndefined();
         });
 
         it('should not have selected menu', () => {
-            expect(component.selectedMenu).toBeUndefined('should be undefined');
+            expect(component.selectedMenu).toBeUndefined();
         });
 
-        it(
-            'should contain header component (stubbed)',
-            waitForAsync(() => {
-                const headerEl = fixture.debugElement.query(By.directive(HeaderStubComponent));
-                console.log('headerEL', headerEl);
-                expect(headerEl).toBeTruthy();
-            })
-        );
+        it('should contain header component (stubbed)', () => {
+            const headerEl = fixture.debugElement.query(By.directive(HeaderStubComponent));
+            expect(headerEl).toBeTruthy();
+        });
+
+        it('should contain corner ribbon component (stubbed)', () => {
+            const cornerRibbonEl = fixture.debugElement.query(By.directive(CornerRibbonStubComponent));
+            expect(cornerRibbonEl).toBeTruthy();
+        });
 
         it('should contain footer component (stubbed)', () => {
             const footerEl = fixture.debugElement.query(By.directive(FooterStubComponent));
@@ -205,15 +192,15 @@ describe('AppComponent', () => {
 
     describe('AFTER onInit', () => {
         beforeEach(() => {
-            // mock the input values supplied by the parent component
+            // Mock the input values supplied by the parent component
             expectedMenuArray = MENUDATA;
             expectedMenu = MENUDATA[0];
 
-            // simulate the parent setting the input properties
+            // Simulate the parent setting the input properties
             component.menuArray = expectedMenuArray;
             component.selectedMenu = expectedMenu;
 
-            // trigger initial data binding
+            // Trigger initial data binding
             fixture.detectChanges();
         });
 

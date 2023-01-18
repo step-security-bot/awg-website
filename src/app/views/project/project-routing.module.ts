@@ -21,16 +21,16 @@ const projectRoutes: Routes = [
                     { path: 'board', component: ProjectBoardComponent },
                     { path: 'cooperations', component: ProjectCooperationsComponent },
                     { path: 'news-archive', component: ProjectNewsArchiveComponent },
-                    { path: '', redirectTo: 'overview', pathMatch: 'full' }
-                ]
-            }
-        ]
-    }
+                    { path: '', redirectTo: 'overview', pathMatch: 'full' },
+                ],
+            },
+        ],
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(projectRoutes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class ProjectRoutingModule {}
 
@@ -40,5 +40,5 @@ export const routedProjectComponents = [
     ProjectCooperationsComponent,
     ProjectNewsArchiveComponent,
     ProjectOverviewComponent,
-    ProjectTeamComponent
+    ProjectTeamComponent,
 ];

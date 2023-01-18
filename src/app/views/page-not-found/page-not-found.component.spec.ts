@@ -7,13 +7,11 @@ describe('PageNotFoundComponent', () => {
     let fixture: ComponentFixture<PageNotFoundComponent>;
     const title = 'Page not found';
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [PageNotFoundComponent]
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [PageNotFoundComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(PageNotFoundComponent);

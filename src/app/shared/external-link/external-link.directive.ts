@@ -1,8 +1,8 @@
-import { Directive, HostBinding, Inject, Input, OnChanges, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Directive, HostBinding, Inject, Input, OnChanges, PLATFORM_ID } from '@angular/core';
 
 @Directive({
-    selector: 'a[href]'
+    selector: 'a[href]',
 })
 export class ExternalLinkDirective implements OnChanges {
     @HostBinding('attr.href') hrefAttr = '';
@@ -15,13 +15,23 @@ export class ExternalLinkDirective implements OnChanges {
     ngOnChanges() {
         this.hrefAttr = this.href;
 
-        if (this.isExternalLink()) {
+        if (this._isExternalLink()) {
             this.targetAttr = '_blank';
             this.relAttr = 'noopener noreferrer';
         }
     }
 
-    private isExternalLink() {
-        return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname);
+    private _isExternalLink() {
+        return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname) && !this._isLanguageCode();
+    }
+
+    private _isLanguageCode() {
+        const langCodes = ['de', 'en'];
+        const hrefSplit = this.href.split('/');
+
+        if (langCodes.includes(hrefSplit[1])) {
+            return true;
+        }
+        return false;
     }
 }

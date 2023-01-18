@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from '@awg-app/shared/shared.module';
 
 import { ContactRoutingModule, routedContactComponents } from './contact-routing.module';
 
 @NgModule({
-    imports: [CommonModule, ContactRoutingModule],
-    declarations: [routedContactComponents]
+    imports: [SharedModule, ContactRoutingModule],
+    declarations: [routedContactComponents],
 })
 export class ContactModule {}

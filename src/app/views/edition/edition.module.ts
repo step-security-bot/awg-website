@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from '@awg-app/shared/shared.module';
 
 import { EditionRoutingModule, routedEditionComponents } from './edition-routing.module';
 
 @NgModule({
-    imports: [CommonModule, EditionRoutingModule],
-    declarations: [routedEditionComponents]
+    imports: [SharedModule, EditionRoutingModule],
+    declarations: [routedEditionComponents],
 })
 export class EditionModule {}

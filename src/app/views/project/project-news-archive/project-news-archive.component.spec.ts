@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { RouterLinkStubDirective } from '@testing/router-link-stub.directive';
+
 import { ProjectNewsArchiveComponent } from './project-news-archive.component';
 
 describe('ProjectNewsArchiveComponent', () => {
@@ -8,7 +10,7 @@ describe('ProjectNewsArchiveComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ProjectNewsArchiveComponent]
+            declarations: [ProjectNewsArchiveComponent, RouterLinkStubDirective],
         }).compileComponents();
     });
 

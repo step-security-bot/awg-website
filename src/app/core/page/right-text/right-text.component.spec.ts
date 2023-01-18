@@ -6,13 +6,11 @@ describe('RightTextComponent', () => {
     let component: RightTextComponent;
     let fixture: ComponentFixture<RightTextComponent>;
 
-    beforeEach(
-        waitForAsync(() => {
-            TestBed.configureTestingModule({
-                declarations: [RightTextComponent]
-            }).compileComponents();
-        })
-    );
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [RightTextComponent],
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(RightTextComponent);

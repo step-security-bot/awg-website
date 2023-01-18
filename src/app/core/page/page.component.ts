@@ -6,7 +6,7 @@ import { PortalService } from './page-services/portal.service';
 @Component({
     selector: 'awg-page',
     templateUrl: './page.component.html',
-    styleUrls: ['./page.component.css']
+    styleUrls: ['./page.component.css'],
 })
 export class PageComponent implements AfterViewInit {
     @Input()
@@ -14,13 +14,13 @@ export class PageComponent implements AfterViewInit {
     @Input()
     selectedMenu: Menu;
 
-    rightTextPortal: TemplateRef<unknown>;
+    rightPanelPortal: TemplateRef<unknown>;
 
-    constructor(private portalService: PortalService, private cdRef: ChangeDetectorRef) {}
+    constructor(private _portalService: PortalService, private cdRef: ChangeDetectorRef) {}
 
     ngAfterViewInit() {
-        this.portalService.getRightTextPortalData().subscribe((ref: TemplateRef<unknown>) => {
-            this.rightTextPortal = ref;
+        this._portalService.getRightPanelPortalData().subscribe((ref: TemplateRef<unknown>) => {
+            this.rightPanelPortal = ref;
 
             this.cdRef.detectChanges();
         });

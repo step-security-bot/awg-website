@@ -1,35 +1,33 @@
+import { TemplatePortal } from '@angular/cdk/portal';
 import {
     AfterViewInit,
-    ChangeDetectionStrategy, ChangeDetectorRef,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
     Component,
-    Input, OnChanges,
-    OnInit,
+    Input,
     TemplateRef,
-    ViewContainerRef
+    ViewContainerRef,
 } from '@angular/core';
-import { TemplatePortal } from '@angular/cdk/portal';
 
 @Component({
     selector: 'awg-right-text',
     templateUrl: './right-text.component.html',
     styleUrls: ['./right-text.component.css'],
-    changeDetection: ChangeDetectionStrategy.Default
+    changeDetection: ChangeDetectionStrategy.Default,
 })
 export class RightTextComponent implements AfterViewInit {
-    @Input() rightTextPortal: TemplateRef<unknown> ;
+    @Input() rightPanelPortal: TemplateRef<unknown>;
 
     templatePortal: TemplatePortal<unknown>;
 
-    constructor(private _viewContainerRef: ViewContainerRef, private cdRef: ChangeDetectorRef) {}
+    constructor(private viewContainerRef: ViewContainerRef, private cdRef: ChangeDetectorRef) {}
 
     ngAfterViewInit() {
-        if (!this.rightTextPortal) return;
+        if (!this.rightPanelPortal) {
+            return;
+        }
 
-        this.templatePortal = new TemplatePortal(
-            this.rightTextPortal,
-            this._viewContainerRef
-        );
+        this.templatePortal = new TemplatePortal(this.rightPanelPortal, this.viewContainerRef);
         this.cdRef.detectChanges();
     }
-
 }

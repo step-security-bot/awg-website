@@ -1,3 +1,4 @@
+/* eslint-disable capitalized-comments, spaced-comment */
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -15,18 +16,13 @@
  */
 
 /***************************************************************************************************
+ * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
+ */
+import '@angular/localize/init';
+
+/***************************************************************************************************
  * BROWSER POLYFILLS
  */
-
-/** IE10 and IE11 requires the following for NgClass support on SVG elements */
-// import 'classlist.js';  // Run `npm install --save classlist.js`.
-
-/**
- * Web Animations `@angular/platform-browser/animations`
- * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
- * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
- */
-// import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
@@ -35,7 +31,7 @@
  * will put import in the top of bundle, so user need to create a separate file
  * in this directory (for example: zone-flags.ts), and put the following flags
  * into that file, and then add the following code before importing zone.js.
- * import './zone-flags.ts';
+ * import './zone-flags';
  *
  * The flags allowed in zone-flags.ts are listed here.
  *
@@ -55,8 +51,29 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js/dist/zone'; // Included with Angular CLI.
+import 'zone.js'; // Included with Angular CLI.
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+const w = window as any;
+
+// Add global to window, assigning the value of window itself.
+w.global = w;
+
+// Workaround for Uncaught ReferenceError: setImmediate is not defined
+// cf. https://stackoverflow.com/a/58088954
+w.setImmediate = w.setTimeout;
+
+// Workaround for Uncaught ReferenceError: Buffer is not defined
+// cf. https://github.com/agoncal/swagger-ui-angular6/issues/2
+// @ts-ignore
+w.Buffer = []; // w.Buffer || require('buffer').Buffer;
+
+// Workaround for Uncaught ReferenceError: process is not defined
+// cf. https://github.com/algolia/algoliasearch-client-javascript/issues/691
+w.process = {
+    env: { DEBUG: undefined },
+    version: [],
+};
