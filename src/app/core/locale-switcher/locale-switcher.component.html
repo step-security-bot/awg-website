@@ -1,6 +1,6 @@
 <ng-container *ngFor="let locale of locales; let last = last">
     <span class="language"
-        ><a href="/{{ locale.code }}">{{ locale.code | uppercase }}</a></span
+        ><a href="/awg-website/{{ locale.code }}/">{{ locale.code | uppercase }}</a></span
     >
     <span *ngIf="!last">|</span>
 </ng-container>
