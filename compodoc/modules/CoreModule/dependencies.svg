@@ -28,13 +28,13 @@
 <title>cluster_CoreModule_declarations</title>
 <polygon fill="none" stroke="black" points="243,-78 243,-130 884,-130 884,-78 243,-78"/>
 </g>
-<g id="clust8" class="cluster">
-<title>cluster_CoreModule_exports</title>
-<polygon fill="none" stroke="black" points="165,-208 165,-260 736,-260 736,-208 165,-208"/>
-</g>
 <g id="clust7" class="cluster">
 <title>cluster_CoreModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 235,-130 235,-78 16,-78"/>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_CoreModule_exports</title>
+<polygon fill="none" stroke="black" points="165,-208 165,-260 736,-260 736,-208 165,-208"/>
 </g>
 <!-- CornerRibbonComponent -->
 <g id="node1" class="node">

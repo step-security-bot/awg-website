@@ -135,8 +135,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#cornerRibbonLabel" >cornerRibbonLabel</a>
+                            </li>
+                            <li>
+                                <a href="#cornerRibbonLink" >cornerRibbonLink</a>
                             </li>
                         </ul>
                     </td>
@@ -176,7 +178,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/core/corner-ribbon/corner-ribbon.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/core/corner-ribbon/corner-ribbon.component.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -213,8 +215,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/core/corner-ribbon/corner-ribbon.component.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/core/corner-ribbon/corner-ribbon.component.ts:14</a></div>
                 </td>
             </tr>
 
@@ -242,7 +244,6 @@
                 <td class="col-md-4">
                     <a name="cornerRibbonLabel"></a>
                     <span class="name">
-                            <span class="modifier">Public</span>
                         <span ><b>cornerRibbonLabel</b></span>
                         <a href="#cornerRibbonLabel"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -268,6 +269,37 @@
 
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cornerRibbonLink"></a>
+                    <span class="name">
+                        <span ><b>cornerRibbonLink</b></span>
+                        <a href="#cornerRibbonLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;https://github.com/webern-unibas-ch/awg-website/&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/core/corner-ribbon/corner-ribbon.component.ts:10</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
 </section>
 
 </div>
@@ -282,7 +314,8 @@
     styleUrls: [&#x27;./corner-ribbon.component.css&#x27;],
 })
 export class CornerRibbonComponent implements OnInit {
-    public cornerRibbonLabel &#x3D; &#x27;beta&#x27;;
+    cornerRibbonLabel &#x3D; &#x27;beta&#x27;;
+    cornerRibbonLink &#x3D; &#x27;https://github.com/webern-unibas-ch/awg-website/&#x27;;
 
     constructor() {}
 
@@ -292,7 +325,9 @@ export class CornerRibbonComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;corner-ribbon top-left sticky red shadow&quot;&gt;{{ cornerRibbonLabel | uppercase }}&lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;corner-ribbon top-left sticky red shadow&quot;&gt;
+    &lt;a href&#x3D;&quot;{{ cornerRibbonLink }}&quot;&gt;{{ cornerRibbonLabel | uppercase }}&lt;/a&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -313,6 +348,14 @@ export class CornerRibbonComponent implements OnInit {
     color: #f0f0f0;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+.corner-ribbon &gt; a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.corner-ribbon &gt; a:hover {
+    border-bottom: 1px solid #fff;
 }
 
 /* custom styles */
@@ -417,7 +460,7 @@ export class CornerRibbonComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="corner-ribbon top-left sticky red shadow">{{ cornerRibbonLabel | uppercase }}</div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="corner-ribbon top-left sticky red shadow">    <a href="{{ cornerRibbonLink }}">{{ cornerRibbonLabel | uppercase }}</a></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'awg-root'},{'name': 'ContactAddressComponent', 'selector': 'awg-contact-address'},{'name': 'ContactCitationComponent', 'selector': 'awg-contact-citation'},{'name': 'ContactComponent', 'selector': 'awg-contact'},{'name': 'ContactImprintComponent', 'selector': 'awg-contact-imprint'},{'name': 'CornerRibbonComponent', 'selector': 'awg-corner-ribbon'},{'name': 'EditionComponent', 'selector': 'awg-edition'},{'name': 'EditionOnlineComponent', 'selector': 'awg-edition-online'},{'name': 'EditionOutlineComponent', 'selector': 'awg-edition-outline'},{'name': 'EditionOverviewComponent', 'selector': 'awg-edition-overview'},{'name': 'EditionPrintComponent', 'selector': 'awg-edition-print'},{'name': 'FooterComponent', 'selector': 'awg-footer'},{'name': 'HeaderComponent', 'selector': 'awg-header'},{'name': 'LocaleSwitcherComponent', 'selector': 'awg-locale-switcher'},{'name': 'MainTextComponent', 'selector': 'awg-main-text'},{'name': 'MenuComponent', 'selector': 'awg-menu'},{'name': 'PageComponent', 'selector': 'awg-page'},{'name': 'PageNotFoundComponent', 'selector': 'awg-page-not-found'},{'name': 'ProjectBoardComponent', 'selector': 'awg-project-board'},{'name': 'ProjectComponent', 'selector': 'awg-project'},{'name': 'ProjectCooperationsComponent', 'selector': 'awg-project-cooperations'},{'name': 'ProjectNewsArchiveComponent', 'selector': 'awg-project-news-archive'},{'name': 'ProjectOverviewComponent', 'selector': 'awg-project-overview'},{'name': 'ProjectTeamComponent', 'selector': 'awg-project-team'},{'name': 'ResearchActivitiesComponent', 'selector': 'awg-research-activities'},{'name': 'ResearchArchivesComponent', 'selector': 'awg-research-archives'},{'name': 'ResearchComponent', 'selector': 'awg-research'},{'name': 'ResearchConferencesComponent', 'selector': 'awg-research-conferences'},{'name': 'ResearchOverviewComponent', 'selector': 'awg-research-overview'},{'name': 'ResearchPublicationsComponent', 'selector': 'awg-research-publications'},{'name': 'ResearchWebernLecturesComponent', 'selector': 'awg-research-webern-lectures'},{'name': 'ResearchWebernStudiesComponent', 'selector': 'awg-research-webern-studies'},{'name': 'RightTextComponent', 'selector': 'awg-right-text'},{'name': 'SearchComponent', 'selector': 'awg-search'},{'name': 'SubMenuComponent', 'selector': 'awg-sub-menu'},{'name': 'WebernBibliographyComponent', 'selector': 'awg-webern-bibliography'},{'name': 'WebernChronologyComponent', 'selector': 'awg-webern-chronology'},{'name': 'WebernComponent', 'selector': 'awg-webern'},{'name': 'WebernLettersComponent', 'selector': 'awg-webern-correspondence'},{'name': 'WebernOverviewComponent', 'selector': 'awg-webern-overview'},{'name': 'WebernPersonsComponent', 'selector': 'awg-webern-persons'},{'name': 'WorksComponent', 'selector': 'awg-works'},{'name': 'WorksMoldenhauerComponent', 'selector': 'awg-works-moldenhauer'},{'name': 'WorksOpusComponent', 'selector': 'awg-works-opus'},{'name': 'WorksOverviewComponent', 'selector': 'awg-works-overview'}];
     var DIRECTIVES = [{'name': 'ExternalLinkDirective', 'selector': 'a[href]'}];
     var ACTUAL_COMPONENT = {'name': 'CornerRibbonComponent'};
