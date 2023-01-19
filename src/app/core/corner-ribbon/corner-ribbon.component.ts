@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./corner-ribbon.component.css'],
 })
 export class CornerRibbonComponent implements OnInit {
-    public cornerRibbonLabel = 'beta';
+    cornerRibbonLabel = 'beta';
+    cornerRibbonLink = 'https://github.com/webern-unibas-ch/awg-website/';
 
     constructor() {}
 
