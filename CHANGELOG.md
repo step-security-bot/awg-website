@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/musicEnfanthen/awg-website/compare/v0.0.3...v0.0.4) (2023-01-19)
+
+
+### Bug Fixes
+
+* **core:** add github link to corner ribbon ([3663706](https://github.com/musicEnfanthen/awg-website/commit/36637062b7964e6b10083f97db18c669ef3ee4fb))
+
+
+### Build System
+
+* **deps-dev:** bump [@angular](https://github.com/angular) packages from 15.1.0 to 15.1.1 ([cf7e0ca](https://github.com/musicEnfanthen/awg-website/commit/cf7e0ca08026c1c6183b7decc936be6b3994e748))
+* **deps-dev:** bump @angular/{cli,build-angular} from 15.1.1 to 15.1.2 ([4765185](https://github.com/musicEnfanthen/awg-website/commit/4765185bfd2f0c6f489e34801124da9ba75314c5))
+* **deps-dev:** bump eslint-plugin-jsdoc from 39.6.4 to 39.6.6 ([d65b8a6](https://github.com/musicEnfanthen/awg-website/commit/d65b8a66888d6ac6493fce47807ffe8c057efc8c))
+
 ### [0.0.3](https://github.com/musicEnfanthen/awg-website/compare/v0.0.2...v0.0.3) (2023-01-18)
 
 

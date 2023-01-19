@@ -12,6 +12,14 @@
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
+.corner-ribbon > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.corner-ribbon > a:hover {
+    border-bottom: 1px solid #fff;
+}
 
 /* custom styles */
 .corner-ribbon.sticky {
