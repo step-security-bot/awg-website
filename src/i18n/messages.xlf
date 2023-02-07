@@ -783,7 +783,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">113</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6036093409057430163" datatype="html">
@@ -1737,7 +1741,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">124</context>
+          <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3523785425479380727" datatype="html">
@@ -1748,7 +1752,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">129,130</context>
+          <context context-type="linenumber">138,139</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3183614456317213746" datatype="html">
@@ -1774,14 +1778,11 @@
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1132910368157499225" datatype="html">
-        <source> Dass von Anton Webern überhaupt ein kompositorischer Nachlass existiert, wurde der Öffentlichkeit erst ab den 1960er Jahren allmählich bekannt. Maßgeblich beteiligt an Auffindung, Zusammenstellung und Erhalt dieses Nachlasses war der deutsch-amerikanischer Musiker und Musikforscher Hans Moldenhauer, der in drei Etappen in den Besitz verschiedener Teilnachlässe gelangte: 1961 erwarb Moldenhauer von Amalie Waller, der ältesten Tochter Weberns (mit der Moldenhauer im Zuge seiner Nachforschungen über Weberns Todesumstände Bekanntschaft gemacht hatte), Notenmanuskripte und Tagebücher, die sich in ihrem Besitz befunden hatten.<x id="START_LINK" ctype="x-a" equiv-text="&lt;a id=&quot;ftnref1&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn1&quot;&gt;"/>[1]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
-    &gt;"/> Dieser Teilnachlass enthielt bis dahin unbekannte Frühwerke Weberns, so unter anderem <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Siegfrieds Schwert<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> M 16, <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Im Sommerwind<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> M 63, den <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Langsamen Satz<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> für Streichquartett M 78, das Streichquartett M 79 von 1905, das Klavierquintett M 118, diverse Lieder sowie das letzte der insgesamt sechs Skizzenbücher,<x id="START_LINK_1" equiv-text="&lt;a
-        id=&quot;ftnref2&quot;
-        [routerLink]=&quot;&apos;.&apos;&quot;
-        fragment=&quot;ftn2&quot;
+      <trans-unit id="8240179920620467047" datatype="html">
+        <source> Dass von Anton Webern überhaupt ein kompositorischer Nachlass existiert, wurde der Öffentlichkeit erst ab den 1960er Jahren allmählich bekannt. Maßgeblich beteiligt an Auffindung, Zusammenstellung und Erhalt dieses Nachlasses war der deutsch-amerikanischer Musiker und Musikforscher Hans Moldenhauer, der in drei Etappen in den Besitz verschiedener Teilnachlässe gelangte:<x id="START_LINK" ctype="x-a" equiv-text="&lt;a id=&quot;ftnref1&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn1&quot;&gt;"/>[1]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+    &gt;"/> 1961 erwarb Moldenhauer von Amalie Waller, der ältesten Tochter Weberns (mit der Moldenhauer im Zuge seiner Nachforschungen über Weberns Todesumstände Bekanntschaft gemacht hatte), Notenmanuskripte und Tagebücher, die sich in Familienbesitz befunden hatten. Dieser Teilnachlass enthielt bis dahin unbekannte Frühwerke Weberns, so unter anderem <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Im Sommerwind<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> M 63, den <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Langsamen Satz<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> für Streichquartett M 78, das Streichquartett von 1905 M 79, das Klavierquintett M 118, diverse Lieder sowie das letzte der insgesamt sechs Skizzenbücher;<x id="START_LINK_1" equiv-text="&lt;a id=&quot;ftnref2&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn2&quot;
         &gt;"/>[2]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
-    &gt;"/> die umfassendes Skizzenmaterial zu den Opuswerken 17–31 und einigen anderen, unvollständigen Stücken aus der Zeit ab 1925 beinhalten. Über den Erwerb und den Transport der Quellen nach Spokane in Washington, wo Moldenhauer an seinem Wohnort im Begriff war ein Quellenarchiv aufzubauen, berichtete damals sogar die amerikanische Presse.<x id="START_LINK_2" equiv-text="&lt;a
+    &gt;"/> diese beinhalten umfassendes Skizzenmaterial zu den Opuswerken 17–31 und einigen anderen, unvollständigen Stücken aus der Zeit ab 1925. Über den Erwerb und den Transport der Quellen in die USA, wo Moldenhauer an seinem Wohnort Spokane (Washington) im Begriff war ein Quellenarchiv aufzubauen, berichtete damals auch die amerikanische Presse.<x id="START_LINK_2" equiv-text="&lt;a
         id=&quot;ftnref3&quot;
         [routerLink]=&quot;&apos;.&apos;&quot;
         fragment=&quot;ftn3&quot;
@@ -1789,15 +1790,15 @@
     &gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">20,42</context>
+          <context context-type="linenumber">20,39</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="679586272479161171" datatype="html">
-        <source> 1963 brachte Moldenhauer mittels Nachforschungen vier weitere Skizzenbücher (Nr. 2–5 mit insgesamt 422 folia) in seinen Besitz, die von Amalie Waller 1954 zusammen mit anderen Materialien leihweise an einen Wiener Musik er für eine geplante Biographie weggegeben worden waren.<x id="START_LINK" ctype="x-a" equiv-text="&lt;a id=&quot;ftnref4&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn4&quot;&gt;"/>[4]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> Am 26. Oktober 1965 führte schließlich ein Treffen mit Hermine Webern, der Schwiegertochter Weberns, zu einem Fund im Dachboden ihres Elternhauses in Perchtoldsdorf bei Wien, wohin Teile von Weberns Nachlass nach dem Ende des Zweiten Weltkrieges überführt worden waren. <x id="START_LINK_1" equiv-text="&lt;a id=&quot;ftnref5&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn5&quot;&gt;"/>[5]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> Eigentlich auf der Suche nach einer zweiten von Josef Humplik<x id="START_LINK_2" equiv-text="&lt;a id=&quot;ftnref6&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn6&quot;&gt;"/>[6]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> angefertigten und durch eine Fotografie dokumentierten Bronzebüste des Komponisten stießen die beiden nicht nur auf Weberns eigenes Violoncello, sondern außerdem auf drei in einen Umschlag gepackte Bündel mit Musikmanuskripten von Weberns Hand. Auch diesmal betraf der Fund vorwiegend das Frühschaffen: Neben etlichen Liedern aus der Jugendzeit und der frühesten bekannten Komposition, den zwei 1899 vermutlich für eine eigene Aufführung komponierten Stücken für Violoncello und Klavier M 1–2, befanden sich unter diesen Handschriften mehrere Konvolute mit Arbeiten aus Weberns Unterrichtszeit bei Arnold Schönberg von 1904 bis 1908. Darüber hinaus kamen Skizzen und Entwürfe aus der Zeit der freien Atonalität von 1908 bis 1914 (u. a. „O sanftes Glühn der Berge“ M 184, Cello-Sonate M 202), atonale Entwürfe von 1924/25 (u. a. die zwei Streichtrios M 273, M 278 und das <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Kinderstück<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> M 267) sowie Bearbeitungen eigener Werke, wie etwa eine kammermusikalische Fassung der Orchesterstücke op. 6, zum Vorschein.
+      <trans-unit id="8925567739821977548" datatype="html">
+        <source> 1963 brachte Moldenhauer mittels Nachforschungen vier weitere Skizzenbücher (Nr. 2–5 mit insgesamt 422 folia) in seinen Besitz, die von Amalie Waller 1954 zusammen mit anderen Materialien leihweise an Friedrich Wildgans für eine geplante Biographie weggegeben worden waren.<x id="START_LINK" ctype="x-a" equiv-text="&lt;a id=&quot;ftnref4&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn4&quot;&gt;"/>[4]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 1965 führte schließlich ein Treffen mit Hermine Webern, der Schwiegertochter Weberns, zu einem Fund im Dachboden ihres Elternhauses in Perchtoldsdorf bei Wien, wohin Teile von Weberns Nachlass nach dem Ende des Zweiten Weltkrieges überführt worden waren.<x id="START_LINK_1" equiv-text="&lt;a id=&quot;ftnref5&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn5&quot;&gt;"/>[5]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> Eigentlich auf der Suche nach einer zweiten von Josef Humplik<x id="START_LINK_2" equiv-text="&lt;a id=&quot;ftnref6&quot; [routerLink]=&quot;&apos;.&apos;&quot; fragment=&quot;ftn6&quot;&gt;"/>[6]<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> angefertigten und durch eine Fotografie dokumentierten Bronzebüste des Komponisten stießen die beiden nicht nur auf Weberns eigenes Violoncello, sondern außerdem auf drei Bündel mit Musikmanuskripten von Weberns Hand. Auch diesmal betraf der Fund vorwiegend das Frühschaffen: Neben etlichen Liedern aus der Jugendzeit und der frühesten bekannten Komposition, den zwei 1899 vermutlich für eine eigene Aufführung komponierten Stücken für Violoncello und Klavier M 1–2, befanden sich unter diesen Handschriften mehrere Konvolute mit Arbeiten aus Weberns Unterrichtszeit bei Schönberg. Darüber hinaus kamen Skizzen und Entwürfe aus der Zeit der freien Atonalität (u. a. „O sanftes Glühn der Berge“ M 184, Cello-Sonate M 202), atonale Entwürfe von 1924/25 (u. a. die zwei Streichtrios M 273, M 278 und das <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Kinderstück<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> M 267) sowie Bearbeitungen eigener Werke, wie etwa eine kammermusikalische Fassung der Orchesterstücke op. 6, zum Vorschein.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">44,61</context>
+          <context context-type="linenumber">41,58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1613006275461511876" datatype="html">
@@ -1809,14 +1810,36 @@
     &gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">62,69</context>
+          <context context-type="linenumber">59,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="197678305319635748" datatype="html">
+        <source>Moldenhauer hat über das Zustandekommen seiner Webern-Sammlung mehrfach und teilweise abweichend berichtet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">80,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2733677423167148046" datatype="html">
+        <source>Vgl. dazu u. a.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3161311643188741585" datatype="html">
         <source>S.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">82</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">84</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
@@ -1824,15 +1847,19 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">88</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">89</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">99</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">97</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
@@ -1840,47 +1867,105 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
           <context context-type="linenumber">109</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5878579489375839691" datatype="html">
-        <source>Vgl.</source>
+      <trans-unit id="3362056935945116206" datatype="html">
+        <source>ders.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
           <context context-type="linenumber">85</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
           <context context-type="linenumber">90</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="1459964040039983691" datatype="html">
+        <source>Paul Sacher Stiftung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1638475657734404442" datatype="html">
-        <source>Vgl. dazu ausführlich</source>
+      <trans-unit id="5878579489375839691" datatype="html">
+        <source>Vgl.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">95</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="845319445727096486" datatype="html">
-        <source>sowie ders.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
           <context context-type="linenumber">100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2840100262295854897" datatype="html">
+        <source>Anm.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2866476555720184521" datatype="html">
+        <source>bzw. den nahezu indentischen Bericht in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
+          <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5738251989277120096" datatype="html">
         <source>Josef Humplik hatte von Webern zwei Büsten angefertigt, 1927 eine aus Gips und 1928 eine aus Terrakotta</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/views/works/works-overview/works-overview.component.html</context>
-          <context context-type="linenumber">106,107</context>
+          <context context-type="linenumber">116,117</context>
         </context-group>
       </trans-unit>
     </body>
