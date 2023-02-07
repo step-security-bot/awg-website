@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/musicEnfanthen/awg-website/compare/v0.0.4...v0.0.5) (2023-02-07)
+
+
+### Bug Fixes
+
+* **works:** update text about Weberns estate ([b61f8b9](https://github.com/musicEnfanthen/awg-website/commit/b61f8b9b842b2eaa4113a20dc6dc15252366fb86))
+
+
+### Build System
+
+* **deps:** bump [@angular](https://github.com/angular) packages from 15.1.2 to 15.1.3 ([b9f03fd](https://github.com/musicEnfanthen/awg-website/commit/b9f03fd7d138575fd3a2a9fe8bf7ee658c8e9355))
+* **deps:** bump http-cache-semantics from 4.1.0 to 4.1.1 ([c0a7807](https://github.com/musicEnfanthen/awg-website/commit/c0a7807ac05a3d0fdc5009dd9d40c1d513ba5b84))
+* **deps:** bump ua-parser-js from 0.7.32 to 0.7.33 ([5181ae1](https://github.com/musicEnfanthen/awg-website/commit/5181ae1313ec4aef9199fb663f433b0fb1515675))
+* **deps-dev:** bump [@angular](https://github.com/angular) packages from 15.1.1 to 15.1.2 ([c78b37d](https://github.com/musicEnfanthen/awg-website/commit/c78b37dcd5c78e606c5ae20e05f54f3a40ed7dc8))
+* **deps-dev:** bump [@typescript-eslin](https://github.com/typescript-eslin) packages from 5.48.2 to 5.49.0 ([14fe000](https://github.com/musicEnfanthen/awg-website/commit/14fe0006b619986cfd7da26465df970b42868a2c))
+* **deps-dev:** bump [@typescript-eslin](https://github.com/typescript-eslin) packages from 5.49.0 to 5.50.0 ([19cc919](https://github.com/musicEnfanthen/awg-website/commit/19cc9193644804d765f0c4a912236e125016e640))
+* **deps-dev:** bump [@typescript-eslint](https://github.com/typescript-eslint) packages from 5.50.0 to 5.51.0 ([932a02b](https://github.com/musicEnfanthen/awg-website/commit/932a02bb032d1c4c482de9fcd8fb1701cf38cc08))
+* **deps-dev:** bump @angular/{cli,build-angular} from 15.1.2 to 15.1.3 ([9608e45](https://github.com/musicEnfanthen/awg-website/commit/9608e452a715727055a376dd2b2f354742dbfd6b))
+* **deps-dev:** bump @angular/{cli,build-angular} from 15.1.3 to 15.1.4 ([378c994](https://github.com/musicEnfanthen/awg-website/commit/378c9949d691000e8c2e60d0abf7cb25dd4ed966))
+* **deps-dev:** bump @types/node from 16.18.11 to 18.13.0 ([a815217](https://github.com/musicEnfanthen/awg-website/commit/a815217b4b822f1074f1cbbe2e05e59c0e16f396))
+* **deps-dev:** bump eslint from 8.32.0 to 8.33.0 ([80c80a4](https://github.com/musicEnfanthen/awg-website/commit/80c80a4e8683c594f21d0f835b7696f2e81ea91e))
+* **deps-dev:** bump eslint-plugin-jsdoc from 39.6.6 to 39.6.8 ([c331b27](https://github.com/musicEnfanthen/awg-website/commit/c331b2752be5a5f03e56605a343fa9f15b13b08e))
+* **deps-dev:** bump eslint-plugin-jsdoc from 39.6.8 to 39.7.4 ([3996587](https://github.com/musicEnfanthen/awg-website/commit/39965879e7471eb5d3772fc5a22ceb43f47cb9b8))
+* **deps-dev:** bump eslint-plugin-jsdoc from 39.7.4 to 39.7.5 ([f334f1c](https://github.com/musicEnfanthen/awg-website/commit/f334f1c5475da8b9df52f8f9e79c53c37ac8e3d4))
+* **deps-dev:** bump eslint-plugin-jsdoc from 39.7.5 to 39.8.0 ([db88cd3](https://github.com/musicEnfanthen/awg-website/commit/db88cd3ddba523db4ef21ce548bb2611d56e1059))
+* **deps-dev:** bump lint-staged from 13.1.0 to 13.1.1 ([3225d5a](https://github.com/musicEnfanthen/awg-website/commit/3225d5a892c441a9da89b51ed260bf2dd11f36c6))
+
 ### [0.0.4](https://github.com/musicEnfanthen/awg-website/compare/v0.0.3...v0.0.4) (2023-01-19)
 
 
