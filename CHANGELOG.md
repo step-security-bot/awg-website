@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/musicEnfanthen/awg-website/compare/v0.0.5...v0.0.6) (2023-02-20)
+
+
+### Continuous Integration
+
+* **gh-actions:** add release job to workflow ([d53cf25](https://github.com/musicEnfanthen/awg-website/commit/d53cf256e4060e07b8138974aad69cdbb08d9857))
+
+
+### Build System
+
+* **deps-dev:** bump [@angular-eslint](https://github.com/angular-eslint) rel packages from 15.2.0 to 15.2.1 ([1430217](https://github.com/musicEnfanthen/awg-website/commit/1430217ce45de353b1c026c0becfab50b781ab1a))
+* **deps-dev:** bump [@commitlint](https://github.com/commitlint) packages from 17.4.2 to 17.4.3 ([d31c9a7](https://github.com/musicEnfanthen/awg-website/commit/d31c9a7307bc8b3343c7cfc42407101f44c85df6))
+* **deps-dev:** bump [@commitlint](https://github.com/commitlint) packages from 17.4.3 to 17.4.4 ([001e238](https://github.com/musicEnfanthen/awg-website/commit/001e23893b48e224c5b7e650abac1f2aa9d9b410))
+* **deps-dev:** bump [@typescript-eslint](https://github.com/typescript-eslint) packages from 5.51.0 to 5.52.0 ([df382d3](https://github.com/musicEnfanthen/awg-website/commit/df382d3496be4eb48d40790c930e56c48dee1e54))
+* **deps-dev:** bump @angular/{cli,build-angular} from 15.1.4 to 15.1.5 ([c9349f9](https://github.com/musicEnfanthen/awg-website/commit/c9349f95db69eee358ff1a8706aa8562cbefb8a0))
+* **deps-dev:** bump @angular/{cli,build-angular} from 15.1.5 to 15.1.6 ([f37c7ab](https://github.com/musicEnfanthen/awg-website/commit/f37c7ab1a52451d5835ea2385d5b7f008da2a787))
+* **deps-dev:** bump eslint from 8.33.0 to 8.34.0 ([31de0d0](https://github.com/musicEnfanthen/awg-website/commit/31de0d0292062f620e7c09054759e5814d4ae0f0))
+* **deps-dev:** bump eslint-plugin-jsdoc from 39.8.0 to 40.0.0 ([dde3589](https://github.com/musicEnfanthen/awg-website/commit/dde35897748bd73620ae218fa17bf505946f06dc))
+* **deps-dev:** bump lint-staged from 13.1.1 to 13.1.2 ([c90280e](https://github.com/musicEnfanthen/awg-website/commit/c90280e08c206c1825bb52124a78f2337dcc983b))
+* **deps-dev:** bump prettier from 2.8.3 to 2.8.4 ([82b4450](https://github.com/musicEnfanthen/awg-website/commit/82b4450321cdb5d2ea8501d4d0b777c1e270a2ac))
+* **deps-dev:** bump webpack-bundle-analyzer from 4.7.0 to 4.8.0 ([d4da8e3](https://github.com/musicEnfanthen/awg-website/commit/d4da8e31d85907480e22a96ec7dbdda7719cd59f))
+* **deps-dev:** clean up yarn.lock file after updates ([768cd9e](https://github.com/musicEnfanthen/awg-website/commit/768cd9e286875b52cf1bfef1f9e0c2fcc3383785))
+* **deps:** bump [@angular](https://github.com/angular) packages from 15.1.3 to 15.1.4 ([75283e8](https://github.com/musicEnfanthen/awg-website/commit/75283e84f02239ae1ade32008eff876ea1a2982d))
+* **deps:** bump [@angular](https://github.com/angular) packages from 15.1.4 to 15.1.5 ([175c364](https://github.com/musicEnfanthen/awg-website/commit/175c364e6055fc90f5d07e520b17db64e1346a30))
+* **deps:** bump trim-newlines from 3.0.0 to 3.0.1 ([80f4487](https://github.com/musicEnfanthen/awg-website/commit/80f4487505fc31352d94f0bd087ad9df849fdf6d))
+* **deps:** fix security issue with minimist ([bf4e03e](https://github.com/musicEnfanthen/awg-website/commit/bf4e03e5f7e96a9fc9c075a9ebb02d544044d76c))
+* **deps:** fix security issue with qs ([b1d460f](https://github.com/musicEnfanthen/awg-website/commit/b1d460fc6f793be5c71951495792028f47221cfc))
+* **deps:** fix security issue with trim-newlines ([c0ad4a4](https://github.com/musicEnfanthen/awg-website/commit/c0ad4a4fc72f530761a4e9377d6a1a27404e947a))
+
 ### [0.0.5](https://github.com/musicEnfanthen/awg-website/compare/v0.0.4...v0.0.5) (2023-02-07)
 
 
