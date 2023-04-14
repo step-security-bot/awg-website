@@ -4,16 +4,16 @@
     "license": "MIT",
     "author": {
         "name": "Stefan Münnich",
-        "email": "<stefan.muennich@unibas.ch>"
+        "email": "stefan.muennich@unibas.ch"
     },
     "contributors": [
         {
             "name": "Thomas Ahrend",
-            "email": "<thomas.ahrend@unibas.ch>"
+            "email": "thomas.ahrend@unibas.ch"
         },
         {
             "name": "Andres Aeschlimann",
-            "email": "<andreas.aeschlimann@appvision.ch>"
+            "email": "andreas.aeschlimann@appvision.ch"
         }
     ],
     "description": "Website of the Anton Webern Gesamtausgabe (Musicological Seminar of the University of Basel)",
