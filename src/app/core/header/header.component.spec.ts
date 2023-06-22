@@ -1,8 +1,14 @@
+import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { HeaderComponent } from './header.component';
 import { RouterLinkStubDirective } from '../../../testing/router-link-stub.directive';
+
+import { HeaderComponent } from './header.component';
+
+// Mock components
+@Component({ selector: 'awg-locale-switcher', template: '' })
+class LocaleSwitcherStubComponent {}
 
 describe('HeaderComponent', () => {
     let component: HeaderComponent;
@@ -12,7 +18,7 @@ describe('HeaderComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            declarations: [HeaderComponent, RouterLinkStubDirective],
+            declarations: [HeaderComponent, LocaleSwitcherStubComponent, RouterLinkStubDirective],
         }).compileComponents();
     }));
 
@@ -44,11 +50,16 @@ describe('HeaderComponent', () => {
         const contactLinkDe = linkDes[0]; // Contact link DebugElement
         const contactLink = routerLinks[0]; // Contact link directive
 
-        expect(contactLink.navigatedTo).toBeNull('should not have navigated yet');
+        expect(contactLink.navigatedTo).toBeNull();
 
         contactLinkDe.triggerEventHandler('click', null);
         fixture.detectChanges();
 
         expect(contactLink.navigatedTo[0]).toBe('/contact');
+    });
+
+    it('should contain locale switcher component (stubbed)', () => {
+        const localeSwitcherEl = fixture.debugElement.query(By.directive(LocaleSwitcherStubComponent));
+        expect(localeSwitcherEl).toBeTruthy();
     });
 });
