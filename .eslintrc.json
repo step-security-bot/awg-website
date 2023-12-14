@@ -173,7 +173,7 @@
                     "error",
                     "always",
                     {
-                        "markers": [",/"]
+                        "markers": ["/"]
                     }
                 ]
             }
