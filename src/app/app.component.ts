@@ -15,7 +15,10 @@ export class AppComponent implements OnInit {
     selectedMenu: Menu;
     menuArray: Menu[];
 
-    constructor(private menuService: MenuService, private router: Router) {
+    constructor(
+        private menuService: MenuService,
+        private router: Router
+    ) {
         this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
             const urlAfterRedirectsKey = 'urlAfterRedirects';
             const path = event[urlAfterRedirectsKey];
