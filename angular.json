@@ -100,13 +100,13 @@
                     "options": {},
                     "configurations": {
                         "production": {
-                            "browserTarget": "awg-website:build:production"
+                            "buildTarget": "awg-website:build:production"
                         },
                         "development": {
-                            "browserTarget": "awg-website:build:development"
+                            "buildTarget": "awg-website:build:development"
                         },
                         "en": {
-                            "browserTarget": "awg-website:build:en"
+                            "buildTarget": "awg-website:build:en"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -114,7 +114,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "awg-website:build"
+                        "buildTarget": "awg-website:build"
                     }
                 },
                 "test": {
@@ -143,8 +143,8 @@
                     }
                 },
                 "deploy": {
-                  "builder": "angular-cli-ghpages:deploy",
-                  "options": {
+                    "builder": "angular-cli-ghpages:deploy",
+                    "options": {
                         "name": "github-actions",
                         "email": "github-actions@users.noreply.github.com",
                         "repo": "https://github.com/webern-unibas-ch/awg-website.git"
