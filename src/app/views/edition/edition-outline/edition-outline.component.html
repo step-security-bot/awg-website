@@ -1,23 +1,24 @@
 <div style="text-align: right">
     <button mat-raised-button (click)="isAllCollapsed ? expandAll() : collapseAll()">
-        <ng-container *ngIf="isAllCollapsed" i18n>Alles ausklappen</ng-container>
-        <ng-container *ngIf="!isAllCollapsed" i18n>Alles einklappen</ng-container>
+        @if (isAllCollapsed) {
+            <span i18n>Alles ausklappen</span>
+        } @else {
+            <span i18n>Alles einklappen</span>
+        }
     </button>
 </div>
 
 <mat-tree #editionComplexTree [dataSource]="dataSource" [treeControl]="treeControl" class="awg-edition-complex-tree">
     <!-- This is the tree node template for leaf nodes -->
-    <!-- There is inline padding applied to this node using styles.
-      This padding value depends on the mat-icon-button width. -->
+    <!-- There is inline padding applied to this node using styles This padding value depends on the mat-icon-button width. -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-        <ng-container *ngIf="node.link; else noLink">
+        @if (node.link) {
             <a href="{{ node.link }}">
                 {{ node.name }}
             </a>
-        </ng-container>
-        <ng-template #noLink>
+        } @else {
             {{ node.name }}
-        </ng-template>
+        }
     </mat-tree-node>
 
     <!-- This is the tree node template for expandable nodes -->
@@ -30,8 +31,7 @@
             </button>
             <span [style.font-weight]="hasChildLinkRecursive(node) ? 'bold' : 'normal'">{{ node.name }}</span>
         </div>
-        <!-- There is inline padding applied to this div using styles.
-            This padding value depends on the mat-icon-button width.  -->
+        <!-- There is inline padding applied to this div using styles. This padding value depends on the mat-icon-button width.  -->
         <div [class.awg-edition-complex-tree-invisible]="!treeControl.isExpanded(node)" role="group">
             <ng-container matTreeNodeOutlet></ng-container>
         </div>

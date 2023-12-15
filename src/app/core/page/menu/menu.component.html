@@ -1,11 +1,12 @@
 <div id="menu">
-    <div
-        class="menu"
-        *ngFor="let menu of menuArray; let i = index; let isFirst = first; let isLast = last"
-        [class.first]="isFirst"
-        [class.last]="isLast"
-        [routerLink]="menu.linkTo"
-        routerLinkActive="active">
-        {{ menu.label | uppercase }}
-    </div>
+    @for (menu of menuArray; track menu; let i = $index; let isFirst = $first; let isLast = $last) {
+        <div
+            class="menu"
+            [class.first]="isFirst"
+            [class.last]="isLast"
+            [routerLink]="menu.linkTo"
+            routerLinkActive="active">
+            {{ menu.label | uppercase }}
+        </div>
+    }
 </div>

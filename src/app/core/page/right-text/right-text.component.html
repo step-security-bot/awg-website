@@ -1,5 +1,5 @@
 <div id="righttext">
-    <span *ngIf="templatePortal">
+    @if (templatePortal) {
         <ng-template [cdkPortalOutlet]="templatePortal"></ng-template>
-    </span>
+    }
 </div>
