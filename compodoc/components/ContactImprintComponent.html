@@ -13,8 +13,66 @@
         <link rel="stylesheet" href="../styles/Readthedocs.css">
     </head>
     <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">awg-website documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -36,32 +94,37 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   ContactImprintComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
         </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -73,10 +136,11 @@
 
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
+
 
 
 
@@ -92,6 +156,8 @@
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>awg-contact-imprint</code></td>
             </tr>
+
+
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
@@ -127,7 +193,7 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 @Component({
@@ -139,7 +205,7 @@ export class ContactImprintComponent {}
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
+    <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;p class&#x3D;&quot;para&quot;&gt;
     &lt;span i18n class&#x3D;&quot;caps&quot;&gt;Herausgeber&lt;/span&gt;:&lt;br /&gt;
     Anton Webern Gesamtausgabe&lt;br /&gt;
@@ -176,7 +242,7 @@ export class ContactImprintComponent {}
     Andreas Aeschlimann&lt;br /&gt;
     Geschäftsführer und Software-Entwickler bei &lt;a href&#x3D;&quot;https://www.appvision.ch&quot;&gt;AppVision GmbH&lt;/a&gt;&lt;br /&gt;&lt;a
         href&#x3D;&quot;mailto:andreas.aeschlimann@appvision.ch&quot;
-        &gt;andreas.aeschlimann@appvision.ch&lt;/a
+        &gt;andreas.aeschlimann&amp;#64;appvision.ch&lt;/a
     &gt;
 &lt;/p&gt;
 
@@ -284,14 +350,14 @@ export class ContactImprintComponent {}
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-styleData">
+    <div class="tab-pane fade " id="styleData">
                 <p class="comment">
                     <code>./contact-imprint.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-tree">
+    <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -316,7 +382,7 @@ export class ContactImprintComponent {}
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p class="para">    <span i18n class="caps">Herausgeber</span>:<br />    Anton Webern Gesamtausgabe<br />    <span i18n>Musikwissenschaftliches Seminar der Universität Basel</span><br />    Petersgraben 27/29<br />    CH-4051 Basel<br />    <span i18n>Schweiz</span></p><p class="para">    <span i18n class="caps">Texte/Inhalte:</span><br />    Die Verantwortung für die Inhalte der Website liegt bei der Anton Webern Gesamtausgabe. Bei inhaltlichen Fragen    wenden Sie sich bitte an die unter<a [routerLink]="[\'/contact\', \'address\']"> Kontakt</a> angegebene Adresse.</p><p class="para">    <span i18n class="caps">Konzept:</span><br />    Anton Webern Gesamtausgabe</p><p class="para">    <span i18n class="caps">Design:</span><br />    Annette Ahrend<br />    w o r t b i l d b ü r o<br />    <a href="mailto:annette.ahrend@wortbildbuero.de">annette.ahrend-at-wortbildbuero.de</a></p><p class="para">    <span i18n class="caps">Programmierung &amp; Webdesign:</span><br />    Stefan Münnich<br />    Wissenschaftlicher Mitarbeiter der Anton Webern Gesamtausgabe, Basel<br />    <a href="mailto:stefan.muennich@unibas.ch">stefan.muennich [at] unibas [dot] ch</a><br />    <span i18n>basierend auf einer früheren Entwicklung von:</span><br />    Andreas Aeschlimann<br />    Geschäftsführer und Software-Entwickler bei <a href="https://www.appvision.ch">AppVision GmbH</a><br /><a        href="mailto:andreas.aeschlimann@appvision.ch"        >andreas.aeschlimann@appvision.ch</a    ></p><p class="para">    <span i18n class="caps">Materialien und Bilder (vgl. Lizenzierung):</span><br />    <span i18n>Digitales Archiv der Anton Webern Gesamtausgabe</span><br />    <span i18n>Online-Edition der Anton Webern Gesamtausgabe</span></p><p class="para caps">Disclaimer</p><p class="italic">Urheberrecht und Lizenzierung:</p><p class="para">    Sämtliche im Rahmen der Anton Webern Gesamtausgabe erarbeiteten und auf ihrer Website oder ihrer Online-Edition    veröffentlichten Inhalte sowie auch alle Inhalte, die von der Website oder der Online-Edition der Anton Webern    Gesamtausgabe aus auf der DaSCH Service Platform (DSP)/SALSAH (Projektbereich der Anton Webern Gesamtausgabe) für    den Nutzer zugänglich sind, sind urheberrechtlich geschützt und werden – sofern nicht anders deklariert – zu den    Bedingungen der Creative Commons-Lizenz „Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 International"    (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA-4.0</a>) zur Verfügung gestellt. Jede    davon abweichende Verwertung bedarf der vorherigen schriftlichen Zustimmung durch den jeweiligen Rechteinhaber.    Allfällige Bewilligungsgesuche sind an die Anton Webern Gesamtausgabe zu richten (<a        [routerLink]="[\'/contact\', \'address\']"        >Kontakt</a    >). Alle Rechte an zugänglich gemachten externen Bildinhalten verbleiben bei den Privateigentümern bzw. den    archivierenden Institutionen, bei denen die Rechte für eine allfällige Weiterverwendung einzuholen sind.</p><p class="italic">Externe Links:</p><p class="para">    Die Anton Webern Gesamtausgabe hat keinen Einfluss auf und übernimmt keine Verantwortung für die Inhalte der von    ihrer Website, von ihrer Online-Edition oder von der&nbsp;DaSCH Service Platform (DSP)/SALSAH (Projektbereich der    Anton Webern Gesamtausgabe) aus verlinkten externen Internetseiten. Eine Prüfung bei der Verlinkung ergab keine    strafbaren Inhalte auf diesen Seiten. Alle Linkangaben sind ohne Gewähr. Seitenaufrufe externer Seiten über diese    Links erfolgen auf eigene Gefahr. Dies gilt für alle Links auf der Website und der Online-Edition der Anton Webern    Gesamtausgabe sowie auf der DaSCH Service Platform (DSP)/SALSAH (Projektbereich der Anton Webern Gesamtausgabe).</p><p class="italic">Haftungserklärung:</p><p class="para">    Die Anton Webern Gesamtausgabe bemüht sich um richtige und aktualisierte Informationen auf ihrer Website und ihrer    Online-Edition, übernimmt jedoch keinerlei Garantien oder Zusicherungen betreffend der Vollständigkeit der auf    dieser enthaltenen bzw. referenzierten Informationen. Prinzipiell erfolgen Zugang, Benutzung und Inanspruchnahme der    Dienstleistungen der Website der Anton Webern Gesamtausgabe ausschließlich auf eigenes Risiko des Nutzers. Weder die    Gesamtausgabe noch eine von ihr beigezogene, in Herstellung, Informationseingabe und Informationsvermittlung der    Website involvierte Hilfsperson sind in irgendeiner Form haftbar für etwaige Schäden, die im Zusammenhang mit    Zugang, Benutzung oder möglichen Störungen beim Gebrauch der Website auftreten könnten.</p><p class="italic">Google Analytics:</p><p class="para">    Die Anton Webern Gesamtausgabe setzt auf Grundlage ihrer berechtigten Interessen (d.h. Interesse an der Analyse und    Optimierung unseres Onlineangebotes im Sinne des Art.    <a title="Art. 6 DSGVO: Rechtmäßigkeit der Verarbeitung" href="https://dejure.org/gesetze/DSGVO/6.html">6</a> Abs. 1    lit. f. DSGVO) Google Analytics, einen Webanalysedienst der Google LLC („Google“) ein. Google verwendet Cookies. Die    durch das Cookie erzeugten Informationen über Benutzung des Onlineangebotes durch die Nutzer werden in der Regel an    einen Server von Google in den USA übertragen und dort gespeichert.</p><p class="para">    Google ist unter dem Privacy-Shield-Abkommen zertifiziert und bietet hierdurch eine Garantie, das europäische    Datenschutzrecht einzuhalten (<a        href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"        rel="noopener"        target="_blank"        >https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a    >).</p><p class="para">    Google wird diese Informationen in unserem Auftrag benutzen, um die Nutzung unseres Onlineangebotes durch die Nutzer    auszuwerten, um Reports über die Aktivitäten innerhalb dieses Onlineangebotes zusammenzustellen und um weitere, mit    der Nutzung dieses Onlineangebotes und der Internetnutzung verbundene Dienstleistungen, uns gegenüber zu erbringen.    Dabei können aus den verarbeiteten Daten pseudonyme Nutzungsprofile der Nutzer erstellt werden.</p><p class="para">    Die Anton Webern Gesamtausgabe setzt Google Analytics nur mit aktivierter IP-Anonymisierung ein. Das bedeutet, die    IP-Adresse der Nutzer wird von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen    Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum gekürzt. Nur in Ausnahmefällen wird die volle    IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt.</p><p class="para">    Die von dem Browser des Nutzers übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Die    Nutzer können die Speicherung der Cookies durch eine entsprechende Einstellung ihrer Browser-Software verhindern;    die Nutzer können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf ihre Nutzung des    Onlineangebotes bezogenen Daten an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das    unter folgendem Link verfügbare Browser-Plugin herunterladen und installieren:    <a href="http://tools.google.com/dlpage/gaoptout?hl=de">http://tools.google.com/dlpage/gaoptout?hl=de</a>.</p><p class="para">    Weitere Informationen zur Datennutzung durch Google, Einstellungs- und Widerspruchsmöglichkeiten, erfahren Sie in    der Datenschutzerklärung von Google (<a href="https://policies.google.com/technologies/ads"        >https://policies.google.com/technologies/ads</a    >) sowie in den Einstellungen für die Darstellung von Werbeeinblendungen durch Google    <a href="https://adssettings.google.com/authenticated">(https://adssettings.google.com/authenticated</a>).</p><p class="para">Die personenbezogenen Daten der Nutzer werden nach 14 Monaten gelöscht.</p><p class="para">    [<a href="https://datenschutz-generator.de/">Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke</a>;    vom Websiteinhaber angepasst]</p></div>'
+        var COMPONENT_TEMPLATE = '<div><p class="para">    <span i18n class="caps">Herausgeber</span>:<br />    Anton Webern Gesamtausgabe<br />    <span i18n>Musikwissenschaftliches Seminar der Universität Basel</span><br />    Petersgraben 27/29<br />    CH-4051 Basel<br />    <span i18n>Schweiz</span></p><p class="para">    <span i18n class="caps">Texte/Inhalte:</span><br />    Die Verantwortung für die Inhalte der Website liegt bei der Anton Webern Gesamtausgabe. Bei inhaltlichen Fragen    wenden Sie sich bitte an die unter<a [routerLink]="[\'/contact\', \'address\']"> Kontakt</a> angegebene Adresse.</p><p class="para">    <span i18n class="caps">Konzept:</span><br />    Anton Webern Gesamtausgabe</p><p class="para">    <span i18n class="caps">Design:</span><br />    Annette Ahrend<br />    w o r t b i l d b ü r o<br />    <a href="mailto:annette.ahrend@wortbildbuero.de">annette.ahrend-at-wortbildbuero.de</a></p><p class="para">    <span i18n class="caps">Programmierung &amp; Webdesign:</span><br />    Stefan Münnich<br />    Wissenschaftlicher Mitarbeiter der Anton Webern Gesamtausgabe, Basel<br />    <a href="mailto:stefan.muennich@unibas.ch">stefan.muennich [at] unibas [dot] ch</a><br />    <span i18n>basierend auf einer früheren Entwicklung von:</span><br />    Andreas Aeschlimann<br />    Geschäftsführer und Software-Entwickler bei <a href="https://www.appvision.ch">AppVision GmbH</a><br /><a        href="mailto:andreas.aeschlimann@appvision.ch"        >andreas.aeschlimann&#64;appvision.ch</a    ></p><p class="para">    <span i18n class="caps">Materialien und Bilder (vgl. Lizenzierung):</span><br />    <span i18n>Digitales Archiv der Anton Webern Gesamtausgabe</span><br />    <span i18n>Online-Edition der Anton Webern Gesamtausgabe</span></p><p class="para caps">Disclaimer</p><p class="italic">Urheberrecht und Lizenzierung:</p><p class="para">    Sämtliche im Rahmen der Anton Webern Gesamtausgabe erarbeiteten und auf ihrer Website oder ihrer Online-Edition    veröffentlichten Inhalte sowie auch alle Inhalte, die von der Website oder der Online-Edition der Anton Webern    Gesamtausgabe aus auf der DaSCH Service Platform (DSP)/SALSAH (Projektbereich der Anton Webern Gesamtausgabe) für    den Nutzer zugänglich sind, sind urheberrechtlich geschützt und werden – sofern nicht anders deklariert – zu den    Bedingungen der Creative Commons-Lizenz „Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 International"    (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA-4.0</a>) zur Verfügung gestellt. Jede    davon abweichende Verwertung bedarf der vorherigen schriftlichen Zustimmung durch den jeweiligen Rechteinhaber.    Allfällige Bewilligungsgesuche sind an die Anton Webern Gesamtausgabe zu richten (<a        [routerLink]="[\'/contact\', \'address\']"        >Kontakt</a    >). Alle Rechte an zugänglich gemachten externen Bildinhalten verbleiben bei den Privateigentümern bzw. den    archivierenden Institutionen, bei denen die Rechte für eine allfällige Weiterverwendung einzuholen sind.</p><p class="italic">Externe Links:</p><p class="para">    Die Anton Webern Gesamtausgabe hat keinen Einfluss auf und übernimmt keine Verantwortung für die Inhalte der von    ihrer Website, von ihrer Online-Edition oder von der&nbsp;DaSCH Service Platform (DSP)/SALSAH (Projektbereich der    Anton Webern Gesamtausgabe) aus verlinkten externen Internetseiten. Eine Prüfung bei der Verlinkung ergab keine    strafbaren Inhalte auf diesen Seiten. Alle Linkangaben sind ohne Gewähr. Seitenaufrufe externer Seiten über diese    Links erfolgen auf eigene Gefahr. Dies gilt für alle Links auf der Website und der Online-Edition der Anton Webern    Gesamtausgabe sowie auf der DaSCH Service Platform (DSP)/SALSAH (Projektbereich der Anton Webern Gesamtausgabe).</p><p class="italic">Haftungserklärung:</p><p class="para">    Die Anton Webern Gesamtausgabe bemüht sich um richtige und aktualisierte Informationen auf ihrer Website und ihrer    Online-Edition, übernimmt jedoch keinerlei Garantien oder Zusicherungen betreffend der Vollständigkeit der auf    dieser enthaltenen bzw. referenzierten Informationen. Prinzipiell erfolgen Zugang, Benutzung und Inanspruchnahme der    Dienstleistungen der Website der Anton Webern Gesamtausgabe ausschließlich auf eigenes Risiko des Nutzers. Weder die    Gesamtausgabe noch eine von ihr beigezogene, in Herstellung, Informationseingabe und Informationsvermittlung der    Website involvierte Hilfsperson sind in irgendeiner Form haftbar für etwaige Schäden, die im Zusammenhang mit    Zugang, Benutzung oder möglichen Störungen beim Gebrauch der Website auftreten könnten.</p><p class="italic">Google Analytics:</p><p class="para">    Die Anton Webern Gesamtausgabe setzt auf Grundlage ihrer berechtigten Interessen (d.h. Interesse an der Analyse und    Optimierung unseres Onlineangebotes im Sinne des Art.    <a title="Art. 6 DSGVO: Rechtmäßigkeit der Verarbeitung" href="https://dejure.org/gesetze/DSGVO/6.html">6</a> Abs. 1    lit. f. DSGVO) Google Analytics, einen Webanalysedienst der Google LLC („Google“) ein. Google verwendet Cookies. Die    durch das Cookie erzeugten Informationen über Benutzung des Onlineangebotes durch die Nutzer werden in der Regel an    einen Server von Google in den USA übertragen und dort gespeichert.</p><p class="para">    Google ist unter dem Privacy-Shield-Abkommen zertifiziert und bietet hierdurch eine Garantie, das europäische    Datenschutzrecht einzuhalten (<a        href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"        rel="noopener"        target="_blank"        >https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a    >).</p><p class="para">    Google wird diese Informationen in unserem Auftrag benutzen, um die Nutzung unseres Onlineangebotes durch die Nutzer    auszuwerten, um Reports über die Aktivitäten innerhalb dieses Onlineangebotes zusammenzustellen und um weitere, mit    der Nutzung dieses Onlineangebotes und der Internetnutzung verbundene Dienstleistungen, uns gegenüber zu erbringen.    Dabei können aus den verarbeiteten Daten pseudonyme Nutzungsprofile der Nutzer erstellt werden.</p><p class="para">    Die Anton Webern Gesamtausgabe setzt Google Analytics nur mit aktivierter IP-Anonymisierung ein. Das bedeutet, die    IP-Adresse der Nutzer wird von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen    Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum gekürzt. Nur in Ausnahmefällen wird die volle    IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt.</p><p class="para">    Die von dem Browser des Nutzers übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Die    Nutzer können die Speicherung der Cookies durch eine entsprechende Einstellung ihrer Browser-Software verhindern;    die Nutzer können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf ihre Nutzung des    Onlineangebotes bezogenen Daten an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das    unter folgendem Link verfügbare Browser-Plugin herunterladen und installieren:    <a href="http://tools.google.com/dlpage/gaoptout?hl=de">http://tools.google.com/dlpage/gaoptout?hl=de</a>.</p><p class="para">    Weitere Informationen zur Datennutzung durch Google, Einstellungs- und Widerspruchsmöglichkeiten, erfahren Sie in    der Datenschutzerklärung von Google (<a href="https://policies.google.com/technologies/ads"        >https://policies.google.com/technologies/ads</a    >) sowie in den Einstellungen für die Darstellung von Werbeeinblendungen durch Google    <a href="https://adssettings.google.com/authenticated">(https://adssettings.google.com/authenticated</a>).</p><p class="para">Die personenbezogenen Daten der Nutzer werden nach 14 Monaten gelöscht.</p><p class="para">    [<a href="https://datenschutz-generator.de/">Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke</a>;    vom Websiteinhaber angepasst]</p></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'awg-root'},{'name': 'ContactAddressComponent', 'selector': 'awg-contact-address'},{'name': 'ContactCitationComponent', 'selector': 'awg-contact-citation'},{'name': 'ContactComponent', 'selector': 'awg-contact'},{'name': 'ContactImprintComponent', 'selector': 'awg-contact-imprint'},{'name': 'CornerRibbonComponent', 'selector': 'awg-corner-ribbon'},{'name': 'EditionComponent', 'selector': 'awg-edition'},{'name': 'EditionOnlineComponent', 'selector': 'awg-edition-online'},{'name': 'EditionOutlineComponent', 'selector': 'awg-edition-outline'},{'name': 'EditionOverviewComponent', 'selector': 'awg-edition-overview'},{'name': 'EditionPrintComponent', 'selector': 'awg-edition-print'},{'name': 'FooterComponent', 'selector': 'awg-footer'},{'name': 'HeaderComponent', 'selector': 'awg-header'},{'name': 'LocaleSwitcherComponent', 'selector': 'awg-locale-switcher'},{'name': 'MainTextComponent', 'selector': 'awg-main-text'},{'name': 'MenuComponent', 'selector': 'awg-menu'},{'name': 'PageComponent', 'selector': 'awg-page'},{'name': 'PageNotFoundComponent', 'selector': 'awg-page-not-found'},{'name': 'ProjectBoardComponent', 'selector': 'awg-project-board'},{'name': 'ProjectComponent', 'selector': 'awg-project'},{'name': 'ProjectCooperationsComponent', 'selector': 'awg-project-cooperations'},{'name': 'ProjectNewsArchiveComponent', 'selector': 'awg-project-news-archive'},{'name': 'ProjectOverviewComponent', 'selector': 'awg-project-overview'},{'name': 'ProjectTeamComponent', 'selector': 'awg-project-team'},{'name': 'ResearchActivitiesComponent', 'selector': 'awg-research-activities'},{'name': 'ResearchArchivesComponent', 'selector': 'awg-research-archives'},{'name': 'ResearchComponent', 'selector': 'awg-research'},{'name': 'ResearchConferencesComponent', 'selector': 'awg-research-conferences'},{'name': 'ResearchOverviewComponent', 'selector': 'awg-research-overview'},{'name': 'ResearchPublicationsComponent', 'selector': 'awg-research-publications'},{'name': 'ResearchWebernLecturesComponent', 'selector': 'awg-research-webern-lectures'},{'name': 'ResearchWebernStudiesComponent', 'selector': 'awg-research-webern-studies'},{'name': 'RightTextComponent', 'selector': 'awg-right-text'},{'name': 'SearchComponent', 'selector': 'awg-search'},{'name': 'SubMenuComponent', 'selector': 'awg-sub-menu'},{'name': 'WebernBibliographyComponent', 'selector': 'awg-webern-bibliography'},{'name': 'WebernChronologyComponent', 'selector': 'awg-webern-chronology'},{'name': 'WebernComponent', 'selector': 'awg-webern'},{'name': 'WebernLettersComponent', 'selector': 'awg-webern-correspondence'},{'name': 'WebernOverviewComponent', 'selector': 'awg-webern-overview'},{'name': 'WebernPersonsComponent', 'selector': 'awg-webern-persons'},{'name': 'WorksComponent', 'selector': 'awg-works'},{'name': 'WorksMoldenhauerComponent', 'selector': 'awg-works-moldenhauer'},{'name': 'WorksOpusComponent', 'selector': 'awg-works-opus'},{'name': 'WorksOverviewComponent', 'selector': 'awg-works-overview'}];
     var DIRECTIVES = [{'name': 'ExternalLinkDirective', 'selector': 'a[href]'}];
     var ACTUAL_COMPONENT = {'name': 'ContactImprintComponent'};

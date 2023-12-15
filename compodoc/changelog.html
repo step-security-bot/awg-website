@@ -13,8 +13,66 @@
         <link rel="stylesheet" href="./styles/Readthedocs.css">
     </head>
     <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="./" class="navbar-brand">awg-website documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -32,14 +90,290 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="changelog">Changelog</h1>
+<h1>Changelog</h1>
 <p>All notable changes to this project will be documented in this file. See <a href="https://github.com/conventional-changelog/standard-version">standard-version</a> for commit guidelines.</p>
-<h3 id="006-2023-02-20"><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.5...v0.0.6">0.0.6</a> (2023-02-20)</h3>
-<h3 id="continuous-integration">Continuous Integration</h3>
+<h3><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.6...v0.0.7">0.0.7</a> (2023-12-15)</h3>
+<h3>Bug Fixes</h3>
+<ul>
+<li><strong>app:</strong> fix lint errors after update to v17 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8593d6835133df815df7e9d553e5526cd8c93e69">8593d68</a>)</li>
+<li><strong>app:</strong> fix reference to localize types (<a href="https://github.com/musicEnfanthen/awg-website/commit/89c9310ab97f1e14639a42a82150240464b66ef2">89c9310</a>)</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li><strong>core:</strong> add test for LocaleSwitcherCmp in header (<a href="https://github.com/musicEnfanthen/awg-website/commit/14282f4e82f77f9c0dac81fe5ff403b3f2786843">14282f4</a>)</li>
+</ul>
+<h3>Documentation</h3>
+<ul>
+<li><strong>README:</strong> add badge for node version (<a href="https://github.com/musicEnfanthen/awg-website/commit/2c4898480c97d94eb0ca9e3295e160bcdc400d04">2c48984</a>)</li>
+</ul>
+<h3>Continuous Integration</h3>
+<ul>
+<li><strong>app:</strong> switch to node 20 as default (<a href="https://github.com/musicEnfanthen/awg-website/commit/61e5531d25ed5c542d3c96bd77038d7291743ba9">61e5531</a>)</li>
+<li><strong>app:</strong> upgrade node to 18.13 (<a href="https://github.com/musicEnfanthen/awg-website/commit/bbd2b6acfe540d3b35394c836ae96f6c07ee5674">bbd2b6a</a>)</li>
+<li><strong>app:</strong> upgrade node to 20.9 (<a href="https://github.com/musicEnfanthen/awg-website/commit/77d754e17e792d04e1b782f020312eb49d95d1f9">77d754e</a>)</li>
+<li><strong>gh-actions:</strong> add groups to dependabot config (<a href="https://github.com/musicEnfanthen/awg-website/commit/53ebfad8c573fefbc47af4ace76e65b0207e8235">53ebfad</a>)</li>
+<li><strong>gh-actions:</strong> add node v20 to matrix (<a href="https://github.com/musicEnfanthen/awg-website/commit/e67281d269c62059fcf852aa3da9f356e9a4ea9c">e67281d</a>)</li>
+<li><strong>gh-actions:</strong> adjust node version in matrix (<a href="https://github.com/musicEnfanthen/awg-website/commit/ca6bb7cdb02badc98349ebcd1ba8e5e7398db84f">ca6bb7c</a>)</li>
+<li><strong>gh-actions:</strong> pin action versions to sha-1 with ratchet (<a href="https://github.com/musicEnfanthen/awg-website/commit/6eac1c0717e6cf44a60887d272f4a95c04b24598">6eac1c0</a>)</li>
+<li><strong>gh-actions:</strong> update dependabot.yml (<a href="https://github.com/musicEnfanthen/awg-website/commit/f80bdc4a66f74ff71d3f4a4bda75b354236fd774">f80bdc4</a>)</li>
+<li><strong>gh-actions:</strong> upgrade to node version 18.16 as default (<a href="https://github.com/musicEnfanthen/awg-website/commit/827c71aedb49a8759fd396cb7b37cf02224f33a8">827c71a</a>)</li>
+</ul>
+<h3>Build System</h3>
+<ul>
+<li><strong>app:</strong> adjust config values after update to Angular v17 (<a href="https://github.com/musicEnfanthen/awg-website/commit/01845d7f5ffee4f9f8db1879a22cc3ad9178cc64">01845d7</a>)</li>
+<li><strong>app:</strong> drop support of node 16 (<a href="https://github.com/musicEnfanthen/awg-website/commit/63d26761b4a0391282cad4f9a5d3d3fdb05174ad">63d2676</a>)</li>
+<li><strong>app:</strong> fix email field in package.json (<a href="https://github.com/musicEnfanthen/awg-website/commit/c423bfe07232019afb0a14679f6bf4df060a12e3">c423bfe</a>)</li>
+<li><strong>app:</strong> remove node 14 support (<a href="https://github.com/musicEnfanthen/awg-website/commit/e4e06126cb84f23903683eef40e7706ca691ec54">e4e0612</a>)</li>
+<li><strong>app:</strong> update test:ci script (<a href="https://github.com/musicEnfanthen/awg-website/commit/cc419af5ec13694719649cfe79a6571b58c57cff">cc419af</a>)</li>
+<li><strong>app:</strong> update to Angular v16 (<a href="https://github.com/musicEnfanthen/awg-website/commit/282cd3415aaf8967a0313f33fe8153c81e9282db">282cd34</a>)</li>
+<li><strong>app:</strong> update to Angular v17 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f2d9aa6af5612d0594c465e43e884df479b9c134">f2d9aa6</a>)</li>
+<li><strong>app:</strong> upgrade minimal supported node version to 18.13.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/efc7003e129d091d89acfb151042657cc3fbba2f">efc7003</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/angular-eslint">@angular-eslint</a> packages from 16.0.1 to 16.0.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f3e9442089caeb119257eadd5ed442b502cb5821">f3e9442</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/angular-eslint">@angular-eslint</a> packages from 16.0.2 to 16.0.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/38badaf34e5752b5f748d9aa747b3810212c6e67">38badaf</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/angular-eslint">@angular-eslint</a> packages from 16.0.3 to 16.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/7b247f7f8a5d8d7a4822537f2941dcbfc6bbf371">7b247f7</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.2.3 to 15.2.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/af7fe9afa408336eaf659e218b73b860ac92788f">af7fe9a</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/commitlint">@commitlint</a> group from 18.2.0 to 18.4.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/93147554e0bb178902372ac0dcae64d40c76781e">9314755</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/commitlint">@commitlint</a> packages from 17.4.4 to 17.6.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1ca9499fdb83a32fdf71e500449c6ec234fd128a">1ca9499</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/commitlint">@commitlint</a> packages from 17.6.1 to 17.6.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/25af501eaa2274d29aa0bae09dd62f8c9d6b5e94">25af501</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/commitlint">@commitlint</a> packages from 17.6.3 to 17.6.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/45643f3de787b8f8508010b6272a352510d2ff50">45643f3</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/commitlint">@commitlint</a> packages from 17.6.5 to 17.6.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/95e230bab6a516307d3a07608e6dfde20424775c">95e230b</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/commitlint">@commitlint</a> packages from 17.6.6 to 17.6.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0396d449e4f7ef0116203b6166f834ac38e048f0">0396d44</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.52.0 to 5.53.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/75962bd87d657f815eb0ce40830d5dd2b1ff7f96">75962bd</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.53.0 to 5.54.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e59cef0e003007d992acacebc8feedbbea105c2c">e59cef0</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.54.0 to 5.55.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/22393ab8b31f77e857fda4f132b001868a786283">22393ab</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.55.0 to 5.57.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8f6af449b7c2007676a0ce8cfa27f4347f6f316b">8f6af44</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.57.0 to 5.58.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/19993c004b1275beb1101a0e2d682bb273b04404">19993c0</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.0 to 5.59.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/92c07fd5549917639450129fde0584b6005a92b4">92c07fd</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.1 to 5.59.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0e0f62b3cfeffd5dd6a734393ee2f3198b71780b">0e0f62b</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.11 to 5.60.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/70b6fe4a938d31e0279b0bb9fedc5bc237a4d9c2">70b6fe4</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.5 to 5.59.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/74400e35866cb28d86dd027952ac046bf63aa9a3">74400e3</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.6 to 5.59.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0f80c5dd8476d551dc5831516885e5302b11ad5e">0f80c5d</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.7 to 5.59.8 (<a href="https://github.com/musicEnfanthen/awg-website/commit/723348f1e9b6a6bdbbdf2b9e7b24003daf8c8531">723348f</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.8 to 5.59.9 (<a href="https://github.com/musicEnfanthen/awg-website/commit/c3fbaf662014237e9b489aed7c07c051e5119f19">c3fbaf6</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.59.9 to 5.59.11 (<a href="https://github.com/musicEnfanthen/awg-website/commit/df8aa57d75234dc128cc66e204855c725c8a1dcc">df8aa57</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.60.0 to 5.60.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8ea1104b2b12302658b52185aee9867486499b2b">8ea1104</a>)</li>
+<li><strong>deps-dev:</strong> bump <a href="https://github.com/typescript-eslint">@typescript-eslint</a> packages from 5.60.1 to 6.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/03ad02f5d94f1f55c64bccc20074e7066f9d7f83">03ad02f</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular-devkit/build-angular (<a href="https://github.com/musicEnfanthen/awg-website/commit/5fbb8d178fcc53eb3601b2f0a43ab1395dc81e27">5fbb8d1</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.1.6 to 15.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f80c1de08bea90eb2c310f3231fea1aedc2e629a">f80c1de</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.2.0 to 15.2.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/3e2b451b090e8cdb0e7ae8646fc232dae99b1231">3e2b451</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.2.3 to 15.2.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/bd5b767ecd0d2cf04fb3734c6f56ac66129c87b6">bd5b767</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.2.4 to 15.2.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0a6aa31d00dc042ec14c45c8b02ee4e3340f909b">0a6aa31</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.2.5 to 15.2.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e4cff8441e926332907104a70c58a358fc226df6">e4cff84</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.2.6 to 15.2.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/669453111e12cffdd99bfb2b824df2aa157bdbbc">6694531</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.2.7 to 15.2.8 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5a3d30cc2c07582be45b86b0ca14809b2b27e7b9">5a3d30c</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.0.1 to 16.0.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/801fe27e4297315fe39de85d065137e8f45856b1">801fe27</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.0.3 to 16.0.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/bc8141192dfe56640de543e70e63beb2eac05f03">bc81411</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.0.4 to 16.0.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/13725608bb5357de7ac937f36bfedec2207ed5c8">1372560</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.0.5 to 16.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/93680bf3a2fde7128a654408a47e3965529591d7">93680bf</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.1.0 to 16.1.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5ee6963c3acbc7a9fc3d066153da83af4bb9a487">5ee6963</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.1.2 to 16.1.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/7be5285ddab1069f1089d1b16232ef5b11bea5a8">7be5285</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.1.3 to 16.1.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5e9eff37c262b21fb28e920272f07ceb43497df5">5e9eff3</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 16.1.5 to 16.1.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ee0f20332da91e3c86c97b598162b303f764ead8">ee0f203</a>)</li>
+<li><strong>deps-dev:</strong> bump @angular/cli from 16.0.2 to 16.0.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/590796d5a876060e2eca96f183b1dcad7da779b4">590796d</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/cli from 17.4.4 to 17.5.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ad8e3b00b95013b34d61f2e32b2bdd5e924523bc">ad8e3b0</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/cli from 17.6.7 to 17.7.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f46d0c138750379c56205f50cc3940b5880ea1ba">f46d0c1</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/cli from 17.7.1 to 17.7.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/737fc2e755dd64995fe232463e9879954f753361">737fc2e</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/cli from 17.7.2 to 17.8.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/9b92420e11c2646a3d91136e8928d2d5811976a2">9b92420</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/cli from 17.8.0 to 18.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/092b3a71bc6c0f234532b1550d1c4f740baaa49b">092b3a7</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/cli from 18.0.0 to 18.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/360d5fb379094d47adee6b1107e319ddfc109725">360d5fb</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/cli from 18.1.0 to 18.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/33f8091857175047b1456e7931cf9483e9428efc">33f8091</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/config-angular from 17.6.7 to 17.7.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/a362ce8c09e62722b8e601d643bae1efe5455e96">a362ce8</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/config-angular from 17.7.0 to 17.8.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/34d174d1ac0dd3d5db19d74b74ae8bb5ae28a8b2">34d174d</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/config-angular from 17.8.0 to 18.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1e81b9f22947b9f16951c17a8f88b5425fd9d825">1e81b9f</a>)</li>
+<li><strong>deps-dev:</strong> bump @commitlint/config-angular from 18.0.0 to 18.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/10baab2e83d2b82effcb4a3aa1267b6f4bf61eb8">10baab2</a>)</li>
+<li><strong>deps-dev:</strong> bump @compodoc/compodoc from 1.1.19 to 1.1.21 (<a href="https://github.com/musicEnfanthen/awg-website/commit/29556902ff203256446331fd7d5b147b4220c2fe">2955690</a>)</li>
+<li><strong>deps-dev:</strong> bump @compodoc/compodoc from 1.1.21 to 1.1.22 (<a href="https://github.com/musicEnfanthen/awg-website/commit/56f99ad914e69abbadcda4b4417aa7249b636a74">56f99ad</a>)</li>
+<li><strong>deps-dev:</strong> bump @compodoc/compodoc from 1.1.22 to 1.1.23 (<a href="https://github.com/musicEnfanthen/awg-website/commit/a72594fba93bf9507c9dc709ac3c38f871428c7f">a72594f</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/jasmine from 4.3.1 to 4.3.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b64bdd00dacbae428e341a646caccbaaee2f2f56">b64bdd0</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/jasmine from 4.3.4 to 4.3.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/eab65e619db56da5b60dd027fddd50f205bc2022">eab65e6</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/jasmine from 4.3.5 to 5.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/64464e226ec4754abe0303d448d1d4ca9641a014">64464e2</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/jasmine from 5.1.0 to 5.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/973f5e06269e5ea6dc823aa31fb30d45713a1ee5">973f5e0</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/jasmine from 5.1.1 to 5.1.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/771d40783b2fa199a5f9f081192068372b217095">771d407</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 16.18.12 to 16.18.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/bd5162c69618f8e82f20bb4c966d4367bfd175e6">bd5162c</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 16.18.13 to 16.18.16 (<a href="https://github.com/musicEnfanthen/awg-website/commit/9236eaac1e0677f368716a234fdf7304dd597816">9236eaa</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 16.18.16 to 16.18.23 (<a href="https://github.com/musicEnfanthen/awg-website/commit/be1992443ad7afa9e66cb35a9d89ba8c06e57997">be19924</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 16.18.23 to 16.18.24 (<a href="https://github.com/musicEnfanthen/awg-website/commit/225cc6c38614c3816b9e170395c5d07ce84048cf">225cc6c</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 16.18.24 to 16.18.25 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8b960941f36d2603f3ff235207b472cb89119e8e">8b96094</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 16.18.25 to 16.18.29 (<a href="https://github.com/musicEnfanthen/awg-website/commit/3ba5ead5a5321c4dc52fded490830e403ae81fd1">3ba5ead</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 16.18.29 to 18.16.8 (<a href="https://github.com/musicEnfanthen/awg-website/commit/159a9c2f83bf49e092fc6a3ddf265fff90b860e8">159a9c2</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.16.13 to 18.16.14 (<a href="https://github.com/musicEnfanthen/awg-website/commit/86f9b5a7b1e56a4e5056f54adc3da047306e7e1e">86f9b5a</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.16.14 to 18.16.16 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1b315e08f6a201f63487046c0c68dd3bf3a281e9">1b315e0</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.16.16 to 18.16.18 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5f03cc4086bd87bb98245a7953422be21af7a72d">5f03cc4</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.16.18 to 18.16.19 (<a href="https://github.com/musicEnfanthen/awg-website/commit/aeeac19fc3e0a934d1de8137886066a174b50e78">aeeac19</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.16.19 to 18.17.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/52b3c6ad21a6347e35d220e54e3a62c7a840e01f">52b3c6a</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.16.8 to 18.16.13 (<a href="https://github.com/musicEnfanthen/awg-website/commit/2cb4b9ab3d84c73f815e417bcc365d317e90b251">2cb4b9a</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.17.0 to 18.17.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b22407902268555b26a42379d0c50005b9ab9225">b224079</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.17.1 to 18.18.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/a185366d969705d2bbe54e82649550e4af78a57b">a185366</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.18.13 to 18.19.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8316172b36ccddf2e2cd49b9aed77ceeeaeb51f6">8316172</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.18.5 to 18.18.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4dcee72845054189edc6a2a8db3dac25e7e3a057">4dcee72</a>)</li>
+<li><strong>deps-dev:</strong> bump @types/node from 18.18.6 to 18.18.13 (<a href="https://github.com/musicEnfanthen/awg-website/commit/2bf2a877ba21e710112068f1e87d6ad10626267c">2bf2a87</a>)</li>
+<li><strong>deps-dev:</strong> bump @typescript-eslint/eslint-plugin (<a href="https://github.com/musicEnfanthen/awg-website/commit/2bfe6755f55b9812a3e81a65e73388552982da86">2bfe675</a>)</li>
+<li><strong>deps-dev:</strong> bump @typescript-eslint/parser from 5.58.0 to 5.59.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1d5f25bb9dc3b8e7714a40185655eac9d0685f30">1d5f25b</a>)</li>
+<li><strong>deps-dev:</strong> bump angular-cli-ghpages from 1.0.5 to 1.0.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e785567212f0b0ca289e52991e8b076a096d7bf1">e785567</a>)</li>
+<li><strong>deps-dev:</strong> bump angular-cli-ghpages from 1.0.6 to 1.0.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1f059e16b585f104bd5b714e843d8925c1a96178">1f059e1</a>)</li>
+<li><strong>deps-dev:</strong> bump conventional-recommended-bump from 6.1.0 to 7.0.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/7a71e9532c378dbd8c489e9332dacb889e655022">7a71e95</a>)</li>
+<li><strong>deps-dev:</strong> bump conventional-recommended-bump from 7.0.1 to 9.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8bf218061d26a4ceb3490d557dcc037540f1f53c">8bf2180</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.34.0 to 8.35.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/713d9422d6b7938f26a27e71d88c9547de627e28">713d942</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.35.0 to 8.36.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/3199211081c1295bd9ed24b23e7d15f2c07d8729">3199211</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.36.0 to 8.37.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/535c469fb9ee018b8c5d153c933fec0411caa7d7">535c469</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.37.0 to 8.38.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f102537c0c23b7f908527754dbe85c59cef7a50c">f102537</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.38.0 to 8.39.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0ed9575e25e5a6dbab687a34ebf9e7dc8a354307">0ed9575</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.39.0 to 8.40.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ac4f4e17bb359fd94916820e0db9628e41646432">ac4f4e1</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.40.0 to 8.41.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ba6f43f071420ae4ef3413ac0af895f60f46fa45">ba6f43f</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.41.0 to 8.42.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4bc431786c846fab2dc721bcfeb2a3d1efa9ed76">4bc4317</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.42.0 to 8.43.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/00a2bd3fe99cee9bd15e8d1aebc875f0d29aa904">00a2bd3</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.43.0 to 8.45.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4505adc4597b273be69408157136e35ff73277cc">4505adc</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.45.0 to 8.46.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/54a8f722689bd6f4f348c963feea49e7f169b21e">54a8f72</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.46.0 to 8.48.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0aa2b4a13458e6babd2760c2f96d17bf34416f01">0aa2b4a</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.48.0 to 8.51.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/3801ceeaacf63fa820649530f7d7b012f0b36451">3801cee</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.51.0 to 8.52.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/d3a8a03dc18361aef6a941f9cf247c008653b074">d3a8a03</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.52.0 to 8.53.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/15e586ee38aa8a33c893891e6860a39311b61008">15e586e</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.53.0 to 8.54.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e19794aeda7972cc36b117a5d179815f0e3090d6">e19794a</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint from 8.54.0 to 8.55.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/7be9fc952b15a4b1c3bdbfc8b40b70f5927c9fb5">7be9fc9</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-config-prettier from 8.6.0 to 8.7.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/d0619afe903f9f6377f6e3cac56ff683fb57a05a">d0619af</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-config-prettier from 8.7.0 to 8.8.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/6a3ca56dd89d3606e09ab6658eb81317931c0fdd">6a3ca56</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-config-prettier from 8.8.0 to 8.9.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ce592c9d22cac7e3b2ff39399e824deccf0d7940">ce592c9</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-config-prettier from 8.9.0 to 9.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/93d7dd4604251d57112e66a8b7913042eeb522b9">93d7dd4</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-config-prettier from 9.0.0 to 9.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0c34400546120252719f795825a6cd8dd3fd0d66">0c34400</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-import from 2.27.5 to 2.28.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/35757be62052d102d24830cf884bb3c3e9288ccf">35757be</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-import from 2.28.0 to 2.28.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/39f90341de6bfdea3e550739f9ecd39817041fab">39f9034</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-import from 2.28.1 to 2.29.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/6720d49dcbcb199fc86c793548f8199699e45091">6720d49</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-import from 2.29.0 to 2.29.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/92ecef10ebea5205b18b80d36d6e574f71ef7b8b">92ecef1</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 40.0.0 to 40.0.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/04341f88e857c88eba463a1f2f1029cfa0218af0">04341f8</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 40.0.3 to 40.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e05e2bfd3b456cf7939e2f8c560d99c938d2441a">e05e2bf</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 40.1.0 to 40.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/706e35cd05af53331e0e336d559e16d10a6b251f">706e35c</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 40.1.1 to 41.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1481c1cfba224c813e7dd9b261930d8c19abe88b">1481c1c</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 41.1.1 to 41.1.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1d65322fb067e12b30da72de20274c1f8868d032">1d65322</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 41.1.2 to 43.0.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f1b36ed25c2b387bee768f479b1e6bf047136dae">f1b36ed</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 43.0.6 to 43.0.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5601c5e8bda7b723e71570953c5c5877f9c78f84">5601c5e</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 43.0.7 to 44.2.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0efcb69359095512bf32aefcb9258925d422471f">0efcb69</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 44.2.3 to 44.2.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ebb043394f55df7c2356a0584c9f4838abbc2111">ebb0433</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 44.2.4 to 44.2.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8350c7785f00333709f1d9706e2505220e70024c">8350c77</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 44.2.5 to 44.2.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/9c7401dc0524612556c9e6f0436ad2c2b1fcf37a">9c7401d</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 44.2.7 to 46.2.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/d4bd954666687ec94dffc4d6e6f8e6dcd1013e7c">d4bd954</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 46.2.4 to 46.2.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/db8d22443a5b92adce335426ab02dc4bb6e6a94d">db8d224</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 46.2.6 to 46.4.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8c9e49569efd9c9e96ada3bdd0e5995f751cba01">8c9e495</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 46.4.2 to 46.4.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5fb906ed51c16cef7116bb6a5d5d4c9ab01d2a2b">5fb906e</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 46.4.4 to 46.4.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/af9bafc107b3ffc5176d5e35b8f433afbb41a8b2">af9bafc</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 46.4.5 to 46.4.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f7c7f6adbe5da7430506fa70336633dfaa9675eb">f7c7f6a</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 46.4.6 to 46.8.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/edc38ca5d1aee11d2576b17c470fb86e4495cb8f">edc38ca</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 46.8.2 to 46.9.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0bea51c777362dd4c0f9ec85f01a1bc4037056b3">0bea51c</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-prettier from 4.2.1 to 5.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/9a45bd5f04f393a319426e484edc95eb2b2240e2">9a45bd5</a>)</li>
+<li><strong>deps-dev:</strong> bump eslint-plugin-prettier from 5.0.0 to 5.0.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e8a506af8e67d1493287b646cd10f8fa1d8d829f">e8a506a</a>)</li>
+<li><strong>deps-dev:</strong> bump jasmine-core from 4.5.0 to 4.6.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/2f6b3314a1d601e0e56ba4481811b0e283419508">2f6b331</a>)</li>
+<li><strong>deps-dev:</strong> bump jasmine-core from 4.6.0 to 5.0.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4b6714b81da5c912be64fb8b2a96809cb27385bd">4b6714b</a>)</li>
+<li><strong>deps-dev:</strong> bump jasmine-core from 5.0.1 to 5.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ded79d639b0f3939147e4d1ee8989b92b61fd733">ded79d6</a>)</li>
+<li><strong>deps-dev:</strong> bump jasmine-core from 5.1.0 to 5.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b929eea87fae37ea514569447ed6dcd8456649b7">b929eea</a>)</li>
+<li><strong>deps-dev:</strong> bump karma from 6.4.1 to 6.4.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/fba414207d4c550390ec741089983da8bc46da93">fba4142</a>)</li>
+<li><strong>deps-dev:</strong> bump karma-chrome-launcher from 3.1.1 to 3.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/86f890a6a84649a8590b13b8e26e9e292cb0602d">86f890a</a>)</li>
+<li><strong>deps-dev:</strong> bump karma-coverage from 2.2.0 to 2.2.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ca241a7818e063a38bc9b8d3a2743d9b523dd629">ca241a7</a>)</li>
+<li><strong>deps-dev:</strong> bump karma-jasmine-html-reporter from 2.0.0 to 2.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/42ee367af3ba235d03cfc9b4a35018e0988a5396">42ee367</a>)</li>
+<li><strong>deps-dev:</strong> bump lint related packages to v16 (<a href="https://github.com/musicEnfanthen/awg-website/commit/7082ae734c55a143a014da4112dad2911175b7cd">7082ae7</a>)</li>
+<li><strong>deps-dev:</strong> bump lint-staged from 13.1.2 to 13.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/60bd304602154b97f8e136b95680f3c80bef9c11">60bd304</a>)</li>
+<li><strong>deps-dev:</strong> bump lint-staged from 13.2.0 to 13.2.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/d6e6972243a43af733c482734285cd1d6b91175c">d6e6972</a>)</li>
+<li><strong>deps-dev:</strong> bump lint-staged from 13.2.1 to 13.2.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/957789914bf796ed91faad7f359166939df9b0a4">9577899</a>)</li>
+<li><strong>deps-dev:</strong> bump lint-staged from 13.2.2 to 13.2.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/374387d78c4959dea393ed06a239fb6096ca3ade">374387d</a>)</li>
+<li><strong>deps-dev:</strong> bump lint-staged from 13.2.3 to 15.0.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/39ccc7be3581d1c1da0775d3bc739e3dba606330">39ccc7b</a>)</li>
+<li><strong>deps-dev:</strong> bump lint-staged from 15.0.2 to 15.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/6aa47e3ef5f473ffc7d4b59d688044615c871dff">6aa47e3</a>)</li>
+<li><strong>deps-dev:</strong> bump lint-staged from 15.1.0 to 15.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5465f1730563ad2271a0f927c093f88334be0af4">5465f17</a>)</li>
+<li><strong>deps-dev:</strong> bump prettier from 2.8.4 to 2.8.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/94aa978bc03feb391f6e6690fc08f39aa09ade2d">94aa978</a>)</li>
+<li><strong>deps-dev:</strong> bump prettier from 2.8.7 to 2.8.8 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8e9604a32bc3e29c6229f9761fefd316ab734c11">8e9604a</a>)</li>
+<li><strong>deps-dev:</strong> bump prettier from 2.8.8 to 3.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/defd8720c2b5ee054ef640b112113905c992ce16">defd872</a>)</li>
+<li><strong>deps-dev:</strong> bump prettier from 3.0.0 to 3.0.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/bd05f941f4c8646324ba594bb64d364ca2f8fbd8">bd05f94</a>)</li>
+<li><strong>deps-dev:</strong> bump prettier from 3.0.1 to 3.0.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/de0b736fa638e8bad3a370f936531204f38f2291">de0b736</a>)</li>
+<li><strong>deps-dev:</strong> bump prettier from 3.0.3 to 3.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/c233146a630d74575dbf257362cea6de17919eed">c233146</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/04be03fa110029a261f8b50425cb5c654a155f1e">04be03f</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/7ae4b01fa0394922a5184100881e3173c53c74ff">7ae4b01</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/8135ea83ee2561aa8db489321053c9c73d07262d">8135ea8</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/9fce5091c0e3a8fa23124235ada59ac197b6d241">9fce509</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/9e79d64d6fc7821a4e53f76a3a1c2c9269f7c7b8">9e79d64</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/58827cbe7f3e190b7264052b09888d608894e279">58827cb</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/3ef3f75210e5a94a8e45752a75b906634a5c322c">3ef3f75</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-cli-devkit group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/8a4564c8bee6d94312004195cd674507e46d6076">8a4564c</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-eslint group from 16.2.0 to 17.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/38e2ad1d9f45af2ae3f1030d38f8220dc24c1746">38e2ad1</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-eslint group with 5 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/ae40ffd9862b596e77a2abe0d2f903d4413fe74e">ae40ffd</a>)</li>
+<li><strong>deps-dev:</strong> bump the angular-eslint group with 5 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/e8a6bc277ee272f9903e132cccc1b0df09ad16b3">e8a6bc2</a>)</li>
+<li><strong>deps-dev:</strong> bump the typescript-eslint group from 6.10.0 to 6.14.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/cb08dca61409c3cc5c69d82f11adaeb7fa7a7c8a">cb08dca</a>)</li>
+<li><strong>deps-dev:</strong> bump the typescript-eslint group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/7caa9e15b2761caeb0f6f8b9ad8ccb48341bfed7">7caa9e1</a>)</li>
+<li><strong>deps-dev:</strong> bump the typescript-eslint group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/73b6d992ec5902a931c579d133b7f545df69a67f">73b6d99</a>)</li>
+<li><strong>deps-dev:</strong> bump the typescript-eslint group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/9cf7b0e57ebbf7f0b92c2b893d278fb33c8aa0bb">9cf7b0e</a>)</li>
+<li><strong>deps-dev:</strong> bump the typescript-eslint group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/f9e4d41d620e6d6c5a80af24c8baacf98fac870e">f9e4d41</a>)</li>
+<li><strong>deps-dev:</strong> bump the typescript-eslint group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/27f56f52d78c7933930b9c624bab2b5cd329b5c5">27f56f5</a>)</li>
+<li><strong>deps-dev:</strong> bump the typescript-eslint-packages group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/deefb4e2415300e02ab87b0c8f7e56b11f2a7ec7">deefb4e</a>)</li>
+<li><strong>deps-dev:</strong> bump typescript from 4.8.4 to 4.9.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/6b73b3c27cace6c5ee3e6b892bf33120ef148eba">6b73b3c</a>)</li>
+<li><strong>deps-dev:</strong> bump typescript from 4.9.5 to 5.0.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/54e64b22f33ed493156c482443b1d19df8a8256b">54e64b2</a>)</li>
+<li><strong>deps-dev:</strong> bump webpack-bundle-analyzer from 4.8.0 to 4.9.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/a0be9514aa1493023b49418029e2acf5a777d397">a0be951</a>)</li>
+<li><strong>deps-dev:</strong> bump webpack-bundle-analyzer from 4.9.0 to 4.9.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/dde99147dfd4f6f0794aac5bbab774f3988fe597">dde9914</a>)</li>
+<li><strong>deps-dev:</strong> bump webpack-bundle-analyzer from 4.9.1 to 4.10.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/672e612668048901441a03cb03bb17eea44f6bd1">672e612</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> material packages from 16.0.3 to 16.0.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/fb7a33f57ff0cae435c07a65706a82b6d0334d04">fb7a33f</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> material packages from 16.1.0 to 16.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/80faf53704d1bdcb77b12e4c3662774589923336">80faf53</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> material packages from 16.1.3 to 16.1.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/9c917061b9ee85b409e5a16485c5c549ba009061">9c91706</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> material packages from 16.1.5 to 16.1.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/aa9f22d49028d3fdcc1b79034a88f13c589b68f2">aa9f22d</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.1.5 to 15.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b439f3836729ff721db4277d54ba3bee799ab040">b439f38</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.2.0 to 15.2.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/945ca002acaedd68e2bb57c519d1063a48d89b31">945ca00</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.2.2 to 15.2.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/05bf1fccd2c3937c5fcb5b4dd873071245b682f9">05bf1fc</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.2.5 to 15.2.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/0709432b005e1c5ea6c6bd70ac44f3593a276bcd">0709432</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.2.6 to 15.2.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b3e457a32c66e276b0161f7adc6a20bdbad26c03">b3e457a</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.2.7 to 15.2.8 (<a href="https://github.com/musicEnfanthen/awg-website/commit/111d7c09733c41c1bdfde231fd7bef52535e8481">111d7c0</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.2.8 to 15.2.9 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1e2b36f0aad748e7884de2d7da937e1d7f35d69f">1e2b36f</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.0.1 to 16.0.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/27ef7b7c2a485e80e3d727fa97c49fe67ec5b550">27ef7b7</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.0.2 to 16.0.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/dfd1847691800290baea07f43d2982a3d54480c2">dfd1847</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.0.3 to 16.0.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/c272a14e3ef8a67c9dd668055ccb34980d7a578e">c272a14</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.0.4 to 16.0.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/fe179dc311b73034ce7e95b2352a392d451dfb7f">fe179dc</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.0.5 to 16.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/54bbfd881b5860a8ad48ac161356f49d5ed50d91">54bbfd8</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.1.1 to 16.1.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4002bc851a2ed43628e91df5cec733ac11a8863a">4002bc8</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.1.2 to 16.1.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/160a0eca6e44136b582de2f22b1b8cca9cb2e1b9">160a0ec</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.1.3 to 16.1.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/dbd43fd2d5f7fd00d92326c1c2e3508346157e6d">dbd43fd</a>)</li>
+<li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 16.1.6 to 16.1.7 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4e717fa5406df2d3340730d48026e817f428a56b">4e717fa</a>)</li>
+<li><strong>deps:</strong> bump @babel/traverse from 7.22.5 to 7.23.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4a53d978425b0eff01c5aef5331ce03dea91ff44">4a53d97</a>)</li>
+<li><strong>deps:</strong> bump actions/checkout from 3.5.2 to 3.5.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/dd3bba485c0d748706edb64df40812c25c7822be">dd3bba4</a>)</li>
+<li><strong>deps:</strong> bump actions/checkout from 3.5.3 to 3.6.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/14816d62ebf3cf72ea75cc2150ed30f2f83627c9">14816d6</a>)</li>
+<li><strong>deps:</strong> bump actions/checkout from 3.6.0 to 4.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e23b193eeaf7a29c745b64dd65e3dbbb33733e4b">e23b193</a>)</li>
+<li><strong>deps:</strong> bump actions/checkout from 4.0.0 to 4.1.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/09af8744971efb3f8c99f3521d0c585bd44e79fd">09af874</a>)</li>
+<li><strong>deps:</strong> bump actions/checkout from 4.1.0 to 4.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/04db99fda5c55b6d079faf7c3f18e2d4f603e59b">04db99f</a>)</li>
+<li><strong>deps:</strong> bump actions/setup-node from 3.6.0 to 3.7.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b125f2d2d9e452b2e2e0788bdbd312ca92ea24a7">b125f2d</a>)</li>
+<li><strong>deps:</strong> bump actions/setup-node from 3.7.0 to 3.8.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/42c93565822ed36cc4bb3397fef674358545d370">42c9356</a>)</li>
+<li><strong>deps:</strong> bump actions/setup-node from 3.8.1 to 4.0.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/891dc0508d5bba7674eb738b6357f92401ef987d">891dc05</a>)</li>
+<li><strong>deps:</strong> bump axios from 1.4.0 to 1.6.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/ce9c4b60f4e67f8bdfe61c7fc2f87f78e38dd296">ce9c4b6</a>)</li>
+<li><strong>deps:</strong> bump crypto-js from 4.1.1 to 4.2.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/a33a37b828917380172c44a60063cc4cdb27e309">a33a37b</a>)</li>
+<li><strong>deps:</strong> bump engine.io from 6.4.0 to 6.4.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b4315316e08d3c48324462366ce1527b0b63f51f">b431531</a>)</li>
+<li><strong>deps:</strong> bump github/codeql-action from 2.3.3 to 2.3.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/e5edd05c79b9df14993dbd5654a134823e1258bb">e5edd05</a>)</li>
+<li><strong>deps:</strong> bump github/codeql-action from 2.3.4 to 2.3.5 (<a href="https://github.com/musicEnfanthen/awg-website/commit/99416def7f71a20a74a232de43b39f49a43d597b">99416de</a>)</li>
+<li><strong>deps:</strong> bump github/codeql-action from 2.3.5 to 2.3.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/f2402d914c090e823f120bdef891f3b84b81a53c">f2402d9</a>)</li>
+<li><strong>deps:</strong> bump github/codeql-action from 2.3.6 to 2.13.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/7b5ba6c0ee0075d25a1736b234d31958d72e5558">7b5ba6c</a>)</li>
+<li><strong>deps:</strong> bump rxjs from 7.8.0 to 7.8.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/00a3c5f176972d4c54a55d26e5ef2f06d070704f">00a3c5f</a>)</li>
+<li><strong>deps:</strong> bump semver from 5.7.1 to 5.7.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/536655af279062180aa199e0459cf9d028c14a9f">536655a</a>)</li>
+<li><strong>deps:</strong> bump socket.io-parser from 4.2.2 to 4.2.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/fb28e996a6b8d5a92470b86c68815ae94350d711">fb28e99</a>)</li>
+<li><strong>deps:</strong> bump the angular group with 11 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/8e3a8d29d7925a62d7934e7138ea5df7dbafc300">8e3a8d2</a>)</li>
+<li><strong>deps:</strong> bump the angular group with 11 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/9b24151ab7b55a2bb32212bf8b58d4b244aea622">9b24151</a>)</li>
+<li><strong>deps:</strong> bump the angular group with 11 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/957e152f74faddb5f7e2a38f65fe888471ed8fd6">957e152</a>)</li>
+<li><strong>deps:</strong> bump the angular group with 11 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/668dfc4a34c6a4402543c4b6c78be6a327212084">668dfc4</a>)</li>
+<li><strong>deps:</strong> bump the angular group with 11 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/aae09d2376f34a0a170e2fc75b266fdc82d18720">aae09d2</a>)</li>
+<li><strong>deps:</strong> bump the angular group with 11 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/73b5a30a25b0f63de118bfc2eff4185c87ed5334">73b5a30</a>)</li>
+<li><strong>deps:</strong> bump the angular group with 11 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/66628d5eaa08a1406a77e1b2b77aa9b770ffb8a3">66628d5</a>)</li>
+<li><strong>deps:</strong> bump the angular-material group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/d30f1029e36ffbe4a2c8bbd69f1e697da572b8fb">d30f102</a>)</li>
+<li><strong>deps:</strong> bump the angular-material group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/069883742a8cd065e38faa6aa07ecbc8cd064a5f">0698837</a>)</li>
+<li><strong>deps:</strong> bump the angular-material group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/16a0bc97015f097da3e2ec3fedfd6506188f828f">16a0bc9</a>)</li>
+<li><strong>deps:</strong> bump the angular-material group with 2 updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/d24037d9d9b2ed28148d81766a65f99082b66c87">d24037d</a>)</li>
+<li><strong>deps:</strong> bump tslib from 2.4.1 to 2.5.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/c6d14ba1bfd2f2d573f7259618dea1fd81b18e2f">c6d14ba</a>)</li>
+<li><strong>deps:</strong> bump tslib from 2.5.0 to 2.5.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b64f2073c1275d0e08fc046488ae87a7b9f89af1">b64f207</a>)</li>
+<li><strong>deps:</strong> bump tslib from 2.5.2 to 2.5.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/5f4e3d5aac033432f5a4129788c9de57ee434953">5f4e3d5</a>)</li>
+<li><strong>deps:</strong> bump tslib from 2.5.3 to 2.6.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/28b54e20c1cd6f88f830a1b872896530f2091a00">28b54e2</a>)</li>
+<li><strong>deps:</strong> bump tslib from 2.6.0 to 2.6.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/d950bda00e246073a9ffefee8f41d202e9c60fc1">d950bda</a>)</li>
+<li><strong>deps:</strong> bump word-wrap from 1.2.3 to 1.2.4 (<a href="https://github.com/musicEnfanthen/awg-website/commit/88d50107e46f69ae894c2489823e105249920423">88d5010</a>)</li>
+<li><strong>deps:</strong> bump zone.js from 0.12.0 to 0.13.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/df9fb6685410250e9fa7b4b38398898a7f90d507">df9fb66</a>)</li>
+<li><strong>deps:</strong> bump zone.js from 0.13.0 to 0.13.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/8a2da4551e654f97b70975d2702428e8fd98d5bf">8a2da45</a>)</li>
+<li><strong>deps:</strong> bump zone.js from 0.13.1 to 0.13.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/3ff102f65bafc02aa5b501ecd661c08e794dcbad">3ff102f</a>)</li>
+<li><strong>deps:</strong> rebuild yarn.lock after updates (<a href="https://github.com/musicEnfanthen/awg-website/commit/fbd90b0d602dce2b924628e1bf131564cf5d7f11">fbd90b0</a>)</li>
+<li><strong>deps:</strong> update material to v16 (<a href="https://github.com/musicEnfanthen/awg-website/commit/183252c61cafdf09556dd1034745d03423af0732">183252c</a>)</li>
+<li><strong>deps:</strong> update material to v17 (<a href="https://github.com/musicEnfanthen/awg-website/commit/7c4df2dac09e716ccd26fdc4c36cf088553b85a2">7c4df2d</a>)</li>
+</ul>
+<h3><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.5...v0.0.6">0.0.6</a> (2023-02-20)</h3>
+<h3>Continuous Integration</h3>
 <ul>
 <li><strong>gh-actions:</strong> add release job to workflow (<a href="https://github.com/musicEnfanthen/awg-website/commit/d53cf256e4060e07b8138974aad69cdbb08d9857">d53cf25</a>)</li>
 </ul>
-<h3 id="build-system">Build System</h3>
+<h3>Build System</h3>
 <ul>
 <li><strong>deps-dev:</strong> bump <a href="https://github.com/angular-eslint">@angular-eslint</a> rel packages from 15.2.0 to 15.2.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/1430217ce45de353b1c026c0becfab50b781ab1a">1430217</a>)</li>
 <li><strong>deps-dev:</strong> bump <a href="https://github.com/commitlint">@commitlint</a> packages from 17.4.2 to 17.4.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/d31c9a7307bc8b3343c7cfc42407101f44c85df6">d31c9a7</a>)</li>
@@ -60,12 +394,12 @@
 <li><strong>deps:</strong> fix security issue with qs (<a href="https://github.com/musicEnfanthen/awg-website/commit/b1d460fc6f793be5c71951495792028f47221cfc">b1d460f</a>)</li>
 <li><strong>deps:</strong> fix security issue with trim-newlines (<a href="https://github.com/musicEnfanthen/awg-website/commit/c0ad4a4fc72f530761a4e9377d6a1a27404e947a">c0ad4a4</a>)</li>
 </ul>
-<h3 id="005-2023-02-07"><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.4...v0.0.5">0.0.5</a> (2023-02-07)</h3>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h3><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.4...v0.0.5">0.0.5</a> (2023-02-07)</h3>
+<h3>Bug Fixes</h3>
 <ul>
 <li><strong>works:</strong> update text about Weberns estate (<a href="https://github.com/musicEnfanthen/awg-website/commit/b61f8b9b842b2eaa4113a20dc6dc15252366fb86">b61f8b9</a>)</li>
 </ul>
-<h3 id="build-system-1">Build System</h3>
+<h3>Build System</h3>
 <ul>
 <li><strong>deps:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.1.2 to 15.1.3 (<a href="https://github.com/musicEnfanthen/awg-website/commit/b9f03fd7d138575fd3a2a9fe8bf7ee658c8e9355">b9f03fd</a>)</li>
 <li><strong>deps:</strong> bump http-cache-semantics from 4.1.0 to 4.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/c0a7807ac05a3d0fdc5009dd9d40c1d513ba5b84">c0a7807</a>)</li>
@@ -84,29 +418,29 @@
 <li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 39.7.5 to 39.8.0 (<a href="https://github.com/musicEnfanthen/awg-website/commit/db88cd3ddba523db4ef21ce548bb2611d56e1059">db88cd3</a>)</li>
 <li><strong>deps-dev:</strong> bump lint-staged from 13.1.0 to 13.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/3225d5a892c441a9da89b51ed260bf2dd11f36c6">3225d5a</a>)</li>
 </ul>
-<h3 id="004-2023-01-19"><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.3...v0.0.4">0.0.4</a> (2023-01-19)</h3>
-<h3 id="bug-fixes-1">Bug Fixes</h3>
+<h3><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.3...v0.0.4">0.0.4</a> (2023-01-19)</h3>
+<h3>Bug Fixes</h3>
 <ul>
 <li><strong>core:</strong> add github link to corner ribbon (<a href="https://github.com/musicEnfanthen/awg-website/commit/36637062b7964e6b10083f97db18c669ef3ee4fb">3663706</a>)</li>
 </ul>
-<h3 id="build-system-2">Build System</h3>
+<h3>Build System</h3>
 <ul>
 <li><strong>deps-dev:</strong> bump <a href="https://github.com/angular">@angular</a> packages from 15.1.0 to 15.1.1 (<a href="https://github.com/musicEnfanthen/awg-website/commit/cf7e0ca08026c1c6183b7decc936be6b3994e748">cf7e0ca</a>)</li>
 <li><strong>deps-dev:</strong> bump @angular/{cli,build-angular} from 15.1.1 to 15.1.2 (<a href="https://github.com/musicEnfanthen/awg-website/commit/4765185bfd2f0c6f489e34801124da9ba75314c5">4765185</a>)</li>
 <li><strong>deps-dev:</strong> bump eslint-plugin-jsdoc from 39.6.4 to 39.6.6 (<a href="https://github.com/musicEnfanthen/awg-website/commit/d65b8a66888d6ac6493fce47807ffe8c057efc8c">d65b8a6</a>)</li>
 </ul>
-<h3 id="003-2023-01-18"><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.2...v0.0.3">0.0.3</a> (2023-01-18)</h3>
-<h3 id="bug-fixes-2">Bug Fixes</h3>
+<h3><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.2...v0.0.3">0.0.3</a> (2023-01-18)</h3>
+<h3>Bug Fixes</h3>
 <ul>
 <li><strong>shared:</strong> do not open locales links in new window (<a href="https://github.com/musicEnfanthen/awg-website/commit/1f57881c5945e2cae7e41ec6f0eb8d9daa2b7103">1f57881</a>)</li>
 </ul>
-<h3 id="002-2023-01-18"><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.1...v0.0.2">0.0.2</a> (2023-01-18)</h3>
-<h3 id="continuous-integration-1">Continuous Integration</h3>
+<h3><a href="https://github.com/musicEnfanthen/awg-website/compare/v0.0.1...v0.0.2">0.0.2</a> (2023-01-18)</h3>
+<h3>Continuous Integration</h3>
 <ul>
 <li><strong>gh-actions:</strong> add default index.html (<a href="https://github.com/musicEnfanthen/awg-website/commit/58eca70bc5f18ca9e02bbeebe66db2add6b15d6a">58eca70</a>)</li>
 </ul>
-<h3 id="001-2023-01-18">0.0.1 (2023-01-18)</h3>
-<h3 id="features">Features</h3>
+<h3>0.0.1 (2023-01-18)</h3>
+<h3>Features</h3>
 <ul>
 <li><strong>app:</strong> add localization for en (<a href="https://github.com/musicEnfanthen/awg-website/commit/b9fe2a3ba21edcf2a688e58b1121f755dd00934c">b9fe2a3</a>)</li>
 <li><strong>app:</strong> add PortalService to all relevant components (<a href="https://github.com/musicEnfanthen/awg-website/commit/8b50fa83b5b683baf93f187fbc5d0ec8f20eb256">8b50fa8</a>)</li>
@@ -121,7 +455,7 @@
 <li><strong>edition:</strong> add content for edition section (<a href="https://github.com/musicEnfanthen/awg-website/commit/3ee2fbfeb620bdf0c18af15bf1164bdd1bc29240">3ee2fbf</a>)</li>
 <li><strong>works:</strong> add i18n (<a href="https://github.com/musicEnfanthen/awg-website/commit/1a4fa205b4987e00a32cd00acad911531b26674a">1a4fa20</a>)</li>
 </ul>
-<h3 id="bug-fixes-3">Bug Fixes</h3>
+<h3>Bug Fixes</h3>
 <ul>
 <li><strong>app:</strong> add class for paragraph margins (<a href="https://github.com/musicEnfanthen/awg-website/commit/9720e8442006c6e775f7366d8977d79dd2e96921">9720e84</a>)</li>
 <li><strong>app:</strong> add favicon (<a href="https://github.com/musicEnfanthen/awg-website/commit/0e6ee7b5e85925bf8695053205c344d3eb28e438">0e6ee7b</a>)</li>
@@ -139,17 +473,17 @@
 <li><strong>views:</strong> add content for works (<a href="https://github.com/musicEnfanthen/awg-website/commit/5af2c58770708520a70d81a2f6872602085464d5">5af2c58</a>)</li>
 <li><strong>works:</strong> add content for works overview (<a href="https://github.com/musicEnfanthen/awg-website/commit/aa6b7ae4fba33e9c7b42626c15096325ee99a904">aa6b7ae</a>)</li>
 </ul>
-<h3 id="styles">Styles</h3>
+<h3>Styles</h3>
 <ul>
 <li><strong>app:</strong> activate material module for edition (<a href="https://github.com/musicEnfanthen/awg-website/commit/4fa3d71a8cf00ead4429a29a605444fb7ad4e95c">4fa3d71</a>)</li>
 <li><strong>app:</strong> format files with prettier (<a href="https://github.com/musicEnfanthen/awg-website/commit/d4fe927c49020fce1aec424c3e828114d2f46164">d4fe927</a>)</li>
 </ul>
-<h3 id="code-refactoring">Code Refactoring</h3>
+<h3>Code Refactoring</h3>
 <ul>
 <li><strong>app:</strong> lint some code (<a href="https://github.com/musicEnfanthen/awg-website/commit/6dfd781738f30e75de9cb4c78f6aeae702006268">6dfd781</a>)</li>
 <li><strong>assets:</strong> rename and restructure images (<a href="https://github.com/musicEnfanthen/awg-website/commit/bde5931183f1f138a7e89a85ec9e6291bdde8aab">bde5931</a>)</li>
 </ul>
-<h3 id="tests">Tests</h3>
+<h3>Tests</h3>
 <ul>
 <li><strong>app:</strong> fix tests (<a href="https://github.com/musicEnfanthen/awg-website/commit/b63a0294df74a51b9497a8437bfdbb110c801d72">b63a029</a>)</li>
 <li><strong>app:</strong> lint test files (<a href="https://github.com/musicEnfanthen/awg-website/commit/61069b73f063c9f3d8686213c4982de8aea917ea">61069b7</a>)</li>
@@ -159,14 +493,14 @@
 <li><strong>core:</strong> fix tests for page component (<a href="https://github.com/musicEnfanthen/awg-website/commit/2be87ca4cc4ae3bbde6dddcac801e2069adb8aec">2be87ca</a>)</li>
 <li><strong>edition:</strong> add HarnessTests for MatTree (<a href="https://github.com/musicEnfanthen/awg-website/commit/bc5508c4be67d32dcbb4e53b2a9b5a82cf78e2af">bc5508c</a>)</li>
 </ul>
-<h3 id="documentation">Documentation</h3>
+<h3>Documentation</h3>
 <ul>
 <li><strong>CODE:</strong> create code of conduct (<a href="https://github.com/musicEnfanthen/awg-website/commit/51b8f32d9cc7d2856b74adde9ce9feccf5b0186d">51b8f32</a>)</li>
 <li><strong>LICENSE:</strong> create license file (<a href="https://github.com/musicEnfanthen/awg-website/commit/2abfca932792f6e079fada289413f113f5923350">2abfca9</a>)</li>
 <li><strong>README:</strong> add badges (<a href="https://github.com/musicEnfanthen/awg-website/commit/c0d8d49ee65eb4af0f2a547306ee6c478d1ebf69">c0d8d49</a>)</li>
 <li><strong>README:</strong> update README (<a href="https://github.com/musicEnfanthen/awg-website/commit/0826bc7e12b8527fc72d4678bd7c1a3176bb08d1">0826bc7</a>)</li>
 </ul>
-<h3 id="build-system-3">Build System</h3>
+<h3>Build System</h3>
 <ul>
 <li><strong>app:</strong> add tsconfig file for documentation (<a href="https://github.com/musicEnfanthen/awg-website/commit/f8a043db87ace204e543a18ea651b70b7bdc6fed">f8a043d</a>)</li>
 <li><strong>app:</strong> fix settings for localization (<a href="https://github.com/musicEnfanthen/awg-website/commit/1e5125c77a5aa037b45dabcfabca11f4b4d759c0">1e5125c</a>)</li>

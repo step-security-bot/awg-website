@@ -13,8 +13,66 @@
         <link rel="stylesheet" href="../styles/Readthedocs.css">
     </head>
     <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">awg-website documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -36,32 +94,37 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   ResearchConferencesComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
         </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -76,14 +139,15 @@
     </p>
     <p class="comment">
                     <code><a href="../miscellaneous/variables.html#w" target="_self" >AfterViewInit</a></code>
-                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                <code>OnDestroy</code>
     </p>
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
+
 
 
 
@@ -99,6 +163,8 @@
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>awg-research-conferences</code></td>
             </tr>
+
+
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
@@ -123,7 +189,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -136,6 +202,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#rightPanelPortal" >rightPanelPortal</a>
                             </li>
                         </ul>
@@ -168,7 +235,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -221,7 +288,7 @@
 
 
 
-    <section>
+    <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -244,21 +311,21 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/views/research/research-conferences/research-conferences.component.ts:15</a></div>
-                </td>
-            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="15"
+                                    class="link-to-prism">src/app/views/research/research-conferences/research-conferences.component.ts:15</a></div>
+                        </td>
+                    </tr>
 
 
             <tr>
                 <td class="col-md-4">
 
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
+                        </div>
                 </td>
             </tr>
         </tbody>
@@ -281,27 +348,27 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/views/research/research-conferences/research-conferences.component.ts:19</a></div>
-                </td>
-            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="19"
+                                    class="link-to-prism">src/app/views/research/research-conferences/research-conferences.component.ts:19</a></div>
+                        </td>
+                    </tr>
 
 
             <tr>
                 <td class="col-md-4">
 
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
+                        </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </section>
-    <section>
+    <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -312,6 +379,7 @@
                 <td class="col-md-4">
                     <a name="rightPanelPortal"></a>
                     <span class="name">
+                            <span class="modifier"></span>
                         <span ><b>rightPanelPortal</b></span>
                         <a href="#rightPanelPortal"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -346,7 +414,7 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from &#x27;@angular/core&#x27;;
 
 import { PortalService } from &#x27;@awg-core/page/page-services/portal.service&#x27;;
@@ -372,7 +440,7 @@ export class ResearchConferencesComponent implements AfterViewInit, OnDestroy {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
+    <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;p class&#x3D;&quot;para&quot; i18n&gt;
     Die AWG organisiert internationale sowie interdisziplinäre Tagungen und Workshops zu spezifischen Aspekten in Anton
     Weberns Schaffen. Bisher haben stattgefunden:
@@ -402,7 +470,7 @@ export class ResearchConferencesComponent implements AfterViewInit, OnDestroy {
         &lt;/li&gt;
     &lt;/ol&gt;
 
-    &lt;li class&#x3D;&quot;para&quot;&gt;webern@segantini&lt;/li&gt;
+    &lt;li class&#x3D;&quot;para&quot;&gt;webern&amp;#64;segantini&lt;/li&gt;
     &lt;ol class&#x3D;&quot;awg-research-conferences&quot;&gt;
         &lt;li class&#x3D;&quot;low-alpha-parenthesis para&quot;&gt;
             &lt;p&gt;
@@ -446,14 +514,14 @@ export class ResearchConferencesComponent implements AfterViewInit, OnDestroy {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-styleData">
+    <div class="tab-pane fade " id="styleData">
                 <p class="comment">
                     <code>./research-conferences.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-tree">
+    <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -478,7 +546,7 @@ export class ResearchConferencesComponent implements AfterViewInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p class="para" i18n>    Die AWG organisiert internationale sowie interdisziplinäre Tagungen und Workshops zu spezifischen Aspekten in Anton    Weberns Schaffen. Bisher haben stattgefunden:</p><ul>    <li class="para" i18n>Der junge Webern</li>    <ol class="awg-research-conferences">        <li class="low-alpha-parenthesis para">            <p>                Künstlerische Orientierungen in Wien nach 1900,                <span i18n>Österreichische Akademie der Wissenschaften</span>, <span i18n>Wien</span>,                <span i18n>5.–6. März 2012</span>.            </p>        </li>        <li class="low-alpha-parenthesis para">            <p>                Texte und Kontexte, <span i18n>Musikwissenschaftliches Seminar der Universität Basel</span>,                <span i18n>31. Mai bis 1. Juni 2012</span>.                <a                    href="https://musikwissenschaft.philhist.unibas.ch/de/forschung/aktuelle-forschungsprojekte/anton-webern-gesamtausgabe/#c490"                    i18n                    >[Mehr]</a                >            </p>        </li>    </ol>    <li class="para">webern@segantini</li>    <ol class="awg-research-conferences">        <li class="low-alpha-parenthesis para">            <p>                <span i18n                    >Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni                    Segantinis ‚Alpentriptychon‘, Segantini-Museum, St. Moritz</span                >, <span i18n>7. April 2014</span>.                <a                    href="https://musikwissenschaft.philhist.unibas.ch/de/forschung/aktuelle-forschungsprojekte/anton-webern-gesamtausgabe/#c498"                    i18n                    >[Mehr]</a                >            </p>            <p i18n>                Im Anschluss an die Tagung erklang in einem Konzert mit dem Pellegrini-Quartett das Streichquartett                Weberns (M 79) in der bisher erarbeiteten Edition der AWG.            </p>        </li>        <li class="low-alpha-parenthesis">            <p>                <span i18n                    >Workshop mit Markus Böggemann (Kassel) in Zusammenarbeit mit dem NFS Bildkritik                    <em>eikones</em></span                >, <span i18n>Musikwissenschaftliches Seminar der Universität Basel</span>,                <span i18n>12. Mai 2014</span>.            </p>        </li>    </ol></ul><ng-template #rightPanelPortal>    <p class="para">        <img src="assets/images/Plakat_Der_junge_Webern.jpg" i18n-alt alt="Der junge Webern" width="200" height="283" />    </p>    <p>        <img src="assets/images/Plakat_webern_at_segantini.jpg" alt="webern@segantini" width="400" height="566" />    </p></ng-template></div>'
+        var COMPONENT_TEMPLATE = '<div><p class="para" i18n>    Die AWG organisiert internationale sowie interdisziplinäre Tagungen und Workshops zu spezifischen Aspekten in Anton    Weberns Schaffen. Bisher haben stattgefunden:</p><ul>    <li class="para" i18n>Der junge Webern</li>    <ol class="awg-research-conferences">        <li class="low-alpha-parenthesis para">            <p>                Künstlerische Orientierungen in Wien nach 1900,                <span i18n>Österreichische Akademie der Wissenschaften</span>, <span i18n>Wien</span>,                <span i18n>5.–6. März 2012</span>.            </p>        </li>        <li class="low-alpha-parenthesis para">            <p>                Texte und Kontexte, <span i18n>Musikwissenschaftliches Seminar der Universität Basel</span>,                <span i18n>31. Mai bis 1. Juni 2012</span>.                <a                    href="https://musikwissenschaft.philhist.unibas.ch/de/forschung/aktuelle-forschungsprojekte/anton-webern-gesamtausgabe/#c490"                    i18n                    >[Mehr]</a                >            </p>        </li>    </ol>    <li class="para">webern&#64;segantini</li>    <ol class="awg-research-conferences">        <li class="low-alpha-parenthesis para">            <p>                <span i18n                    >Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni                    Segantinis ‚Alpentriptychon‘, Segantini-Museum, St. Moritz</span                >, <span i18n>7. April 2014</span>.                <a                    href="https://musikwissenschaft.philhist.unibas.ch/de/forschung/aktuelle-forschungsprojekte/anton-webern-gesamtausgabe/#c498"                    i18n                    >[Mehr]</a                >            </p>            <p i18n>                Im Anschluss an die Tagung erklang in einem Konzert mit dem Pellegrini-Quartett das Streichquartett                Weberns (M 79) in der bisher erarbeiteten Edition der AWG.            </p>        </li>        <li class="low-alpha-parenthesis">            <p>                <span i18n                    >Workshop mit Markus Böggemann (Kassel) in Zusammenarbeit mit dem NFS Bildkritik                    <em>eikones</em></span                >, <span i18n>Musikwissenschaftliches Seminar der Universität Basel</span>,                <span i18n>12. Mai 2014</span>.            </p>        </li>    </ol></ul><ng-template #rightPanelPortal>    <p class="para">        <img src="assets/images/Plakat_Der_junge_Webern.jpg" i18n-alt alt="Der junge Webern" width="200" height="283" />    </p>    <p>        <img src="assets/images/Plakat_webern_at_segantini.jpg" alt="webern@segantini" width="400" height="566" />    </p></ng-template></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'awg-root'},{'name': 'ContactAddressComponent', 'selector': 'awg-contact-address'},{'name': 'ContactCitationComponent', 'selector': 'awg-contact-citation'},{'name': 'ContactComponent', 'selector': 'awg-contact'},{'name': 'ContactImprintComponent', 'selector': 'awg-contact-imprint'},{'name': 'CornerRibbonComponent', 'selector': 'awg-corner-ribbon'},{'name': 'EditionComponent', 'selector': 'awg-edition'},{'name': 'EditionOnlineComponent', 'selector': 'awg-edition-online'},{'name': 'EditionOutlineComponent', 'selector': 'awg-edition-outline'},{'name': 'EditionOverviewComponent', 'selector': 'awg-edition-overview'},{'name': 'EditionPrintComponent', 'selector': 'awg-edition-print'},{'name': 'FooterComponent', 'selector': 'awg-footer'},{'name': 'HeaderComponent', 'selector': 'awg-header'},{'name': 'LocaleSwitcherComponent', 'selector': 'awg-locale-switcher'},{'name': 'MainTextComponent', 'selector': 'awg-main-text'},{'name': 'MenuComponent', 'selector': 'awg-menu'},{'name': 'PageComponent', 'selector': 'awg-page'},{'name': 'PageNotFoundComponent', 'selector': 'awg-page-not-found'},{'name': 'ProjectBoardComponent', 'selector': 'awg-project-board'},{'name': 'ProjectComponent', 'selector': 'awg-project'},{'name': 'ProjectCooperationsComponent', 'selector': 'awg-project-cooperations'},{'name': 'ProjectNewsArchiveComponent', 'selector': 'awg-project-news-archive'},{'name': 'ProjectOverviewComponent', 'selector': 'awg-project-overview'},{'name': 'ProjectTeamComponent', 'selector': 'awg-project-team'},{'name': 'ResearchActivitiesComponent', 'selector': 'awg-research-activities'},{'name': 'ResearchArchivesComponent', 'selector': 'awg-research-archives'},{'name': 'ResearchComponent', 'selector': 'awg-research'},{'name': 'ResearchConferencesComponent', 'selector': 'awg-research-conferences'},{'name': 'ResearchOverviewComponent', 'selector': 'awg-research-overview'},{'name': 'ResearchPublicationsComponent', 'selector': 'awg-research-publications'},{'name': 'ResearchWebernLecturesComponent', 'selector': 'awg-research-webern-lectures'},{'name': 'ResearchWebernStudiesComponent', 'selector': 'awg-research-webern-studies'},{'name': 'RightTextComponent', 'selector': 'awg-right-text'},{'name': 'SearchComponent', 'selector': 'awg-search'},{'name': 'SubMenuComponent', 'selector': 'awg-sub-menu'},{'name': 'WebernBibliographyComponent', 'selector': 'awg-webern-bibliography'},{'name': 'WebernChronologyComponent', 'selector': 'awg-webern-chronology'},{'name': 'WebernComponent', 'selector': 'awg-webern'},{'name': 'WebernLettersComponent', 'selector': 'awg-webern-correspondence'},{'name': 'WebernOverviewComponent', 'selector': 'awg-webern-overview'},{'name': 'WebernPersonsComponent', 'selector': 'awg-webern-persons'},{'name': 'WorksComponent', 'selector': 'awg-works'},{'name': 'WorksMoldenhauerComponent', 'selector': 'awg-works-moldenhauer'},{'name': 'WorksOpusComponent', 'selector': 'awg-works-opus'},{'name': 'WorksOverviewComponent', 'selector': 'awg-works-overview'}];
     var DIRECTIVES = [{'name': 'ExternalLinkDirective', 'selector': 'a[href]'}];
     var ACTUAL_COMPONENT = {'name': 'ResearchConferencesComponent'};

@@ -13,8 +13,66 @@
         <link rel="stylesheet" href="../styles/Readthedocs.css">
     </head>
     <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">awg-website documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -36,32 +94,37 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   ResearchActivitiesComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
         </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -76,14 +139,15 @@
     </p>
     <p class="comment">
                     <code><a href="../miscellaneous/variables.html#w" target="_self" >AfterViewInit</a></code>
-                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                <code>OnDestroy</code>
     </p>
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
+
 
 
 
@@ -99,6 +163,8 @@
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>awg-research-activities</code></td>
             </tr>
+
+
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
@@ -123,7 +189,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -136,6 +202,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#rightPanelPortal" >rightPanelPortal</a>
                             </li>
                         </ul>
@@ -168,7 +235,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -221,7 +288,7 @@
 
 
 
-    <section>
+    <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -244,21 +311,21 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/views/research/research-activities/research-activities.component.ts:15</a></div>
-                </td>
-            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="15"
+                                    class="link-to-prism">src/app/views/research/research-activities/research-activities.component.ts:15</a></div>
+                        </td>
+                    </tr>
 
 
             <tr>
                 <td class="col-md-4">
 
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
+                        </div>
                 </td>
             </tr>
         </tbody>
@@ -281,27 +348,27 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/views/research/research-activities/research-activities.component.ts:19</a></div>
-                </td>
-            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="19"
+                                    class="link-to-prism">src/app/views/research/research-activities/research-activities.component.ts:19</a></div>
+                        </td>
+                    </tr>
 
 
             <tr>
                 <td class="col-md-4">
 
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
+                        </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </section>
-    <section>
+    <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -312,6 +379,7 @@
                 <td class="col-md-4">
                     <a name="rightPanelPortal"></a>
                     <span class="name">
+                            <span class="modifier"></span>
                         <span ><b>rightPanelPortal</b></span>
                         <a href="#rightPanelPortal"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -346,7 +414,7 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from &#x27;@angular/core&#x27;;
 
 import { PortalService } from &#x27;@awg-core/page/page-services/portal.service&#x27;;
@@ -372,7 +440,7 @@ export class ResearchActivitiesComponent implements AfterViewInit, OnDestroy {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
+    <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;h4 style&#x3D;&quot;margin-top: 0&quot; i18n&gt;Vorträge und öffentliche Präsentationen&lt;/h4&gt;
 
 &lt;h4 class&#x3D;&quot;presentation-year&quot;&gt;2022&lt;/h4&gt;
@@ -633,13 +701,13 @@ export class ResearchActivitiesComponent implements AfterViewInit, OnDestroy {
 
 &lt;p class&#x3D;&quot;para&quot;&gt;
     Matthias Schmidt, „Flüchtige Bilder. Perspektiven des ‚Form-Entwurfs‘ zum Streichquartett (1905)“, Referat auf der
-    Tagung „webern@segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni
-    Segantinis ‚Alpentriptychon‘“, 7. April 2014, Segantini-Museum, St. Moritz.
+    Tagung „webern&amp;#64;segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und
+    Giovanni Segantinis ‚Alpentriptychon‘“, 7. April 2014, Segantini-Museum, St. Moritz.
 &lt;/p&gt;
 
 &lt;p class&#x3D;&quot;para&quot;&gt;
     Thomas Ahrend, „Entwurf oder Ausführung? Die Skizzen zum Streichquartett (1905)“, Referat auf der Tagung
-    „webern@segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni
+    „webern&amp;#64;segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni
     Segantinis ‚Alpentriptychon‘“, 7. April 2014, Segantini-Museum, St. Moritz.
 &lt;/p&gt;
 
@@ -746,14 +814,14 @@ export class ResearchActivitiesComponent implements AfterViewInit, OnDestroy {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-styleData">
+    <div class="tab-pane fade " id="styleData">
                 <p class="comment">
                     <code>./research-activities.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-tree">
+    <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -778,7 +846,7 @@ export class ResearchActivitiesComponent implements AfterViewInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h4 style="margin-top: 0" i18n>Vorträge und öffentliche Präsentationen</h4><h4 class="presentation-year">2022</h4><p class="para">    Stefan Münnich (mit Richard Freedman, Emilio Sanfilippo, David M. Weigl, David Lewis), „Connecting Musics: Semantic    Modelling as Challenge for Music Encoding“, Workshop im Rahmen der Music Encoding Conference (MEC2022), 19. Mai    2022, Universität Dalhousie, Halifax, Kanada, Online-Meeting.</p><p class="para">    Stefan Münnich (mit David M. Weigl), „Tutorial on Linked Data and Music Encodings“, Tutorial im Rahmen der European    Semantic Web Conference (ESWC2022), 30. Mai 2022, Hersonissos, Griechenland [<a        href="https://musicenfanthen.gitbook.io/eswc-2022-tutorial"        >Abstract</a    >].</p><h4 class="presentation-year">2021</h4><p class="para">    Stefan Münnich, „Music Notations and Their Codes: Story of a Relationship“ (Beispiel: Anton Webern, Sechs Bagatellen    op. 9/5), Referat im Rahmen des Graduate Research Colloquiums der Faculty of Music der University of Oxford,    26.10.2021, Online-Meeting [<a        href="https://web.archive.org/web/20211018012505/https://www.music.ox.ac.uk/event/graduate-research-colloquium-stefan-munnich/"        >Abstract</a    >].</p><p class="para">    Stefan Münnich, „Ontologiegeleitete Modellierung musikalischer Wissensstrukturen“, Referat im Rahmen des    Forschungskolloquiums des Musikwissenschaftlichen Seminars der CAU Kiel, 12.01.2021, Online-Meeting.</p><h4 class="presentation-year">2020</h4><p class="para">    Stefan Münnich, „Vom Paratext zum Para-Graph: Semantische Modellierung musikalischer Paratexte in der Anton Webern    Gesamtausgabe“, Referat auf der 18. internationalen Tagung der Arbeitsgemeinschaft für germanistische Edition:    <em><a href="https://www.ag-edition.org/?page_id=28">Werk und Beiwerk. Zur Edition von Paratexten</a></em    >, 12. bis 15. Februar 2020, Deutsches Literaturarchiv Marbach a. N. [<a        href="https://wwik-prod.dla-marbach.de/age2020/index.php/M%C3%BCnnich,_Stefan"        >Abstract</a    >].</p><h4 class="presentation-year">2019</h4><p class="para">    Thomas Ahrend, „Das World Wide Web als Medium musikphilologischer Forschung”, Vortrag im Rahmen der Ringvorlesung    „Musical Digitology – Musik und Musikgeschichte in Zeiten von Digitalisierung und WWW”, 27. November 2019, Institut    für Musikwissenschaft und Interpretationsforschung der Universität für Musik und darstellende Kunst Wien (mdw).</p><p class="para">    Thomas Ahrend / Michael Matter / Matthias Schmidt: Aktive Teilnahme am Workshop „Skizzieren in der Wiener Schule” im    Rahmen des Arnold Schönberg Symposiums, 18. Oktober 2019, Arnold Schönberg Center, Wien.</p><p class="para">    Stefan Münnich, „Scholarly Music Editions as Graph: Semantic Modelling of the Anton Webern Gesamtausgabe“, Referat    im Rahmen des "Workshop on Scholarly Digital Editions, Graph Data-Models and Semantic Web Technologies“    (GRAPHSDE2019), 3.–4. Juni 2019, Universität Lausanne. [<a        href="http://wp.unil.ch/graphsde/files/2019/07/GraphSDE2019_Slides_Muennich.pdf"        >Slides</a    >]</p><p class="para">    Stefan Münnich (mit David Weigl, Laurent Pugin, Tim Crawford, David Lewis), „Tutorial on Linked Data and Music    Encodings“, Workshop im Rahmen der Music Encoding Conference (MEC2019), 29. Mai 2019, Institut für    Musikwissenschaft, Universität Wien.</p><p class="para">    Thomas Ahrend, „Was ist eine Skizze? Zur semantischen Modellierung editorischen Wissens in der    Anton-Webern-Gesamtausgabe“, Workshop im Rahmen des KOSMOS-Workshops "Text- und Musikedition im Zeitalter der    Digitalisierung", 4.–6. April 2019, Institut für Musikwissenschaft und Medienwissenschaft der Humboldt-Universität    zu Berlin, Berlin.</p><p class="para">    Stefan Münnich, „Adornos Theorie der musikalischen Reproduktion als Herausforderung für die digitale Codierung    musikalischer Schrift“, Referat auf dem Symposium „Musik, Schrift, Differenz – Eine interdisziplinäre Lektüre von    Adornos Theorie der musikalischen Reproduktion“, 3.–5. April 2019, Arnold Schönberg Center, Wien. [<a        href="https://mdw.ac.at/live/upload/AUDIO/2019_Adorno/20190403-05-Sympsoium-16-Muennich.mp3"        >Audio-Mitschnitt</a    >]</p><h4 class="presentation-year">2018</h4><p class="para">    Matthias Schmidt, „‚Alpenkräuter-Duft‘ – Eduard Steuermann und Anton Webern“, Referat auf dem Symposium „Mehr als    Schönbergs Pianist: Eduard Steuermann und die Aufführungspraxis der Wiener Schule“, 15.–17. November 2018, Anton    Bruckner Privatuniversität Linz.</p><p class="para">    Stefan Münnich, „Semantic Web/Linked Open Data“, Workshop im Rahmen der Edirom Summer School (ESS2018), 17.–21.    September 2018, Universität Paderborn.</p><p class="para">    Stefan Münnich, „On Cultural and Digital Memory Gaps: Some Considerations on Methodology and Data Modelling of No    Longer Existent Sources in Relation to Anton Webern\'s Op. 4 No. 5“, Referat auf dem internationalen Kongress der    International Association of Music Libraries, Archives and Documentation Centres (IAML), 22.–27. Juli 2018,    Hochschule für Musik und Theater "Felix Mendelssohn Bartholdy", Leipzig.</p><p class="para">    Thomas Ahrend, „Werk und virtueller Text – Spuren von Performativität in den Kompositionen Anton Weberns“, Referat    auf der 17. Internationalen Tagung der Arbeitsgemeinschaft für germanistische Edition: „Aufführung und Edition“,    14.–17. Februar 2018, Goethe-Universität Frankfurt am Main.</p><p class="para">    Stefan Münnich, „Quellenverluste als methodologischer Unsicherheitsbereich für Editorik und Datenmodellierung am    Beispiel von Anton Weberns George-Liedern op. 3 &amp; 4“, Referat auf der Tagung Graphentechnologien 2018    ("Modellierung des Zweifels"), 19.–20. Januar 2018, Akademie der Wissenschaften und der Literatur, Mainz. [<a        href="http://www.adwmainz.de/mediathek/medien/ansicht/graphentagung-2018-die-modellierung-des-zweifels-stefan-muennich.html"        >Video</a    >] [<a href="https://www.hsozkult.de/conferencereport/id/tagungsberichte-7686">Konferenzbericht</a>]</p><h4 class="presentation-year">2017</h4><p class="para">    Stefan Münnich, „Die Anton Webern Gesamtausgabe im Kontext einer ‚semantischen‘ digitalen Musikwissenschaft“,    Projektpräsentation im Rahmen der von Gerhard Lauer im Herbstsemester 2017 abgehaltenen Vorlesung „Einführung in die    Digital Humanities“, 28. November 2017, Universität Basel.</p><p class="para">    Stefan Münnich, „Ontology of the non-existent? Towards a data model for missing or lost musical sources with regard    to Anton Webern’s George Lieder op. 3 &amp; 4“, Referat auf der internationalen Tagung „Ex umbra in solem“, 2.–5.    November 2017, Haliciana Schola Cantorum/UKU, Lviv (Ukraine).</p><p class="para">    Stefan Münnich, „Ontologien in der Praxis: Möglichkeiten und Herausforderungen für die Modellierung    musikwissenschaftlicher/-editorischer Wissensstrukturen“, Referat auf der Jahrestagung der Gesellschaft für    Musikforschung, 27.–30. September 2017, Universität Kassel.</p><p class="para">    Stefan Münnich, „Einführung Semantic Web“, Workshop im Rahmen der Edirom Summer School (ESS2017), 18.–22. September    2017, Universität Paderborn.</p><p class="para">    Thomas Ahrend, „ ‚Epigonalität‘ als Medium von Originalität? Leopold Spinners Verhältnis zu Anton Webern“, Referat    auf der Tagung „Leopold Spinner (1906–1980). Komponist in Wien und London“, 11.–12. Mai 2017, Arnold Schönberg    Center Wien.</p><p class="para">    Thomas Ahrend / Stefan Münnich, „Zur Konzeption und zum aktuellen Stand der Anton Webern Gesamtausgabe“,    Projektpräsentation im Kolloquium der Paul Sacher Stiftung, 4. April 2017, Paul Sacher Stiftung, Basel.</p><h4 class="presentation-year">2016</h4><p class="para">    Thomas Ahrend, „Innerlichkeit und Stimmung in frühen Liedern Anton Weberns“, Referat auf der Tagung „Ästhetik der    Innerlichkeit. Max Reger und das Lied um 1900“, 21.–23. September 2016, Institut für Musikwissenschaft der    Universität Wien.</p><p class="para">    Stefan Münnich, „A musicological edition in a virtual environment: Integrating the Anton Webern Gesamtausgabe in    SALSAH“, Poster-Präsentation auf der „Music Encoding Conference“ (MEC2016), 17.–20. Mai 2016, Schulich School of    Music, McGill University, Montréal (CA).</p><p class="para">    Thomas Ahrend, „ ‚… einen Roman durch eine einzige Geste … auszudrücken …‘ Zu möglichen Vorgeschichten    zeitgenössischer musikalischer Gestik bei Anton Webern“, Referat bei der Arbeitstagung „Gesten der zeitgenössischen    Musik. Komposition und Wissenschaft im Dialog“, NFS Bildkritik eikones Basel, 15. März 2016, Musikwissenschaftliches    Seminar der Universität Basel.</p><p class="para">    Stefan Münnich, „Eine musikwissenschaftliche Edition in virtueller Umgebung: Die Einbindung der Anton Webern    Gesamtausgabe in SALSAH“, Poster-Präsentation auf der 3. Tagung des Verbands „Digital Humanities im    deutschsprachigen Raum e. V.“ (DHd): „Modellierung – Vernetzung – Visualisierung. Die Digital Humanities als    fächerübergreifendes Forschungsparadigma“, 7.–12. März 2016, Universität Leipzig. [<a        href="http://www.dhd2016.de/abstracts/posters-029.html"        >Abstract</a    >]</p><p class="para">    Michael Matter, „Revisionen in den Klavierstücken aus Weberns Studienzeit“, Referat auf der 16. internationalen    Tagung der Arbeitsgemeinschaft für germanistische Edition: „Textrevisionen“, 17.–20. Februar 2016,    Karl-Franzens-Universität Graz.</p><h4 class="presentation-year">2015</h4><p class="para">    Michael Matter, „Anton Webern und die ‚Gründungsmythen‘ der Wiener Schule“, Referat auf der Tagung „Über den    Ursprung von Musik. Mythen, Legenden und Geschichtsschreibungen im interdisziplinären Diskurs“, 19.–20. November    2015, Musikwissenschaftliches Institut der Universität Bern.</p><p class="para">    Julia Bungardt, Poster-Präsentation zur AWG auf der Jahrestagung der Österreichischen Gesellschaft für    Musikwissenschaft 2015: „Analyse – Interpretation – Aufführung – Performance. Ein Spannungsfeld der Neubestimmung    musikwissenschaftlicher Methoden“, 18.–21. November 2015, Universität für Musik und darstellende Kunst Graz.</p><p class="para">    Thomas Ahrend, „Kann man Klänge edieren? Zur Anton Webern Gesamtausgabe“, Referat im Rahmen der vom Forum für    Edition und Erschliessung (FEE) im Herbstsemester 2015 organisierten Ringvorlesung „Schriftstücke als    Forschungsgegenstand. Gegenwart und Zukunft der Editionen in Basel“, 2. November 2015, Universität Basel.</p><p class="para">    Thomas Ahrend, „Versions, Variants, and the Performatives of the Score: Traces of Performances in the Texts of Anton    Webern’s Music“, Referat auf der Tagung „Tracking the Creative Process in Music“, 8.–9. Oktober, IRCAM Paris. [<a        href="http://medias.ircam.fr/xc1449e"        >Video</a    >]</p><p class="para">    Julia Bungardt, „Anton Webern und die Universal Edition“, Referat auf dem Symposion „Anton Webern im politischen    Kontext“, 11.–12. September 2015, Komponistenforum Mittersill.</p><h4 class="presentation-year">2014</h4><p class="para">    Matthias Schmidt, „Siegesparaden, Höllenkonzerte, Traumlandschaften: Musik im Ersten Weltkrieg“ [u. a. zu Weberns    op. 12], Vortrag an der Bayerischen Akademie der Schönen Künste, 19. Dezember 2014, München.</p><p class="para">    Thomas Ahrend, „Noten-Pausen-Schrift-Zeichen. Überlegungen zur Notation von ‚stiller‘ Musik“ [u. a. zu Weberns op. 7    Nr. 4], Referat auf der Tagung „Stille als Musik“, 12. Dezember 2014, Hochschule für Musik Basel. [<a        href="https://voicerepublic.com/talks/thomas-ahrend-noten-pausen-schrift-zeichen-uberlegungen-zur-notation-von-stiller-musik"        >Audio-Mitschnitt</a    >]</p><p class="para">    Thomas Ahrend, „Interpretierst du noch oder performst du schon? Überlegungen zu einer Begrifflichkeit“ [u. a. zu    Weberns op. 3 Nr. 1], Referat auf der Tagung „performing voice“, 28. November 2014, Hochschule der Künste Bern.</p><p class="para">    Thomas Ahrend / Michael Matter / Barbara Schingnitz, Vorstellung des Projekts der AWG bei der Jahressitzung der    Freiwilligen Akademischen Gesellschaft Basel, 22. November 2014, Musikwissenschaftliches Seminar der Universität    Basel.</p><p class="para">    Thomas Ahrend, „ ‚... ein Reich der Musik ..., dessen Existenz bis anhin unbekannt war‘. Erich Schmid und Anton    Webern“, Referat auf dem Symposium „Atelier Erich – Erich“ zu Erich Schmid, Erich Itor Kahn und Anton Webern, 21.    Juni 2014, Zürcher Hochschule der Künste.</p><p class="para">    Thomas Ahrend / Michael Matter, „Ein ‚analoges‘ Editionsprojekt? Zur Anton Webern Gesamtausgabe“, Referat auf der    Tagung „Digitale Musikedition“, 2. Juni 2014, Universität Bern.</p><p class="para">    Matthias Schmidt, „Flüchtige Bilder. Perspektiven des ‚Form-Entwurfs‘ zum Streichquartett (1905)“, Referat auf der    Tagung „webern@segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni    Segantinis ‚Alpentriptychon‘“, 7. April 2014, Segantini-Museum, St. Moritz.</p><p class="para">    Thomas Ahrend, „Entwurf oder Ausführung? Die Skizzen zum Streichquartett (1905)“, Referat auf der Tagung    „webern@segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni    Segantinis ‚Alpentriptychon‘“, 7. April 2014, Segantini-Museum, St. Moritz.</p><h4 class="presentation-year">2013</h4><p class="para">    Thomas Ahrend, Kurzvorstellung des Projekts der AWG bei der Fachgruppensitzung der Fachgruppe Freie    Forschungsinstitute der Gesellschaft für Musikforschung, September 2013, Musikhochschule Dresden.</p><p class="para">    Barbara Schingnitz, „Hildegard Jone und Anton Webern: Schlaglichter auf eine ungewöhnliche Künstlerfreundschaft“,    Referat beim Symposium anlässlich der 50. Wiederkehr des Todestages von Hildegard Jone, 12. April 2013, Purkersdorf    (Österreich).</p><p class="para">    Thomas Ahrend, „Wann ist Musik noch ‚Musik‘?“ [u. a. zu Weberns op. 28], Referat bei der „Soirée musicale“ (Ltg.    Christian Graf), 8. Februar 2013, Philosophicum Basel.</p><h4 class="presentation-year">2012</h4><p class="para">    Thomas Ahrend, „Musikedition als Medium zwischen Komposition und Interpretation“, Vortrag bei „Musik und Mensch“    (FHNW) / Töpfergesellschaft Solothurn, 7. November 2012, Museum Blumenstein, Solothurn.</p><p class="para">    „Erfahrungen und Erwartungen. Zur Interpretation und Edition des ‚Frühwerks‘ Weberns“, Posiumsdiskussion auf der    Tagung „Der junge Webern. Texte und Kontexte“ mit Jean-Jacques Dünki, Regina Busch, Gösta Neuwirth und Anne C.    Shreffler (Moderation: Thomas Ahrend), 1. Juni 2012, Universität Basel.</p><p class="para">    Simon Obert, „Weberns Lied-Orchestrierungen. Suche nach dem eigenen Klang in der Tradition“, Referat auf der Tagung    „Der junge Webern. Texte und Kontexte“, 1. Juni 2012, Universität Basel.</p><p class="para">    Matthias Schmidt, „Geschichtsstunde. Webern in der Schönberg-Schule“, Referat auf der Tagung „Der junge Webern.    Texte und Kontexte“, 31. Mai 2012, Universität Basel.</p><p class="para">    Thomas Ahrend, „Hausaufgaben oder Werke. Formmodelle in Weberns früher Kammermusik“, Referat auf der Tagung „Der    junge Webern. Texte und Kontexte“, 31. Mai 2012, Universität Basel.</p><p class="para">    Monika Kröpfl, „Versuch einer Standortbestimmung“, Referat auf der Tagung „Der junge Webern. Künstlerische    Orientierungen in Wien nch 1900“, 5. März 2012, Österreichische Akademie der Wissenschaften, Wien.</p><p class="para">    Thomas Ahrend, „Editorische Probleme des vertonten Texts in Anton Weberns George-Liedern“, Referat auf der Tagung    „<em>Inter</em>Nationalität und <em>Inter</em>Disziplinarität der Editionswissenschaft“ der Arbeitsgemeinschaft für    germanistische Editionen, 16. Februar 2012, Universität Bern.</p><h4 class="presentation-year">2011</h4><p class="para">    Thomas Ahrend, „Weberns Schüler“, Referat auf der Tagung „Neue Perspektiven. Anton Webern und das Komponieren im 20.    Jahrhundert“, 24. November 2011, Universität Basel.</p><p class="para">    Simon Obert, „Webern und die Popkultur“, Referat auf der Tagung „Neue Perspektiven. Anton Webern und das Komponieren    im 20. Jahrhundert“, 24. November 2011, Universität Basel.</p><h4 class="presentation-year">2010</h4><p class="para">    Vitrine der AWG innerhalb der Ausstellung „Editionen in Basel“ in der Universitätsbibliothek Basel zum    550-Jahr-Jubiläum der Universität vom 11. September bis 27. November 2010.</p><p class="para">    Monika Kröpfl / Simon Obert, „Anton Webern Gesamtausgabe“, Vorstellung bei der Österreichischen Gesellschaft für    Musik, 11. Mai 2010, Wien.</p><h4 class="presentation-year">2009</h4><p class="para">    Matthias Schmidt / Simon Obert, Präsentation der AWG beim „colloquium 48“, 15. Dezember 2009, Musik Akademie Basel.</p><p class="para">    Monika Kröpfl, „Schönbergs Studenten bei Guido Adler. Alte Musik in der Lehre und als musikwissenschaftliches    Betätigungsfeld“, Referat auf der Tagung „Die Wiener Schule und die Alte Musik“, 9. Oktober 2009, Arnold Schönberg    Center, Wien.</p><p class="para">    Simon Obert, „Webern beginnt. ‚Wie bin ich froh‘ op. 25, Nr. 1, im Kontext des ersten Satzes von op. 24.    Beobachtungen zu Weberns Kompositionsprozess“, Referat auf der Arbeitstagung „Kompositorische Arbeitsprozesse im    Vergleich“, Februar 2009, Paul Sacher Stiftung, Basel.</p><p class="para">    Simon Obert, „Der Wert der Wiederholung. Eine historische Perspektive“, Referat auf der Arbeitstagung „Atonalität    und Wiederholung“, Januar 2009, Institut für Musikwissenschaft der Universität Erlangen.</p><ng-template #rightPanelPortal></ng-template></div>'
+        var COMPONENT_TEMPLATE = '<div><h4 style="margin-top: 0" i18n>Vorträge und öffentliche Präsentationen</h4><h4 class="presentation-year">2022</h4><p class="para">    Stefan Münnich (mit Richard Freedman, Emilio Sanfilippo, David M. Weigl, David Lewis), „Connecting Musics: Semantic    Modelling as Challenge for Music Encoding“, Workshop im Rahmen der Music Encoding Conference (MEC2022), 19. Mai    2022, Universität Dalhousie, Halifax, Kanada, Online-Meeting.</p><p class="para">    Stefan Münnich (mit David M. Weigl), „Tutorial on Linked Data and Music Encodings“, Tutorial im Rahmen der European    Semantic Web Conference (ESWC2022), 30. Mai 2022, Hersonissos, Griechenland [<a        href="https://musicenfanthen.gitbook.io/eswc-2022-tutorial"        >Abstract</a    >].</p><h4 class="presentation-year">2021</h4><p class="para">    Stefan Münnich, „Music Notations and Their Codes: Story of a Relationship“ (Beispiel: Anton Webern, Sechs Bagatellen    op. 9/5), Referat im Rahmen des Graduate Research Colloquiums der Faculty of Music der University of Oxford,    26.10.2021, Online-Meeting [<a        href="https://web.archive.org/web/20211018012505/https://www.music.ox.ac.uk/event/graduate-research-colloquium-stefan-munnich/"        >Abstract</a    >].</p><p class="para">    Stefan Münnich, „Ontologiegeleitete Modellierung musikalischer Wissensstrukturen“, Referat im Rahmen des    Forschungskolloquiums des Musikwissenschaftlichen Seminars der CAU Kiel, 12.01.2021, Online-Meeting.</p><h4 class="presentation-year">2020</h4><p class="para">    Stefan Münnich, „Vom Paratext zum Para-Graph: Semantische Modellierung musikalischer Paratexte in der Anton Webern    Gesamtausgabe“, Referat auf der 18. internationalen Tagung der Arbeitsgemeinschaft für germanistische Edition:    <em><a href="https://www.ag-edition.org/?page_id=28">Werk und Beiwerk. Zur Edition von Paratexten</a></em    >, 12. bis 15. Februar 2020, Deutsches Literaturarchiv Marbach a. N. [<a        href="https://wwik-prod.dla-marbach.de/age2020/index.php/M%C3%BCnnich,_Stefan"        >Abstract</a    >].</p><h4 class="presentation-year">2019</h4><p class="para">    Thomas Ahrend, „Das World Wide Web als Medium musikphilologischer Forschung”, Vortrag im Rahmen der Ringvorlesung    „Musical Digitology – Musik und Musikgeschichte in Zeiten von Digitalisierung und WWW”, 27. November 2019, Institut    für Musikwissenschaft und Interpretationsforschung der Universität für Musik und darstellende Kunst Wien (mdw).</p><p class="para">    Thomas Ahrend / Michael Matter / Matthias Schmidt: Aktive Teilnahme am Workshop „Skizzieren in der Wiener Schule” im    Rahmen des Arnold Schönberg Symposiums, 18. Oktober 2019, Arnold Schönberg Center, Wien.</p><p class="para">    Stefan Münnich, „Scholarly Music Editions as Graph: Semantic Modelling of the Anton Webern Gesamtausgabe“, Referat    im Rahmen des "Workshop on Scholarly Digital Editions, Graph Data-Models and Semantic Web Technologies“    (GRAPHSDE2019), 3.–4. Juni 2019, Universität Lausanne. [<a        href="http://wp.unil.ch/graphsde/files/2019/07/GraphSDE2019_Slides_Muennich.pdf"        >Slides</a    >]</p><p class="para">    Stefan Münnich (mit David Weigl, Laurent Pugin, Tim Crawford, David Lewis), „Tutorial on Linked Data and Music    Encodings“, Workshop im Rahmen der Music Encoding Conference (MEC2019), 29. Mai 2019, Institut für    Musikwissenschaft, Universität Wien.</p><p class="para">    Thomas Ahrend, „Was ist eine Skizze? Zur semantischen Modellierung editorischen Wissens in der    Anton-Webern-Gesamtausgabe“, Workshop im Rahmen des KOSMOS-Workshops "Text- und Musikedition im Zeitalter der    Digitalisierung", 4.–6. April 2019, Institut für Musikwissenschaft und Medienwissenschaft der Humboldt-Universität    zu Berlin, Berlin.</p><p class="para">    Stefan Münnich, „Adornos Theorie der musikalischen Reproduktion als Herausforderung für die digitale Codierung    musikalischer Schrift“, Referat auf dem Symposium „Musik, Schrift, Differenz – Eine interdisziplinäre Lektüre von    Adornos Theorie der musikalischen Reproduktion“, 3.–5. April 2019, Arnold Schönberg Center, Wien. [<a        href="https://mdw.ac.at/live/upload/AUDIO/2019_Adorno/20190403-05-Sympsoium-16-Muennich.mp3"        >Audio-Mitschnitt</a    >]</p><h4 class="presentation-year">2018</h4><p class="para">    Matthias Schmidt, „‚Alpenkräuter-Duft‘ – Eduard Steuermann und Anton Webern“, Referat auf dem Symposium „Mehr als    Schönbergs Pianist: Eduard Steuermann und die Aufführungspraxis der Wiener Schule“, 15.–17. November 2018, Anton    Bruckner Privatuniversität Linz.</p><p class="para">    Stefan Münnich, „Semantic Web/Linked Open Data“, Workshop im Rahmen der Edirom Summer School (ESS2018), 17.–21.    September 2018, Universität Paderborn.</p><p class="para">    Stefan Münnich, „On Cultural and Digital Memory Gaps: Some Considerations on Methodology and Data Modelling of No    Longer Existent Sources in Relation to Anton Webern\'s Op. 4 No. 5“, Referat auf dem internationalen Kongress der    International Association of Music Libraries, Archives and Documentation Centres (IAML), 22.–27. Juli 2018,    Hochschule für Musik und Theater "Felix Mendelssohn Bartholdy", Leipzig.</p><p class="para">    Thomas Ahrend, „Werk und virtueller Text – Spuren von Performativität in den Kompositionen Anton Weberns“, Referat    auf der 17. Internationalen Tagung der Arbeitsgemeinschaft für germanistische Edition: „Aufführung und Edition“,    14.–17. Februar 2018, Goethe-Universität Frankfurt am Main.</p><p class="para">    Stefan Münnich, „Quellenverluste als methodologischer Unsicherheitsbereich für Editorik und Datenmodellierung am    Beispiel von Anton Weberns George-Liedern op. 3 &amp; 4“, Referat auf der Tagung Graphentechnologien 2018    ("Modellierung des Zweifels"), 19.–20. Januar 2018, Akademie der Wissenschaften und der Literatur, Mainz. [<a        href="http://www.adwmainz.de/mediathek/medien/ansicht/graphentagung-2018-die-modellierung-des-zweifels-stefan-muennich.html"        >Video</a    >] [<a href="https://www.hsozkult.de/conferencereport/id/tagungsberichte-7686">Konferenzbericht</a>]</p><h4 class="presentation-year">2017</h4><p class="para">    Stefan Münnich, „Die Anton Webern Gesamtausgabe im Kontext einer ‚semantischen‘ digitalen Musikwissenschaft“,    Projektpräsentation im Rahmen der von Gerhard Lauer im Herbstsemester 2017 abgehaltenen Vorlesung „Einführung in die    Digital Humanities“, 28. November 2017, Universität Basel.</p><p class="para">    Stefan Münnich, „Ontology of the non-existent? Towards a data model for missing or lost musical sources with regard    to Anton Webern’s George Lieder op. 3 &amp; 4“, Referat auf der internationalen Tagung „Ex umbra in solem“, 2.–5.    November 2017, Haliciana Schola Cantorum/UKU, Lviv (Ukraine).</p><p class="para">    Stefan Münnich, „Ontologien in der Praxis: Möglichkeiten und Herausforderungen für die Modellierung    musikwissenschaftlicher/-editorischer Wissensstrukturen“, Referat auf der Jahrestagung der Gesellschaft für    Musikforschung, 27.–30. September 2017, Universität Kassel.</p><p class="para">    Stefan Münnich, „Einführung Semantic Web“, Workshop im Rahmen der Edirom Summer School (ESS2017), 18.–22. September    2017, Universität Paderborn.</p><p class="para">    Thomas Ahrend, „ ‚Epigonalität‘ als Medium von Originalität? Leopold Spinners Verhältnis zu Anton Webern“, Referat    auf der Tagung „Leopold Spinner (1906–1980). Komponist in Wien und London“, 11.–12. Mai 2017, Arnold Schönberg    Center Wien.</p><p class="para">    Thomas Ahrend / Stefan Münnich, „Zur Konzeption und zum aktuellen Stand der Anton Webern Gesamtausgabe“,    Projektpräsentation im Kolloquium der Paul Sacher Stiftung, 4. April 2017, Paul Sacher Stiftung, Basel.</p><h4 class="presentation-year">2016</h4><p class="para">    Thomas Ahrend, „Innerlichkeit und Stimmung in frühen Liedern Anton Weberns“, Referat auf der Tagung „Ästhetik der    Innerlichkeit. Max Reger und das Lied um 1900“, 21.–23. September 2016, Institut für Musikwissenschaft der    Universität Wien.</p><p class="para">    Stefan Münnich, „A musicological edition in a virtual environment: Integrating the Anton Webern Gesamtausgabe in    SALSAH“, Poster-Präsentation auf der „Music Encoding Conference“ (MEC2016), 17.–20. Mai 2016, Schulich School of    Music, McGill University, Montréal (CA).</p><p class="para">    Thomas Ahrend, „ ‚… einen Roman durch eine einzige Geste … auszudrücken …‘ Zu möglichen Vorgeschichten    zeitgenössischer musikalischer Gestik bei Anton Webern“, Referat bei der Arbeitstagung „Gesten der zeitgenössischen    Musik. Komposition und Wissenschaft im Dialog“, NFS Bildkritik eikones Basel, 15. März 2016, Musikwissenschaftliches    Seminar der Universität Basel.</p><p class="para">    Stefan Münnich, „Eine musikwissenschaftliche Edition in virtueller Umgebung: Die Einbindung der Anton Webern    Gesamtausgabe in SALSAH“, Poster-Präsentation auf der 3. Tagung des Verbands „Digital Humanities im    deutschsprachigen Raum e. V.“ (DHd): „Modellierung – Vernetzung – Visualisierung. Die Digital Humanities als    fächerübergreifendes Forschungsparadigma“, 7.–12. März 2016, Universität Leipzig. [<a        href="http://www.dhd2016.de/abstracts/posters-029.html"        >Abstract</a    >]</p><p class="para">    Michael Matter, „Revisionen in den Klavierstücken aus Weberns Studienzeit“, Referat auf der 16. internationalen    Tagung der Arbeitsgemeinschaft für germanistische Edition: „Textrevisionen“, 17.–20. Februar 2016,    Karl-Franzens-Universität Graz.</p><h4 class="presentation-year">2015</h4><p class="para">    Michael Matter, „Anton Webern und die ‚Gründungsmythen‘ der Wiener Schule“, Referat auf der Tagung „Über den    Ursprung von Musik. Mythen, Legenden und Geschichtsschreibungen im interdisziplinären Diskurs“, 19.–20. November    2015, Musikwissenschaftliches Institut der Universität Bern.</p><p class="para">    Julia Bungardt, Poster-Präsentation zur AWG auf der Jahrestagung der Österreichischen Gesellschaft für    Musikwissenschaft 2015: „Analyse – Interpretation – Aufführung – Performance. Ein Spannungsfeld der Neubestimmung    musikwissenschaftlicher Methoden“, 18.–21. November 2015, Universität für Musik und darstellende Kunst Graz.</p><p class="para">    Thomas Ahrend, „Kann man Klänge edieren? Zur Anton Webern Gesamtausgabe“, Referat im Rahmen der vom Forum für    Edition und Erschliessung (FEE) im Herbstsemester 2015 organisierten Ringvorlesung „Schriftstücke als    Forschungsgegenstand. Gegenwart und Zukunft der Editionen in Basel“, 2. November 2015, Universität Basel.</p><p class="para">    Thomas Ahrend, „Versions, Variants, and the Performatives of the Score: Traces of Performances in the Texts of Anton    Webern’s Music“, Referat auf der Tagung „Tracking the Creative Process in Music“, 8.–9. Oktober, IRCAM Paris. [<a        href="http://medias.ircam.fr/xc1449e"        >Video</a    >]</p><p class="para">    Julia Bungardt, „Anton Webern und die Universal Edition“, Referat auf dem Symposion „Anton Webern im politischen    Kontext“, 11.–12. September 2015, Komponistenforum Mittersill.</p><h4 class="presentation-year">2014</h4><p class="para">    Matthias Schmidt, „Siegesparaden, Höllenkonzerte, Traumlandschaften: Musik im Ersten Weltkrieg“ [u. a. zu Weberns    op. 12], Vortrag an der Bayerischen Akademie der Schönen Künste, 19. Dezember 2014, München.</p><p class="para">    Thomas Ahrend, „Noten-Pausen-Schrift-Zeichen. Überlegungen zur Notation von ‚stiller‘ Musik“ [u. a. zu Weberns op. 7    Nr. 4], Referat auf der Tagung „Stille als Musik“, 12. Dezember 2014, Hochschule für Musik Basel. [<a        href="https://voicerepublic.com/talks/thomas-ahrend-noten-pausen-schrift-zeichen-uberlegungen-zur-notation-von-stiller-musik"        >Audio-Mitschnitt</a    >]</p><p class="para">    Thomas Ahrend, „Interpretierst du noch oder performst du schon? Überlegungen zu einer Begrifflichkeit“ [u. a. zu    Weberns op. 3 Nr. 1], Referat auf der Tagung „performing voice“, 28. November 2014, Hochschule der Künste Bern.</p><p class="para">    Thomas Ahrend / Michael Matter / Barbara Schingnitz, Vorstellung des Projekts der AWG bei der Jahressitzung der    Freiwilligen Akademischen Gesellschaft Basel, 22. November 2014, Musikwissenschaftliches Seminar der Universität    Basel.</p><p class="para">    Thomas Ahrend, „ ‚... ein Reich der Musik ..., dessen Existenz bis anhin unbekannt war‘. Erich Schmid und Anton    Webern“, Referat auf dem Symposium „Atelier Erich – Erich“ zu Erich Schmid, Erich Itor Kahn und Anton Webern, 21.    Juni 2014, Zürcher Hochschule der Künste.</p><p class="para">    Thomas Ahrend / Michael Matter, „Ein ‚analoges‘ Editionsprojekt? Zur Anton Webern Gesamtausgabe“, Referat auf der    Tagung „Digitale Musikedition“, 2. Juni 2014, Universität Bern.</p><p class="para">    Matthias Schmidt, „Flüchtige Bilder. Perspektiven des ‚Form-Entwurfs‘ zum Streichquartett (1905)“, Referat auf der    Tagung „webern&#64;segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und    Giovanni Segantinis ‚Alpentriptychon‘“, 7. April 2014, Segantini-Museum, St. Moritz.</p><p class="para">    Thomas Ahrend, „Entwurf oder Ausführung? Die Skizzen zum Streichquartett (1905)“, Referat auf der Tagung    „webern&#64;segantini. Interdisziplinäre Tagung und Konzert zu Anton Weberns Streichquartett (1905) und Giovanni    Segantinis ‚Alpentriptychon‘“, 7. April 2014, Segantini-Museum, St. Moritz.</p><h4 class="presentation-year">2013</h4><p class="para">    Thomas Ahrend, Kurzvorstellung des Projekts der AWG bei der Fachgruppensitzung der Fachgruppe Freie    Forschungsinstitute der Gesellschaft für Musikforschung, September 2013, Musikhochschule Dresden.</p><p class="para">    Barbara Schingnitz, „Hildegard Jone und Anton Webern: Schlaglichter auf eine ungewöhnliche Künstlerfreundschaft“,    Referat beim Symposium anlässlich der 50. Wiederkehr des Todestages von Hildegard Jone, 12. April 2013, Purkersdorf    (Österreich).</p><p class="para">    Thomas Ahrend, „Wann ist Musik noch ‚Musik‘?“ [u. a. zu Weberns op. 28], Referat bei der „Soirée musicale“ (Ltg.    Christian Graf), 8. Februar 2013, Philosophicum Basel.</p><h4 class="presentation-year">2012</h4><p class="para">    Thomas Ahrend, „Musikedition als Medium zwischen Komposition und Interpretation“, Vortrag bei „Musik und Mensch“    (FHNW) / Töpfergesellschaft Solothurn, 7. November 2012, Museum Blumenstein, Solothurn.</p><p class="para">    „Erfahrungen und Erwartungen. Zur Interpretation und Edition des ‚Frühwerks‘ Weberns“, Posiumsdiskussion auf der    Tagung „Der junge Webern. Texte und Kontexte“ mit Jean-Jacques Dünki, Regina Busch, Gösta Neuwirth und Anne C.    Shreffler (Moderation: Thomas Ahrend), 1. Juni 2012, Universität Basel.</p><p class="para">    Simon Obert, „Weberns Lied-Orchestrierungen. Suche nach dem eigenen Klang in der Tradition“, Referat auf der Tagung    „Der junge Webern. Texte und Kontexte“, 1. Juni 2012, Universität Basel.</p><p class="para">    Matthias Schmidt, „Geschichtsstunde. Webern in der Schönberg-Schule“, Referat auf der Tagung „Der junge Webern.    Texte und Kontexte“, 31. Mai 2012, Universität Basel.</p><p class="para">    Thomas Ahrend, „Hausaufgaben oder Werke. Formmodelle in Weberns früher Kammermusik“, Referat auf der Tagung „Der    junge Webern. Texte und Kontexte“, 31. Mai 2012, Universität Basel.</p><p class="para">    Monika Kröpfl, „Versuch einer Standortbestimmung“, Referat auf der Tagung „Der junge Webern. Künstlerische    Orientierungen in Wien nch 1900“, 5. März 2012, Österreichische Akademie der Wissenschaften, Wien.</p><p class="para">    Thomas Ahrend, „Editorische Probleme des vertonten Texts in Anton Weberns George-Liedern“, Referat auf der Tagung    „<em>Inter</em>Nationalität und <em>Inter</em>Disziplinarität der Editionswissenschaft“ der Arbeitsgemeinschaft für    germanistische Editionen, 16. Februar 2012, Universität Bern.</p><h4 class="presentation-year">2011</h4><p class="para">    Thomas Ahrend, „Weberns Schüler“, Referat auf der Tagung „Neue Perspektiven. Anton Webern und das Komponieren im 20.    Jahrhundert“, 24. November 2011, Universität Basel.</p><p class="para">    Simon Obert, „Webern und die Popkultur“, Referat auf der Tagung „Neue Perspektiven. Anton Webern und das Komponieren    im 20. Jahrhundert“, 24. November 2011, Universität Basel.</p><h4 class="presentation-year">2010</h4><p class="para">    Vitrine der AWG innerhalb der Ausstellung „Editionen in Basel“ in der Universitätsbibliothek Basel zum    550-Jahr-Jubiläum der Universität vom 11. September bis 27. November 2010.</p><p class="para">    Monika Kröpfl / Simon Obert, „Anton Webern Gesamtausgabe“, Vorstellung bei der Österreichischen Gesellschaft für    Musik, 11. Mai 2010, Wien.</p><h4 class="presentation-year">2009</h4><p class="para">    Matthias Schmidt / Simon Obert, Präsentation der AWG beim „colloquium 48“, 15. Dezember 2009, Musik Akademie Basel.</p><p class="para">    Monika Kröpfl, „Schönbergs Studenten bei Guido Adler. Alte Musik in der Lehre und als musikwissenschaftliches    Betätigungsfeld“, Referat auf der Tagung „Die Wiener Schule und die Alte Musik“, 9. Oktober 2009, Arnold Schönberg    Center, Wien.</p><p class="para">    Simon Obert, „Webern beginnt. ‚Wie bin ich froh‘ op. 25, Nr. 1, im Kontext des ersten Satzes von op. 24.    Beobachtungen zu Weberns Kompositionsprozess“, Referat auf der Arbeitstagung „Kompositorische Arbeitsprozesse im    Vergleich“, Februar 2009, Paul Sacher Stiftung, Basel.</p><p class="para">    Simon Obert, „Der Wert der Wiederholung. Eine historische Perspektive“, Referat auf der Arbeitstagung „Atonalität    und Wiederholung“, Januar 2009, Institut für Musikwissenschaft der Universität Erlangen.</p><ng-template #rightPanelPortal></ng-template></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'awg-root'},{'name': 'ContactAddressComponent', 'selector': 'awg-contact-address'},{'name': 'ContactCitationComponent', 'selector': 'awg-contact-citation'},{'name': 'ContactComponent', 'selector': 'awg-contact'},{'name': 'ContactImprintComponent', 'selector': 'awg-contact-imprint'},{'name': 'CornerRibbonComponent', 'selector': 'awg-corner-ribbon'},{'name': 'EditionComponent', 'selector': 'awg-edition'},{'name': 'EditionOnlineComponent', 'selector': 'awg-edition-online'},{'name': 'EditionOutlineComponent', 'selector': 'awg-edition-outline'},{'name': 'EditionOverviewComponent', 'selector': 'awg-edition-overview'},{'name': 'EditionPrintComponent', 'selector': 'awg-edition-print'},{'name': 'FooterComponent', 'selector': 'awg-footer'},{'name': 'HeaderComponent', 'selector': 'awg-header'},{'name': 'LocaleSwitcherComponent', 'selector': 'awg-locale-switcher'},{'name': 'MainTextComponent', 'selector': 'awg-main-text'},{'name': 'MenuComponent', 'selector': 'awg-menu'},{'name': 'PageComponent', 'selector': 'awg-page'},{'name': 'PageNotFoundComponent', 'selector': 'awg-page-not-found'},{'name': 'ProjectBoardComponent', 'selector': 'awg-project-board'},{'name': 'ProjectComponent', 'selector': 'awg-project'},{'name': 'ProjectCooperationsComponent', 'selector': 'awg-project-cooperations'},{'name': 'ProjectNewsArchiveComponent', 'selector': 'awg-project-news-archive'},{'name': 'ProjectOverviewComponent', 'selector': 'awg-project-overview'},{'name': 'ProjectTeamComponent', 'selector': 'awg-project-team'},{'name': 'ResearchActivitiesComponent', 'selector': 'awg-research-activities'},{'name': 'ResearchArchivesComponent', 'selector': 'awg-research-archives'},{'name': 'ResearchComponent', 'selector': 'awg-research'},{'name': 'ResearchConferencesComponent', 'selector': 'awg-research-conferences'},{'name': 'ResearchOverviewComponent', 'selector': 'awg-research-overview'},{'name': 'ResearchPublicationsComponent', 'selector': 'awg-research-publications'},{'name': 'ResearchWebernLecturesComponent', 'selector': 'awg-research-webern-lectures'},{'name': 'ResearchWebernStudiesComponent', 'selector': 'awg-research-webern-studies'},{'name': 'RightTextComponent', 'selector': 'awg-right-text'},{'name': 'SearchComponent', 'selector': 'awg-search'},{'name': 'SubMenuComponent', 'selector': 'awg-sub-menu'},{'name': 'WebernBibliographyComponent', 'selector': 'awg-webern-bibliography'},{'name': 'WebernChronologyComponent', 'selector': 'awg-webern-chronology'},{'name': 'WebernComponent', 'selector': 'awg-webern'},{'name': 'WebernLettersComponent', 'selector': 'awg-webern-correspondence'},{'name': 'WebernOverviewComponent', 'selector': 'awg-webern-overview'},{'name': 'WebernPersonsComponent', 'selector': 'awg-webern-persons'},{'name': 'WorksComponent', 'selector': 'awg-works'},{'name': 'WorksMoldenhauerComponent', 'selector': 'awg-works-moldenhauer'},{'name': 'WorksOpusComponent', 'selector': 'awg-works-opus'},{'name': 'WorksOverviewComponent', 'selector': 'awg-works-overview'}];
     var DIRECTIVES = [{'name': 'ExternalLinkDirective', 'selector': 'a[href]'}];
     var ACTUAL_COMPONENT = {'name': 'ResearchActivitiesComponent'};
