@@ -16,7 +16,10 @@ export class PageComponent implements AfterViewInit {
 
     rightPanelPortal: TemplateRef<unknown>;
 
-    constructor(private _portalService: PortalService, private cdRef: ChangeDetectorRef) {}
+    constructor(
+        private _portalService: PortalService,
+        private cdRef: ChangeDetectorRef
+    ) {}
 
     ngAfterViewInit() {
         this._portalService.getRightPanelPortalData().subscribe((ref: TemplateRef<unknown>) => {

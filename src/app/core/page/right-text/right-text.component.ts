@@ -20,7 +20,10 @@ export class RightTextComponent implements AfterViewInit {
 
     templatePortal: TemplatePortal<unknown>;
 
-    constructor(private viewContainerRef: ViewContainerRef, private cdRef: ChangeDetectorRef) {}
+    constructor(
+        private viewContainerRef: ViewContainerRef,
+        private cdRef: ChangeDetectorRef
+    ) {}
 
     ngAfterViewInit() {
         if (!this.rightPanelPortal) {

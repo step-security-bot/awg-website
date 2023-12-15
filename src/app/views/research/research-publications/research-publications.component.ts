@@ -13,7 +13,10 @@ export class ResearchPublicationsComponent implements OnInit, AfterViewInit, OnD
 
     bibBaseUrl: SafeResourceUrl;
 
-    constructor(private _portalService: PortalService, private sanitizer: DomSanitizer) {}
+    constructor(
+        private _portalService: PortalService,
+        private sanitizer: DomSanitizer
+    ) {}
 
     ngOnInit() {
         this._sanitizeUrls();
