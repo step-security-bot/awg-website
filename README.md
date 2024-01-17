@@ -1,6 +1,6 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/webern-unibas-ch/awg-website.svg)
 [![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/webern-unibas-ch/awg-website/@angular/core?color=blue&label=angular&logo=angular)](https://github.com/angular/angular)
-![Node.js version](https://img.shields.io/badge/node.js-%3E=v18.13.0-blue)
+![Node.js version](https://img.shields.io/badge/node.js-%3E=v18.19.0-blue)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/webern-unibas-ch/awg-website)
 ![CI Workflow](https://github.com/webern-unibas-ch/awg-website/actions/workflows/ci_workflow.yml/badge.svg)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
