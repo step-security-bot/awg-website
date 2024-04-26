@@ -65,7 +65,7 @@
         "pre_sourcemap": "yarn build:prod --sourceMap",
         "sourcemap": "yarn pre_sourcemap && source-map-explorer dist/awg-website/*.js",
         "-- DEPLOY --": "",
-        "pre-release": "standard-version -a",
+        "pre-release": "commit-and-tag-version -a",
         "deploy:ci": "ng deploy --no-build --message=\"Release $npm_package_name (v$npm_package_version) on gh-pages\""
     },
     "dependencies": {
@@ -102,6 +102,7 @@
         "@typescript-eslint/eslint-plugin": "^7.7.1",
         "@typescript-eslint/parser": "^7.7.1",
         "angular-cli-ghpages": "^1.0.7",
+        "commit-and-tag-version": "^12.4.0",
         "conventional-recommended-bump": "^9.0.0",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.0",
@@ -120,7 +121,6 @@
         "lint-staged": "^15.2.2",
         "prettier": "^3.2.5",
         "source-map-explorer": "^2.5.3",
-        "standard-version": "^9.5.0",
         "typescript": "~5.2.2",
         "webpack-bundle-analyzer": "^4.10.2"
     },
