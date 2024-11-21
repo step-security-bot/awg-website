@@ -14,6 +14,7 @@ import {
     templateUrl: './right-text.component.html',
     styleUrls: ['./right-text.component.css'],
     changeDetection: ChangeDetectionStrategy.Default,
+    standalone: false,
 })
 export class RightTextComponent implements AfterViewInit {
     @Input() rightPanelPortal: TemplateRef<unknown>;

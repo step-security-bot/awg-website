@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-research-conferences',
     templateUrl: './research-conferences.component.html',
     styleUrls: ['./research-conferences.component.css'],
+    standalone: false,
 })
 export class ResearchConferencesComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

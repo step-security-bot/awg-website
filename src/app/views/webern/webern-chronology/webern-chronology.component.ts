@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-webern-chronology',
     templateUrl: './webern-chronology.component.html',
     styleUrls: ['./webern-chronology.component.css'],
+    standalone: false,
 })
 export class WebernChronologyComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

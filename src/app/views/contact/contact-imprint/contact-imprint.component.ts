@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
     selector: 'awg-contact-imprint',
     templateUrl: './contact-imprint.component.html',
     styleUrls: ['./contact-imprint.component.css'],
+    standalone: false,
 })
 export class ContactImprintComponent {}

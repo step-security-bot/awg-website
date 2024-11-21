@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-project-board',
     templateUrl: './project-board.component.html',
     styleUrls: ['./project-board.component.css'],
+    standalone: false,
 })
 export class ProjectBoardComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

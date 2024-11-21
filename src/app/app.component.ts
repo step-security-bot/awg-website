@@ -10,6 +10,7 @@ import { MenuService } from '@awg-core/page/page-services/menu.service';
     selector: 'awg-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
+    standalone: false,
 })
 export class AppComponent implements OnInit {
     selectedMenu: Menu;

@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-edition-online',
     templateUrl: './edition-online.component.html',
     styleUrls: ['./edition-online.component.css'],
+    standalone: false,
 })
 export class EditionOnlineComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

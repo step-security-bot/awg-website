@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-webern-bibliography',
     templateUrl: './webern-bibliography.component.html',
     styleUrls: ['./webern-bibliography.component.css'],
+    standalone: false,
 })
 export class WebernBibliographyComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

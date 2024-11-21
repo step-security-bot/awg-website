@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-webern-overview',
     templateUrl: './webern-overview.component.html',
     styleUrls: ['./webern-overview.component.css'],
+    standalone: false,
 })
 export class WebernOverviewComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

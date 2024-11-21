@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
     selector: 'awg-webern',
     templateUrl: './webern.component.html',
     styleUrls: ['./webern.component.css'],
+    standalone: false,
 })
 export class WebernComponent {
     constructor() {}

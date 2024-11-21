@@ -13,24 +13,44 @@ import { PortalService } from './page-services/portal.service';
 
 import { PageComponent } from './page.component';
 
-@Component({ selector: 'awg-main-text', template: '' })
+@Component({
+    selector: 'awg-main-text',
+    template: '',
+    standalone: false,
+})
 class MainTextStubComponent {}
 
-@Component({ selector: 'awg-menu', template: '' })
+@Component({
+    selector: 'awg-menu',
+    template: '',
+    standalone: false,
+})
 class MenuStubComponent {
     @Input()
     menuArray: Menu[];
 }
 
-@Component({ selector: 'awg-right-text', template: '' })
+@Component({
+    selector: 'awg-right-text',
+    template: '',
+    standalone: false,
+})
 class RightTextStubComponent {
     @Input() rightPanelPortal: TemplateRef<unknown>;
 }
 
-@Component({ selector: 'awg-search', template: '' })
+@Component({
+    selector: 'awg-search',
+    template: '',
+    standalone: false,
+})
 class SearchStubComponent {}
 
-@Component({ selector: 'awg-sub-menu', template: '' })
+@Component({
+    selector: 'awg-sub-menu',
+    template: '',
+    standalone: false,
+})
 class SubMenuStubComponent {
     @Input()
     selectedMenu: Menu;
@@ -39,6 +59,7 @@ class SubMenuStubComponent {
 // Mock component to get templateRef
 @Component({
     template: ` <ng-template #template><h1>Test template</h1></ng-template> `,
+    standalone: false,
 })
 class MockTemplateComponent {
     @ViewChild('template', { static: true }) public template: TemplateRef<any>;

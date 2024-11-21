@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
     selector: 'awg-contact-address',
     templateUrl: './contact-address.component.html',
     styleUrls: ['./contact-address.component.css'],
+    standalone: false,
 })
 export class ContactAddressComponent {}

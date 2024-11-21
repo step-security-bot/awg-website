@@ -2,6 +2,7 @@ import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
     selector: '[routerLink]',
+    standalone: false,
 })
 export class RouterLinkStubDirective {
     @Input()

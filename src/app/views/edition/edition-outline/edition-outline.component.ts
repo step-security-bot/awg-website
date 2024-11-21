@@ -216,6 +216,7 @@ const TREE_DATA: EditionComplexNode[] = [
     selector: 'awg-edition-outline',
     templateUrl: './edition-outline.component.html',
     styleUrls: ['./edition-outline.component.css'],
+    standalone: false,
 })
 export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

@@ -7,7 +7,11 @@ import { RouterLinkStubDirective } from '../../../testing/router-link-stub.direc
 import { HeaderComponent } from './header.component';
 
 // Mock components
-@Component({ selector: 'awg-locale-switcher', template: '' })
+@Component({
+    selector: 'awg-locale-switcher',
+    template: '',
+    standalone: false,
+})
 class LocaleSwitcherStubComponent {}
 
 describe('HeaderComponent', () => {
