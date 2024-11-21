@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
     selector: 'awg-project',
     templateUrl: './project.component.html',
     styleUrls: ['./project.component.css'],
+    standalone: false,
 })
 export class ProjectComponent {
     constructor() {}

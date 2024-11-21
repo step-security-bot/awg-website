@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'awg-corner-ribbon',
     templateUrl: './corner-ribbon.component.html',
     styleUrls: ['./corner-ribbon.component.css'],
+    standalone: false,
 })
 export class CornerRibbonComponent implements OnInit {
     cornerRibbonLabel = 'beta';

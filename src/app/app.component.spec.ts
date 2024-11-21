@@ -17,16 +17,32 @@ import { MenuService } from '@awg-core/page/page-services/menu.service';
 import { AppComponent } from './app.component';
 
 // Mock components
-@Component({ selector: 'awg-corner-ribbon', template: '' })
+@Component({
+    selector: 'awg-corner-ribbon',
+    template: '',
+    standalone: false,
+})
 class CornerRibbonStubComponent {}
 
-@Component({ selector: 'awg-footer', template: '' })
+@Component({
+    selector: 'awg-footer',
+    template: '',
+    standalone: false,
+})
 class FooterStubComponent {}
 
-@Component({ selector: 'awg-header', template: '' })
+@Component({
+    selector: 'awg-header',
+    template: '',
+    standalone: false,
+})
 class HeaderStubComponent {}
 
-@Component({ selector: 'awg-page', template: '' })
+@Component({
+    selector: 'awg-page',
+    template: '',
+    standalone: false,
+})
 class PageStubComponent {
     @Input()
     menuArray: Menu[];
@@ -34,10 +50,18 @@ class PageStubComponent {
     selectedMenu: Menu;
 }
 
-@Component({ selector: 'awg-test', template: 'test' })
+@Component({
+    selector: 'awg-test',
+    template: 'test',
+    standalone: false,
+})
 export class RoutedTestMockComponent {}
 
-@Component({ selector: 'awg-test2', template: 'test2' })
+@Component({
+    selector: 'awg-test2',
+    template: 'test2',
+    standalone: false,
+})
 export class RoutedTest2MockComponent {}
 
 export const mockRoutes: Routes = [

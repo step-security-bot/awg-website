@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-works-moldenhauer',
     templateUrl: './works-moldenhauer.component.html',
     styleUrls: ['./works-moldenhauer.component.css'],
+    standalone: false,
 })
 export class WorksMoldenhauerComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

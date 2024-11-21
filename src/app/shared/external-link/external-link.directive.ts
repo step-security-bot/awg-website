@@ -3,6 +3,7 @@ import { Directive, HostBinding, Inject, Input, OnChanges, PLATFORM_ID } from '@
 
 @Directive({
     selector: 'a[href]',
+    standalone: false,
 })
 export class ExternalLinkDirective implements OnChanges {
     @HostBinding('attr.href') hrefAttr = '';

@@ -6,6 +6,7 @@ import { Menu } from '@awg-core/page/page-models/menu.model';
     selector: 'awg-menu',
     templateUrl: './menu.component.html',
     styleUrls: ['./menu.component.css'],
+    standalone: false,
 })
 export class MenuComponent {
     @Input()

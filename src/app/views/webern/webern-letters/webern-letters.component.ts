@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-webern-correspondence',
     templateUrl: './webern-letters.component.html',
     styleUrls: ['./webern-letters.component.css'],
+    standalone: false,
 })
 export class WebernLettersComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

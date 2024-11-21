@@ -6,6 +6,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     selector: 'awg-edition-print',
     templateUrl: './edition-print.component.html',
     styleUrls: ['./edition-print.component.css'],
+    standalone: false,
 })
 export class EditionPrintComponent implements AfterViewInit, OnDestroy {
     @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;

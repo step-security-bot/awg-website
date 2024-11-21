@@ -18,6 +18,7 @@ import { ExternalLinkDirective } from './external-link.directive';
 
         <br /><br />
         <a (click)="doSomething()">Link without href</a>`,
+    standalone: false,
 })
 class TestExernalLinkComponent {
     hostname = location.hostname;

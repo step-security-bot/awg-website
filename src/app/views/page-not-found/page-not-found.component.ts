@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
     selector: 'awg-page-not-found',
     templateUrl: './page-not-found.component.html',
     styleUrls: ['./page-not-found.component.css'],
+    standalone: false,
 })
 export class PageNotFoundComponent {
     title = 'Page not found';
