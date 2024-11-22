@@ -1,9 +1,8 @@
 import { Location } from '@angular/common';
-import { Component, DebugElement, Input, NgZone } from '@angular/core';
+import { Component, DebugElement, NgZone, input } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Router, Routes } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 import Spy = jasmine.Spy;
 
@@ -44,10 +43,8 @@ class HeaderStubComponent {}
     standalone: false,
 })
 class PageStubComponent {
-    @Input()
-    menuArray: Menu[];
-    @Input()
-    selectedMenu: Menu;
+    readonly menuArray = input<Menu[]>(undefined);
+    readonly selectedMenu = input<Menu>(undefined);
 }
 
 @Component({
@@ -97,7 +94,7 @@ describe('AppComponent', () => {
         };
 
         TestBed.configureTestingModule({
-            imports: [RouterTestingModule.withRoutes(mockRoutes)],
+            imports: [RouterModule.forRoot(mockRoutes)],
             declarations: [
                 AppComponent,
                 CornerRibbonStubComponent,
@@ -240,59 +237,53 @@ describe('AppComponent', () => {
             it('... should return menu array', () => {
                 expect(component.menuArray).toBe(expectedMenuArray);
             });
-
-            it('... should have triggered `provideActiveMenu()`', () => {
-                expectSpyCall(provideActiveMenuSpy, 1);
-            });
         });
 
         describe('#provideActiveMenu', () => {
-            it('... should have been called', () => {
-                expectSpyCall(provideActiveMenuSpy, 1, undefined);
-            });
-
-            it('... should have called menu service to get active menu (without path)', () => {
-                expectSpyCall(getActiveMenuSpy, 1, [expectedMenuArray, undefined]);
-            });
-
             it('... should return selected menu', () => {
                 expect(component.selectedMenu).toBe(expectedMenu);
+
+                getActiveMenuSpy.and.returnValue(MENUDATA[1]);
+
+                component.provideActiveMenu(MENUDATA[1].linkTo);
+
+                expect(component.selectedMenu).toEqual(MENUDATA[1]);
             });
 
-            it('... should be called when the route url changes', waitForAsync(() => {
-                expectSpyCall(provideActiveMenuSpy, 1, undefined);
+            it('... should be triggered when the route url changes', waitForAsync(() => {
+                expectSpyCall(provideActiveMenuSpy, 0, undefined);
 
                 fixture.ngZone.run(() => {
                     router.navigate(['test']).then(() => {
-                        expectSpyCall(provideActiveMenuSpy, 2, '/test');
+                        expectSpyCall(provideActiveMenuSpy, 1, '/test');
 
                         router.navigate(['test2']).then(() => {
-                            expectSpyCall(provideActiveMenuSpy, 3, '/test2');
+                            expectSpyCall(provideActiveMenuSpy, 2, '/test2');
 
                             router.navigate(['']).then(() => {
-                                expectSpyCall(provideActiveMenuSpy, 4, '/test');
+                                expectSpyCall(provideActiveMenuSpy, 3, '/test');
                             });
                         });
                     });
                 });
             }));
 
-            it('... should have called menu service to get active menu (with path) when the route url changes', waitForAsync(() => {
-                expectSpyCall(provideActiveMenuSpy, 1, undefined);
-                expectSpyCall(getActiveMenuSpy, 1, [expectedMenuArray, undefined]);
+            it('... should call menu service to get active menu (with path) when the route url changes', waitForAsync(() => {
+                expectSpyCall(provideActiveMenuSpy, 0, undefined);
+                expectSpyCall(getActiveMenuSpy, 0, [expectedMenuArray, undefined]);
 
                 fixture.ngZone.run(() => {
                     router.navigate(['test']).then(() => {
-                        expectSpyCall(provideActiveMenuSpy, 2, '/test');
-                        expectSpyCall(getActiveMenuSpy, 2, [expectedMenuArray, '/test']);
+                        expectSpyCall(provideActiveMenuSpy, 1, '/test');
+                        expectSpyCall(getActiveMenuSpy, 1, [expectedMenuArray, '/test']);
 
                         router.navigate(['test2']).then(() => {
-                            expectSpyCall(provideActiveMenuSpy, 3, '/test2');
-                            expectSpyCall(getActiveMenuSpy, 3, [expectedMenuArray, '/test2']);
+                            expectSpyCall(provideActiveMenuSpy, 2, '/test2');
+                            expectSpyCall(getActiveMenuSpy, 2, [expectedMenuArray, '/test2']);
 
                             router.navigate(['']).then(() => {
-                                expectSpyCall(provideActiveMenuSpy, 4, '/test');
-                                expectSpyCall(getActiveMenuSpy, 4, [expectedMenuArray, '/test']);
+                                expectSpyCall(provideActiveMenuSpy, 3, '/test');
+                                expectSpyCall(getActiveMenuSpy, 3, [expectedMenuArray, '/test']);
                             });
                         });
                     });
@@ -309,11 +300,11 @@ describe('AppComponent', () => {
             const pageEl = fixture.debugElement.query(By.directive(PageStubComponent));
             const pageCmp = pageEl.injector.get(PageStubComponent) as PageStubComponent;
 
-            expect(pageCmp.menuArray).toBeTruthy();
-            expect(pageCmp.menuArray).toBe(MENUDATA);
+            expect(pageCmp.menuArray()).toBeTruthy();
+            expect(pageCmp.menuArray()).toBe(MENUDATA);
 
-            expect(pageCmp.selectedMenu).toBeTruthy();
-            expect(pageCmp.selectedMenu).toBe(MENUDATA[0]);
+            expect(pageCmp.selectedMenu()).toBeTruthy();
+            expect(pageCmp.selectedMenu()).toBe(MENUDATA[0]);
         });
     });
 });

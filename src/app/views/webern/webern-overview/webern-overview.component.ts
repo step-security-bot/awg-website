@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, TemplateRef, viewChild } from '@angular/core';
 
 import { PortalService } from '@awg-core/page/page-services/portal.service';
 
@@ -9,12 +9,12 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     standalone: false,
 })
 export class WebernOverviewComponent implements AfterViewInit, OnDestroy {
-    @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+    readonly rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
 
     constructor(private _portalService: PortalService) {}
 
     ngAfterViewInit() {
-        this._portalService.updateRightPanelPortalData(this.rightPanelPortal);
+        this._portalService.updateRightPanelPortalData(this.rightPanelPortal());
     }
 
     ngOnDestroy() {

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, viewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 import { PortalService } from '@awg-core/page/page-services/portal.service';
@@ -10,7 +10,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     standalone: false,
 })
 export class ResearchPublicationsComponent implements OnInit, AfterViewInit, OnDestroy {
-    @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+    readonly rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
 
     bibBaseUrl: SafeResourceUrl;
 
@@ -24,7 +24,7 @@ export class ResearchPublicationsComponent implements OnInit, AfterViewInit, OnD
     }
 
     ngAfterViewInit() {
-        this._portalService.updateRightPanelPortalData(this.rightPanelPortal);
+        this._portalService.updateRightPanelPortalData(this.rightPanelPortal());
     }
 
     ngOnDestroy() {

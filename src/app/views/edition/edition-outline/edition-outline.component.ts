@@ -1,5 +1,5 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
-import { AfterViewInit, Component, OnDestroy, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, TemplateRef, viewChild } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 
 import { PortalService } from '@awg-core/page/page-services/portal.service';
@@ -219,7 +219,7 @@ const TREE_DATA: EditionComplexNode[] = [
     standalone: false,
 })
 export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
-    @ViewChild('rightPanelPortal') rightPanelPortal: TemplateRef<unknown>;
+    readonly rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
 
     isAllCollapsed = true;
     treeControl = new NestedTreeControl<EditionComplexNode>(node => node.children);
@@ -250,7 +250,7 @@ export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
     };
 
     ngAfterViewInit() {
-        this._portalService.updateRightPanelPortalData(this.rightPanelPortal);
+        this._portalService.updateRightPanelPortalData(this.rightPanelPortal());
     }
 
     collapseAll() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
@@ -13,14 +13,14 @@ import { MenuService } from '@awg-core/page/page-services/menu.service';
     standalone: false,
 })
 export class AppComponent implements OnInit {
-    selectedMenu: Menu;
     menuArray: Menu[];
+    selectedMenu: Menu;
 
-    constructor(
-        private menuService: MenuService,
-        private router: Router
-    ) {
-        this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
+    private readonly _menuService = inject(MenuService);
+    private readonly _router = inject(Router);
+
+    constructor() {
+        this._router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
             const urlAfterRedirectsKey = 'urlAfterRedirects';
             const path = event[urlAfterRedirectsKey];
 
@@ -33,11 +33,10 @@ export class AppComponent implements OnInit {
     }
 
     provideMenu(): void {
-        this.menuArray = this.menuService.getMenuArray();
-        this.provideActiveMenu();
+        this.menuArray = this._menuService.getMenuArray();
     }
 
     provideActiveMenu(path?: string): void {
-        this.selectedMenu = this.menuService.getActiveMenu(this.menuArray, path);
+        this.selectedMenu = this._menuService.getActiveMenu(this.menuArray, path);
     }
 }

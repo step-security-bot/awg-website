@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, Input, TemplateRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, TemplateRef, input } from '@angular/core';
 
 import { Menu } from './page-models/menu.model';
 import { PortalService } from './page-services/portal.service';
@@ -10,23 +10,21 @@ import { PortalService } from './page-services/portal.service';
     standalone: false,
 })
 export class PageComponent implements AfterViewInit {
-    @Input()
-    menuArray: Menu[];
-    @Input()
-    selectedMenu: Menu;
+    menuArray = input<Menu[]>(undefined);
+    selectedMenu = input<Menu>(undefined);
 
     rightPanelPortal: TemplateRef<unknown>;
 
     constructor(
         private _portalService: PortalService,
-        private cdRef: ChangeDetectorRef
+        private _cdRef: ChangeDetectorRef
     ) {}
 
     ngAfterViewInit() {
         this._portalService.getRightPanelPortalData().subscribe((ref: TemplateRef<unknown>) => {
             this.rightPanelPortal = ref;
 
-            this.cdRef.detectChanges();
+            this._cdRef.detectChanges();
         });
     }
 }
