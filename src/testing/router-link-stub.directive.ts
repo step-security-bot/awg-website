@@ -5,7 +5,7 @@ import { Directive, HostListener, input } from '@angular/core';
     standalone: false,
 })
 export class RouterLinkStubDirective {
-    readonly routerLink = input<any>(undefined);
+    routerLink = input<any>(undefined);
 
     navigatedTo: any = null;
 

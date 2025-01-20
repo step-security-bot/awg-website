@@ -9,7 +9,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     standalone: false,
 })
 export class WebernLettersComponent implements AfterViewInit, OnDestroy {
-    readonly rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
+    rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
 
     constructor(private _portalService: PortalService) {}
 

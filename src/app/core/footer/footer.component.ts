@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'awg-footer',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./footer.component.css'],
     standalone: false,
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
     now = new Date().getFullYear();
 
-    constructor() {}
-
-    ngOnInit() {}
+    constructor() {
+        // Intentionally empty
+    }
 }

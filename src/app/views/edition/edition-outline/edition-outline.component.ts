@@ -219,7 +219,7 @@ const TREE_DATA: EditionComplexNode[] = [
     standalone: false,
 })
 export class EditionOutlineComponent implements AfterViewInit, OnDestroy {
-    readonly rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
+    rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
 
     isAllCollapsed = true;
     treeControl = new NestedTreeControl<EditionComplexNode>(node => node.children);

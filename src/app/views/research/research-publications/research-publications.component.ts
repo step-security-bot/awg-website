@@ -10,7 +10,7 @@ import { PortalService } from '@awg-core/page/page-services/portal.service';
     standalone: false,
 })
 export class ResearchPublicationsComponent implements OnInit, AfterViewInit, OnDestroy {
-    readonly rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
+    rightPanelPortal = viewChild<TemplateRef<unknown>>('rightPanelPortal');
 
     bibBaseUrl: SafeResourceUrl;
 

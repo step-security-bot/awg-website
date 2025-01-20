@@ -9,7 +9,7 @@ export class ExternalLinkDirective implements OnChanges {
     @HostBinding('attr.href') hrefAttr = '';
     @HostBinding('attr.target') targetAttr = '';
     @HostBinding('attr.rel') relAttr = '';
-    readonly href = input<string>(undefined);
+    href = input<string>(undefined);
 
     constructor(@Inject(PLATFORM_ID) private platformId: string) {}
 

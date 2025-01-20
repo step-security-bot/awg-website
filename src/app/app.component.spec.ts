@@ -1,13 +1,12 @@
 import { Location } from '@angular/common';
 import { Component, DebugElement, NgZone, input } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { Router, RouterModule, Routes } from '@angular/router';
 
 import Spy = jasmine.Spy;
 
 import { cleanStylesFromDOM } from '@testing/clean-up-helper';
-import { expectSpyCall } from '@testing/expect-helper';
+import { expectSpyCall, getAndExpectDebugElementByDirective } from '@testing/expect-helper';
 
 import { MENUDATA } from '@awg-core/page/page-data/menu-data';
 import { Menu } from '@awg-core/page/page-models/menu.model';
@@ -43,8 +42,8 @@ class HeaderStubComponent {}
     standalone: false,
 })
 class PageStubComponent {
-    readonly menuArray = input<Menu[]>(undefined);
-    readonly selectedMenu = input<Menu>(undefined);
+    menuArray = input<Menu[]>(undefined);
+    selectedMenu = input<Menu>(undefined);
 }
 
 @Component({
@@ -71,8 +70,8 @@ describe('AppComponent', () => {
     let component: AppComponent;
     let fixture: ComponentFixture<AppComponent>;
     let compDe: DebugElement;
-    let compEl: any;
 
+    /* eslint-disable-next-line no-unused-vars */
     let ngZone: NgZone;
     let router: Router;
     let location: Location;
@@ -116,7 +115,6 @@ describe('AppComponent', () => {
         fixture = TestBed.createComponent(AppComponent);
         component = fixture.debugElement.componentInstance;
         compDe = fixture.debugElement;
-        compEl = compDe.nativeElement;
 
         router = TestBed.inject(Router);
         location = TestBed.inject(Location);
@@ -191,23 +189,19 @@ describe('AppComponent', () => {
         });
 
         it('should contain header component (stubbed)', () => {
-            const headerEl = fixture.debugElement.query(By.directive(HeaderStubComponent));
-            expect(headerEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, HeaderStubComponent, 1, 1);
         });
 
         it('should contain corner ribbon component (stubbed)', () => {
-            const cornerRibbonEl = fixture.debugElement.query(By.directive(CornerRibbonStubComponent));
-            expect(cornerRibbonEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, CornerRibbonStubComponent, 1, 1);
         });
 
         it('should contain footer component (stubbed)', () => {
-            const footerEl = fixture.debugElement.query(By.directive(FooterStubComponent));
-            expect(footerEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, FooterStubComponent, 1, 1);
         });
 
         it('should not contain page component (stubbed)', () => {
-            const pageEl = fixture.debugElement.query(By.directive(PageStubComponent));
-            expect(pageEl).not.toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, PageStubComponent, 0, 0);
         });
     });
 
@@ -292,13 +286,12 @@ describe('AppComponent', () => {
         });
 
         it('should contain page component (stubbed)', () => {
-            const pageEl = fixture.debugElement.query(By.directive(PageStubComponent));
-            expect(pageEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, PageStubComponent, 1, 1);
         });
 
         it('should pass down menuArray & selectedMenu to page component', () => {
-            const pageEl = fixture.debugElement.query(By.directive(PageStubComponent));
-            const pageCmp = pageEl.injector.get(PageStubComponent) as PageStubComponent;
+            const pageDes = getAndExpectDebugElementByDirective(compDe, PageStubComponent, 1, 1);
+            const pageCmp = pageDes[0].injector.get(PageStubComponent) as PageStubComponent;
 
             expect(pageCmp.menuArray()).toBeTruthy();
             expect(pageCmp.menuArray()).toBe(MENUDATA);

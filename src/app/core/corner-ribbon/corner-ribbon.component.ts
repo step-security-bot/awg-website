@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'awg-corner-ribbon',
@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./corner-ribbon.component.css'],
     standalone: false,
 })
-export class CornerRibbonComponent implements OnInit {
+export class CornerRibbonComponent {
     cornerRibbonLabel = 'beta';
     cornerRibbonLink = 'https://github.com/webern-unibas-ch/awg-website/';
 
-    constructor() {}
-
-    ngOnInit() {}
+    constructor() {
+        // Intentionally empty
+    }
 }

@@ -17,7 +17,7 @@ import { ExternalLinkDirective } from './external-link.directive';
         <a href="{{ dynamicInternalLink }}">Link Internal Dynamic</a>
 
         <br /><br />
-        <a (click)="doSomething()">Link without href</a>`,
+        <a (click)="doSomething()" (keyup.enter)="doSomething()" role="link" tabindex="0">Link without href</a>`,
     standalone: false,
 })
 class TestExernalLinkComponent {
@@ -26,7 +26,7 @@ class TestExernalLinkComponent {
     dynamicExternalLink = 'https://coryrylan.com/blog/managing-external-links-safely-in-angular';
 
     doSomething() {
-        console.log('Clicked on link without href');
+        console.info('Clicked on link without href');
     }
 }
 

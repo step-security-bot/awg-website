@@ -17,7 +17,7 @@ import {
     standalone: false,
 })
 export class RightTextComponent implements AfterViewInit {
-    readonly rightPanelPortal = input<TemplateRef<unknown>>(undefined);
+    rightPanelPortal = input<TemplateRef<unknown>>(undefined);
 
     templatePortal: TemplatePortal<unknown>;
 

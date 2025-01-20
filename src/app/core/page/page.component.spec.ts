@@ -1,4 +1,4 @@
-import { Component, ComponentRef, TemplateRef, input, signal, viewChild } from '@angular/core';
+import { Component, TemplateRef, input, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
@@ -26,7 +26,7 @@ class MainTextStubComponent {}
     standalone: false,
 })
 class MenuStubComponent {
-    readonly menuArray = input<Menu[]>(undefined);
+    menuArray = input<Menu[]>(undefined);
 }
 
 @Component({
@@ -35,7 +35,7 @@ class MenuStubComponent {
     standalone: false,
 })
 class RightTextStubComponent {
-    readonly rightPanelPortal = input<TemplateRef<unknown>>(undefined);
+    rightPanelPortal = input<TemplateRef<unknown>>(undefined);
 }
 
 @Component({
@@ -51,7 +51,7 @@ class SearchStubComponent {}
     standalone: false,
 })
 class SubMenuStubComponent {
-    readonly selectedMenu = input<Menu>(undefined);
+    selectedMenu = input<Menu>(undefined);
 }
 
 // Mock component to get templateRef
@@ -60,7 +60,7 @@ class SubMenuStubComponent {
     standalone: false,
 })
 class MockTemplateComponent {
-    readonly template = viewChild<TemplateRef<any>>('template');
+    template = viewChild<TemplateRef<any>>('template');
 }
 
 describe('PageComponent', () => {
