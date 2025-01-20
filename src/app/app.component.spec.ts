@@ -1,14 +1,12 @@
 import { Location } from '@angular/common';
-import { Component, DebugElement, Input, NgZone } from '@angular/core';
+import { Component, DebugElement, NgZone, input } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { Router, Routes } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 import Spy = jasmine.Spy;
 
 import { cleanStylesFromDOM } from '@testing/clean-up-helper';
-import { expectSpyCall } from '@testing/expect-helper';
+import { expectSpyCall, getAndExpectDebugElementByDirective } from '@testing/expect-helper';
 
 import { MENUDATA } from '@awg-core/page/page-data/menu-data';
 import { Menu } from '@awg-core/page/page-models/menu.model';
@@ -44,10 +42,8 @@ class HeaderStubComponent {}
     standalone: false,
 })
 class PageStubComponent {
-    @Input()
-    menuArray: Menu[];
-    @Input()
-    selectedMenu: Menu;
+    menuArray = input<Menu[]>(undefined);
+    selectedMenu = input<Menu>(undefined);
 }
 
 @Component({
@@ -74,8 +70,8 @@ describe('AppComponent', () => {
     let component: AppComponent;
     let fixture: ComponentFixture<AppComponent>;
     let compDe: DebugElement;
-    let compEl: any;
 
+    /* eslint-disable-next-line no-unused-vars */
     let ngZone: NgZone;
     let router: Router;
     let location: Location;
@@ -97,7 +93,7 @@ describe('AppComponent', () => {
         };
 
         TestBed.configureTestingModule({
-            imports: [RouterTestingModule.withRoutes(mockRoutes)],
+            imports: [RouterModule.forRoot(mockRoutes)],
             declarations: [
                 AppComponent,
                 CornerRibbonStubComponent,
@@ -119,7 +115,6 @@ describe('AppComponent', () => {
         fixture = TestBed.createComponent(AppComponent);
         component = fixture.debugElement.componentInstance;
         compDe = fixture.debugElement;
-        compEl = compDe.nativeElement;
 
         router = TestBed.inject(Router);
         location = TestBed.inject(Location);
@@ -194,23 +189,19 @@ describe('AppComponent', () => {
         });
 
         it('should contain header component (stubbed)', () => {
-            const headerEl = fixture.debugElement.query(By.directive(HeaderStubComponent));
-            expect(headerEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, HeaderStubComponent, 1, 1);
         });
 
         it('should contain corner ribbon component (stubbed)', () => {
-            const cornerRibbonEl = fixture.debugElement.query(By.directive(CornerRibbonStubComponent));
-            expect(cornerRibbonEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, CornerRibbonStubComponent, 1, 1);
         });
 
         it('should contain footer component (stubbed)', () => {
-            const footerEl = fixture.debugElement.query(By.directive(FooterStubComponent));
-            expect(footerEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, FooterStubComponent, 1, 1);
         });
 
         it('should not contain page component (stubbed)', () => {
-            const pageEl = fixture.debugElement.query(By.directive(PageStubComponent));
-            expect(pageEl).not.toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, PageStubComponent, 0, 0);
         });
     });
 
@@ -240,59 +231,53 @@ describe('AppComponent', () => {
             it('... should return menu array', () => {
                 expect(component.menuArray).toBe(expectedMenuArray);
             });
-
-            it('... should have triggered `provideActiveMenu()`', () => {
-                expectSpyCall(provideActiveMenuSpy, 1);
-            });
         });
 
         describe('#provideActiveMenu', () => {
-            it('... should have been called', () => {
-                expectSpyCall(provideActiveMenuSpy, 1, undefined);
-            });
-
-            it('... should have called menu service to get active menu (without path)', () => {
-                expectSpyCall(getActiveMenuSpy, 1, [expectedMenuArray, undefined]);
-            });
-
             it('... should return selected menu', () => {
                 expect(component.selectedMenu).toBe(expectedMenu);
+
+                getActiveMenuSpy.and.returnValue(MENUDATA[1]);
+
+                component.provideActiveMenu(MENUDATA[1].linkTo);
+
+                expect(component.selectedMenu).toEqual(MENUDATA[1]);
             });
 
-            it('... should be called when the route url changes', waitForAsync(() => {
-                expectSpyCall(provideActiveMenuSpy, 1, undefined);
+            it('... should be triggered when the route url changes', waitForAsync(() => {
+                expectSpyCall(provideActiveMenuSpy, 0, undefined);
 
                 fixture.ngZone.run(() => {
                     router.navigate(['test']).then(() => {
-                        expectSpyCall(provideActiveMenuSpy, 2, '/test');
+                        expectSpyCall(provideActiveMenuSpy, 1, '/test');
 
                         router.navigate(['test2']).then(() => {
-                            expectSpyCall(provideActiveMenuSpy, 3, '/test2');
+                            expectSpyCall(provideActiveMenuSpy, 2, '/test2');
 
                             router.navigate(['']).then(() => {
-                                expectSpyCall(provideActiveMenuSpy, 4, '/test');
+                                expectSpyCall(provideActiveMenuSpy, 3, '/test');
                             });
                         });
                     });
                 });
             }));
 
-            it('... should have called menu service to get active menu (with path) when the route url changes', waitForAsync(() => {
-                expectSpyCall(provideActiveMenuSpy, 1, undefined);
-                expectSpyCall(getActiveMenuSpy, 1, [expectedMenuArray, undefined]);
+            it('... should call menu service to get active menu (with path) when the route url changes', waitForAsync(() => {
+                expectSpyCall(provideActiveMenuSpy, 0, undefined);
+                expectSpyCall(getActiveMenuSpy, 0, [expectedMenuArray, undefined]);
 
                 fixture.ngZone.run(() => {
                     router.navigate(['test']).then(() => {
-                        expectSpyCall(provideActiveMenuSpy, 2, '/test');
-                        expectSpyCall(getActiveMenuSpy, 2, [expectedMenuArray, '/test']);
+                        expectSpyCall(provideActiveMenuSpy, 1, '/test');
+                        expectSpyCall(getActiveMenuSpy, 1, [expectedMenuArray, '/test']);
 
                         router.navigate(['test2']).then(() => {
-                            expectSpyCall(provideActiveMenuSpy, 3, '/test2');
-                            expectSpyCall(getActiveMenuSpy, 3, [expectedMenuArray, '/test2']);
+                            expectSpyCall(provideActiveMenuSpy, 2, '/test2');
+                            expectSpyCall(getActiveMenuSpy, 2, [expectedMenuArray, '/test2']);
 
                             router.navigate(['']).then(() => {
-                                expectSpyCall(provideActiveMenuSpy, 4, '/test');
-                                expectSpyCall(getActiveMenuSpy, 4, [expectedMenuArray, '/test']);
+                                expectSpyCall(provideActiveMenuSpy, 3, '/test');
+                                expectSpyCall(getActiveMenuSpy, 3, [expectedMenuArray, '/test']);
                             });
                         });
                     });
@@ -301,19 +286,18 @@ describe('AppComponent', () => {
         });
 
         it('should contain page component (stubbed)', () => {
-            const pageEl = fixture.debugElement.query(By.directive(PageStubComponent));
-            expect(pageEl).toBeTruthy();
+            getAndExpectDebugElementByDirective(compDe, PageStubComponent, 1, 1);
         });
 
         it('should pass down menuArray & selectedMenu to page component', () => {
-            const pageEl = fixture.debugElement.query(By.directive(PageStubComponent));
-            const pageCmp = pageEl.injector.get(PageStubComponent) as PageStubComponent;
+            const pageDes = getAndExpectDebugElementByDirective(compDe, PageStubComponent, 1, 1);
+            const pageCmp = pageDes[0].injector.get(PageStubComponent) as PageStubComponent;
 
-            expect(pageCmp.menuArray).toBeTruthy();
-            expect(pageCmp.menuArray).toBe(MENUDATA);
+            expect(pageCmp.menuArray()).toBeTruthy();
+            expect(pageCmp.menuArray()).toBe(MENUDATA);
 
-            expect(pageCmp.selectedMenu).toBeTruthy();
-            expect(pageCmp.selectedMenu).toBe(MENUDATA[0]);
+            expect(pageCmp.selectedMenu()).toBeTruthy();
+            expect(pageCmp.selectedMenu()).toBe(MENUDATA[0]);
         });
     });
 });

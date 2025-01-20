@@ -1,9 +1,15 @@
 <div id="submenu">
-    @for (subItem of selectedMenu.subMenu; track subItem; let i = $index; let isFirst = $first; let isLast = $last) {
+    @for (
+        subItem of selectedMenu().subMenu;
+        track subItem.label;
+        let i = $index;
+        let isFirst = $first;
+        let isLast = $last
+    ) {
         <div
             [class.first]="isFirst"
             [class.last]="isLast"
-            [routerLink]="[selectedMenu.linkTo, subItem.linkTo]"
+            [routerLink]="[selectedMenu().linkTo, subItem.linkTo]"
             routerLinkActive="active">
             <span>{{ subItem.label | uppercase }}</span>
         </div>

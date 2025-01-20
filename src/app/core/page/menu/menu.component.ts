@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 import { Menu } from '@awg-core/page/page-models/menu.model';
 
@@ -9,8 +9,7 @@ import { Menu } from '@awg-core/page/page-models/menu.model';
     standalone: false,
 })
 export class MenuComponent {
-    @Input()
-    menuArray: Menu[];
+    menuArray = input.required<Menu[]>();
 
     constructor() {}
 }

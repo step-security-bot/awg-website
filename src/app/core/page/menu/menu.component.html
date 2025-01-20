@@ -1,5 +1,5 @@
 <div id="menu">
-    @for (menu of menuArray; track menu; let i = $index; let isFirst = $first; let isLast = $last) {
+    @for (menu of menuArray(); track menu.label; let i = $index; let isFirst = $first; let isLast = $last) {
         <div
             class="menu"
             [class.first]="isFirst"

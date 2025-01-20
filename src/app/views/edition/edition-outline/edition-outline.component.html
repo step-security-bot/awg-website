@@ -11,7 +11,7 @@
 <mat-tree #editionComplexTree [dataSource]="dataSource" [treeControl]="treeControl" class="awg-edition-complex-tree">
     <!-- This is the tree node template for leaf nodes -->
     <!-- There is inline padding applied to this node using styles This padding value depends on the mat-icon-button width. -->
-    <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+    <mat-nested-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
         @if (node.link) {
             <a href="{{ node.link }}">
                 {{ node.name }}
@@ -19,7 +19,7 @@
         } @else {
             {{ node.name }}
         }
-    </mat-tree-node>
+    </mat-nested-tree-node>
 
     <!-- This is the tree node template for expandable nodes -->
     <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">

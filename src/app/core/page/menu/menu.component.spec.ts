@@ -33,7 +33,7 @@ describe('MenuComponent', () => {
         expectedMenuArray = MENUDATA;
 
         // Simulate the parent setting the input property with that menu array
-        component.menuArray = expectedMenuArray;
+        fixture.componentRef.setInput('menuArray', expectedMenuArray);
 
         // Trigger initial data binding
         fixture.detectChanges();
@@ -57,18 +57,18 @@ describe('MenuComponent', () => {
     });
 
     it('should get menu array input after data binding', () => {
-        expect(component.menuArray).toBeDefined();
-        expect(component.menuArray).toBe(expectedMenuArray);
+        expect(component.menuArray()).toBeDefined();
+        expect(component.menuArray()).toBe(expectedMenuArray);
     });
 
     it('can get routerLinks from template', () => {
         expect(routerLinks.length).withContext('should have 6 routerLinks').toBe(6);
-        expect(routerLinks[0].routerLink).toBe('/project');
-        expect(routerLinks[1].routerLink).toBe('/webern');
-        expect(routerLinks[2].routerLink).toBe('/works');
-        expect(routerLinks[3].routerLink).toBe('/edition');
-        expect(routerLinks[4].routerLink).toBe('/research');
-        expect(routerLinks[5].routerLink).toBe('/contact');
+        expect(routerLinks[0].routerLink()).toBe('/project');
+        expect(routerLinks[1].routerLink()).toBe('/webern');
+        expect(routerLinks[2].routerLink()).toBe('/works');
+        expect(routerLinks[3].routerLink()).toBe('/edition');
+        expect(routerLinks[4].routerLink()).toBe('/research');
+        expect(routerLinks[5].routerLink()).toBe('/contact');
     });
 
     it('can click edition link in template', () => {

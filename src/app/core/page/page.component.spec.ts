@@ -1,4 +1,4 @@
-import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, input, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
@@ -26,8 +26,7 @@ class MainTextStubComponent {}
     standalone: false,
 })
 class MenuStubComponent {
-    @Input()
-    menuArray: Menu[];
+    menuArray = input<Menu[]>(undefined);
 }
 
 @Component({
@@ -36,7 +35,7 @@ class MenuStubComponent {
     standalone: false,
 })
 class RightTextStubComponent {
-    @Input() rightPanelPortal: TemplateRef<unknown>;
+    rightPanelPortal = input<TemplateRef<unknown>>(undefined);
 }
 
 @Component({
@@ -52,8 +51,7 @@ class SearchStubComponent {}
     standalone: false,
 })
 class SubMenuStubComponent {
-    @Input()
-    selectedMenu: Menu;
+    selectedMenu = input<Menu>(undefined);
 }
 
 // Mock component to get templateRef
@@ -62,7 +60,7 @@ class SubMenuStubComponent {
     standalone: false,
 })
 class MockTemplateComponent {
-    @ViewChild('template', { static: true }) public template: TemplateRef<any>;
+    template = viewChild<TemplateRef<any>>('template');
 }
 
 describe('PageComponent', () => {
@@ -118,11 +116,11 @@ describe('PageComponent', () => {
 
     describe('BEFORE initial data binding', () => {
         it('should not get menu array input', () => {
-            expect(component.menuArray).toBeUndefined();
+            expect(component.menuArray()).toBeUndefined();
         });
 
         it('should not get selected menu input', () => {
-            expect(component.selectedMenu).toBeUndefined();
+            expect(component.selectedMenu()).toBeUndefined();
         });
 
         it('should contain main text component (stubbed)', () => {
@@ -159,11 +157,11 @@ describe('PageComponent', () => {
 
             const mockFixture = TestBed.createComponent(MockTemplateComponent);
             const mockComponent = mockFixture.componentInstance;
-            mockTemplate = mockComponent.template;
+            mockTemplate = mockComponent.template();
 
             // Simulate the parent setting the input properties
-            component.menuArray = expectedMenuArray;
-            component.selectedMenu = expectedMenu;
+            fixture.componentRef.setInput('menuArray', expectedMenuArray);
+            fixture.componentRef.setInput('selectedMenu', expectedMenu);
 
             portalServiceSpy.and.returnValue(observableOf(mockTemplate));
 
@@ -172,11 +170,11 @@ describe('PageComponent', () => {
         });
 
         it('should get menu array input', () => {
-            expect(component.menuArray).toBe(expectedMenuArray);
+            expect(component.menuArray()).toBe(expectedMenuArray);
         });
 
         it('should get selected menu input', () => {
-            expect(component.selectedMenu).toBe(expectedMenu);
+            expect(component.selectedMenu()).toBe(expectedMenu);
         });
 
         it('should contain right panel portal component (stubbed)', () => {
@@ -201,16 +199,16 @@ describe('PageComponent', () => {
             const menuDes = fixture.debugElement.query(By.directive(MenuStubComponent));
             const menuCmp = menuDes.injector.get(MenuStubComponent) as MenuStubComponent;
 
-            expect(menuCmp.menuArray).toBeTruthy();
-            expect(menuCmp.menuArray).toBe(MENUDATA);
+            expect(menuCmp.menuArray()).toBeTruthy();
+            expect(menuCmp.menuArray()).toBe(MENUDATA);
         });
 
         it('should pass down selected menu to submenu component', () => {
             const subMenuDes = fixture.debugElement.query(By.directive(SubMenuStubComponent));
             const subMenuCmp = subMenuDes.injector.get(SubMenuStubComponent) as SubMenuStubComponent;
 
-            expect(subMenuCmp.selectedMenu).toBeTruthy();
-            expect(subMenuCmp.selectedMenu).toBe(MENUDATA[0]);
+            expect(subMenuCmp.selectedMenu()).toBeTruthy();
+            expect(subMenuCmp.selectedMenu()).toBe(MENUDATA[0]);
         });
 
         it('should pass down right panel portal to right panel portal component', () => {
@@ -219,8 +217,8 @@ describe('PageComponent', () => {
                 RightTextStubComponent
             ) as RightTextStubComponent;
 
-            expect(rightPanelPortalCmp.rightPanelPortal).toBeTruthy();
-            expect(rightPanelPortalCmp.rightPanelPortal).toEqual(mockTemplate);
+            expect(rightPanelPortalCmp.rightPanelPortal()).toBeTruthy();
+            expect(rightPanelPortalCmp.rightPanelPortal()).toEqual(mockTemplate);
         });
     });
 });

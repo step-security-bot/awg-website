@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'awg-main-text',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./main-text.component.css'],
     standalone: false,
 })
-export class MainTextComponent implements OnInit {
-    constructor() {}
-
-    ngOnInit() {}
+export class MainTextComponent {
+    constructor() {
+        // Intentionally empty
+    }
 }

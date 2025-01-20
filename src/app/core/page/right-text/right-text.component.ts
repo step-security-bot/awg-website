@@ -4,9 +4,9 @@ import {
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
-    Input,
     TemplateRef,
     ViewContainerRef,
+    input,
 } from '@angular/core';
 
 @Component({
@@ -17,7 +17,7 @@ import {
     standalone: false,
 })
 export class RightTextComponent implements AfterViewInit {
-    @Input() rightPanelPortal: TemplateRef<unknown>;
+    rightPanelPortal = input<TemplateRef<unknown>>(undefined);
 
     templatePortal: TemplatePortal<unknown>;
 
@@ -27,11 +27,12 @@ export class RightTextComponent implements AfterViewInit {
     ) {}
 
     ngAfterViewInit() {
-        if (!this.rightPanelPortal) {
+        const rightPanelPortal = this.rightPanelPortal();
+        if (!rightPanelPortal) {
             return;
         }
 
-        this.templatePortal = new TemplatePortal(this.rightPanelPortal, this.viewContainerRef);
+        this.templatePortal = new TemplatePortal(rightPanelPortal, this.viewContainerRef);
         this.cdRef.detectChanges();
     }
 }

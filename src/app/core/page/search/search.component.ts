@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'awg-search',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./search.component.css'],
     standalone: false,
 })
-export class SearchComponent implements OnInit {
-    constructor() {}
-
-    ngOnInit() {}
+export class SearchComponent {
+    constructor() {
+        // Intentionally empty
+    }
 }

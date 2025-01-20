@@ -37,7 +37,7 @@ describe('FooterComponent', () => {
 
     it('can get routerLink from template', () => {
         expect(routerLinks.length).toBe(1, 'should have 1 routerLink');
-        expect(routerLinks[0].routerLink[0]).toBe('/contact');
+        expect(routerLinks[0].routerLink()[0]).toBe('/contact');
     });
 
     it('can click Contact link in template', () => {

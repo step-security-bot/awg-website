@@ -86,11 +86,6 @@
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "^19.1.1",
-        "@angular-eslint/builder": "^18.4.2",
-        "@angular-eslint/eslint-plugin": "^18.4.2",
-        "@angular-eslint/eslint-plugin-template": "^18.4.2",
-        "@angular-eslint/schematics": "^18.4.2",
-        "@angular-eslint/template-parser": "^18.4.2",
         "@angular/cli": "^19.1.1",
         "@angular/compiler-cli": "^19.1.1",
         "@angular/language-service": "^19.1.1",
@@ -102,9 +97,8 @@
         "@eslint/js": "^9.18.0",
         "@types/jasmine": "~5.1.5",
         "@types/node": "^22.10.7",
-        "@typescript-eslint/eslint-plugin": "^8.20.0",
-        "@typescript-eslint/parser": "^8.20.0",
         "angular-cli-ghpages": "^2.0.3",
+        "angular-eslint": "19.0.0",
         "commit-and-tag-version": "^12.5.0",
         "conventional-recommended-bump": "^10.0.0",
         "eslint": "^9.18.0",
@@ -126,6 +120,7 @@
         "prettier": "^3.4.2",
         "source-map-explorer": "^2.5.3",
         "typescript": "~5.6.3",
+        "typescript-eslint": "8.16.0",
         "webpack-bundle-analyzer": "^4.10.2"
     },
     "engines": {

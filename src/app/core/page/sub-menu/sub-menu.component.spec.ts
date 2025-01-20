@@ -36,7 +36,7 @@ describe('SubMenuComponent', () => {
         expectedMenu = MENUDATA[0];
 
         // Simulate the parent setting the input property with that menu array
-        component.selectedMenu = expectedMenu;
+        fixture.componentRef.setInput('selectedMenu', expectedMenu);
 
         // Trigger initial data binding
         fixture.detectChanges();
@@ -60,19 +60,19 @@ describe('SubMenuComponent', () => {
     });
 
     it('should get menu input after data binding', () => {
-        expect(component.selectedMenu).toBe(expectedMenu);
+        expect(component.selectedMenu()).toBe(expectedMenu);
     });
 
     it('can get project routerLinks from template', () => {
         expect(routerLinks.length).withContext('should have 5 routerLinks').toBe(5);
         routerLinks.forEach(route => {
-            expect(route.routerLink[0]).toBe('/project');
+            expect(route.routerLink()[0]).toBe('/project');
         }); // Every route has /project root
-        expect(routerLinks[0].routerLink[1]).toBe('overview');
-        expect(routerLinks[1].routerLink[1]).toBe('team');
-        expect(routerLinks[2].routerLink[1]).toBe('board');
-        expect(routerLinks[3].routerLink[1]).toBe('cooperations');
-        expect(routerLinks[4].routerLink[1]).toBe('news-archive');
+        expect(routerLinks[0].routerLink()[1]).toBe('overview');
+        expect(routerLinks[1].routerLink()[1]).toBe('team');
+        expect(routerLinks[2].routerLink()[1]).toBe('board');
+        expect(routerLinks[3].routerLink()[1]).toBe('cooperations');
+        expect(routerLinks[4].routerLink()[1]).toBe('news-archive');
     });
 
     it('can click board link in template', () => {
