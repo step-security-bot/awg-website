@@ -90,7 +90,7 @@
         "@angular/compiler-cli": "^19.1.4",
         "@angular/language-service": "^19.1.4",
         "@commitlint/cli": "^19.7.1",
-        "@commitlint/config-angular": "^19.7.0",
+        "@commitlint/config-angular": "^19.7.1",
         "@compodoc/compodoc": "^1.1.26",
         "@eslint/compat": "^1.2.6",
         "@eslint/eslintrc": "^3.2.0",
