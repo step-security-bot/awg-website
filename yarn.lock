@@ -498,9 +498,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/cdk@npm:^19.1.5":
-  version: 19.1.5
-  resolution: "@angular/cdk@npm:19.1.5"
+"@angular/cdk@npm:^19.2.1":
+  version: 19.2.1
+  resolution: "@angular/cdk@npm:19.2.1"
   dependencies:
     parse5: "npm:^7.1.2"
     tslib: "npm:^2.3.0"
@@ -511,7 +511,7 @@ __metadata:
   dependenciesMeta:
     parse5:
       optional: true
-  checksum: 10c0/28159d3a5d7739cb784208e775ed2d19bb8306d56948d9c16ba19747b1df6d90b7383c0e5b2b50dc9399b01806c06b64ff72524732e5cccd32f21df368553b8e
+  checksum: 10c0/be65f5e1614741a5b210cbf1c730d272a45e84be9c8d838eb61107deb47db99e55d56e3fbc758b9aa42117a83e63b39cf708da2b1945ee7520cbf4e6bd851958
   languageName: node
   linkType: hard
 
@@ -643,20 +643,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/material@npm:^19.1.5":
-  version: 19.1.5
-  resolution: "@angular/material@npm:19.1.5"
+"@angular/material@npm:^19.2.1":
+  version: 19.2.1
+  resolution: "@angular/material@npm:19.2.1"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/animations": ^19.0.0 || ^20.0.0
-    "@angular/cdk": 19.1.5
+    "@angular/cdk": 19.2.1
     "@angular/common": ^19.0.0 || ^20.0.0
     "@angular/core": ^19.0.0 || ^20.0.0
     "@angular/forms": ^19.0.0 || ^20.0.0
     "@angular/platform-browser": ^19.0.0 || ^20.0.0
     rxjs: ^6.5.3 || ^7.4.0
-  checksum: 10c0/c39b457c8dea1c371cf998795ed1b2c173a8a2c67f98c4cd20f360b542dc3b80be13d25d99894146955589a005d8bd5da27faadb4df2da8c6461d37182519aec
+  checksum: 10c0/78d98bbf9655677c5e827d3fccee6de4641bd3ee56db95b8a9190cffc3115d5e92df854a1dbbb852562e9a2197d46d47f75e32b80162ee7ef1b06615625fccf4
   languageName: node
   linkType: hard
 
@@ -6501,7 +6500,7 @@ __metadata:
   dependencies:
     "@angular-devkit/build-angular": "npm:^19.2.0"
     "@angular/animations": "npm:^19.2.0"
-    "@angular/cdk": "npm:^19.1.5"
+    "@angular/cdk": "npm:^19.2.1"
     "@angular/cli": "npm:^19.2.0"
     "@angular/common": "npm:^19.2.0"
     "@angular/compiler": "npm:^19.2.0"
@@ -6510,7 +6509,7 @@ __metadata:
     "@angular/forms": "npm:^19.2.0"
     "@angular/language-service": "npm:^19.2.0"
     "@angular/localize": "npm:^19.2.0"
-    "@angular/material": "npm:^19.1.5"
+    "@angular/material": "npm:^19.2.1"
     "@angular/platform-browser": "npm:^19.2.0"
     "@angular/platform-browser-dynamic": "npm:^19.2.0"
     "@angular/router": "npm:^19.2.0"
